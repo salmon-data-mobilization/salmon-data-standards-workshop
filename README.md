@@ -89,4 +89,4 @@ We encourage community participation! Whether you are a researcher, data steward
 
 ---
 
-For more information, visit the [Salmon Data Mobilization GitHub Organization](https://github.com/salmon-data-mobiliszation) or contact us directly.
+For more information, visit the [Salmon Data Mobilization GitHub Organization](https://github.com/salmon-data-mobilization) or contact us directly.
