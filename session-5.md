@@ -1,5 +1,5 @@
 ---
-title: 'From Concepts to Semantics — Introducing SKOS'
+title: 'From Concepts to Semantics — Introducing Simple Knowledge Organization System (SKOS)'
 teaching: 75
 exercises: 5
 ---
