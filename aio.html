@@ -1975,7 +1975,7 @@ alternative was returned.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-R" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-R">
+<div id="nav-tabpanel-1-R" class="tab-pane show active" aria-labelledby="nav-tab-1-R" role="tabpanel">
 <p>The R <code>metasalmon</code> v0.5.0 review queue reads saved
 suggestions. It does not search or contact an AI provider:</p>
 <div class="codewrapper sourceCode" id="cb1">
@@ -2025,7 +2025,7 @@ also valid; record the remaining question. Run the decision script
 against the preserved candidate evidence when replaying this review,
 rather than rebuilding over the edited package.</p>
 </div>
-<div id="nav-tabpanel-1-Python" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Python">
+<div id="nav-tabpanel-1-Python" class="tab-pane" aria-labelledby="nav-tab-1-Python" role="tabpanel">
 <p>The pinned <code>metasalmonpy</code> v0.4.0 has no native equivalents
 of R’s <code>review_semantics()</code>,
 <code>accept_suggestion()</code>, <code>reject_suggestion()</code>, or
@@ -2060,7 +2060,7 @@ unavailable in v0.4.0. Revisit this lane when a pinned Python release
 provides the required review workflow and passes the same-source
 exercises.</p>
 </div>
-<div id="nav-tabpanel-1-Spreadsheet" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Spreadsheet">
+<div id="nav-tabpanel-1-Spreadsheet" class="tab-pane" aria-labelledby="nav-tab-1-Spreadsheet" role="tabpanel">
 <p>Open <code>checkpoints/seeded-sdp/semantic_suggestions.csv</code>
 beside your working dictionary and the draft’s metadata CSVs. Filter to
 <code>NATURAL_ADULT_SPAWNERS</code>, then inspect one candidate and its
@@ -2148,7 +2148,7 @@ comparison activity and keep the failure visible.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-R" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-R">
+<div id="nav-tabpanel-2-R" class="tab-pane show active" aria-labelledby="nav-tab-2-R" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2163,7 +2163,7 @@ Package-native LLM review requires its explicit
 comparison script enables that setting and sends the prepared
 request.</p>
 </div>
-<div id="nav-tabpanel-2-Python" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Python">
+<div id="nav-tabpanel-2-Python" class="tab-pane" aria-labelledby="nav-tab-2-Python" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2174,7 +2174,7 @@ request.</p>
 semantic-review APIs have shipped. Review the resulting assessment
 against your human artifacts before changing package metadata.</p>
 </div>
-<div id="nav-tabpanel-2-Spreadsheet" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Spreadsheet">
+<div id="nav-tabpanel-2-Spreadsheet" class="tab-pane" aria-labelledby="nav-tab-2-Spreadsheet" role="tabpanel">
 <p>The saved-output activity gives you the same comparison task without
 an API account. For an optional live demonstration, follow the
 facilitator’s submitted payload and returned response, then make your
@@ -2372,7 +2372,7 @@ supply.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-R" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-R">
+<div id="nav-tabpanel-1-R" class="tab-pane show active" aria-labelledby="nav-tab-1-R" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2389,7 +2389,7 @@ supply.</p>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu">filter</span><span class="op">(</span><span class="va">column_name</span> <span class="op">==</span> <span class="st">"ESTIMATE_METHOD"</span><span class="op">)</span></span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-Python" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Python">
+<div id="nav-tabpanel-1-Python" class="tab-pane" aria-labelledby="nav-tab-1-Python" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2403,7 +2403,7 @@ supply.</p>
 <span id="cb2-8"><a href="#cb2-8" tabindex="-1" aria-label="code-block-2-8"></a><span class="bu">print</span>(pkg[<span class="st">"codes"</span>].loc[pkg[<span class="st">"codes"</span>][<span class="st">"column_name"</span>] <span class="op">==</span> <span class="st">"ESTIMATE_METHOD"</span>])</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-Spreadsheet" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Spreadsheet">
+<div id="nav-tabpanel-1-Spreadsheet" class="tab-pane" aria-labelledby="nav-tab-1-Spreadsheet" role="tabpanel">
 <p>Open the source read-only and filter <code>ESTIMATE_METHOD</code>, or
 create a pivot table in a separate workbook. Compare the observed values
 with the rows for <code>ESTIMATE_METHOD</code> in the draft’s
@@ -2661,7 +2661,7 @@ universal relationship to a missing estimate.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-R" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-R">
+<div id="nav-tabpanel-1-R" class="tab-pane show active" aria-labelledby="nav-tab-1-R" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2674,7 +2674,7 @@ notes. Unresolved <code>REVIEW:</code> markers or missing required
 semantic fields must be addressed through review, not removed just to
 pass.</p>
 </div>
-<div id="nav-tabpanel-1-Python" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Python">
+<div id="nav-tabpanel-1-Python" class="tab-pane" aria-labelledby="nav-tab-1-Python" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2688,7 +2688,7 @@ pass.</p>
 does not close Python’s separate native-review capability gap or confirm
 the scientific interpretation.</p>
 </div>
-<div id="nav-tabpanel-1-Spreadsheet" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Spreadsheet">
+<div id="nav-tabpanel-1-Spreadsheet" class="tab-pane" aria-labelledby="nav-tab-1-Spreadsheet" role="tabpanel">
 <p>Inspect the validator report produced by your R or Python
 collaborator against your edited metadata. Locate a reported field in
 the CSV and explain the decision needed to resolve it. Spreadsheet
@@ -2770,7 +2770,7 @@ make its scientific review complete.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-R" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-R">
+<div id="nav-tabpanel-2-R" class="tab-pane show active" aria-labelledby="nav-tab-2-R" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2797,7 +2797,7 @@ copy:</p>
 Read the exact planned object list and intended public access before any
 separately authorized deposit.</p>
 </div>
-<div id="nav-tabpanel-2-Python" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Python">
+<div id="nav-tabpanel-2-Python" class="tab-pane" aria-labelledby="nav-tab-2-Python" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2822,7 +2822,7 @@ installed as directed in Setup. If dependencies or required facts are
 unavailable, inspect the supplied same-source plan and record that
 limitation.</p>
 </div>
-<div id="nav-tabpanel-2-Spreadsheet" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Spreadsheet">
+<div id="nav-tabpanel-2-Spreadsheet" class="tab-pane" aria-labelledby="nav-tab-2-Spreadsheet" role="tabpanel">
 <p>Open the supplied <code>publication/test/knb-manifest.json</code>
 with the facilitator. Identify the metadata object, data table, named
 SDP metadata files, and resource map. Match one object to its local file
@@ -3222,7 +3222,7 @@ Chapter 9.</li>
   What a defensible result contains
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Compare with <a href="files/fraser-coho-workshop/semantic-lab/vocabulary/routing-decisions-working.csv">worked
 routing decisions</a> after your attempt. These are draft proposals, not
@@ -3590,7 +3590,7 @@ or decisions blank where no agreement exists.</li>
   Worked output and answer criteria
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Compare <a href="files/fraser-coho-workshop/semantic-lab/vocabulary/concepts-working.csv">concepts-working.csv</a>
 and <a href="files/fraser-coho-workshop/semantic-lab/vocabulary/estimate-methods.ttl">estimate-methods.ttl</a>
@@ -4709,7 +4709,7 @@ They do not search the web, call AI, or post issues.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-R" class="tab-pane show active" aria-labelledby="nav-tab-1-R" role="tabpanel">
+<div id="nav-tabpanel-1-R" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-R">
 <p>Run from the extracted <code>fraser-coho-workshop/</code> project
 root:</p>
 <div class="codewrapper sourceCode" id="cb1">
@@ -4733,7 +4733,7 @@ root:</p>
 for inspection. It does not make a stewardship decision. Read the local
 files under <code>output/term-request-preview-r/</code>.</p>
 </div>
-<div id="nav-tabpanel-1-Python" class="tab-pane" aria-labelledby="nav-tab-1-Python" role="tabpanel">
+<div id="nav-tabpanel-1-Python" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Python">
 <p>Run from the same project root using the pinned Python
 environment:</p>
 <div class="codewrapper sourceCode" id="cb3">
@@ -4755,7 +4755,7 @@ environment:</p>
 separate native-review and metadata-setter gaps. Inspect
 <code>output/term-request-preview-python/</code>.</p>
 </div>
-<div id="nav-tabpanel-1-Spreadsheet" class="tab-pane" aria-labelledby="nav-tab-1-Spreadsheet" role="tabpanel">
+<div id="nav-tabpanel-1-Spreadsheet" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Spreadsheet">
 <p>Open <code>semantic-lab/contributions/recorded-gap-preview.csv</code>
 and <code>recorded-preview-notes.md</code> in the kit, or inspect a
 partner’s new preview folder. Compare <code>dictionary_role</code>, the
@@ -4976,8 +4976,8 @@ step.</li>
   "url": "https://salmon-data-mobilization.github.io/salmon-data-standards-workshop/aio.html",
   "identifier": "https://salmon-data-mobilization.github.io/salmon-data-standards-workshop/aio.html",
   "dateCreated": "2025-01-22",
-  "dateModified": "2026-09-15",
-  "datePublished": "2026-09-15"
+  "dateModified": "2026-09-22",
+  "datePublished": "2026-09-22"
 }
 
   </script><script>
