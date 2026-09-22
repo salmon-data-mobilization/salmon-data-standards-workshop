@@ -21,15 +21,13 @@ exercises: 35
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-![Workflow: prepare a source-backed request and follow its stewardship lifecycle.](fig/workflow-12.svg)
-
 ## The problem: an unresolved label needs a useful next action
 
 Continue with the unchanged **173-row, 14-column NuSEDS Fraser Coho 2023–2024 source**, dataset ID `fraser-coho-workshop`, table ID `escapement`. Bring your actual Chapter 2 graph, Chapter 3 dictionary and peer review, and the decisions from the Day 2 mapping and local-model exercises. A supplied reference answer cannot replace your human checkpoint.
 
 You now have more choices than accepting the nearest label. You can reuse an existing term, clarify a source definition, improve an existing vocabulary entry, keep a local concept, propose a mapping, or request a new shared term. Success in this chapter is a reviewable draft and a defensible next step. It does not require a new term or a submitted issue.
 
-Use the [request worksheet](files/fraser-coho-workshop/semantic-lab/worksheets/term-request.md) in the kit. Read the [filled source-clarification example](files/fraser-coho-workshop/semantic-lab/contributions/source-clarification-example.md) after choosing your own unresolved question. These are working documents, not approval records.
+Use the [request worksheet](files/fraser-coho-workshop/semantic-lab/worksheets/term-request.md) in the kit. Read the [filled source-clarification example](files/fraser-coho-workshop/semantic-lab/contributions/source-clarification-example.md) after choosing your own unresolved question.
 
 ## Choose the request before choosing a repository
 
@@ -44,7 +42,7 @@ Use the [request worksheet](files/fraser-coho-workshop/semantic-lab/worksheets/t
 
 Ownership and representation are separate choices. **SKOS** organizes concepts and code lists; **OWL** expresses formal classes and properties. Either can be maintained locally. Shared `smn:` terms require stable cross-organization meaning; `gcdfo:` holds DFO-specific or intentionally profile-scoped meaning. A DFO source document alone does not decide where a concept belongs. A bridge connects meanings but does not transfer their ownership.
 
-Do not create a compound shared class merely because a source column has a long name. Keep the variable's property, entity, unit, constraints, statistical modifier, and method context distinguishable. `method_iri` is not a column-dictionary slot in SDP v0.3; a source method value belongs with its code context. The upstream request form's method prompt is context for discussion, not permission to add a dictionary field.
+Use your decomposition to identify which part of a compound variable needs a term: its property, entity, unit, constraints or statistical modifier. Include the method as supporting context in the request. In SDP v0.3, a row-varying method belongs with its code metadata; `method_iri` is not a column-dictionary field.
 
 ## Inspect existing definitions and record the search boundary
 
@@ -108,7 +106,7 @@ Open `semantic-lab/contributions/recorded-gap-preview.csv` and `recorded-preview
 
 The supplied evidence produces two candidate rows in the checked versions: the **property** and **variable** roles for `NATURAL_ADULT_SPAWNERS`. Both generated titles say “Request new shared SMN term: NATURAL_ADULT_SPAWNERS”. That title is not a conclusion you should adopt. For example, `smn:Abundance` already supplies a reusable characteristic to inspect, while the complete source variable raises other scope questions. A renderer can make a search limitation look like a confident new-term request; revise the draft using your evidence.
 
-The recorded preview is a software execution record. It is not a human-approved gap, an actual submission, or a substitute for reading source definitions. New evidence or software versions may change the candidate list; keep the actual output rather than forcing it to match the recording.
+The recorded preview shows what the software proposed. Evaluate each candidate against the source definitions and your search evidence. If a later run returns different candidates, retain its output and investigate what changed.
 
 ## Write the request a steward can evaluate
 
@@ -116,9 +114,9 @@ The worksheet asks for the problem, source row/column context, current interpret
 
 For a shared proposal, use the current [SMN request templates](https://github.com/salmon-data-mobilization/salmon-domain-ontology/issues/new/choose). For a DFO-specific question, follow [DFO CONTRIBUTING](https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/CONTRIBUTING.md), which also supports boundary questions and definition updates. Check the destination's current guidance before submission; the local worksheet prepares the evidence but does not replace the repository's form.
 
-A useful request explains why a nearby term does not fit, not merely that the preferred label was absent. Name the expected consequence of the requested change: a clearer definition, a local code interpretation, a reviewed mapping, or a new reusable concept. If a mapping is proposed, state what evidence supports its strength. `owl:equivalentClass` has logical consequences; neither a high score nor approval to discuss it proves those consequences are justified.
+A useful request explains why a nearby term does not fit, not merely that the preferred label was absent. Name the expected consequence of the requested change: a clearer definition, a local code interpretation, a reviewed mapping, or a new reusable concept. If a mapping is proposed, state what evidence supports its strength. For `owl:equivalentClass`, test the logical consequences as you did in Chapter 11 and explain why they fit the intended meaning.
 
-## Follow the lifecycle without inventing its outcome
+## Follow a proposal through review, release and reuse
 
 | Stage | Evidence to retain | Responsible decision |
 | --- | --- | --- |
@@ -132,7 +130,7 @@ A useful request explains why a nearby term does not fit, not merely that the pr
 
 This is a teaching checklist, not a replacement governance policy. Repository labels and decisions may differ. A merged change, a released term, a scientifically adequate definition, and a correct dataset mapping are separate claims. A declined or deferred request can still improve the local definition and preserve a useful explanation.
 
-In this workshop the final handoff is **a saved draft**, with a proposed destination and next step. Posting to GitHub or contacting a steward is a separate action by an authorized person. No submission is required for completion.
+Finish the workshop with **a saved draft**, a proposed destination and a next step. The lifecycle above shows how that draft could become a maintained term and then return to your dataset's metadata.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -156,6 +154,6 @@ Finish with one saved request or source question, one recorded review decision o
 - Ownership, representation, mapping strength, and approval answer different questions.
 - Useful contributions preserve source context, alternatives, uncertainty, and compatibility effects.
 - Stewardship continues through decision, release, contextual reuse, and later revision.
-- The workshop produces an unsubmitted draft and an honest next step.
+- The workshop produces a contribution draft with evidence and a concrete next step.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::

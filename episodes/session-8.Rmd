@@ -21,8 +21,6 @@ exercises: 30
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-![Day 2 workflow, with decisions about reuse, representation and stewardship highlighted.](fig/workflow-8.svg)
-
 ## Start with the human work already completed
 
 Day 1 followed all **173 rows and 14 columns** of the Fraser Coho NuSEDS slice through interpretation, packaging and review. Day 2 develops small vocabulary, model and bridge artifacts from those same records. Keep the completed graph, dictionary, decomposition and actual peer-review record beside you. A supplied example does not replace that baseline.
@@ -71,7 +69,7 @@ Do not turn each code into an OWL class merely because it has an IRI. Under the 
 | Meaning depends on a program or operational rule | Keep that scope explicit and route to the appropriate program/profile steward | Evidence that the meaning is policy-neutral and shared |
 | The source does not establish the meaning | Ask a source question and keep the uncertainty visible | A dated definition or method source answers it |
 
-For this dataset, the abundance property already has the shared anchor `https://w3id.org/smn/Abundance`. The [pinned definition](https://github.com/salmon-data-mobilization/salmon-domain-ontology/blob/d45f8f7cc857d92af8bbe54a7c89b2a4a14784b2/ontology/modules/02-observation-measurement.ttl) concerns a reusable characteristic. Reusing it does not resolve the complete adult-spawner variable, authorize aggregation, or establish natural origin.
+For this dataset, the abundance property already has the shared anchor `https://w3id.org/smn/Abundance`. The [pinned definition](https://github.com/salmon-data-mobilization/salmon-domain-ontology/blob/d45f8f7cc857d92af8bbe54a7c89b2a4a14784b2/ontology/modules/02-observation-measurement.ttl) concerns a reusable characteristic. The complete adult-spawner variable still needs its population, qualifiers, units and method context before you can assess whether estimates are comparable.
 
 The current SDO conventions keep estimate-method and estimate-type schemes in the profile layer. Chapter 9 therefore builds a **teaching draft of selected source categories**, without claiming that NuSEDS needs a new official vocabulary. All newly introduced example identifiers begin `https://example.org/fraser-coho-workshop/terms/`. They identify classroom artifacts, not production resources or resolving vocabulary pages. No labels or definitions are added to terms owned by another namespace.
 
@@ -93,7 +91,7 @@ Record the intended use, observed evidence, rejected uniqueness claim and next s
 
 ## What a defensible result contains
 
-Compare with [worked routing decisions](files/fraser-coho-workshop/semantic-lab/vocabulary/routing-decisions-working.csv) after your attempt. These are draft proposals, not approvals.
+Compare your proposed routes and reasons with the [worked routing decisions](files/fraser-coho-workshop/semantic-lab/vocabulary/routing-decisions-working.csv) after your attempt.
 
 - Abundance can reuse an existing shared characteristic while the full compound variable remains separately described.
 - Method categories and the `NO SURVEY THIS YEAR` classification need different schemes and scope. The classification is not a procedure.

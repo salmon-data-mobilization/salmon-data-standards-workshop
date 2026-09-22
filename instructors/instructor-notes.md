@@ -48,6 +48,20 @@ The practical progression is a source value → documented local meaning → rep
 
 Use Chapter 1 without package creation or AI calls. Allocate 10 minutes to the three outcomes and raw/finished comparison, 10 to the six source columns and their interpretation problems, 15 to the human-preparation and Day 1 workflow, 10 to a preview of Day 2's vocabulary/model/bridge/request files, and 10 to the chapter's pair discussion and recap. This is an awareness session, not completion of either day's hands-on outcomes.
 
+## Facilitate Chapter 1
+
+Begin with a reuse problem familiar to biologists: comparing spawner estimates across rivers or years when another team's definitions and methods are unclear. Invite participants to identify the context they would need before combining the values.
+
+Open the [worked publication example](reference.html#teaching-record) beside the source CSV. Check the reference page for the actual catalog status before teaching. If the public test record is still unavailable, show the supplied local publication preview and explain that it is a preview. A draft, test upload, and production deposit have different outcomes; describe the one actually being shown.
+
+Keep this chapter as a tour and discussion. Learners first draw their own diagram, write the dictionary and decomposition, and complete peer review in Chapters 2–3. Package creation begins in Chapter 4; AI comparison follows in Chapter 5.
+
+Briefly preview the Day 2 files in `semantic-lab/` inside the extracted workshop ZIP, linking back to the [setup instructions](index.html#download-and-open-the-workshop-kit) for anyone who has not located it. Return to the source table after showing what the later vocabulary, model, bridge and contribution activities will produce.
+
+Use the three-record excerpt to distinguish stored values from descriptions. Keep the blank estimate visible and invite participants to ask what they would need to compare the different methods. The full CSV and later exercises retain all 173 rows and 14 columns.
+
+Walk through the first record using the worked flow. The abundance property illustrates reusing an existing term; the unresolved source-method definition illustrates why clarification may come before a new-term request. Show the two publication outcomes and the return path from a released term's IRI to a later metadata version. Day 1 reaches the catalog preview, while Day 2 prepares semantic drafts for later review and release.
+
 ## Prepare the kit and endpoint tour
 
 1. Download and open the [workshop kit][workshop-kit]. Confirm that the source has 173 rows and 14 columns and that its README explains the source, extraction, and limitations.

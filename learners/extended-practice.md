@@ -48,7 +48,7 @@ Work in a separate practice folder and preserve the raw CSV, completed worksheet
 
 **Output.** A four-or-more-row code audit, one justified correction or retained disagreement, and one draft source or vocabulary question.
 
-**Self-check.** Every meaning has a traceable source or an explicit uncertainty label. The starter dictionary is evidence to inspect, not automatic authority. Raw codes are unchanged; a matching label alone has not established semantic equivalence or expert approval.
+**Self-check.** Every meaning has a traceable source or an explicit question. Raw codes are unchanged. Compare full definitions when assessing a mapping, including any differences in scope hidden by similar labels.
 
 ## Lab 4: carry one reviewed definition through R and Python
 
@@ -69,11 +69,11 @@ Work in a separate practice folder and preserve the raw CSV, completed worksheet
 **Problem.** A package validation result, an EML schema result, and a planned catalog object answer different questions. Trace their evidence after [Chapter 7](session-7.html) without making a deposit. Allow 35–45 minutes.
 
 1. Read the stage/review notes in `checkpoints/reference-sdp/`, `validation/README.md`, and `validation/reference-validation.json`. Make separate entries for the pinned MetaSalmon check, the independent SDP specification validator, EML validation, human scientific review, and live test-record status. Copy each actual outcome and its evidence location.
-2. Select one source field. Trace its definition from your human dictionary into `metadata/column_dictionary.csv` and the descriptor in the reference checkpoint. Note any disagreement with the technical reference instead of treating its wording as approved.
+2. Select one source field. Trace its definition from your human dictionary into `metadata/column_dictionary.csv` and the descriptor in the reference checkpoint. Note any disagreements and identify evidence that could resolve them.
 3. Inspect the reference checkpoint's `metadata/eml-mapping.yml` and `publication/test/eml.xml`. Find the corresponding EML attribute and identify which description, unit/domain, and missing-value information came from the dictionary or the mapping sidecar. Record anything you cannot trace.
 4. Open `publication/test/knb-manifest.json` in that checkpoint. Trace the data table, one metadata CSV, EML, and the resource map to their local files and planned identifiers. Record a checksum and its declared algorithm for one object; optionally recompute it locally using that algorithm.
 5. Compare the manifest with the current [teaching-record status](reference.html#teaching-record). Explain what additional evidence would establish anonymous catalog access and what evidence would still be needed for scientific approval.
 
 **Output.** A five-claim evidence table plus a source-to-metadata-to-EML-to-manifest trace. Mark each check as executed, inspected, or unavailable and include any unresolved mismatch.
 
-**Self-check.** You have not turned a dry-run object plan into a live publication claim. The known independent-validator failure remains visible alongside any passing checks. Reference scientific review by Bruno and Tom remains pending unless an actual review record supersedes that status. No credentials, live AI requests, new identifiers, or uploads are necessary for this lab.
+**Self-check.** Your notes distinguish planned objects from available catalog files and identify which validation checks passed or failed, including the known independent-validator failure. Use the [reference page](reference.html#teaching-record) to compare these technical results with the example's domain-review and publication status.

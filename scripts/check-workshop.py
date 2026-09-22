@@ -66,7 +66,6 @@ durations = []
 for n in range(1, 13):
     page = (ROOT / f"episodes/session-{n}.Rmd").read_text()
     durations.append(sum(int(re.search(rf"^{key}: (\d+)$", page, re.M)[1]) for key in ("teaching", "exercises")))
-    check(f"fig/workflow-{n}.svg" in page, "Missing highlighted workflow")
     check("../glossary.html" not in page and "../reference.html" not in page, "Link escapes deployment root")
     if n < 4:
         check(not re.search(r"```(?:\{r|python)|create_sdp\(", page), "Early chapter contains an ingestion code example")
@@ -144,10 +143,10 @@ if args.site:
         deployed_file = deployed_kit / name
         check(deployed_file.is_file() and deployed_file.read_bytes() == (KIT / name).read_bytes(),
               "Rendered kit file is absent or stale: " + name)
-    for n in range(1, 13):
-        deployed_figure = site / f"fig/workflow-{n}.svg"
-        check(deployed_figure.is_file() and deployed_figure.read_bytes() == (ROOT / f"episodes/fig/workflow-{n}.svg").read_bytes(),
-              f"Rendered workflow-{n}.svg is absent or stale")
+    for source_figure in ROOT.glob("episodes/fig/*.svg"):
+        deployed_figure = site / "fig" / source_figure.name
+        check(deployed_figure.is_file() and deployed_figure.read_bytes() == source_figure.read_bytes(),
+              f"Rendered {source_figure.name} is absent or stale")
     pages = {p.resolve(): Links() for p in site.rglob("*.html")}
     check(bool(pages), "Rendered site contains no HTML pages")
     for path, parsed in pages.items(): parsed.feed(path.read_text())

@@ -21,23 +21,19 @@ exercises: 25
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-![Two-part workshop workflow: Day 1 through publication and Day 2 through vocabulary, ontology, bridge and contribution work; Chapter 1 highlighted.](fig/workflow-1.svg)
-
 ## Two days, three connected outcomes
 
-This workshop supports **reusable data publication**, **contributions to shared terminology**, and **local vocabulary or ontology stewardship connected to shared meanings**. Day 1 is a complete six-hour beginner route through publication; Day 2 adds six hours of semantic authoring and contribution work. This chapter also stands alone as a 55-minute overview. Its tour includes the purpose and artifacts of both days without requiring code or formal syntax.
+This workshop supports **reusable data publication**, **contributions to shared terminology**, and **local vocabulary or ontology stewardship connected to shared meanings**. Day 1 is a six-hour beginner route through publication; Day 2 adds six hours of semantic authoring and contribution work.
 
 The same graph and dictionary support all three outcomes. On Day 1 they make source meanings reviewable before software. On Day 2 we use them to decide which terms already exist, create small draft resources where useful, and connect local meanings to the Salmon Domain Ontology without erasing their differences. A catalog record helps people find the dataset; explicit concepts and relationships help them compare and interpret its meanings.
 
-The [Day 2 guide](advanced.html) shows the next artifacts: a [SKOS](glossary.html#skos) controlled vocabulary, a small [OWL](glossary.html#owl) model, a [bridge](glossary.html#bridge), and a [term-request](glossary.html#term-request) or clarification draft. These classroom drafts do not create official shared terms. Briefly preview the files in `semantic-lab/` and return to the source; detailed authoring starts in Chapter 8.
+The [Day 2 guide](advanced.html) introduces a [SKOS](glossary.html#skos) controlled vocabulary, a small [OWL](glossary.html#owl) model, a [bridge](glossary.html#bridge), and a [term-request](glossary.html#term-request) or clarification draft. These examples are in the `semantic-lab/` folder inside the extracted workshop ZIP. The [setup instructions](index.html#download-and-open-the-workshop-kit) explain how to download and open it. We will work with those files from Chapter 8 onward.
 
-## Start with the destination
+## Framing the challenge
 
-Imagine finding a salmon [dataset](glossary.html#dataset) produced by another team. Can you tell what was estimated, which population and place it concerns, how the estimate was made, and whether it is suitable for your question? A download button alone cannot answer those questions.
+Imagine you are comparing coho spawner estimates across rivers or years. A colleague sends you a [dataset](glossary.html#dataset) produced by another team. Before combining its values with your own, you need to know which populations and life stages were included, how the estimates were produced, and what missing values mean. Differences in these details can change the biological questions the data can answer.
 
-The facilitator begins with the [Fraser Coho teaching record](reference.html#teaching-record), then opens the source CSV beside it. The reference page records the endpoint's actual status and evidence. A draft or test record is a demonstration; it is not evidence that this workshop has a verified public deposit. If a verified endpoint is still pending, use the supplied local publication preview and say so explicitly.
-
-This is a **tour of the result**, not a software exercise. Participants do not send data to metasalmon or AI in this chapter. We will first create our own diagram and dictionary, then review them with another person in Chapters 2–3.
+Useful descriptions make that context available alongside the data. The [worked publication example](reference.html#teaching-record) brings a table, its definitions, methods, and source information together. Use the questions below to assess how well these descriptions support reuse.
 
 ### What to look for in the record
 
@@ -54,9 +50,9 @@ These are practical aims of [FAIR](glossary.html#fair): findable, accessible, in
 
 Download and extract the [Fraser Coho workshop kit](files/fraser-coho-workshop.zip). Everyone follows the **173-row, 14-column NuSEDS Fraser Coho 2023–2024 slice** in `raw_data/nuseds-fraser-coho-2023-2024.csv`. Open a copy for viewing in a spreadsheet, or follow the projected table. Keep the source file unchanged.
 
-The slice comes from Fisheries and Oceans Canada's Fraser and BC Interior NuSEDS workbook. The kit preserves its source information, derivation and the current [official DFO dictionary](files/fraser-coho-workshop/raw_data/official-nuseds-dictionary.csv). That dictionary was retrieved on 8 September 2026 and may postdate the workbook used for this slice. It is a selected two-year teaching dataset, not the full NuSEDS database or a complete history of Fraser Coho.
+The example is selected from Fisheries and Oceans Canada's Fraser and BC Interior NuSEDS workbook, available through the [Government of Canada's Open Government Portal](https://open.canada.ca/data/en/dataset/c48669a3-045b-400d-b730-48aafe8c5ee6). The kit preserves its source information, derivation and the current [official DFO dictionary](files/fraser-coho-workshop/raw_data/official-nuseds-dictionary.csv). That dictionary was retrieved on 8 September 2026 and may postdate the workbook used for this slice. The teaching dataset covers Coho for 2023–2024; the full publication contains records beyond this selection.
 
-The table contains 87 distinct `POP_ID` values and **164 distinct population–analysis-year pairs across 173 rows**. Some pairs occur more than once. A row is therefore a source record associated with a population, waterbody and analysis year; **population plus year is not a verified unique key**. Later we will examine what additional context distinguishes the records. Do not delete repeated pairs or sum their estimates during the workshop.
+The table contains 87 distinct `POP_ID` values and **164 distinct population–analysis-year pairs across 173 rows**. Some pairs occur more than once. A row is a source record associated with a population, waterbody and analysis year; **population plus year does not uniquely identify a row**. Keep these records separate while investigating what additional context distinguishes them in Chapter 2.
 
 Six columns let us practice the main kinds of description:
 
@@ -69,33 +65,43 @@ Six columns let us practice the main kinds of description:
 | `NATURAL_ADULT_SPAWNERS` | Numerical estimates and 13 blanks | What does “natural” qualify, and what does a blank mean? |
 | `ESTIMATE_METHOD` | Labels such as `Area Under the Curve` | How does the stated procedure affect interpretation? |
 
-We will write descriptions for these six fields ourselves. The other eight fields remain in the table and must also be read and reviewed. A focused exercise is not permission to discard context.
+We will draft descriptions for these six fields and review the supplied descriptions for the other eight.
 
 ## Values and descriptions do different jobs
 
-The first record associates population ID `46200`, `BONAPARTE RIVER`, analysis year `2023`, `Coho`, estimate `758` and method `Resistivity Counter`. Those are **data values**. Explaining what the identifier, estimate and method mean is [metadata](glossary.html#metadata): information that helps someone interpret and reuse those values.
+Here are the first three records from the source CSV, showing the six focus columns. The empty estimate in the second row is also empty in the source.
 
-An identifier is a label used to refer to something. It is not the thing itself. Likewise, a waterbody, a biological population, a species category and a Conservation Unit describe different things. The table has no Conservation Unit field. We can discuss that wider context, but we cannot invent a CU assignment from these rows.
+| POP_<wbr>ID | WATERBODY | ANALYSIS_<wbr>YR | SPECIES | NATURAL_<wbr>ADULT_<wbr>SPAWNERS | ESTIMATE_<wbr>METHOD |
+| --- | --- | --- | --- | --- | --- |
+| 46200 | BONAPARTE RIVER | 2023 | Coho | 758 | Resistivity Counter |
+| 44965 | CLAPPERTON CREEK | 2023 | Coho |  | Not Applicable |
+| 46190 | COLDWATER RIVER | 2023 | Coho | 7943 | Combined Methods |
+
+The identifiers, years, estimates and method labels are **data values**. Explaining what they mean is [metadata](glossary.html#metadata): information that helps someone interpret and reuse those values. For example, comparing the two numerical estimates requires understanding which fish were included and how each method produced its result.
+
+An identifier is a label used to refer to something. It is not the thing itself. Likewise, a waterbody, a biological population, a species category and a Conservation Unit describe different things. The table has no Conservation Unit field, so comparisons by CU would need a separate source linking populations to those units.
 
 One compound name is enough to motivate the next chapters: `NATURAL_ADULT_SPAWNERS`. A [variable](glossary.html#variable) describes the question being represented, while its [property](glossary.html#property) is the characteristic of interest, such as abundance, and its [entity](glossary.html#entity) is the thing the data concerns. “Adult”, “natural”, the place, the year basis, the unit and the method may add different kinds of meaning. We will separate them and record uncertainty instead of treating the column name as a complete definition.
 
-## The journey we will follow
+## Follow one estimate through the workflow
 
-| Chapter | Problem it addresses | What you leave with |
-| --- | --- | --- |
-| 1. See the whole journey | A useful final result is hard to picture | A shared purpose and one reuse question |
-| 2. Draw the dataset | Relationships and row meaning are implicit | A human-created node-and-edge diagram with evidence and questions |
-| 3. Describe and decompose | Short column names hide assumptions | A dictionary, variable decomposition and peer-review record |
-| 4. Build the package | Meaning and data can become separated | An SDP built from the same table and reviewed human descriptions |
-| 5. Compare AI-assisted interpretation | Automated suggestions can seem more certain than their evidence | A comparison with the human baseline and documented decisions |
-| 6. Review shared meanings | Similar labels may represent different concepts | Reviewed mappings, code meanings and unresolved term questions |
-| 7. Validate and share | A valid file alone is not a reusable publication | A checked package and an honest publication handoff |
+Take the first row's estimate of `758`. Here is a preview of how we can turn that value and its context into descriptions other people can use, while keeping the source's unanswered questions visible.
 
-**Diagram → dictionary and decomposition → human peer review → metasalmon → AI-assisted comparison.** This order is part of the method. Your first explanation of the dataset must exist before tools propose one for you.
+![Worked preview: draw the first record's population, waterbody and result relationships; write and decompose its dictionary; peer review; build the package and review terms and AI suggestions. Day 1 previews catalog publication. Day 2 develops vocabulary, ontology and term-request drafts; released term identifiers can later link back to the metadata.](fig/record-to-reuse.svg)
+
+The same example in words:
+
+1. **Draw what the row describes.** The record refers to the population identified by `46200`, names `BONAPARTE RIVER`, and reports `758`. The estimation activity and its result are distinct; the method describes how the result was produced. [Chapter 2](session-2.html).
+2. **Write and decompose the dictionary.** A working definition is “reported adult-spawner estimate, excluding jacks; the scope of ‘natural’ needs confirmation.” Separate the **entity** (source population), **property** (abundance), **result** (`758`), and **unit** (individuals in the starter dictionary, to confirm). Keep year, place and method as context. Peer-review this explanation, then build the package. [Chapters 3–4](session-3.html).
+3. **Reuse terms whose definitions fit.** Compare the property with the Salmon Domain Ontology's existing [Abundance definition](https://github.com/salmon-data-mobilization/salmon-domain-ontology/blob/d45f8f7cc857d92af8bbe54a7c89b2a4a14784b2/ontology/modules/02-observation-measurement.ttl), and record a supported link to its IRI. Evaluate AI suggestions against the same human explanation and source evidence. [Chapters 5–6](session-5.html).
+4. **Make the data discoverable.** Validate the package, export its metadata and follow the KNB test publication preview. A catalog record lets someone find the data and follow its descriptions and term links. [Chapter 7](session-7.html).
+5. **Develop meanings that are missing.** Clarify unclear source definitions, then draft a local vocabulary or ontology, a [bridge](glossary.html#bridge), or a request for a reusable term in the Salmon Domain Ontology. After steward review and term publication, link the released identifiers in a later version of the dataset's metadata. [Chapters 8–12](session-8.html).
+
+There are two connected outputs: **a catalog record for finding and assessing the dataset**, and **maintained terms for describing meanings across datasets**. Publishing the data and publishing a vocabulary or ontology each has its own review and release process.
 
 ### A few names you will hear later
 
-A **Salmon Data Package (SDP)** keeps the table, [data dictionary](glossary.html#data-dictionary), code definitions, dataset description and other context together. `metasalmon` in R and `metasalmonpy` in Python help create and inspect that package. We introduce their names here; detailed commands belong in Chapter 4.
+A **Salmon Data Package (SDP)** keeps the table, [data dictionary](glossary.html#data-dictionary), code definitions, dataset description and other context together. `metasalmon` in R and `metasalmonpy` in Python help create and inspect that package. We will use them in Chapter 4.
 
 The workshop [Glossary](glossary.html) is a reading aid: it explains words used in these lessons. A [controlled vocabulary](glossary.html#controlled-vocabulary) is a maintained set of terms and definitions used to describe data consistently. Reading a glossary entry helps you understand the discussion; choosing a vocabulary term requires checking its maintained definition against your data.
 
@@ -115,7 +121,7 @@ Then write three short notes:
 - The description, relationship or source evidence that would help.
 - The workshop stage where you expect to resolve it.
 
-Share one example. Keep unanswered questions for the diagram and dictionary exercises. An unresolved question is a useful result; an invented answer is not.
+Share one example. Keep unanswered questions for the diagram and dictionary exercises, together with the additional information you would need to answer them.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -125,6 +131,6 @@ Share one example. Keep unanswered questions for the diagram and dictionary exer
 - A reusable dataset needs understandable values, context, relationships, sources and access conditions.
 - The dataset has 164 distinct population–year pairs; that pair does not uniquely identify every row.
 - We draw and describe the dataset, then peer review our account, before using metasalmon or AI.
-- A catalog preview, a draft record and a verified public deposit have different statuses.
+- A catalog record helps people find data; its descriptions help them assess whether those data suit their question.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::

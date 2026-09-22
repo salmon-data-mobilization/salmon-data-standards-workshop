@@ -28,7 +28,7 @@ fraser-coho-workshop/
   semantic-lab/                 # Day 2: draft vocabularies, model, bridges, requests
 ```
 
-The kit also supplies worksheets, source context, recorded AI outputs, and three package checkpoints: `draft-sdp`, `seeded-sdp`, and `reference-sdp`. Follow its README and each chapter to choose the correct checkpoint. Keep your own exercise answers separate from the supplied reference files. The reference is a technical draft pending Bruno and Tom's domain review.
+The kit also supplies worksheets, source context, recorded AI outputs, and three package checkpoints: `draft-sdp`, `seeded-sdp`, and `reference-sdp`. Follow its README and each chapter to choose the correct checkpoint. Save your exercise answers separately so you can compare them with the supplied examples. The [reference page](reference.html#teaching-record) records their review and publication status.
 
 All chapters use dataset ID `fraser-coho-workshop` and table ID `escapement`. Code paths are relative to the project root. In RStudio, use **File > New Project > Existing Directory** to open the extracted folder as a project. In Python, open a terminal or editor in that folder. Do not change the working directory partway through a build.
 
@@ -36,7 +36,7 @@ All chapters use dataset ID `fraser-coho-workshop` and table ID `escapement`. Co
 
 Use Excel, LibreOffice Calc, or another spreadsheet editor. Open CSVs through the import dialog so identifiers and code values can remain text. The first three chapters also use paper or a simple drawing tool; no ontology editor is needed.
 
-You will write and peer-review a human dictionary, inspect the same generated package as the code lanes, compare supplied candidate evidence, and record decisions in the exercise files. An R or Python collaborator runs the validator and export steps. Manual inspection does not establish that these automated checks passed.
+You will write and peer-review a human dictionary, inspect the same generated package as the code lanes, compare supplied candidate evidence, and record decisions in the exercise files. An R or Python collaborator runs the validator and export steps so you can compare their results with your inspection notes.
 
 ## R lane
 
@@ -98,7 +98,7 @@ Keep API keys in a local credential store or session environment, never in a wor
 
 ## Day 2 tools and preparation
 
-Day 2 uses the same reviewed human graph and dictionary. Work through [Chapters 8–12](advanced.html) with a plain-text editor and the `semantic-lab/` worksheets. Spreadsheet participants can edit the concept and mapping tables and review the generated Turtle with a partner. R users can use their editor for these files; RDF validation is an additional tool, not a new metasalmon API.
+Day 2 uses the same reviewed human graph and dictionary. Work through [Chapters 8–12](advanced.html) with a plain-text editor and the `semantic-lab/` worksheets. Spreadsheet participants can edit the concept and mapping tables and review the generated Turtle with a partner. R users can use their editor for these files and run RDF checks in the additional Python environment below.
 
 For the optional local code checks, use **Python 3.9 or newer** in a separate environment. Install the pinned RDF parser and limited rule reasoner before the class:
 
@@ -118,4 +118,4 @@ All Day 2 namespaces and releases remain teaching drafts. No GitHub account, sha
 - Locate the worksheets, source notes, recorded AI outputs, and three checkpoints in the kit README.
 - Open the [Glossary](glossary.html) and [Field reference](field-reference.html).
 - If using code, check that your pinned package imports and your editor starts in `fraser-coho-workshop/`.
-- Read the [teaching-record status](reference.html#teaching-record). A Test Node demonstration and a software check do not establish domain approval or production publication.
+- Read the [teaching-record status](reference.html#teaching-record) to see which checks are complete and which review or publication steps remain.

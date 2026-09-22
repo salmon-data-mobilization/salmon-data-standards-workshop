@@ -22,8 +22,6 @@ exercises: 55
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-![Workflow: formalize a small part of the human model after reviewing its meanings.](fig/workflow-10.svg)
-
 ## Start with a question the model should answer
 
 We have already described the data and built a small vocabulary. Now we want another system to recognize relationships that a person can see in the diagram. For example: **if a NuSEDS record has a reported result, what kind of object is that result?** A second question is just as useful: **does a missing result tell us that zero fish were reported?**
@@ -141,7 +139,7 @@ Use the semantic-lab environment from [Setup](setup.html). Its requirements file
 python semantic-lab/scripts/check_model.py --report output/semantic-lab/model-check-01.json
 ```
 
-This utility works alongside either the R or Python SDP lane. It is a Python graph tool, not a new MetaSalmon function. Spreadsheet participants can make the statement table and predictions, then inspect a partner's or facilitator's actual run. Record whether you executed or inspected the result.
+Run this utility in the separate Python RDF environment from Setup, whichever SDP lane you chose. Spreadsheet participants can make the statement table and predictions, then inspect a partner's or facilitator's run. Record whether you executed or inspected the result.
 
 The learner command checks the Chapter 2–3 preparation record before loading the model. It reads local Turtle files, resolves no ontology imports, makes no API calls, preserves the source, and refuses to overwrite a report. Use a new report name on the next run.
 

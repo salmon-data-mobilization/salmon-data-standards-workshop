@@ -3,8 +3,8 @@
   "files": [
     {
       "path": "README.html",
-      "bytes": 9857,
-      "sha256": "268187e416c1f0a52375e9b8beb1f4645a8a2b4ba0b236cccffb0dce8c8075d4"
+      "bytes": 9808,
+      "sha256": "b8e6e4614f3d4b2098334c0959df5e4962e837ad151bb524b06f8436bb908b4e"
     },
     {
       "path": "README.md",
@@ -13,8 +13,8 @@
     },
     {
       "path": "ai/README.html",
-      "bytes": 12029,
-      "sha256": "e44307a54884d024347b8f7bac4c5245fa983a33681d81c5e4ae43865ed68654"
+      "bytes": 11980,
+      "sha256": "c2a5d9236138bc7d4ff03ebc476de141e5e13da23acee9a87722aaa2ea068456"
     },
     {
       "path": "ai/README.md",
@@ -33,8 +33,8 @@
     },
     {
       "path": "ai/recorded-assessment.html",
-      "bytes": 13557,
-      "sha256": "1a0df77b679e29561123eec6ca67b39124a75678a1d1dc9982373ad560b4b5a2"
+      "bytes": 13508,
+      "sha256": "6bf68f47103d552355c7b7967a3f37dddd3cab62b76311e99ed09791c32d94b9"
     },
     {
       "path": "ai/recorded-assessment.md",
@@ -228,8 +228,8 @@
     },
     {
       "path": "publication/README.html",
-      "bytes": 8087,
-      "sha256": "8a95113423249e76744d17c6d9d0c49d573ecba49acd0e6186bf8f7dc52ee7e6"
+      "bytes": 8038,
+      "sha256": "6962432d7f3d6465a894f024e08b7763ae36982c1c45a7c88703ff347c22189c"
     },
     {
       "path": "publication/README.md",
@@ -238,8 +238,8 @@
     },
     {
       "path": "raw_data/PROVENANCE.html",
-      "bytes": 7963,
-      "sha256": "55f787770600ee1d820752e42fdd04ab3ad65a40983244610e916a057f9da53d"
+      "bytes": 7914,
+      "sha256": "6e6ea61588f56a391fed2cb32b2ff29b8abc5116b52e84a4a55467ed5833ba79"
     },
     {
       "path": "raw_data/PROVENANCE.md",
@@ -303,8 +303,8 @@
     },
     {
       "path": "reference/dataset-graph-working.html",
-      "bytes": 7220,
-      "sha256": "8566cf2efb377e16426afd34b1db6060ba7e250b3d3d462d84ffb2f00475a924"
+      "bytes": 7171,
+      "sha256": "3c1007eadb8a13520e766dd13cb309df3d1dd6036f181bb3c6bde0cf061935b3"
     },
     {
       "path": "reference/dataset-graph-working.md",
@@ -322,9 +322,29 @@
       "sha256": "edacef3e2b46b2baabc76d550c58ba51948968545770d8e91fb6bdd5cb934d5d"
     },
     {
+      "path": "reference/measurement-sketch-edges.csv",
+      "bytes": 1515,
+      "sha256": "b3344469d1ae9e2889b765d746b71b6234989e9b78a0ad3c0dfe0952e89933f6"
+    },
+    {
+      "path": "reference/measurement-sketch-nodes.csv",
+      "bytes": 2185,
+      "sha256": "7a333ec4b8ad94c6828db4c387c918fa0e45716e1f85fe574250ca6877a5d415"
+    },
+    {
+      "path": "reference/measurement-sketch-working.mmd",
+      "bytes": 652,
+      "sha256": "9699247d062e7701aadff6737d6812e866710c59f05e0383c490feb677ca2b9b"
+    },
+    {
+      "path": "reference/measurement-sketch-working.svg",
+      "bytes": 7972,
+      "sha256": "b03ab7b0f9d01f053e4da606cca8ee9a9c41bfe2ea689698ff519e209b8448f8"
+    },
+    {
       "path": "reference/metamodel-source-notes.html",
-      "bytes": 6915,
-      "sha256": "a2e3b0fd0bcf88b62cbef140e452f5deafe05810da6109a10062511d3ee2c35d"
+      "bytes": 6866,
+      "sha256": "74b6a2bfb1095c45699df8c7251d7f85a698156e23662b9ae5853c302dd7a9fe"
     },
     {
       "path": "reference/metamodel-source-notes.md",
@@ -333,8 +353,8 @@
     },
     {
       "path": "reference/scientific-review-packet.html",
-      "bytes": 13560,
-      "sha256": "d5e5b27502de8b09eff10a6abb8a67cfe32e974d85e8476b95244cc233ba0c17"
+      "bytes": 13511,
+      "sha256": "085a35839d183a33ab50cd689e098f031932ecabf11b0255019e1676ee3c9b61"
     },
     {
       "path": "reference/scientific-review-packet.md",
@@ -398,8 +418,8 @@
     },
     {
       "path": "semantic-lab/README.html",
-      "bytes": 14915,
-      "sha256": "aa14a81e4c967779517ee6fcdb01f21d04ae83fb4828b9417cb4be3ead7e52b6"
+      "bytes": 14866,
+      "sha256": "e29de7b6cc6ddd02e51e1a78c8bd28a415ce87a5784b7898668a5260894df40f"
     },
     {
       "path": "semantic-lab/README.md",
@@ -408,8 +428,8 @@
     },
     {
       "path": "semantic-lab/bridge/README.html",
-      "bytes": 10855,
-      "sha256": "e8822e1506ecee871928b3b73d94f3037a8ca61395bc7b3194efe7b564943e0c"
+      "bytes": 10806,
+      "sha256": "030bfd9b0bc213dca17884b371fe159735125bf777d245b70400fcd8e2ec8997"
     },
     {
       "path": "semantic-lab/bridge/README.md",
@@ -443,8 +463,8 @@
     },
     {
       "path": "semantic-lab/contributions/README.html",
-      "bytes": 4987,
-      "sha256": "022ac07660214af81d5d76b8c44b63e564c65a96564d160049d4b1a9ed0a85f5"
+      "bytes": 4938,
+      "sha256": "e4eeaa0b9f0f1aa244e8f6f165a348f2b730f2fc4bf794dbd7682a9a368a4123"
     },
     {
       "path": "semantic-lab/contributions/README.md",
@@ -473,8 +493,8 @@
     },
     {
       "path": "semantic-lab/contributions/recorded-preview-notes.html",
-      "bytes": 5941,
-      "sha256": "174092641d4a7633cdeac0b3a944d4c4e8b2b6dcc52e12ec18ca4a06f207bf05"
+      "bytes": 5892,
+      "sha256": "c3b6033160c9a463cc334a887ce35cf461353f1bd8de3ea6582293364e9ce600"
     },
     {
       "path": "semantic-lab/contributions/recorded-preview-notes.md",
@@ -483,8 +503,8 @@
     },
     {
       "path": "semantic-lab/contributions/source-clarification-example.html",
-      "bytes": 9033,
-      "sha256": "cdd8f92ed88af72d906db357a5fc1d6fd8e9caa4180c110118d3425adf9af947"
+      "bytes": 8984,
+      "sha256": "9c4b0fbeb897007c57dde2aef0de2cf0174f0fcff6a3097d2837336cb5c7574f"
     },
     {
       "path": "semantic-lab/contributions/source-clarification-example.md",
@@ -493,8 +513,8 @@
     },
     {
       "path": "semantic-lab/model/README.html",
-      "bytes": 11054,
-      "sha256": "a0bf39842cbef7affe086c16fba27f12d4e4860e9e83b57984b24a31fbd0d232"
+      "bytes": 11005,
+      "sha256": "a8477987cd749887388471dcf3e2ba57a2828257bc1baa1bfd68363ab94ee1ed"
     },
     {
       "path": "semantic-lab/model/README.md",
@@ -563,8 +583,8 @@
     },
     {
       "path": "semantic-lab/vocabulary/README.html",
-      "bytes": 12187,
-      "sha256": "048d6d49c42f3f40ef3ec8ce68ef493a2c30ab5b92872f15f2a10676e3c292e9"
+      "bytes": 12138,
+      "sha256": "a1780270cde0ef84833dbf6e4f075dd59b26ff1cd16057fc675cf612cfadeb8f"
     },
     {
       "path": "semantic-lab/vocabulary/README.md",
@@ -598,8 +618,8 @@
     },
     {
       "path": "semantic-lab/vocabulary/stewardship-working.html",
-      "bytes": 7873,
-      "sha256": "a70ff570c0888386b72082d51fae00e4c6e25312fe35ae26f5964e0f59039ef9"
+      "bytes": 7824,
+      "sha256": "4f093aefdaf4b72442f590e818d0eb1885170d05b7716818768b912b900b6e62"
     },
     {
       "path": "semantic-lab/vocabulary/stewardship-working.md",
@@ -623,8 +643,8 @@
     },
     {
       "path": "semantic-lab/worksheets/stewardship.html",
-      "bytes": 6734,
-      "sha256": "aa30c584b8bdba9e5a42096778242af874b23572ad2efa6dc418ef191952c733"
+      "bytes": 6685,
+      "sha256": "3971121fe34f068e08b099c96f919fbe1cf634ab99047d9ed9b302c4330a81cd"
     },
     {
       "path": "semantic-lab/worksheets/stewardship.md",
@@ -633,8 +653,8 @@
     },
     {
       "path": "semantic-lab/worksheets/term-request.html",
-      "bytes": 7861,
-      "sha256": "37ce23c476d4daf460901656cd989eca4af26605d94ed96707b4bf656093f3c9"
+      "bytes": 7812,
+      "sha256": "d5c716d86ca83fc2bebd872c2faa57817f59851b50ea2f9b41e6ff85cdde3f8f"
     },
     {
       "path": "semantic-lab/worksheets/term-request.md",
@@ -648,8 +668,8 @@
     },
     {
       "path": "validation/README.html",
-      "bytes": 10374,
-      "sha256": "6b48fe70f55817f7e58dae8435e69aad77b4e7a59dc6b7c953949baa6739a26e"
+      "bytes": 10325,
+      "sha256": "088ac2c0913705bb1e009a083c70f88cdd83fed90cdc7de6eefef71a413031f8"
     },
     {
       "path": "validation/README.md",
@@ -678,8 +698,8 @@
     },
     {
       "path": "validation/unseeded-code-iri-issue.html",
-      "bytes": 13097,
-      "sha256": "32df7a7212892f131bf769a53497fad2a0337de9c371b5d0025bba095cd36529"
+      "bytes": 13048,
+      "sha256": "76a364c4a37c4b41d93ba4e461f685aaeeb131c5c70e34582a9ad1a2d1f7fe3a"
     },
     {
       "path": "validation/unseeded-code-iri-issue.md",
@@ -688,8 +708,8 @@
     },
     {
       "path": "validation/upstream-validator-issue.html",
-      "bytes": 13347,
-      "sha256": "3303dc845c6f9f7d9caa98c162f236722c335d83b4c8d5804e4ff002e3f377e3"
+      "bytes": 13298,
+      "sha256": "3eb0df9e3e4adc08078d34c2af89079f89e68759608eee9fa965191fc0a8b5a0"
     },
     {
       "path": "validation/upstream-validator-issue.md",

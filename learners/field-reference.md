@@ -20,7 +20,7 @@ The source data have 173 rows and 14 columns. Metadata have a different structur
 | `temporal_start`, `temporal_end` | Describe the documented time coverage. |
 | `source_citation`, `provenance_note` | Connect the extract, source documentation, and processing history. |
 
-The identifier, title, description, creator, contact name, contact email, and licence are required dataset fields. Coverage and provenance fields are useful evidence even where the schema does not require them. An example value must not be mistaken for an approved contact or rights statement. [Canonical dataset fields][sdp-field-reference].
+The identifier, title, description, creator, contact name, contact email, and licence are required dataset fields. Coverage and provenance fields are useful evidence even where the schema does not require them. Use the dataset's documented creators, contact and licence when completing these fields. [Canonical dataset fields][sdp-field-reference].
 
 ## Table fields {#table-fields}
 
@@ -89,10 +89,10 @@ Start with `ESTIMATE_METHOD` and `ESTIMATE_CLASSIFICATION`. A missing source val
 | --- | --- |
 | Human worksheet and peer review | A recorded interpretation, its evidence, and unresolved questions. |
 | `semantic_suggestions.csv` | Candidate retrieval evidence; scores and ranks do not establish correctness. |
-| Recorded AI outputs | Proposals to compare with human reasoning; no authority to accept them automatically. |
+| Recorded AI outputs | Proposals to compare with the human graph, dictionary and source evidence. |
 | Review-state validation | Structural checks that allow specified semantic work to remain unfinished. |
 | Strict validation | Whether the checked package meets the implemented publication rules. |
 | Schema-valid EML | Whether the exported metadata conforms to the EML schema. |
 | Test publication receipt | The exact environment, identifiers, and upload outcome recorded by the rehearsal. |
 
-No row in this table establishes Bruno and Tom's domain approval. The reference package remains a technical draft pending their review. The [teaching record](reference.html#teaching-record) keeps technical verification, domain-review status, and publication outcome separate.
+The [teaching record](reference.html#teaching-record) records which technical checks, domain reviews and publication steps are complete for the supplied example.

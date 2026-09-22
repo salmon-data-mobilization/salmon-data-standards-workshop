@@ -38,9 +38,9 @@ All three checkpoints describe the same source rows and values. Preserve your ow
 
 ## Teaching record {#teaching-record}
 
-**Status: a live KNB Test Node record has not yet been verified for this workshop revision.** Use the supplied local reference package and Chapter 7's test publication artifacts until a verified link and receipt are recorded here. Do not present a planned upload, a local dry run, or an unverified identifier as a completed catalog record.
+**Status: a live KNB Test Node record has not yet been verified for this workshop revision.** The supplied local reference package and Chapter 7's test publication artifacts are available for inspection. A verified catalog link and publication receipt are still pending.
 
-The planned teaching deposit is scoped to the **KNB Test Node**, under Brett's authorized identity. It is intended to become a public test record for demonstrating discovery, downloads, and metadata. A production deposit is outside this rehearsal. Test services do not provide the same durability commitment as a production archive. Record the environment, publication outcome, identifier, and observed link status together when the rehearsal completes.
+The planned teaching deposit uses the **KNB Test Node** to demonstrate discovery, downloads and metadata. Test services are independent of production services and do not provide the same durability commitment as a production archive.
 
 The reference package remains a **technical draft pending Bruno and Tom's domain review**. A resolvable catalog link, schema-valid EML, or passing package check does not change that status. Consult the supplied provenance and review notes before reusing its interpretations.
 

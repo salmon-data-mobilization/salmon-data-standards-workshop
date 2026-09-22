@@ -28,8 +28,6 @@ exercises: 40
 library(metasalmon)
 ```
 
-![Workflow: map and review meanings after the human description and package build.](fig/workflow-5.svg)
-
 ## The problem: the same label can describe different things
 
 A [controlled vocabulary](glossary.html#controlled-vocabulary) gives a definition a reusable [IRI](glossary.html#iri). Linking to that identifier helps another system interpret our data. A convincing label alone does not establish that the definition fits.
@@ -121,7 +119,7 @@ print(candidates.loc[
 
 For a supported decision, use `target_sdp_file`, `target_sdp_field`, the dataset/table/column keys, and any code value to identify the exact metadata cell. Record the selected IRI or rejection, reason, reviewer, and source in your review notes. A changed cell alone does not preserve the reasoning. Preserve the current package before metadata editing, and use the package writer or an R collaborator to keep the generated descriptor consistent with the CSVs.
 
-Do not call missing R-style functions in Python. The saved candidate evidence keeps this exercise reproducible while those review APIs are unavailable in v0.4.0. Revisit this lane when a pinned Python release provides the required review workflow and passes the same-source exercises.
+The saved candidate evidence supports the same mapping decisions in Python while native review helpers are unavailable in v0.4.0.
 
 ### Spreadsheet
 
@@ -137,7 +135,7 @@ An empty queue is not a completed package. The queue contains returned suggestio
 
 [AI](glossary.html#ai) can point out missing context or propose a decomposition. The human artifacts come first so you can test those proposals against an independent interpretation instead of accepting fluent text as evidence.
 
-Open `ai/README.md` in the kit and use the recorded outputs it identifies. Read the input context, provider/model identity, run date, and success or failure status. Compare actual saved responses; do not treat an example prompt, a failed request, or a facilitator's hypothetical response as a completed model run. If a saved response is unavailable, record that limitation and perform the source-and-candidate review with the material that is present.
+Open `ai/README.md` in the kit and use the recorded outputs it identifies. Read the input context, provider/model identity, run date, and success or failure status. These details let you trace each response to the information the model received.
 
 The common recording is `ai/recorded-assessment.md`, produced by the Codex authoring assistant and preserved as such. `ai/recorded-suggestions.csv` gives its individually numbered propositions, and `ai/comparison-worksheet.csv` leaves your human decisions blank. This is an actual authoring-assistant response, not a successful OpenRouter run or native `semantic_llm_assessments` output. Keep those origins distinct when comparing a later live result.
 
@@ -152,7 +150,7 @@ Record the model's suggestion separately from the final human decision. Agreemen
 
 ## Optional: run a free live assessment
 
-Recheck that your diagram, dictionary, decomposition, and peer review are complete before a live call. Read the payload and the provider information in `ai/README.md`; only use the approved public teaching material. A live AI request sends that context to the provider.
+Recheck that your diagram, dictionary, decomposition, and peer review are complete before a live call. Read the prepared teaching payload and provider information in `ai/README.md` so you know which public source excerpts and context will be sent to the provider.
 
 The kit's optional scripts use the fixed **`openrouter/free` route** and do not fall back to a paid model. Free availability and rate limits can change. If no suitable free route is available or the request fails, use the saved comparison activity and keep the failure visible.
 
@@ -166,7 +164,7 @@ The kit's optional scripts use the fixed **`openrouter/free` route** and do not 
 source("scripts/review_ai.R")
 ```
 
-Supplying context to metasalmon does not itself authorize an AI call. Package-native LLM review requires its explicit `llm_assess = TRUE` opt-in. Choosing to run this optional comparison script enables that setting and sends the prepared request.
+Providing context alone does not trigger an AI request in metasalmon. Package-native LLM review requires `llm_assess = TRUE`. Running this optional comparison script enables that setting and sends the prepared request.
 
 ### Python
 
@@ -175,7 +173,7 @@ Supplying context to metasalmon does not itself authorize an AI call. Package-na
 python scripts/review_ai.py
 ```
 
-The comparison script does not imply that Python's missing native semantic-review APIs have shipped. Review the resulting assessment against your human artifacts before changing package metadata.
+The script returns an assessment for you to compare with your graph, dictionary and source evidence before changing package metadata.
 
 ### Spreadsheet
 
@@ -183,7 +181,7 @@ The saved-output activity gives you the same comparison task without an API acco
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-Keep API keys out of worksheets, scripts, saved outputs, and screenshots. The response is review evidence; it is not an instruction to modify the package automatically.
+Keep API keys out of worksheets, scripts, saved outputs, and screenshots. Review each suggestion against your source evidence before applying a metadata change.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
