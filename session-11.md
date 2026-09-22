@@ -8,7 +8,7 @@ exercises: 45
 
 - When should a local term reuse a shared identifier, remain local, or become a proposed shared contribution?
 - What does each mapping predicate actually claim, and in which direction?
-- How can we test a bridge without erasing source meaning or pretending it has been approved?
+- How can we test what a bridge implies while preserving the source meaning?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -21,8 +21,6 @@ exercises: 45
 - Distinguish a mapping's meaning from its serialization or review status.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
-![Workflow: connect reviewed local meanings to shared definitions using explicit bridge decisions.](fig/workflow-11.svg)
 
 ## Preserve local meaning while making it discoverable
 
@@ -86,13 +84,13 @@ The supplied **draft** proposes:
 ex:area-under-the-curve skos:relatedMatch smn:EnumerationMethod .
 ```
 
-Its counterexample is concrete: an annual estimate calculated from a time series and survey-life assumption is not simply a direct field count. Replacing `Area Under the Curve` with `Enumeration method` would remove information a reader needs to interpret row 5. A discovery interface may show this record under a reviewed “related methods” expansion while still displaying the original method and classification. That discovery use does not authorize aggregating its value with other estimates.
+Its counterexample is concrete: an annual estimate calculated from a time series and survey-life assumption is not simply a direct field count. Replacing `Area Under the Curve` with `Enumeration method` would remove information a reader needs to interpret row 5. A discovery interface may show this record under a reviewed “related methods” expansion while still displaying the original method and classification. Whether its value can be combined with other estimates still depends on the methods and coverage of those estimates.
 
 Compare data row **39**, Dunn Creek (Clearwater) Coho, which stores `Fixed Site Census`. The official source describes combining raw observations into an estimate. The label alone might make you imagine a single direct field census. Use that tension to test your proposed category boundaries, not to infer undocumented equivalence between the two local methods.
 
 `mapping-decisions-working.csv` records six proposals and alternatives. B01 is the draft related link above; B02 rejects an exact link between the same endpoints. B05 defers a Resistivity Counter mapping because the current dictionary lacks an operational definition. A rejected or deferred row stays in the decision record without becoming a mapping triple.
 
-## Work through a class bridge without inventing biology
+## Work through a bridge between record classes
 
 Chapter 10 includes a documentation item, `method-description-auc`, representing the captured NuSEDS explanation of the AUC method. It is an instance of local class `NuSEDSMethodDescription`. This is distinct from the method concept and from an actual execution of that method.
 
@@ -120,7 +118,7 @@ Keep local definitions and source labels intact. Retain one proposed predicate p
 
 **A draft annotation does not switch off a triple.** Loading `bridge.ttl` asserts its two mapping statements. Its review annotations tell a person how to treat the file; a reasoner still uses the logical assertions. The workshop therefore loads it only into the isolated exercise. Passing the check does not approve its use in production integration.
 
-[SSSOM](glossary.html#sssom) is a format for sharing mappings and their metadata. It carries a mapping predicate; it does not choose the predicate's semantics or make an uncertain relationship exact. A CSV with two identifier columns is not automatically valid SSSOM. The lab's decision table is a workshop worksheet; no SSSOM-conformance claim is made. If you later export it, preserve the predicate, provenance, and review decision and validate against the chosen SSSOM version. [SSSOM documentation](https://mapping-commons.github.io/sssom/dev/).
+[SSSOM](glossary.html#sssom) is a format for sharing mappings and their metadata. It carries a mapping predicate; it does not choose the predicate's semantics or make an uncertain relationship exact. To export the lab's decision worksheet as SSSOM, use the required format fields, preserve the predicate, provenance and review decision, and validate against the chosen SSSOM version. [SSSOM documentation](https://mapping-commons.github.io/sssom/dev/).
 
 ## Test the bridge, then inspect what the test leaves open
 
@@ -141,7 +139,7 @@ The expected report contains ten named checks. Inspect at least these:
 - A **counterfactual in-memory** `broadMatch` produces an inverse `narrowMatch`, not a reverse `broadMatch`. This demonstrates direction without promoting the unsupported stronger mapping into the saved bridge.
 - Adding an exact mapping alongside the related mapping fails the lab's per-pair policy.
 
-The supplied checks test these particular examples and their stated expectations. They do not prove that every possible bridge is sound, run a full OWL DL classifier, or establish scientific agreement. If an edited proposal changes an expected outcome, a failing check is a prompt to inspect the new claim and revise its documented test deliberately. Do not delete a check merely to obtain a pass.
+The supplied checks test these particular examples and their stated expectations. They do not prove that every possible bridge is sound, run a full OWL DL classifier, or establish scientific agreement. If an edited proposal changes an expected outcome, a failing check is a prompt to inspect the new claim and revise its documented test deliberately.
 
 ## Decide whether to reuse, keep local, or request a shared term
 

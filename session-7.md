@@ -21,8 +21,6 @@ exercises: 20
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-![Workflow: validate the package and inspect its test catalog representation.](fig/workflow-7.svg)
-
 ## The problem: a reusable package needs both meaning and a reliable access path
 
 At the start of the workshop you saw the destination. Now follow the evidence that connects it to the source: unchanged rows, a human diagram, definitions and decomposition, recorded mapping decisions, code meanings, and a package another person can interpret.
@@ -33,7 +31,7 @@ Our catalog exercise uses the **KNB Test Node**, with the same 173-row, 14-colum
 
 ## Check what is ready and what still needs work
 
-The classroom draft is `output/fraser-coho-workshop-sdp`. Preserve it, its worksheets, and the actual review decisions. The kit's `checkpoints/reference-sdp/` is a facilitator comparison artifact; read its stage and review notes before describing it as reviewed. A technical validation result does not substitute for a named human scientific review.
+Use `output/fraser-coho-workshop-sdp` together with your worksheets and review decisions. Compare them with the kit's `checkpoints/reference-sdp/`, whose [reference notes](reference.html#teaching-record) identify completed checks and remaining review work.
 
 Use these questions to assess the package:
 
@@ -92,13 +90,13 @@ The exporter needs facts that cannot be recovered from column names alone: struc
 
 Inspect `metadata/eml-mapping.yml` and any supplied `publication/test/eml.xml` in the reference checkpoint. Trace one source-column definition into the EML attribute description. Then find the source citation, teaching-record label, and test-environment URLs. Use the canonical [SDP-to-EML workflow][metasalmon-eml-workflow] and [mapping template][metasalmon-eml-mapping] for the full requirements.
 
-The pinned R and Python exporters also require checksum-bound semantic evidence and accepted-selection files. The R package validates this closure but does not provide a general public function that produces every required file. The supplied reference build must document how those artifacts were made and what was actually reviewed. Do not fabricate a reviewer, licence, checksum, missing-value explanation, or accepted decision to satisfy the exporter. This limitation can be retired when the pinned release supplies and verifies the complete producer workflow.
+The pinned R and Python exporters also require semantic-evidence and accepted-selection files tied to the package by checksums. The supplied reference checkpoint includes these files and their preparation notes. Trace the recorded selections to their evidence and review status; the pinned R package checks the files but does not yet provide a general public function to produce the complete set.
 
 ## Preview a test deposit
 
 A dry run plans the identifiers, files, checksums, access policy, and relationships without credentials or network calls. The workshop scripts explicitly target `knb_environment = "test"` and use the expanded representation so the metadata files remain individually inspectable.
 
-Run this only when the package has the required export facts, or inspect the supplied reference plan. The script requires an explicit package copy beneath `output/` and refuses checkpoint paths. For practice, copy the reference checkpoint to a new destination; preserve the supplied checkpoint and its stage notes. This copy does not make its scientific review complete.
+Run this when the package has the required export facts, or inspect the supplied reference plan. The script requires a package copy beneath `output/` and refuses checkpoint paths. For practice, copy the reference checkpoint to a new destination, keeping its stage notes with the copy.
 
 ::::::::::::::::::::::::::::::::::::: group-tab
 
@@ -123,7 +121,7 @@ From the project's terminal, run the test-only planner against that copy:
 Rscript scripts/plan_test_deposit.R output/reference-practice-sdp
 ```
 
-The key call is `publish_sdp_to_knb(..., public = TRUE, dry_run = TRUE, representation = "expanded", knb_environment = "test")`. Read the exact planned object list and intended public access before any separately authorized deposit.
+The key call is `publish_sdp_to_knb(..., public = TRUE, dry_run = TRUE, representation = "expanded", knb_environment = "test")`. Inspect the planned objects and access settings to see which files a test deposit would make public.
 
 ### Python
 
@@ -158,13 +156,13 @@ Open the [teaching-record link and status](reference.html#teaching-record). It i
 
 For a verified public test record, each learner should be able to open it without signing in, read the metadata, and download the intended example files. Follow a description from the source and human dictionary into the displayed catalog metadata. Inspect the separate package components and their relationships.
 
-If the reference page says the deposit is pending, private, unavailable, or not yet verified, use the supplied local artifacts and screenshots and report exactly that status. `published_pending_catalog` means object storage has progressed but the required catalog evidence is incomplete. It is not a completed catalog demonstration, and recreating identifiers does not fix the indexing question.
+The supplied local artifacts let you inspect the package while a public test record is unavailable. The [reference page](reference.html#teaching-record) records its current status. For example, `published_pending_catalog` means object storage has progressed but catalog indexing and access still need verification.
 
 Test services can change or remove records. The downloadable kit remains the common classroom reference and makes the example inspectable when the test service is unavailable.
 
-## Explain the production steps without executing them
+## What production publication adds
 
-A production publication needs its own source-rights decision, final metadata review, repository choice, intended access, and responsible depositor. It also needs a fresh production plan and production identifiers. A test record is never a shortcut around these decisions.
+A production publication needs a source-rights decision, final metadata review, repository choice, intended access, and responsible depositor. Test and production services are independent, so production also needs a fresh plan and identifiers.
 
 For an appropriate future dataset, the sequence is:
 
@@ -175,13 +173,13 @@ For an appropriate future dataset, the sequence is:
 5. Verify object integrity, access, catalog indexing, and the user-facing record.
 6. Follow the repository's public-release and DOI process when applicable, and preserve the record for later versioning.
 
-These are explanatory steps in this workshop. The learner scripts contain no live upload or production-deposit action. The source's existing Open Canada record remains the authoritative source publication.
+The learner scripts generate a test publication preview. The source's existing Open Canada record remains the authoritative source publication; use the sequence above when preparing an appropriate dataset for a production repository.
 
 For a later metadata revision, preserve the previous package and manifest, build a new version in a separate directory, document the change, and review its new plan. Published object bytes and identities are not edited in place.
 
 ## Finish Day 1 and carry the model into Day 2
 
-This completes the six-hour beginner route. Keep the human graph, dictionary, review decisions, and unresolved questions. In [Day 2](advanced.html), the same evidence supports a small controlled vocabulary, an OWL model, explicit bridges, and a contribution draft. A working catalog link is not required to study those meanings; keep its actual publication status separate. Begin with [Chapter 8](session-8.html) when ready.
+This completes the six-hour beginner route. Keep the human graph, dictionary, review decisions, and unresolved questions. In [Day 2](advanced.html), the same evidence supports a small controlled vocabulary, an OWL model, explicit bridges, and a contribution draft. Begin with [Chapter 8](session-8.html) when ready.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -198,6 +196,6 @@ Finish by identifying one requirement that a production publication would add an
 - A good finished package combines supported meaning, traceable evidence, and usable access.
 - Strict validation and schema-valid EML do not establish human scientific approval.
 - The classroom destination is a clearly labelled test demonstration of the same NuSEDS source.
-- Production publication is explained, separately authorized, and not executed here.
+- Production publication needs a fresh plan, reviewed metadata, appropriate rights and a responsible depositor.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::

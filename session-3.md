@@ -21,11 +21,9 @@ exercises: 45
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-![Seven workshop stages, with dictionary writing and human review highlighted.](fig/workflow-3.svg)
-
 ## Turn the diagram into a usable explanation
 
-Continue with the unchanged 173-row Fraser Coho table and your Chapter 2 diagram. Open `worksheets/data-dictionary.csv` and `worksheets/variable-decomposition.csv` from the kit in a spreadsheet or text editor. **This is still human interpretation work: no metasalmon ingestion and no AI interpretation yet.**
+Continue with the unchanged 173-row Fraser Coho table and your Chapter 2 diagram. Open `worksheets/data-dictionary.csv` and `worksheets/variable-decomposition.csv` from the kit in a spreadsheet or text editor. **Write and peer-review your interpretation before using metasalmon or AI.**
 
 A [data dictionary](glossary.html#data-dictionary) explains each field: what it means, how values are represented, which values or codes are allowed, what missing values may mean, and which sources support the explanation. It should help someone identify both appropriate uses and unresolved questions.
 
@@ -46,7 +44,7 @@ These are **workshop interpretation fields**. They are not a replacement schema 
 
 ## Read the data and source together
 
-Do not copy every statement from the supplied starter dictionary into your own definition. That dictionary is a starting point, not scientific approval. The kit also includes the [official DFO dictionary](files/fraser-coho-workshop/raw_data/official-nuseds-dictionary.csv) and its [retrieval record](files/fraser-coho-workshop/raw_data/official-dictionary-source.json). It was retrieved on 8 September 2026 and may postdate the 2025 workbook used for this slice. Its current definitions support useful corrections to the starter. The <a href="files/fraser-coho-workshop/reference/scientific-review-packet.md" download>scientific-review packet</a> records the remaining questions that Brett will take to Bruno and Tom; its reviewer fields intentionally remain blank.
+Compare the supplied starter dictionary with the [official DFO dictionary](files/fraser-coho-workshop/raw_data/official-nuseds-dictionary.csv) and its [retrieval record](files/fraser-coho-workshop/raw_data/official-dictionary-source.json). The official dictionary was retrieved on 8 September 2026 and may postdate the 2025 workbook used for this slice. Its current definitions support useful corrections to the starter. The <a href="files/fraser-coho-workshop/reference/scientific-review-packet.md" download>scientific-review packet</a> records source questions that still need investigation.
 
 Keep these checks beside the six writing tasks:
 
@@ -79,17 +77,17 @@ Use the [decomposition worksheet](files/fraser-coho-workshop/worksheets/variable
 | Method | Refer to the row's `ESTIMATE_METHOD`; its meaning belongs with the procedure that produced the result. |
 | Observation context and dimensions | Source population, waterbody, analysis year, survey-window dates, estimate classification and any other demonstrated context. |
 
-The starter dictionary says “natural-origin adult spawners”; the current official DFO definition describes maturity and excludes jacks, without establishing natural origin. Our worksheet retains the starter phrase as **source wording requiring review**, alongside the more cautious working definition. It must not become an accepted natural-origin constraint merely because software finds a matching term. Likewise, a year value varies between rows; it is not a fixed constraint on the entire measurement column. The official definition identifies the estimate year; a claim that it is a brood year or another biological-year basis requires further evidence.
+The starter dictionary says “natural-origin adult spawners”; the current official DFO definition describes maturity and excludes jacks, without establishing natural origin. Our worksheet retains the starter phrase as **source wording requiring review**, alongside the more cautious working definition. Finding a vocabulary term with the same wording would still leave this source question unanswered. Likewise, a year value varies between rows; it is not a fixed constraint on the entire measurement column. The official definition identifies the estimate year; a claim that it is a brood year or another biological-year basis requires further evidence.
 
 The ontology's [composition rules](https://github.com/salmon-data-mobilization/salmon-domain-ontology/blob/main/CONVENTIONS.md#12-year-age-abundance-and-method-composition) keep reusable abundance, unit, procedure, qualifiers and dimensions distinct. Your dictionary should do the same in plain language. Specific ontology identifiers and mapping strengths come later.
 
 ## Peer review is the handoff to tools
 
-Exchange the diagram, node/edge tables, dictionary and decomposition with another person. A peer review checks whether the explanation is understandable, internally consistent and honest about evidence. It does **not** grant scientific publication approval or settle questions beyond the available sources.
+Exchange the diagram, node/edge tables, dictionary and decomposition with another person. Check whether the explanation is understandable, internally consistent and supported by the cited evidence. Identify any questions that need further source information or specialist review.
 
-Use `worksheets/peer-review.md` to record the actual reviewer, review date, observations, revisions and unresolved questions. The supplied form starts with `Completion: pending` and a blank reviewer. After the reviewer has checked the artifacts and required revisions are complete, record their name and date (as `YYYY-MM-DD`) and change that marker to `Completion: complete`. Leave unresolved scientific questions visible with a next step; never fill in a review that did not happen.
+Use `worksheets/peer-review.md` to record the reviewer, review date, observations, revisions and unresolved questions. The supplied form starts with `Completion: pending` and a blank reviewer. After the reviewer has checked the artifacts and required revisions are complete, record their name and date (as `YYYY-MM-DD`) and change that marker to `Completion: complete`. Give each unresolved scientific question a next step.
 
-An open scientific question can travel into a draft package as an open question. A missing human explanation or an undocumented peer review cannot be replaced by asking AI to supply one. Chapter 4's build checks the review marker; the human review itself is what gives the marker meaning.
+A peer-reviewed draft can include open scientific questions. The handoff requires a working interpretation or explicit question for every field, agreement between the graph and dictionary, and a completed peer-review record. Chapter 4's build checks that record before creating the package.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -99,7 +97,7 @@ An open scientific question can travel into a draft package as an open question.
 2. **Review for 15 minutes.** Your partner traces a source row through the graph and dictionary. Check the six focus fields, the other eight descriptions, blank handling, decimal estimates, the non-unique population/year pair, the unsupported natural-origin restriction, the supported estimate-year definition and any further year-basis claims.
 3. **Revise for 10 minutes.** Reconcile conflicting labels or relationships and record what changed. Complete the peer-review record only when the described review has actually occurred.
 
-Compare your results with the [draft dictionary](files/fraser-coho-workshop/reference/data-dictionary-working.csv) and [draft decomposition](files/fraser-coho-workshop/reference/variable-decomposition-working.csv) after your first attempt. They show a cautious working interpretation; they do not carry Bruno's or Tom's approval.
+Compare your results with the [draft dictionary](files/fraser-coho-workshop/reference/data-dictionary-working.csv) and [draft decomposition](files/fraser-coho-workshop/reference/variable-decomposition-working.csv) after your first attempt. Discuss differences in the interpretations, their evidence and their remaining questions.
 
 **Ready for Chapter 4:** the diagram and node/edge tables agree; all 14 dictionary fields have been read; the six writing tasks and one decomposition are complete; a real reviewer and date are recorded; unresolved questions remain explicit. Keep these human-created artifacts as the baseline against which you will later compare software and AI suggestions.
 

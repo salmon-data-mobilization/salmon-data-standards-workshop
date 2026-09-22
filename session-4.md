@@ -21,15 +21,13 @@ exercises: 20
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-![Workflow: build the package after understanding, diagramming, and describing the data.](fig/workflow-4.svg)
-
 ## The problem: useful descriptions need to travel with the data
 
 Your diagram explains the relationships. Your dictionary explains the columns. A [Salmon Data Package](glossary.html#salmon-data-package) organizes data and standardized metadata for another person and their software to inspect. This chapter transfers selected human descriptions into that structure while retaining the richer diagram and reasoning in the workshop project.
 
-**Before opening metasalmon or supplying anything to AI**, complete `worksheets/dataset-nodes.csv`, `worksheets/dataset-edges.csv`, `worksheets/data-dictionary.csv`, and `worksheets/variable-decomposition.csv`. Record the actual peer reviewer, date, decision, and remaining questions in `worksheets/peer-review.md`. Revisit any relationship or definition the reviewer cannot explain. A question may remain explicitly unresolved; a guess must not become an asserted fact.
+**Before opening metasalmon or supplying anything to AI**, complete `worksheets/dataset-nodes.csv`, `worksheets/dataset-edges.csv`, `worksheets/data-dictionary.csv`, and `worksheets/variable-decomposition.csv`. Record the peer reviewer, date, decision, and remaining questions in `worksheets/peer-review.md`. Revise any relationship or definition the reviewer cannot explain, and identify questions that need further evidence.
 
-The facilitator's `reference/*-working.csv` files are comparison drafts. Copying them does not constitute peer review. Keep your own decisions and their evidence visible.
+Use the `reference/*-working.csv` files to compare interpretations with your own reviewed worksheets. Keep the reasons for your decisions alongside them.
 
 ## Open the common workshop project
 
@@ -122,7 +120,7 @@ Software can suggest that `NATURAL_ADULT_SPAWNERS` holds numeric values. The off
 
 Do not append worksheet-only columns to the canonical metadata CSVs. Methods that vary by row remain associated with the `ESTIMATE_METHOD` code column; the SDP dictionary has no general-purpose `method_iri` column.
 
-## Check the structure and keep the draft honest
+## Check the package structure
 
 Run the prepared validation script for your lane, or inspect the facilitator's validation result:
 
@@ -147,11 +145,11 @@ This stage uses `require_iris=False`. Inspect all messages and connect them to t
 
 ### Spreadsheet
 
-Use the [metadata field reference](field-reference.html#review-and-validation) to inspect required fields and allowed values. Ask your collaborator to run the validator against your edited files. Manual inspection and an automated result are different records; say which occurred.
+Use the [metadata field reference](field-reference.html#review-and-validation) to inspect required fields and allowed values. Ask your collaborator to run the validator against your edited files. Record your inspection notes and the validator's results so you can compare them.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-Passing draft validation means that the tested structural rules pass. It does not approve a biological interpretation, establish a licence, or make the draft publication-ready. Checkpoint labels describe their actual stage: a technical reference remains a draft until its scientific review is recorded.
+Draft validation checks the package's structure. Reviewing the source definitions, biological interpretation and licence requires separate evidence; carry those questions into the next chapters.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -174,6 +172,6 @@ Your output is a traceable **draft package**, with its human preparation intact.
 - Human diagramming, dictionary work, and peer review precede packaging tools and AI.
 - The same full Fraser Coho source is used in every chapter.
 - Canonical metadata fields have defined roles; the working worksheets preserve richer reasoning.
-- A structural validation result is evidence about structure, not scientific approval.
+- Validation checks structure; source review checks whether the descriptions fit the data.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::

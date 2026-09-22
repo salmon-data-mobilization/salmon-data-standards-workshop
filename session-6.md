@@ -20,8 +20,6 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-![Workflow: review code meanings and unresolved terms before final validation.](fig/workflow-6.svg)
-
 ## The problem: readable codes can still hide important distinctions
 
 The same Fraser Coho package contains `ESTIMATE_METHOD`, `ESTIMATE_CLASSIFICATION`, `ESTIMATE_STAGE`, and `RUN_TYPE`. These columns answer different questions. A [code list](glossary.html#controlled-vocabulary) records the exact stored values and what each one means in context. The [code-field reference](field-reference.html#code-fields) explains the canonical `metadata/codes.csv` fields.
@@ -44,7 +42,7 @@ Return to your graph and human dictionary before assigning a shared definition. 
 | `Fixed Site Census` | 1 | What is counted and how? |
 | `Fence` | 1 | What operational definition accompanies this label? |
 
-These are sample counts, not claims about all NuSEDS records. `Not Applicable` is not automatically a procedure. `Combined Methods` needs context that a generic label may not supply.
+These counts describe the 173-row teaching example. `Not Applicable` is not automatically a procedure. `Combined Methods` needs context that a generic label may not supply.
 
 ::::::::::::::::::::::::::::::::::::: group-tab
 
@@ -106,7 +104,7 @@ The packages provide `detect_semantic_term_gaps()` and `render_ontology_term_req
 
 Keep the draft in your workshop notes. Include the source column or code, the supported meaning, examples from this dataset, evidence, nearby terms that do not fit, the proposed route, and the unresolved question or requested change. Refer back to the relevant graph node or edge and dictionary row.
 
-The workshop does not post requests automatically. A maintainer can review a draft at the [Salmon Domain Ontology request page][smn-issues] or the [DFO Salmon Ontology request page][gcdfo-issues] when a request is warranted. This short Day 1 decision prepares [Day 2](advanced.html): Chapter 8 compares representation and stewardship choices, Chapter 9 builds a SKOS vocabulary, Chapters 10–11 develop a model and bridge, and Chapter 12 prepares a complete request or clarification draft.
+The [Salmon Domain Ontology request page][smn-issues] and [DFO Salmon Ontology request page][gcdfo-issues] show what maintainers need to evaluate a proposal. This short Day 1 decision prepares [Day 2](advanced.html): Chapter 8 compares representation and stewardship choices, Chapter 9 builds a SKOS vocabulary, Chapters 10–11 develop a model and bridge, and Chapter 12 prepares a complete request or clarification draft.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -114,7 +112,7 @@ The workshop does not post requests automatically. A maintainer can review a dra
 
 In 15 minutes, choose one method value and check its source definition with a partner. Record the exact code, its interpretation, and the evidence. Then choose one unresolved question from your graph, dictionary, or mapping review and draft its next action.
 
-Success is a code explanation that preserves the source meaning and a route another person can assess. An honest request for source clarification is a useful outcome.
+Success is a code explanation that preserves the source meaning and a route another person can assess. A specific request for source clarification is a useful outcome.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

@@ -21,8 +21,6 @@ exercises: 45
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-![Day 2 workflow, with building and stewarding a local vocabulary highlighted.](fig/workflow-9.svg)
-
 ## Build from source meanings, not labels alone
 
 Chapter 8 selected a local/profile teaching draft for a small set of estimate-method categories. Continue with your human dictionary and the same 173-row, 14-column source. The four values below all occur in `ESTIMATE_METHOD`; they are a **selection from its nine values**, not a complete NuSEDS method vocabulary.
@@ -53,7 +51,7 @@ Open [vocabulary-concepts.csv](files/fraser-coho-workshop/semantic-lab/worksheet
 
 For `Resistivity Counter`, leave the operational definition empty and explain why in `definition_status` and `open_question`. Do not use the word `N/A` as though it defined the procedure. A known source category can be documented as an incomplete draft while its meaning remains unresolved.
 
-`Combined Methods` is not automatically a broader concept than every method that might be combined. The source also does not establish that `Fence` is a synonym of `Fixed Site Census`. Leave these relationships absent unless supported. The worked vocabulary therefore has no invented hierarchy or alternative labels.
+`Combined Methods` is not automatically a broader concept than every method that might be combined. The source also does not establish that `Fence` is a synonym of `Fixed Site Census`. The worked vocabulary leaves these relationships open for investigation.
 
 ## Read and write a small SKOS file
 
@@ -76,11 +74,11 @@ This short excerpt illustrates the structure. The supplied [estimate-methods.ttl
 
 Create `output/semantic-lab/` and save your own edited file there as `estimate-methods.ttl`. Keep the reference unchanged. Use its prefix and scheme declarations, then build the four concept blocks from your completed worksheet. Each supported definition becomes `skos:definition`; scope belongs in `skos:scopeNote`, the outstanding question and draft state in `skos:editorialNote`, and the source in `dcterms:source`. Omit a `skos:definition` statement for the unresolved counter method rather than copying a guess into it.
 
-All new subject IRIs are in `https://example.org/fraser-coho-workshop/terms/`. This is a teaching namespace, not an official NuSEDS or SDO vocabulary. The source links identify evidence; they do not let us add labels or redefine terms in another organization's namespace. The complete source and convention pins are in [provenance.json](files/fraser-coho-workshop/semantic-lab/vocabulary/provenance.json).
+All new subject IRIs are in the teaching namespace `https://example.org/fraser-coho-workshop/terms/`. Keeping local identifiers separate from existing shared identifiers makes it clear which resource defines each concept. The complete source and convention pins are in [provenance.json](files/fraser-coho-workshop/semantic-lab/vocabulary/provenance.json).
 
 ## Check the artifact and its limits
 
-A syntax check determines whether Turtle can be read. A vocabulary check examines selected expectations such as concept types, labels and scheme membership. Neither supplies scientific approval.
+A syntax check determines whether Turtle can be read. A vocabulary check examines selected expectations such as concept types, labels and scheme membership. A domain reviewer assesses whether the definitions accurately describe the methods.
 
 After preparing the Day 2 Python environment in Setup, run the same small utility from any software lane. Start in the extracted workshop-kit root:
 
@@ -97,13 +95,13 @@ Use this human checklist alongside that bounded check:
 - There is one preferred label per language on each concept, and no identical literal used as both preferred and alternative label.
 - Three concepts have source-backed definitions; the counter concept explicitly records its missing operational definition.
 - Every concept retains evidence, scope and a pending-review note; no concept IRI is also declared an OWL class.
-- No hierarchy or cross-vocabulary equivalence was invented to make the file look complete.
+- Each proposed hierarchy or cross-vocabulary relationship has supporting evidence.
 
 The label and scheme distinctions follow the [SKOS Reference](https://www.w3.org/TR/2009/REC-skos-reference-20090818/). Our exact four-concept inventory is a workshop check. SKOS scheme membership alone does not impose a closed list of permitted values on the source column; the dataset's schema and code inventory do that job.
 
 ## Steward the meaning as well as the file
 
-Complete `semantic-lab/worksheets/stewardship.md`. A production resource needs decisions about its owner, users, identifier policy, evidence review, versioning, corrections and release. Today you prepare those decisions; filling a form does not appoint an agency steward.
+Complete `semantic-lab/worksheets/stewardship.md`. Propose who would maintain the vocabulary, who would use it, and how identifiers, evidence review, versioning, corrections and release would work. Record which responsibilities still need agreement with the proposed owner.
 
 In the draft, distinguish a wording correction from a changed meaning. Record the former in a change log; a substantive change may need a new concept and an explicit replacement decision so old data can still be interpreted. Preserve versions and review evidence. Before publication, the responsible steward must decide the production namespace, adoption scope, hosting and maintenance. These example.org IRIs remain teaching identifiers.
 
@@ -113,7 +111,7 @@ The [pinned SDO conventions](https://github.com/salmon-data-mobilization/salmon-
 
 ## Activity: create a vocabulary and its stewardship record
 
-1. **Write for 15 minutes.** Complete all four concept records against the source. Keep one definition explicitly unresolved. Do not add invented synonyms, parent concepts or approved stewards.
+1. **Write for 15 minutes.** Complete all four concept records against the source. Keep the missing definition and unsupported relationships as open questions.
 2. **Build for 15 minutes.** Create your own Turtle file from those records. Work in pairs if a text editor is unfamiliar. Trace each statement back to a worksheet cell or cited source.
 3. **Review for 10 minutes.** Exchange the worksheet and Turtle file. Use the checklist above to find missing source links, changed source values, unsupported hierarchy or lost questions. Record only the review that actually occurred.
 4. **Plan for 5 minutes.** Complete the stewardship form's proposed roles, release conditions and one change scenario. Keep names or decisions blank where no agreement exists.
@@ -122,9 +120,9 @@ The [pinned SDO conventions](https://github.com/salmon-data-mobilization/salmon-
 
 ## Worked output and answer criteria
 
-Compare [concepts-working.csv](files/fraser-coho-workshop/semantic-lab/vocabulary/concepts-working.csv) and [estimate-methods.ttl](files/fraser-coho-workshop/semantic-lab/vocabulary/estimate-methods.ttl) with your output. They are source-grounded teaching drafts with no scientific approval. The stewardship working example in `semantic-lab/vocabulary/stewardship-working.md` deliberately leaves reviewer names and agency decisions unset.
+Compare [concepts-working.csv](files/fraser-coho-workshop/semantic-lab/vocabulary/concepts-working.csv) and [estimate-methods.ttl](files/fraser-coho-workshop/semantic-lab/vocabulary/estimate-methods.ttl) with your output. Trace their definitions and questions to the cited evidence. Use `semantic-lab/vocabulary/stewardship-working.md` to compare the proposed responsibilities and decisions still needed for release.
 
-Success means another person can recover all four exact source bindings, distinguish three supported paraphrases from one definition gap, and identify what must happen before adoption. A parsed file with an invented procedure definition fails that test. A draft with the gap clearly documented can pass the classroom exercise while remaining unsuitable for an approved vocabulary release.
+Success means another person can recover all four exact source bindings, distinguish three supported paraphrases from one definition gap, and identify what must happen before adoption. Documenting the gap gives a future reviewer a concrete question to resolve.
 
 ::::::::::::::::::::::::
 
