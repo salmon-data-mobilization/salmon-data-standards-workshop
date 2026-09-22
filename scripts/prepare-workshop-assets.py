@@ -240,14 +240,14 @@ def render_measurement_sketch():
                      f'{dash} marker-end="url(#arrow)"/>')
 
     text(24, 32, "One estimate, unpacked", size=23, bold=True)
-    box(20, 66, 220, 84, ["N2 · ENTITY", "Source population", f'POP_ID {row["POP_ID"]}'])
-    box(270, 66, 220, 84, ["N7 · PROPERTY", "Abundance"])
-    box(520, 66, 220, 84, ["N13 · SCOPE", "Mature adults;", "exclude jacks"])
-    box(220, 248, 320, 90, ["N6 · VARIABLE", "Adult-spawner estimate", field])
-    box(520, 356, 220, 92, ["Q1 · QUESTION", "Natural origin?", "Source evidence needed"], question=True)
-    box(20, 515, 220, 112, ["N11 · METHOD LABEL", row["ESTIMATE_METHOD"], "How collected?", "How calculated?"])
-    box(270, 515, 220, 112, ["N8 · ACTIVITY", "Observation / estimation", "Details to investigate"])
-    box(520, 515, 220, 112, ["N9 · RESULT", row[field], "Individuals? (starter unit)"])
+    box(20, 66, 220, 84, ["ENTITY", "Source population", f'POP_ID {row["POP_ID"]}'])
+    box(270, 66, 220, 84, ["PROPERTY", "Abundance"])
+    box(520, 66, 220, 84, ["SCOPE", "Mature adults;", "exclude jacks"])
+    box(220, 248, 320, 90, ["VARIABLE", "Adult-spawner estimate", field])
+    box(520, 356, 220, 92, ["QUESTION", "Natural origin?", "Source evidence needed"], question=True)
+    box(20, 515, 220, 112, ["METHOD LABEL", row["ESTIMATE_METHOD"], "How collected?", "How calculated?"])
+    box(270, 515, 220, 112, ["ACTIVITY", "Observation / estimation", "Details to investigate"])
+    box(520, 515, 220, 112, ["RESULT", row[field], "Individuals? (starter unit)"])
     arrow("M 270 248 V 199 H 130 V 151")
     text(145, 185, "concerns", size=16)
     arrow("M 380 248 V 151")
@@ -276,7 +276,7 @@ def render_measurement_sketch():
 
     mermaid = ["flowchart TB"]
     for node_id, label, kind, *_ in nodes:
-        mermaid.append(f'  {node_id}["{node_id}: {kind}<br/>{label}"]')
+        mermaid.append(f'  {node_id}["{kind}<br/>{label}"]')
     for start, relation, end, _, _, status, _ in edges:
         connector = "-.->" if status == "question" else "-->"
         mermaid.append(f"  {start} {connector}|{relation}| {end}")
