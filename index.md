@@ -2,7 +2,7 @@
 site: sandpaper::sandpaper_site
 ---
 
-Follow the **NuSEDS Fraser Coho 2023–2024 dataset** through a two-part workshop: **12 hours of teaching and activities over two days**, excluding breaks. Everyone uses the same 173 rows and 14 columns. Day 1 is a complete beginner route through a test catalog publication demonstration. Day 2 develops local controlled vocabularies, a small ontology model, bridges to shared meanings, and contribution proposals. No personal dataset is needed.
+Learn how to make salmon data easier to understand, share, and reuse. This workshop provides **12 hours of teaching and activities over two days**, excluding breaks. Day 1 introduces data description, packaging, and a test catalog publication demonstration. Day 2 explores controlled vocabularies, ontology models, and connections to shared meanings. The dataset and exercise materials are provided.
 
 On **Day 1, Chapters 1–7**, draw the relationships behind the observations, write and peer-review a data dictionary, build a [Salmon Data Package](glossary.html#salmon-data-package), and compare your mappings with recorded [AI](glossary.html#ai) suggestions. Then describe codes and unresolved terms, validate the package, export [EML](glossary.html#eml), and inspect the [KNB](glossary.html#knb) test publication artifacts. The public test record is still pending; the reference page records its actual status.
 
