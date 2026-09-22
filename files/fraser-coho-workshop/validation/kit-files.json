@@ -333,13 +333,13 @@
     },
     {
       "path": "reference/measurement-sketch-working.mmd",
-      "bytes": 652,
-      "sha256": "9699247d062e7701aadff6737d6812e866710c59f05e0383c490feb677ca2b9b"
+      "bytes": 618,
+      "sha256": "0ef6e1888ea139e393e7c54dd93f2b24411917c4287647801c14ccd22a27f28a"
     },
     {
       "path": "reference/measurement-sketch-working.svg",
-      "bytes": 7972,
-      "sha256": "b03ab7b0f9d01f053e4da606cca8ee9a9c41bfe2ea689698ff519e209b8448f8"
+      "bytes": 7922,
+      "sha256": "c9984bb8e7e0acb9c4af4dc620032e3e331f5a8df1afe00305675f6e8f7a50ae"
     },
     {
       "path": "reference/metamodel-source-notes.html",
