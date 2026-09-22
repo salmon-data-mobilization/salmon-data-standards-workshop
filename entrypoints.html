@@ -19,7 +19,17 @@
             load: ['a11y/assistive-mml', '[tex]/noerrors']
         }
     };
-    </script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><!-- Responsive Favicon for The Carpentries --><link rel="apple-touch-icon" sizes="180x180" href="favicons/incubator/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="favicons/incubator/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="favicons/incubator/favicon-16x16.png"><link rel="manifest" href="favicons/incubator/site.webmanifest"><link rel="mask-icon" href="favicons/incubator/safari-pinned-tab.svg" color="#5bbad5"><meta name="msapplication-TileColor" content="#da532c"><meta name="theme-color" media="(prefers-color-scheme: light)" content="white"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="black"></head><body>
+    </script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><!-- Responsive Favicon for The Carpentries --><link rel="apple-touch-icon" sizes="180x180" href="favicons/incubator/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="favicons/incubator/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="favicons/incubator/favicon-16x16.png"><link rel="manifest" href="favicons/incubator/site.webmanifest"><link rel="mask-icon" href="favicons/incubator/safari-pinned-tab.svg" color="#5bbad5"><meta name="msapplication-TileColor" content="#da532c"><meta name="theme-color" media="(prefers-color-scheme: light)" content="white"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="black"><style id="workshop-navigation">
+/* Day 2 starts at Chapter 8. The current chapter has a button instead of a
+   link, so also match the item after Chapter 7. Retire this customization
+   when Sandpaper supports native sidebar groups. */
+#sidebar .accordion:has(> .accordion-item > .accordion-header > a[href="session-8.html"]),
+#sidebar .accordion:has(> .accordion-item > .accordion-header > a[href="session-7.html"]) + .accordion {
+  border-top: var(--bs-border-width) solid var(--bs-border-color);
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+</style></head><body>
     <header id="top" class="navbar navbar-expand-md top-nav incubator"><svg xmlns="http://www.w3.org/2000/svg" class="d-none"><symbol id="check2" viewbox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path></symbol><symbol id="circle-half" viewbox="0 0 16 16"><path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path></symbol><symbol id="moon-stars-fill" viewbox="0 0 16 16"><path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path><path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path></symbol><symbol id="sun-fill" viewbox="0 0 16 16"><path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path></symbol></svg><a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
   <div class="container-fluid top-nav-container">
     <div class="col-md-8">
@@ -512,6 +522,9 @@ learner review is performed or claimed.</td>
 </tr><tr><td><code>scripts/build-workshop-kit.py</code></td>
 <td>Generate HTML reading companions (including nested Day 2 pages),
 inventory all distributed bytes and assemble the downloadable kit.</td>
+</tr><tr><td><code>scripts/prepare-site.R</code></td>
+<td>Extend the installed Varnish head template with shared navigation
+styling before local builds and deployment.</td>
 </tr><tr><td><code>scripts/verify-test-record.py</code></td>
 <td>Verify the test catalog record through anonymous, read-only
 requests; it does not upload or change access.</td>
@@ -548,8 +561,17 @@ as
 <code>[Subsection]{.h4 .d-block role="heading" aria-level="4"}</code>;
 another Markdown heading creates another tab.</p>
 <p>Varnish/Bootstrap owns colors, spacing, typography, and tab behavior.
-Do not add page-local CSS or custom tab JavaScript. Inspect rendered
-pages when changing headings, tables, diagrams, or download links.</p>
+<code>styles/workshop-navigation.css</code> supplies the Day 1/Day 2
+sidebar divider using Bootstrap’s border tokens and spacing scale.
+<code>scripts/prepare-site.R</code> includes it in the installed Varnish
+head through pkgdown’s local template override at
+<code>site/pkgdown/templates/head.html</code>; that file is generated
+and ignored. Keep navigation styling in the shared source, without style
+attributes, page-local CSS or custom tab JavaScript. The two selectors
+cover both ordinary chapter links and Chapter 8’s current-page button.
+Retire this customization when Sandpaper supports native sidebar groups.
+Inspect rendered pages when changing navigation, headings, tables,
+diagrams, or download links.</p>
 <p>Write the chapters for learners: explain the problem, show the
 evidence and give the next activity. Keep delivery instructions in the
 instructor guide, maintenance instructions here, and the reference
@@ -558,10 +580,9 @@ scientific uncertainties where they affect interpretation.</p>
 <p>Known theme limitation: with Sandpaper 0.20.2 and Varnish 1.1.1, the
 fixed “Search the All In One page” button overlaps the lesson title at a
 560-pixel viewport, even with the shortened workshop title. The
-installed theme exposes no lesson-level search-label or global
-stylesheet override. Keep the canonical theme and recheck this
-limitation after a Varnish upgrade; retire this note when the header
-fits at narrow widths.</p>
+installed theme exposes no lesson-level search-label option. Keep the
+canonical theme and recheck this limitation after a Varnish upgrade;
+retire this note when the header fits at narrow widths.</p>
 </div>
 <div class="section level2">
 <h2 id="checks">Checks<a class="anchor" aria-label="anchor" href="#checks"></a></h2>
@@ -573,7 +594,7 @@ Sandpaper checks:</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="ex">python3</span> scripts/check-workshop.py</span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a><span class="ex">python3</span> scripts/check-semantic-lab.py  <span class="co"># requires semantic-lab/scripts/requirements.txt</span></span>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a><span class="ex">Rscript</span> <span class="at">--vanilla</span> <span class="at">-e</span> <span class="st">'sandpaper::check_lesson()'</span></span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a><span class="ex">Rscript</span> <span class="at">--vanilla</span> <span class="at">-e</span> <span class="st">'sandpaper::build_lesson(rebuild = TRUE, preview = FALSE)'</span></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a><span class="ex">Rscript</span> <span class="at">--vanilla</span> <span class="at">-e</span> <span class="st">'source("scripts/prepare-site.R"); sandpaper::build_lesson(rebuild = TRUE, preview = FALSE)'</span></span>
 <span id="cb1-5"><a href="#cb1-5" tabindex="-1" aria-label="code-block-1-5"></a><span class="fu">git</span> diff <span class="at">--check</span></span></code></pre>
 </div>
 <p>The rendered site is <code>site/docs/</code>.
@@ -604,6 +625,12 @@ dependencies, then runs
 <code>sandpaper:::ci_deploy(reset = reset)</code>. A successful local
 build is evidence about the local toolchain; inspect the workflow
 outcome before claiming the published site is current.</p>
+<p>After changing navigation styling, run the deployment workflow with
+<code>reset = true</code> to refresh Sandpaper’s cached aggregate pages
+as well. The local preparation script invalidates the two
+instructor-notes HTML files; CI checks out its cached site later, so it
+needs the workflow reset. Retire this extra reset when Sandpaper tracks
+local template changes for every page.</p>
 </div>
 </div>
 
