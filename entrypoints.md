@@ -59,6 +59,7 @@ The SDO conventions, module/bridge guide, metamodel view and term-request templa
 | `scripts/check-workshop.py` | Check consistency across the source lesson, kit, paths, and identifiers. |
 | `scripts/check-semantic-lab.py` | Orchestrate supplied reference vocabulary/model/bridge checks. No learner review is performed or claimed. |
 | `scripts/build-workshop-kit.py` | Generate HTML reading companions (including nested Day 2 pages), inventory all distributed bytes and assemble the downloadable kit. |
+| `scripts/prepare-site.R` | Extend the installed Varnish head template with shared navigation styling before local builds and deployment. |
 | `scripts/verify-test-record.py` | Verify the test catalog record through anonymous, read-only requests; it does not upload or change access. |
 
 Read each script's inputs and options before running it. Keep its technical results separate from pending domain review and the actual test publication receipt.
@@ -75,11 +76,11 @@ The [SDP specification](https://github.com/salmon-data-mobilization/smn-data-pkg
 
 Use Sandpaper's native `group-tab` control for software alternatives. Inside it, only `### R`, `### Python`, and `### Spreadsheet` are tab headings, in that order. For a subsection within a lane, use a span such as `[Subsection]{.h4 .d-block role="heading" aria-level="4"}`; another Markdown heading creates another tab.
 
-Varnish/Bootstrap owns colors, spacing, typography, and tab behavior. Do not add page-local CSS or custom tab JavaScript. Inspect rendered pages when changing headings, tables, diagrams, or download links.
+Varnish/Bootstrap owns colors, spacing, typography, and tab behavior. `styles/workshop-navigation.css` supplies the Day 1/Day 2 sidebar divider using Bootstrap's border tokens and spacing scale. `scripts/prepare-site.R` includes it in the installed Varnish head through pkgdown's local template override at `site/pkgdown/templates/head.html`; that file is generated and ignored. Keep navigation styling in the shared source, without style attributes, page-local CSS or custom tab JavaScript. The two selectors cover both ordinary chapter links and Chapter 8's current-page button. Retire this customization when Sandpaper supports native sidebar groups. Inspect rendered pages when changing navigation, headings, tables, diagrams, or download links.
 
 Write the chapters for learners: explain the problem, show the evidence and give the next activity. Keep delivery instructions in the instructor guide, maintenance instructions here, and the reference package's review and publication status on the reference page. Preserve scientific uncertainties where they affect interpretation.
 
-Known theme limitation: with Sandpaper 0.20.2 and Varnish 1.1.1, the fixed “Search the All In One page” button overlaps the lesson title at a 560-pixel viewport, even with the shortened workshop title. The installed theme exposes no lesson-level search-label or global stylesheet override. Keep the canonical theme and recheck this limitation after a Varnish upgrade; retire this note when the header fits at narrow widths.
+Known theme limitation: with Sandpaper 0.20.2 and Varnish 1.1.1, the fixed “Search the All In One page” button overlaps the lesson title at a 560-pixel viewport, even with the shortened workshop title. The installed theme exposes no lesson-level search-label option. Keep the canonical theme and recheck this limitation after a Varnish upgrade; retire this note when the header fits at narrow widths.
 
 ## Checks
 
@@ -89,7 +90,7 @@ From the repository root, run the workshop consistency check and the Sandpaper c
 python3 scripts/check-workshop.py
 python3 scripts/check-semantic-lab.py  # requires semantic-lab/scripts/requirements.txt
 Rscript --vanilla -e 'sandpaper::check_lesson()'
-Rscript --vanilla -e 'sandpaper::build_lesson(rebuild = TRUE, preview = FALSE)'
+Rscript --vanilla -e 'source("scripts/prepare-site.R"); sandpaper::build_lesson(rebuild = TRUE, preview = FALSE)'
 git diff --check
 ```
 
@@ -102,3 +103,5 @@ The consistency script checks the lesson/kit contract; it does not replace runni
 ## Site deployment
 
 `.github/workflows/sandpaper-main.yaml` builds and deploys on a push to `main` or `master`, or a manual workflow run. It provisions R 4.4.2, Pandoc, and the lesson dependencies, then runs `sandpaper:::ci_deploy(reset = reset)`. A successful local build is evidence about the local toolchain; inspect the workflow outcome before claiming the published site is current.
+
+After changing navigation styling, run the deployment workflow with `reset = true` to refresh Sandpaper's cached aggregate pages as well. The local preparation script invalidates the two instructor-notes HTML files; CI checks out its cached site later, so it needs the workflow reset. Retire this extra reset when Sandpaper tracks local template changes for every page.
