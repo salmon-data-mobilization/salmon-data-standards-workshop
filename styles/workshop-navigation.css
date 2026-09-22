@@ -1,0 +1,9 @@
+/* Day 2 starts at Chapter 8. The current chapter has a button instead of a
+   link, so also match the item after Chapter 7. Retire this customization
+   when Sandpaper supports native sidebar groups. */
+#sidebar .accordion:has(> .accordion-item > .accordion-header > a[href="session-8.html"]),
+#sidebar .accordion:has(> .accordion-item > .accordion-header > a[href="session-7.html"]) + .accordion {
+  border-top: var(--bs-border-width) solid var(--bs-border-color);
+  margin-top: 1rem;
+  padding-top: 1rem;
+}

@@ -1,0 +1,3 @@
+# Site tooling uses Varnish from the lesson engine, not the learner library.
+# Remove this exclusion if dependency scanning becomes limited to lesson code.
+/scripts/prepare-site.R
