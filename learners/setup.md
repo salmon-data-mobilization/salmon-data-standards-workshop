@@ -10,6 +10,8 @@ Everyone uses **173 rows and 14 columns** from `nuseds-fraser-coho-2023-2024.csv
 
 ## Download and open the workshop kit
 
+The example dataset is already included in [metasalmon v0.5.0][metasalmon-example-data]. The workshop ZIP contains an identical copy, plus the worksheets, scripts, recorded AI outputs, and package checkpoints used by R, Python, and spreadsheet learners.
+
 Download [fraser-coho-workshop.zip][workshop-kit] and extract it to a location where you can save your work. Use `fraser-coho-workshop/` as the project root. Open the included source, context, and exercise files before the workshop; ask the facilitator for a local copy if downloads are restricted.
 
 The core working paths are:
