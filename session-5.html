@@ -377,7 +377,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Map Meanings and Compare AI Suggestions</h1>
-        <p>Last updated on 2026-09-08 |
+        <p>Last updated on 2026-09-22 |
 
         <a href="https://github.com/salmon-data-mobilization/salmon-data-standards-workshop/edit/main/episodes/session-5.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -422,9 +422,7 @@ free-only live assessment.</li>
 </div>
 </div>
 </div>
-<figure><img src="fig/workflow-5.svg" alt="Workflow: map and review meanings after the human description and package build." class="figure mx-auto d-block"><div class="figcaption">Workflow: map and review meanings after the
-human description and package build.</div>
-</figure><section><h2 class="section-heading" id="the-problem-the-same-label-can-describe-different-things">The problem: the same label can describe different things<a class="anchor" aria-label="anchor" href="#the-problem-the-same-label-can-describe-different-things"></a></h2>
+<section><h2 class="section-heading" id="the-problem-the-same-label-can-describe-different-things">The problem: the same label can describe different things<a class="anchor" aria-label="anchor" href="#the-problem-the-same-label-can-describe-different-things"></a></h2>
 <hr class="half-width"><p>A <a href="glossary.html#controlled-vocabulary">controlled
 vocabulary</a> gives a definition a reusable <a href="glossary.html#iri">IRI</a>. Linking to that identifier helps
 another system interpret our data. A convincing label alone does not
@@ -597,11 +595,8 @@ changed cell alone does not preserve the reasoning. Preserve the current
 package before metadata editing, and use the package writer or an R
 collaborator to keep the generated descriptor consistent with the
 CSVs.</p>
-<p>Do not call missing R-style functions in Python. The saved candidate
-evidence keeps this exercise reproducible while those review APIs are
-unavailable in v0.4.0. Revisit this lane when a pinned Python release
-provides the required review workflow and passes the same-source
-exercises.</p>
+<p>The saved candidate evidence supports the same mapping decisions in
+Python while native review helpers are unavailable in v0.4.0.</p>
 </div>
 <div id="nav-tabpanel-1-Spreadsheet" class="tab-pane" aria-labelledby="nav-tab-1-Spreadsheet" role="tabpanel">
 <p>Open <code>checkpoints/seeded-sdp/semantic_suggestions.csv</code>
@@ -628,11 +623,8 @@ those proposals against an independent interpretation instead of
 accepting fluent text as evidence.</p>
 <p>Open <code>ai/README.md</code> in the kit and use the recorded
 outputs it identifies. Read the input context, provider/model identity,
-run date, and success or failure status. Compare actual saved responses;
-do not treat an example prompt, a failed request, or a facilitator’s
-hypothetical response as a completed model run. If a saved response is
-unavailable, record that limitation and perform the source-and-candidate
-review with the material that is present.</p>
+run date, and success or failure status. These details let you trace
+each response to the information the model received.</p>
 <p>The common recording is <code>ai/recorded-assessment.md</code>,
 produced by the Codex authoring assistant and preserved as such.
 <code>ai/recorded-suggestions.csv</code> gives its individually numbered
@@ -657,10 +649,9 @@ unresolved?</li>
 decision. Agreement among models is not source confirmation.</p>
 </section><section><h2 class="section-heading" id="optional-run-a-free-live-assessment">Optional: run a free live assessment<a class="anchor" aria-label="anchor" href="#optional-run-a-free-live-assessment"></a></h2>
 <hr class="half-width"><p>Recheck that your diagram, dictionary, decomposition, and peer review
-are complete before a live call. Read the payload and the provider
-information in <code>ai/README.md</code>; only use the approved public
-teaching material. A live AI request sends that context to the
-provider.</p>
+are complete before a live call. Read the prepared teaching payload and
+provider information in <code>ai/README.md</code> so you know which
+public source excerpts and context will be sent to the provider.</p>
 <p>The kit’s optional scripts use the fixed
 <strong><code>openrouter/free</code> route</strong> and do not fall back
 to a paid model. Free availability and rate limits can change. If no
@@ -694,11 +685,10 @@ comparison activity and keep the failure visible.</p>
 <span><span class="co"># Read the script and prepared payload before choosing to send the request.</span></span>
 <span><span class="kw">source</span><span class="op">(</span><span class="st">"scripts/review_ai.R"</span><span class="op">)</span></span></code></pre>
 </div>
-<p>Supplying context to metasalmon does not itself authorize an AI call.
-Package-native LLM review requires its explicit
-<code>llm_assess = TRUE</code> opt-in. Choosing to run this optional
-comparison script enables that setting and sends the prepared
-request.</p>
+<p>Providing context alone does not trigger an AI request in metasalmon.
+Package-native LLM review requires <code>llm_assess = TRUE</code>.
+Running this optional comparison script enables that setting and sends
+the prepared request.</p>
 </div>
 <div id="nav-tabpanel-2-Python" class="tab-pane" aria-labelledby="nav-tab-2-Python" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb5">
@@ -707,9 +697,8 @@ request.</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="co"># Follow ai/README.md for explicit opt-in and runtime credential setup.</span></span>
 <span id="cb5-2"><a href="#cb5-2" tabindex="-1" aria-label="code-block-5-2"></a><span class="ex">python</span> scripts/review_ai.py</span></code></pre>
 </div>
-<p>The comparison script does not imply that Python’s missing native
-semantic-review APIs have shipped. Review the resulting assessment
-against your human artifacts before changing package metadata.</p>
+<p>The script returns an assessment for you to compare with your graph,
+dictionary and source evidence before changing package metadata.</p>
 </div>
 <div id="nav-tabpanel-2-Spreadsheet" class="tab-pane" aria-labelledby="nav-tab-2-Spreadsheet" role="tabpanel">
 <p>The saved-output activity gives you the same comparison task without
@@ -721,8 +710,8 @@ prerequisite for completing this chapter.</p>
 </div>
 </div>
 <p>Keep API keys out of worksheets, scripts, saved outputs, and
-screenshots. The response is review evidence; it is not an instruction
-to modify the package automatically.</p>
+screenshots. Review each suggestion against your source evidence before
+applying a metadata change.</p>
 <div id="activity-make-one-defensible-mapping-decision" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -824,7 +813,7 @@ including unresolved questions.</li>
   "url": "https://salmon-data-mobilization.github.io/salmon-data-standards-workshop/session-5.html",
   "identifier": "https://salmon-data-mobilization.github.io/salmon-data-standards-workshop/session-5.html",
   "dateCreated": "2025-01-22",
-  "dateModified": "2026-09-08",
+  "dateModified": "2026-09-22",
   "datePublished": "2026-09-22"
 }
 

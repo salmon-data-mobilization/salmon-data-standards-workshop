@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="762" viewBox="0 0 760 762" role="img" aria-labelledby="title desc">
+<title id="title">A small measurement sketch for the first NuSEDS record</title>
+<desc id="desc">A variable concerns a population, represents abundance and has adult scope. A dashed arrow asks whether natural origin applies. An observation or estimation activity applies the variable, uses the source method label Resistivity Counter and generates result 758. Method details, source scope and unit applicability remain questions. Node and edge tables record the evidence for these working statements.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#334755"/></marker></defs>
+<rect width="760" height="762" rx="8" fill="#ffffff"/>
+<text x="24" y="32" font-family="sans-serif" font-size="23" font-weight="bold" text-anchor="start" fill="#172b3a">One estimate, unpacked</text>
+<rect x="20" y="66" width="220" height="84" rx="7" fill="#f4f5f6" stroke="#687582"/>
+<text x="130.0" y="89" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#172b3a">N2 · ENTITY</text>
+<text x="130.0" y="111" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="middle" fill="#172b3a">Source population</text>
+<text x="130.0" y="133" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="middle" fill="#172b3a">POP_ID 46200</text>
+<rect x="270" y="66" width="220" height="84" rx="7" fill="#f4f5f6" stroke="#687582"/>
+<text x="380.0" y="89" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#172b3a">N7 · PROPERTY</text>
+<text x="380.0" y="111" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="middle" fill="#172b3a">Abundance</text>
+<rect x="520" y="66" width="220" height="84" rx="7" fill="#f4f5f6" stroke="#687582"/>
+<text x="630.0" y="89" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#172b3a">N13 · SCOPE</text>
+<text x="630.0" y="111" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="middle" fill="#172b3a">Mature adults;</text>
+<text x="630.0" y="133" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="middle" fill="#172b3a">exclude jacks</text>
+<rect x="220" y="248" width="320" height="90" rx="7" fill="#f4f5f6" stroke="#687582"/>
+<text x="380.0" y="271" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#172b3a">N6 · VARIABLE</text>
+<text x="380.0" y="293" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="middle" fill="#172b3a">Adult-spawner estimate</text>
+<text x="380.0" y="315" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="middle" fill="#172b3a">NATURAL_ADULT_SPAWNERS</text>
+<rect x="520" y="356" width="220" height="92" rx="7" fill="#f4f5f6" stroke="#687582" stroke-dasharray="6 4"/>
+<text x="630.0" y="379" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#172b3a">Q1 · QUESTION</text>
+<text x="630.0" y="401" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="middle" fill="#172b3a">Natural origin?</text>
+<text x="630.0" y="423" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="middle" fill="#172b3a">Source evidence needed</text>
+<rect x="20" y="515" width="220" height="112" rx="7" fill="#f4f5f6" stroke="#687582"/>
+<text x="130.0" y="538" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#172b3a">N11 · METHOD LABEL</text>
+<text x="130.0" y="560" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="middle" fill="#172b3a">Resistivity Counter</text>
+<text x="130.0" y="582" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="middle" fill="#172b3a">How collected?</text>
+<text x="130.0" y="604" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="middle" fill="#172b3a">How calculated?</text>
+<rect x="270" y="515" width="220" height="112" rx="7" fill="#f4f5f6" stroke="#687582"/>
+<text x="380.0" y="538" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#172b3a">N8 · ACTIVITY</text>
+<text x="380.0" y="560" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="middle" fill="#172b3a">Observation / estimation</text>
+<text x="380.0" y="582" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="middle" fill="#172b3a">Details to investigate</text>
+<rect x="520" y="515" width="220" height="112" rx="7" fill="#f4f5f6" stroke="#687582"/>
+<text x="630.0" y="538" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#172b3a">N9 · RESULT</text>
+<text x="630.0" y="560" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="middle" fill="#172b3a">758</text>
+<text x="630.0" y="582" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="middle" fill="#172b3a">Individuals? (starter unit)</text>
+<path d="M 270 248 V 199 H 130 V 151" fill="none" stroke="#334755" stroke-width="2"  marker-end="url(#arrow)"/>
+<text x="145" y="185" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="start" fill="#172b3a">concerns</text>
+<path d="M 380 248 V 151" fill="none" stroke="#334755" stroke-width="2"  marker-end="url(#arrow)"/>
+<text x="391" y="213" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="start" fill="#172b3a">represents</text>
+<text x="391" y="233" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="start" fill="#172b3a">property</text>
+<path d="M 500 248 V 199 H 630 V 151" fill="none" stroke="#334755" stroke-width="2"  marker-end="url(#arrow)"/>
+<text x="550" y="189" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="start" fill="#172b3a">has scope</text>
+<path d="M 540 293 H 630 V 355" fill="none" stroke="#334755" stroke-width="2"  stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+<text x="545" y="322" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="start" fill="#172b3a">has</text>
+<text x="545" y="342" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="start" fill="#172b3a">constraint?</text>
+<path d="M 380 515 V 339" fill="none" stroke="#334755" stroke-width="2"  marker-end="url(#arrow)"/>
+<text x="391" y="425" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="start" fill="#172b3a">applies variable</text>
+<path d="M 270 563 H 256 V 483 H 130 V 514" fill="none" stroke="#334755" stroke-width="2"  marker-end="url(#arrow)"/>
+<text x="55" y="474" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="start" fill="#172b3a">uses source method</text>
+<path d="M 490 563 H 506 V 483 H 630 V 514" fill="none" stroke="#334755" stroke-width="2"  marker-end="url(#arrow)"/>
+<text x="543" y="474" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="start" fill="#172b3a">generates result</text>
+<text x="380" y="665" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="middle" fill="#172b3a">Record context: BONAPARTE RIVER · 2023 · Coho</text>
+<path d="M 24 701 H 79" fill="none" stroke="#334755" stroke-width="2"  marker-end="url(#arrow)"/>
+<text x="94" y="707" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="start" fill="#172b3a">Working statement: follow its evidence in the tables.</text>
+<path d="M 24 735 H 79" fill="none" stroke="#334755" stroke-width="2"  stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+<text x="94" y="741" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="start" fill="#172b3a">Question: a possible relationship to investigate.</text>
+</svg>

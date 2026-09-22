@@ -376,7 +376,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Write the Dictionary, Decompose Meanings and Review Together</h1>
-        <p>Last updated on 2026-09-08 |
+        <p>Last updated on 2026-09-22 |
 
         <a href="https://github.com/salmon-data-mobilization/salmon-data-standards-workshop/edit/main/episodes/session-3.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -422,14 +422,12 @@ moving to metasalmon or AI.</li>
 </div>
 </div>
 </div>
-<figure><img src="../fig/workflow-3.svg" alt="Seven workshop stages, with dictionary writing and human review highlighted." class="figure mx-auto d-block"><div class="figcaption">Seven workshop stages, with dictionary writing
-and human review highlighted.</div>
-</figure><section><h2 class="section-heading" id="turn-the-diagram-into-a-usable-explanation">Turn the diagram into a usable explanation<a class="anchor" aria-label="anchor" href="#turn-the-diagram-into-a-usable-explanation"></a></h2>
+<section><h2 class="section-heading" id="turn-the-diagram-into-a-usable-explanation">Turn the diagram into a usable explanation<a class="anchor" aria-label="anchor" href="#turn-the-diagram-into-a-usable-explanation"></a></h2>
 <hr class="half-width"><p>Continue with the unchanged 173-row Fraser Coho table and your
 Chapter 2 diagram. Open <code>worksheets/data-dictionary.csv</code> and
 <code>worksheets/variable-decomposition.csv</code> from the kit in a
-spreadsheet or text editor. <strong>This is still human interpretation
-work: no metasalmon ingestion and no AI interpretation yet.</strong></p>
+spreadsheet or text editor. <strong>Write and peer-review your
+interpretation before using metasalmon or AI.</strong></p>
 <p>A <a href="glossary.html#data-dictionary">data dictionary</a>
 explains each field: what it means, how values are represented, which
 values or codes are allowed, what missing values may mean, and which
@@ -485,16 +483,13 @@ how reviewed descriptions map into the package’s own metadata fields,
 while the full worksheets remain supporting context.</p>
 </div>
 </section><section><h2 class="section-heading" id="read-the-data-and-source-together">Read the data and source together<a class="anchor" aria-label="anchor" href="#read-the-data-and-source-together"></a></h2>
-<hr class="half-width"><p>Do not copy every statement from the supplied starter dictionary into
-your own definition. That dictionary is a starting point, not scientific
-approval. The kit also includes the <a href="../files/fraser-coho-workshop/raw_data/official-nuseds-dictionary.csv">official
+<hr class="half-width"><p>Compare the supplied starter dictionary with the <a href="../files/fraser-coho-workshop/raw_data/official-nuseds-dictionary.csv">official
 DFO dictionary</a> and its <a href="../files/fraser-coho-workshop/raw_data/official-dictionary-source.json">retrieval
-record</a>. It was retrieved on 8 September 2026 and may postdate the
-2025 workbook used for this slice. Its current definitions support
-useful corrections to the starter. The
+record</a>. The official dictionary was retrieved on 8 September 2026
+and may postdate the 2025 workbook used for this slice. Its current
+definitions support useful corrections to the starter. The
 <a href="../files/fraser-coho-workshop/reference/scientific-review-packet.html" download>scientific-review
-packet</a> records the remaining questions that Brett will take to Bruno
-and Tom; its reviewer fields intentionally remain blank.</p>
+packet</a> records source questions that still need investigation.</p>
 <p>Keep these checks beside the six writing tasks:</p>
 <table class="table"><colgroup><col width="33%"><col width="33%"><col width="33%"></colgroup><thead><tr><th>Field</th>
 <th>Supported observation</th>
@@ -579,8 +574,8 @@ estimate classification and any other demonstrated context.</td>
 current official DFO definition describes maturity and excludes jacks,
 without establishing natural origin. Our worksheet retains the starter
 phrase as <strong>source wording requiring review</strong>, alongside
-the more cautious working definition. It must not become an accepted
-natural-origin constraint merely because software finds a matching term.
+the more cautious working definition. Finding a vocabulary term with the
+same wording would still leave this source question unanswered.
 Likewise, a year value varies between rows; it is not a fixed constraint
 on the entire measurement column. The official definition identifies the
 estimate year; a claim that it is a brood year or another
@@ -592,24 +587,22 @@ language. Specific ontology identifiers and mapping strengths come
 later.</p>
 </section><section><h2 class="section-heading" id="peer-review-is-the-handoff-to-tools">Peer review is the handoff to tools<a class="anchor" aria-label="anchor" href="#peer-review-is-the-handoff-to-tools"></a></h2>
 <hr class="half-width"><p>Exchange the diagram, node/edge tables, dictionary and decomposition
-with another person. A peer review checks whether the explanation is
-understandable, internally consistent and honest about evidence. It does
-<strong>not</strong> grant scientific publication approval or settle
-questions beyond the available sources.</p>
-<p>Use <code>worksheets/peer-review.md</code> to record the actual
-reviewer, review date, observations, revisions and unresolved questions.
-The supplied form starts with <code>Completion: pending</code> and a
-blank reviewer. After the reviewer has checked the artifacts and
-required revisions are complete, record their name and date (as
+with another person. Check whether the explanation is understandable,
+internally consistent and supported by the cited evidence. Identify any
+questions that need further source information or specialist review.</p>
+<p>Use <code>worksheets/peer-review.md</code> to record the reviewer,
+review date, observations, revisions and unresolved questions. The
+supplied form starts with <code>Completion: pending</code> and a blank
+reviewer. After the reviewer has checked the artifacts and required
+revisions are complete, record their name and date (as
 <code>YYYY-MM-DD</code>) and change that marker to
-<code>Completion: complete</code>. Leave unresolved scientific questions
-visible with a next step; never fill in a review that did not
-happen.</p>
-<p>An open scientific question can travel into a draft package as an
-open question. A missing human explanation or an undocumented peer
-review cannot be replaced by asking AI to supply one. Chapter 4’s build
-checks the review marker; the human review itself is what gives the
-marker meaning.</p>
+<code>Completion: complete</code>. Give each unresolved scientific
+question a next step.</p>
+<p>A peer-reviewed draft can include open scientific questions. The
+handoff requires a working interpretation or explicit question for every
+field, agreement between the graph and dictionary, and a completed
+peer-review record. Chapter 4’s build checks that record before creating
+the package.</p>
 <div id="activity-write-reconcile-and-peer-review" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -639,8 +632,8 @@ or relationships and record what changed. Complete the peer-review
 record only when the described review has actually occurred.</li>
 </ol><p>Compare your results with the <a href="../files/fraser-coho-workshop/reference/data-dictionary-working.csv">draft
 dictionary</a> and <a href="../files/fraser-coho-workshop/reference/variable-decomposition-working.csv">draft
-decomposition</a> after your first attempt. They show a cautious working
-interpretation; they do not carry Bruno’s or Tom’s approval.</p>
+decomposition</a> after your first attempt. Discuss differences in the
+interpretations, their evidence and their remaining questions.</p>
 <p><strong>Ready for Chapter 4:</strong> the diagram and node/edge
 tables agree; all 14 dictionary fields have been read; the six writing
 tasks and one decomposition are complete; a real reviewer and date are
@@ -731,7 +724,7 @@ save the baseline for later comparison.</li>
   "url": "https://salmon-data-mobilization.github.io/salmon-data-standards-workshop/instructor/session-3.html",
   "identifier": "https://salmon-data-mobilization.github.io/salmon-data-standards-workshop/instructor/session-3.html",
   "dateCreated": "2025-01-22",
-  "dateModified": "2026-09-08",
+  "dateModified": "2026-09-22",
   "datePublished": "2026-09-22"
 }
 

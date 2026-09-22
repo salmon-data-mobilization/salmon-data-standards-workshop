@@ -378,7 +378,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Turn the Human Graph into a Small OWL Model</h1>
-        <p>Last updated on 2026-09-09 |
+        <p>Last updated on 2026-09-22 |
 
         <a href="https://github.com/salmon-data-mobilization/salmon-data-standards-workshop/edit/main/episodes/session-10.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -423,9 +423,7 @@ method concepts distinct.</li>
 </div>
 </div>
 </div>
-<figure><img src="fig/workflow-10.svg" alt="Workflow: formalize a small part of the human model after reviewing its meanings." class="figure mx-auto d-block"><div class="figcaption">Workflow: formalize a small part of the human
-model after reviewing its meanings.</div>
-</figure><section><h2 class="section-heading" id="start-with-a-question-the-model-should-answer">Start with a question the model should answer<a class="anchor" aria-label="anchor" href="#start-with-a-question-the-model-should-answer"></a></h2>
+<section><h2 class="section-heading" id="start-with-a-question-the-model-should-answer">Start with a question the model should answer<a class="anchor" aria-label="anchor" href="#start-with-a-question-the-model-should-answer"></a></h2>
 <hr class="half-width"><p>We have already described the data and built a small vocabulary. Now
 we want another system to recognize relationships that a person can see
 in the diagram. For example: <strong>if a NuSEDS record has a reported
@@ -643,11 +641,11 @@ workshop project root, with that Python environment active:</p>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="ex">python</span> semantic-lab/scripts/check_model.py <span class="at">--report</span> output/semantic-lab/model-check-01.json</span></code></pre>
 </div>
-<p>This utility works alongside either the R or Python SDP lane. It is a
-Python graph tool, not a new MetaSalmon function. Spreadsheet
-participants can make the statement table and predictions, then inspect
-a partner’s or facilitator’s actual run. Record whether you executed or
-inspected the result.</p>
+<p>Run this utility in the separate Python RDF environment from Setup,
+whichever SDP lane you chose. Spreadsheet participants can make the
+statement table and predictions, then inspect a partner’s or
+facilitator’s run. Record whether you executed or inspected the
+result.</p>
 <p>The learner command checks the Chapter 2–3 preparation record before
 loading the model. It reads local Turtle files, resolves no ontology
 imports, makes no API calls, preserves the source, and refuses to
@@ -791,7 +789,7 @@ review establish different things.</li>
   "url": "https://salmon-data-mobilization.github.io/salmon-data-standards-workshop/session-10.html",
   "identifier": "https://salmon-data-mobilization.github.io/salmon-data-standards-workshop/session-10.html",
   "dateCreated": "2025-01-22",
-  "dateModified": "2026-09-09",
+  "dateModified": "2026-09-22",
   "datePublished": "2026-09-22"
 }
 

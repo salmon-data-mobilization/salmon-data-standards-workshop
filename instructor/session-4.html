@@ -240,7 +240,7 @@
 <li><a href="#open-the-common-workshop-project">Open the common workshop project</a></li>
 <li><a href="#generate-or-inspect-the-draft">Generate or inspect the draft</a></li>
 <li><a href="#follow-one-description-into-the-package">Follow one description into the package</a></li>
-<li><a href="#check-the-structure-and-keep-the-draft-honest">Check the structure and keep the draft honest</a></li>
+<li><a href="#check-the-package-structure">Check the package structure</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -377,7 +377,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Build the Package from Your Human Description</h1>
-        <p>Last updated on 2026-09-08 |
+        <p>Last updated on 2026-09-22 |
 
         <a href="https://github.com/salmon-data-mobilization/salmon-data-standards-workshop/edit/main/episodes/session-4.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -423,9 +423,7 @@ readiness.</li>
 </div>
 </div>
 </div>
-<figure><img src="../fig/workflow-4.svg" alt="Workflow: build the package after understanding, diagramming, and describing the data." class="figure mx-auto d-block"><div class="figcaption">Workflow: build the package after understanding,
-diagramming, and describing the data.</div>
-</figure><section><h2 class="section-heading" id="the-problem-useful-descriptions-need-to-travel-with-the-data">The problem: useful descriptions need to travel with the data<a class="anchor" aria-label="anchor" href="#the-problem-useful-descriptions-need-to-travel-with-the-data"></a></h2>
+<section><h2 class="section-heading" id="the-problem-useful-descriptions-need-to-travel-with-the-data">The problem: useful descriptions need to travel with the data<a class="anchor" aria-label="anchor" href="#the-problem-useful-descriptions-need-to-travel-with-the-data"></a></h2>
 <hr class="half-width"><p>Your diagram explains the relationships. Your dictionary explains the
 columns. A <a href="glossary.html#salmon-data-package">Salmon Data
 Package</a> organizes data and standardized metadata for another person
@@ -436,14 +434,14 @@ reasoning in the workshop project.</p>
 AI</strong>, complete <code>worksheets/dataset-nodes.csv</code>,
 <code>worksheets/dataset-edges.csv</code>,
 <code>worksheets/data-dictionary.csv</code>, and
-<code>worksheets/variable-decomposition.csv</code>. Record the actual
-peer reviewer, date, decision, and remaining questions in
-<code>worksheets/peer-review.md</code>. Revisit any relationship or
-definition the reviewer cannot explain. A question may remain explicitly
-unresolved; a guess must not become an asserted fact.</p>
-<p>The facilitator’s <code>reference/*-working.csv</code> files are
-comparison drafts. Copying them does not constitute peer review. Keep
-your own decisions and their evidence visible.</p>
+<code>worksheets/variable-decomposition.csv</code>. Record the peer
+reviewer, date, decision, and remaining questions in
+<code>worksheets/peer-review.md</code>. Revise any relationship or
+definition the reviewer cannot explain, and identify questions that need
+further evidence.</p>
+<p>Use the <code>reference/*-working.csv</code> files to compare
+interpretations with your own reviewed worksheets. Keep the reasons for
+your decisions alongside them.</p>
 </section><section><h2 class="section-heading" id="open-the-common-workshop-project">Open the common workshop project<a class="anchor" aria-label="anchor" href="#open-the-common-workshop-project"></a></h2>
 <hr class="half-width"><p>Download and extract the <a href="../files/fraser-coho-workshop.zip">workshop kit</a>, as described in
 <a href="index.html#setup">Setup</a>. Work from its
@@ -597,7 +595,7 @@ their meanings are supported.</p>
 Methods that vary by row remain associated with the
 <code>ESTIMATE_METHOD</code> code column; the SDP dictionary has no
 general-purpose <code>method_iri</code> column.</p>
-</section><section><h2 class="section-heading" id="check-the-structure-and-keep-the-draft-honest">Check the structure and keep the draft honest<a class="anchor" aria-label="anchor" href="#check-the-structure-and-keep-the-draft-honest"></a></h2>
+</section><section><h2 class="section-heading" id="check-the-package-structure">Check the package structure<a class="anchor" aria-label="anchor" href="#check-the-package-structure"></a></h2>
 <hr class="half-width"><p>Run the prepared validation script for your lane, or inspect the
 facilitator’s validation result:</p>
 <div class="tabs">
@@ -641,17 +639,15 @@ and connect them to the relevant metadata field.</p>
 <div id="nav-tabpanel-2-Spreadsheet" class="tab-pane" aria-labelledby="nav-tab-2-Spreadsheet" role="tabpanel">
 <p>Use the <a href="field-reference.html#review-and-validation">metadata
 field reference</a> to inspect required fields and allowed values. Ask
-your collaborator to run the validator against your edited files. Manual
-inspection and an automated result are different records; say which
-occurred.</p>
+your collaborator to run the validator against your edited files. Record
+your inspection notes and the validator’s results so you can compare
+them.</p>
 </div>
 </div>
 </div>
-<p>Passing draft validation means that the tested structural rules pass.
-It does not approve a biological interpretation, establish a licence, or
-make the draft publication-ready. Checkpoint labels describe their
-actual stage: a technical reference remains a draft until its scientific
-review is recorded.</p>
+<p>Draft validation checks the package’s structure. Reviewing the source
+definitions, biological interpretation and licence requires separate
+evidence; carry those questions into the next chapters.</p>
 <div id="activity-trace-and-explain-one-field" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -689,8 +685,8 @@ packaging tools and AI.</li>
 <li>The same full Fraser Coho source is used in every chapter.</li>
 <li>Canonical metadata fields have defined roles; the working worksheets
 preserve richer reasoning.</li>
-<li>A structural validation result is evidence about structure, not
-scientific approval.</li>
+<li>Validation checks structure; source review checks whether the
+descriptions fit the data.</li>
 </ul></div>
 </div>
 </div>
@@ -754,7 +750,7 @@ scientific approval.</li>
   "url": "https://salmon-data-mobilization.github.io/salmon-data-standards-workshop/instructor/session-4.html",
   "identifier": "https://salmon-data-mobilization.github.io/salmon-data-standards-workshop/instructor/session-4.html",
   "dateCreated": "2025-01-22",
-  "dateModified": "2026-09-08",
+  "dateModified": "2026-09-22",
   "datePublished": "2026-09-22"
 }
 

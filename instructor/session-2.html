@@ -218,11 +218,11 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#start-with-people-and-the-source-table">Start with people and the source table</a></li>
-<li><a href="#what-a-simple-graph-adds">What a simple graph adds</a></li>
-<li><a href="#begin-with-row-meaning">Begin with row meaning</a></li>
-<li><a href="#expand-one-estimate-into-meaningful-parts">Expand one estimate into meaningful parts</a></li>
-<li><a href="#keep-a-route-to-later-formalization">Keep a route to later formalization</a></li>
+        <ul><li><a href="#start-with-three-columns">Start with three columns</a></li>
+<li><a href="#use-a-small-drawing-convention">Use a small drawing convention</a></li>
+<li><a href="#build-the-sketch-one-question-at-a-time">Build the sketch one question at a time</a></li>
+<li><a href="#worked-drawing-a-small-model-with-questions">Worked drawing: a small model with questions</a></li>
+<li><a href="#add-enough-context-to-explain-the-record">Add enough context to explain the record</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -377,7 +377,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Draw the Dataset Before Using Tools</h1>
-        <p>Last updated on 2026-09-08 |
+        <p>Last updated on 2026-09-22 |
 
         <a href="https://github.com/salmon-data-mobilization/salmon-data-standards-workshop/edit/main/episodes/session-2.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -398,11 +398,12 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>What is a row about, and which things must remain distinct?</li>
-<li>How can a simple diagram make hidden relationships and assumptions
-visible?</li>
-<li>What should we record now so the diagram could support formal
-ontology work later?</li>
+<ul><li>What does one spawner estimate tell us, and what context is still
+implicit?</li>
+<li>Which fish does it concern, and how were they observed and the
+estimate calculated?</li>
+<li>How can a drawing distinguish supported relationships from open
+questions?</li>
 </ul></div>
 </div>
 </div>
@@ -410,187 +411,213 @@ ontology work later?</li>
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Draw a node-and-edge model of the Fraser Coho table using
-plain-language relationships.</li>
-<li>Distinguish source records, population identifiers, waterbodies,
-species, years and estimates.</li>
-<li>Link diagram statements to source fields and mark unsupported
-relationships as questions.</li>
-<li>Save an editable diagram and text-based node/edge tables before
-using packaging or AI tools.</li>
+<ul><li>Sketch one <code>NATURAL_ADULT_SPAWNERS</code> example using
+<code>POP_ID</code> and <code>ESTIMATE_METHOD</code> as starting
+context.</li>
+<li>Identify the population, possible constraints, and separate
+questions about field observations and estimate calculation.</li>
+<li>Use named nodes and verb-labelled arrows to explain a working
+interpretation or ask a precise question.</li>
+<li>Save the drawing and its node/edge notes for the dictionary exercise
+in Chapter 3.</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<figure><img src="../fig/workflow-2.svg" alt="Seven workshop stages, with drawing the dataset highlighted." class="figure mx-auto d-block"><div class="figcaption">Seven workshop stages, with drawing the dataset
-highlighted.</div>
-</figure><section><h2 class="section-heading" id="start-with-people-and-the-source-table">Start with people and the source table<a class="anchor" aria-label="anchor" href="#start-with-people-and-the-source-table"></a></h2>
-<hr class="half-width"><p>Use the same <code>raw_data/nuseds-fraser-coho-2023-2024.csv</code>
-from Chapter 1. This chapter uses paper, a whiteboard or an ordinary
-drawing application, plus a spreadsheet or text editor. <strong>Do not
-load the dataset into metasalmon or an AI service.</strong> First make
-your own account of what the data is about.</p>
+<section><h2 class="section-heading" id="start-with-three-columns">Start with three columns<a class="anchor" aria-label="anchor" href="#start-with-three-columns"></a></h2>
+<hr class="half-width"><p>Open <code>raw_data/nuseds-fraser-coho-2023-2024.csv</code> from the
+<a href="index.html#download-and-open-the-workshop-kit">extracted
+workshop kit</a>. Use paper, a whiteboard or a drawing application,
+together with a spreadsheet or text editor.</p>
+<p>Begin with three columns from the first record:</p>
+<table class="table"><thead><tr><th>POP_ID</th>
+<th>NATURAL_ADULT_SPAWNERS</th>
+<th>ESTIMATE_METHOD</th>
+</tr></thead><tbody><tr><td>46200</td>
+<td>758</td>
+<td>Resistivity Counter</td>
+</tr></tbody></table><p>What would a biologist need to know before comparing <code>758</code>
+with another estimate? Start with the fish being described, which fish
+are included, and the work that produced the number.</p>
 <p>Work inside the extracted kit:</p>
 <pre class="text"><code>fraser-coho-workshop/
-  raw_data/       source CSV and supplied source information
-  worksheets/     your diagram tables, dictionary and review record
-  reference/      draft worked examples and scientific-review questions
-  scripts/        used after the human review in Chapter 3
-  output/         used for later generated packages</code></pre>
-<p>The worksheets are editable. Preserve the source files. If working on
-paper, photograph or scan the finished diagram and keep it in
-<code>worksheets/</code>; also complete the node/edge tables so the
-relationships can be read without an image.</p>
-</section><section><h2 class="section-heading" id="what-a-simple-graph-adds">What a simple graph adds<a class="anchor" aria-label="anchor" href="#what-a-simple-graph-adds"></a></h2>
-<hr class="half-width"><p>A <strong>node</strong> names something relevant to the dataset. An
-<strong>edge</strong> states how one node relates to another. Write a
-short verb phrase on each arrow, such as “identifies”, “is reported for”
-or “has result”. An unlabelled line leaves its meaning to the next
-reader.</p>
-<p>Give each node a local ID such as <code>N1</code>. These IDs connect
-the diagram to the worksheet. They are not official NuSEDS identifiers
-or newly minted ontology terms.</p>
-<table class="table"><colgroup><col width="50%"><col width="50%"></colgroup><thead><tr><th>Record</th>
-<th>What to write</th>
-</tr></thead><tbody><tr><td>Node</td>
-<td>Local ID, plain label, kind of thing, related source fields,
-evidence, status and any question</td>
-</tr><tr><td>Edge</td>
-<td>Start-node ID, relationship phrase, end-node ID, related source
-fields, evidence, status and any question</td>
-</tr></tbody></table><p>The supplied <a href="../files/fraser-coho-workshop/worksheets/dataset-nodes.csv">node
-worksheet</a> and <a href="../files/fraser-coho-workshop/worksheets/dataset-edges.csv">edge
-worksheet</a> provide these columns. Use “observed in file”, “working
-interpretation” or “question” to show the kind of support behind a
-statement.</p>
-</section><section><h2 class="section-heading" id="begin-with-row-meaning">Begin with row meaning<a class="anchor" aria-label="anchor" href="#begin-with-row-meaning"></a></h2>
-<hr class="half-width"><p><a href="glossary.html#row-grain">Row grain</a> describes what one
-record represents and the context needed to distinguish it from others.
-Start your drawing with <strong>a source record</strong>, then add the
-things that the record identifies or describes.</p>
-<p>The source has 173 rows but only 164 distinct
-<code>POP_ID</code>–<code>ANALYSIS_YR</code> pairs. For example,
-<code>POP_ID</code> <code>46170</code> has two records for
-<code>2023</code>: <code>NICOLA RIVER (DAM)</code> and
-<code>NICOLA RIVER (DOT)</code>. Both have a blank adult-spawner
-estimate and <code>NO SURVEY THIS YEAR</code> classification. Their
-shared population/year values are not evidence that one row should be
-removed.</p>
-<p>Draw the distinction between:</p>
-<ul><li>the <strong>identifier value</strong> in <code>POP_ID</code> and the
-source population it identifies;</li>
-<li>the <strong>waterbody name</strong> and the place it refers to;</li>
-<li>the <strong>species label</strong> and the population/organisms
-being described;</li>
-<li>the <strong>analysis-year value</strong> and the biological or
-reporting basis that gives that year meaning;</li>
-<li>an <strong>estimate result</strong> and the observation or
-estimation activity that produced it.</li>
-</ul><p>Do not assume every row represents exactly one field visit. The
-source’s method and survey-window fields may summarize work; the exact
-observation/estimation structure remains a question for source
-review.</p>
+  raw_data/       original CSV and source documentation
+  worksheets/     your drawing, node/edge notes and dictionary
+  reference/      worked examples and source questions</code></pre>
+<p>Save your work in <code>worksheets/</code> and keep the files in
+<code>raw_data/</code> unchanged. If drawing on paper, photograph or
+scan the finished sketch and save it with your notes.</p>
+</section><section><h2 class="section-heading" id="use-a-small-drawing-convention">Use a small drawing convention<a class="anchor" aria-label="anchor" href="#use-a-small-drawing-convention"></a></h2>
+<hr class="half-width"><p>A <strong>node</strong> names one thing or idea. An
+<strong>edge</strong> is an arrow expressing a relationship between two
+nodes. These are the basic elements described in <a href="https://yed.yworks.com/support/tutorial/create_graph.html" class="external-link">yEd’s
+graph tutorial</a>; paper and other drawing tools work equally well.</p>
+<p>Use these four conventions for our sketches:</p>
+<table class="table"><colgroup><col width="33%"><col width="33%"><col width="33%"></colgroup><thead><tr><th>Mark</th>
+<th>How to use it</th>
+<th>Example</th>
+</tr></thead><tbody><tr><td>A labelled box with a local ID</td>
+<td>Put one idea in each node. Add its role or source field.</td>
+<td><code>N2: source population — identified by POP_ID 46200</code></td>
+</tr><tr><td>An arrow with a verb phrase</td>
+<td>Read from start to end as a sentence.</td>
+<td><code>variable → concerns → source population</code></td>
+</tr><tr><td>A clearly labelled example value</td>
+<td>Distinguish the reported result from the variable it describes.</td>
+<td><code>N9: reported result — example 758</code></td>
+</tr><tr><td>A dashed arrow and a question mark</td>
+<td>Record a possible relationship that needs evidence.</td>
+<td><code>variable ⇢ has constraint? ⇢ natural origin?</code></td>
+</tr></tbody></table><p>Choose whatever layout, shapes or colours help you think. The labels,
+arrows and question marks carry the meaning. The dashed-line convention
+is our workshop shorthand for uncertainty; it is not an OWL
+assertion.</p>
+<p>Add a short evidence note beside a relationship or in the <a href="../files/fraser-coho-workshop/worksheets/dataset-nodes.csv">node</a>
+and <a href="../files/fraser-coho-workshop/worksheets/dataset-edges.csv">edge</a>
+worksheets. Use “observed in file”, “working interpretation” or
+“question”. Keep local drawing IDs such as <code>N2</code> separate from
+source identifiers such as <code>46200</code>. In yEd, the <a href="https://yed.yworks.com/support/manual/properties.html" class="external-link">description
+and URL properties</a> can hold supporting notes and source links.</p>
+</section><section><h2 class="section-heading" id="build-the-sketch-one-question-at-a-time">Build the sketch one question at a time<a class="anchor" aria-label="anchor" href="#build-the-sketch-one-question-at-a-time"></a></h2>
+<hr class="half-width"><p>Write <strong>adult-spawner estimate</strong> and the source field
+<code>NATURAL_ADULT_SPAWNERS</code> in a central box. Keep the
+three-cell record beside it as evidence. The central box describes the
+<a href="glossary.html#variable">variable</a>; <code>758</code> is one
+reported <a href="glossary.html#result">result</a>.</p>
+<p>Add three branches:</p>
+<ol style="list-style-type: decimal"><li>
+<strong>What is it about?</strong> Add a population node and a
+“concerns” arrow. <code>POP_ID = 46200</code> identifies the source
+population. Ask what population or group of fish that identifier covers.
+This is the <a href="glossary.html#entity">entity</a> question.</li>
+<li>
+<strong>Which fish are included?</strong> Add scope or <a href="glossary.html#constraint">constraint</a> notes. The current
+official dictionary describes mature salmon excluding jacks. What does
+“natural” add? Put uncertain interpretations on dashed arrows with a
+question mark.</li>
+<li>
+<strong>How was the value obtained?</strong> Add an
+observation/estimation activity and connect it to the source <a href="glossary.html#method">method</a> label. Ask separately how
+observations were collected and how they became an estimate. Connect the
+activity to the reported result <code>758</code>.</li>
+</ol><p>The characteristic of interest is <strong>abundance</strong>: how
+much of the population or group is represented. Add it as a <a href="glossary.html#property">property</a> node connected to the
+variable. Keep any unit claim beside the result; the starter dictionary
+supplies “Individual”, whose applicability still needs checking across
+estimate types.</p>
+<p>This introduces the decomposition approach used by <a href="https://www.rd-alliance.org/system/files/InteroperAble%20Descriptions%20of%20Observable%20Property%20Terminologies%20%28I-ADOPT%29%20WG%20-%20output%20and%20recommendations_0.pdf" class="external-link">I-ADOPT</a>:
+describe a variable through its property, entity and constraints. The
+Salmon Domain Ontology’s <a href="https://github.com/salmon-data-mobilization/salmon-domain-ontology/blob/main/ontology/views/README.md" class="external-link">metamodel
+view</a> connects that description to the activity, method and result.
+Chapter 3 develops the fuller decomposition in a dictionary.</p>
 <div class="section level3">
-<h3 id="where-does-a-conservation-unit-fit">Where does a Conservation Unit fit?<a class="anchor" aria-label="anchor" href="#where-does-a-conservation-unit-fit"></a></h3>
-<p>A Conservation Unit, a biological population, a species and a stream
-are not interchangeable levels of one simple hierarchy. The current <a href="https://open.canada.ca/data/en/dataset/c48669a3-045b-400d-b730-48aafe8c5ee6" class="external-link">NuSEDS
-catalog description</a> describes populations by freshwater location and
-run timing, referenced to stream mouths; those populations can be
-grouped by CU. This table has no CU column or population-to-CU
-membership table. You may add a dashed <strong>“CU relationship to
-investigate”</strong> node beside your graph, but do not assign a CU,
-draw an asserted membership edge, or label the relationship “is a”
-without supporting evidence.</p>
-<p>Use the same discipline for stream relationships. “This source record
-names this waterbody” is supported directly by the table. The current
-official dictionary describes the waterbody or portion that bounds the
-population on its source estimate document (SEN). “This population
-occurs only in this waterbody” is a stronger biological claim that the
-table alone does not establish.</p>
+<h3 id="field-observations-and-estimate-calculation-are-different-questions">Field observations and estimate calculation are different
+questions<a class="anchor" aria-label="anchor" href="#field-observations-and-estimate-calculation-are-different-questions"></a></h3>
+<p><code>ESTIMATE_METHOD</code> does not always answer both. Compare
+these source labels and definitions:</p>
+<table class="table"><colgroup><col width="33%"><col width="33%"><col width="33%"></colgroup><thead><tr><th>Source label</th>
+<th>What the supplied evidence tells us</th>
+<th>What to ask next</th>
+</tr></thead><tbody><tr><td><code>Resistivity Counter</code></td>
+<td>The label occurs in the table, but its official dictionary
+definition is <code>N/A</code>.</td>
+<td>What was detected in the field? How were detections classified or
+adjusted to produce <code>758</code>?</td>
+</tr><tr><td><code>Area Under the Curve</code></td>
+<td>The official definition describes integrating abundance over time
+and dividing by survey life.</td>
+<td>How were the observations collected, and which survey-life
+assumption and calculation were used?</td>
+</tr><tr><td><code>Combined Methods</code></td>
+<td>The definition describes a final estimate combining two or more
+estimate methods.</td>
+<td>Which field and analytical methods were combined, and how?</td>
+</tr></tbody></table><p>Use the kit’s <a href="../files/fraser-coho-workshop/raw_data/official-nuseds-dictionary.csv">official
+dictionary</a> and <a href="../files/fraser-coho-workshop/reference/code-definitions-working.csv">method
+evidence table</a>. The dictionary was retrieved on 8 September 2026 and
+may postdate the 2025 source workbook. An unanswered method question is
+a useful part of the drawing. One source record may summarize several
+visits or calculations.</p>
 </div>
-</section><section><h2 class="section-heading" id="expand-one-estimate-into-meaningful-parts">Expand one estimate into meaningful parts<a class="anchor" aria-label="anchor" href="#expand-one-estimate-into-meaningful-parts"></a></h2>
-<hr class="half-width"><p>The Salmon Domain Ontology’s <a href="https://github.com/salmon-data-mobilization/salmon-domain-ontology/blob/main/ontology/views/README.md" class="external-link">metamodel
-view</a> provides a plain-language guide. It is an <strong>optional,
-non-normative orientation model</strong>; the shared ontology’s core
-modules hold its reusable definitions.</p>
-<p>For <code>NATURAL_ADULT_SPAWNERS</code>, add nodes that help
-distinguish:</p>
-<table class="table"><colgroup><col width="50%"><col width="50%"></colgroup><thead><tr><th>Part</th>
-<th>Plain-language question</th>
-</tr></thead><tbody><tr><td><a href="glossary.html#entity">Entity</a></td>
-<td>What population or group does the estimate concern?</td>
-</tr><tr><td><a href="glossary.html#property">Property</a></td>
-<td>What characteristic is represented, such as abundance?</td>
-</tr><tr><td><a href="glossary.html#variable">Variable</a></td>
-<td>What complete data question is the column answering?</td>
-</tr><tr><td><a href="glossary.html#observation">Observation or estimation
-activity</a></td>
-<td>What work produced the result?</td>
-</tr><tr><td>
-<a href="glossary.html#result">Result</a> and <a href="glossary.html#unit">unit</a>
-</td>
-<td>What value was reported, and in what units?</td>
-</tr><tr><td><a href="glossary.html#method">Method</a></td>
-<td>How was the result determined?</td>
-</tr><tr><td>
-<a href="glossary.html#constraint">Constraint</a> and other
-context</td>
-<td>Which qualifiers change the meaning or scope?</td>
-</tr></tbody></table><p>Use <code>758</code> from the first source record as a labelled
-<strong>example value</strong>, not as the definition of the variable.
-Relate <code>ESTIMATE_METHOD</code> to the estimation activity. The
-current official dictionary defines adults as mature fish excluding
-jacks and the year as the year the estimate is for; surveys may extend
-into the next calendar year. It does not establish a natural-origin
-restriction. Keep that qualifier, applicability of current definitions
-to the source workbook, and any additional biological year-basis claim
-as review questions. The next chapter makes these distinctions explicit
-in the dictionary.</p>
-</section><section><h2 class="section-heading" id="keep-a-route-to-later-formalization">Keep a route to later formalization<a class="anchor" aria-label="anchor" href="#keep-a-route-to-later-formalization"></a></h2>
-<hr class="half-width"><p>We are making a conceptual model, not writing OWL. Clear labels,
-typed nodes, directed relationships, evidence and uncertainty will help
-an ontology specialist formalize the model later. A local diagram does
-not approve new terms or prove equivalence with an existing term.</p>
-<p>Keep broad kinds of things separate from examples. A box labelled
-“waterbody” and an example <code>BONAPARTE RIVER</code> should not
-silently become the same object. Record whether a node is a concept,
-source record, identifier, example value or unresolved placeholder. The
-typed distinction is more useful now than formal syntax.</p>
+</section><section><h2 class="section-heading" id="worked-drawing-a-small-model-with-questions">Worked drawing: a small model with questions<a class="anchor" aria-label="anchor" href="#worked-drawing-a-small-model-with-questions"></a></h2>
+<hr class="half-width"><p>This is a simplified view of the metamodel applied to the first
+record. Follow one arrow at a time; your own drawing can use different
+words or positions.</p>
+<figure><img src="../files/fraser-coho-workshop/reference/measurement-sketch-working.svg" alt="Worked measurement sketch: the variable concerns a source population, represents abundance and has adult scope. Natural origin is an open question. An estimation activity applies the variable, uses the source method label and generates a reported result." class="figure mx-auto d-block"><div class="figcaption">Worked measurement sketch: the variable concerns
+a source population, represents abundance and has adult scope. Natural
+origin is an open question. An estimation activity applies the variable,
+uses the source method label and generates a reported result.</div>
+</figure><p>The drawing reads as these statements:</p>
+<ul><li>The adult-spawner <strong>variable</strong> concerns a source
+<strong>population</strong>, represents <strong>abundance</strong>, and
+has a working adult scope excluding jacks.</li>
+<li>An observation or estimation <strong>activity</strong> applies that
+variable, uses a <strong>method</strong>, and generates a
+<strong>result</strong>. The source labels the method
+<code>Resistivity Counter</code> and reports <code>758</code>; the
+detailed procedure remains a question.</li>
+<li>The possible <strong>natural-origin constraint</strong> is dashed
+because its applicability to this source field is unresolved.</li>
+</ul><p>For a glimpse of later term reuse, compare that question with the
+Salmon Domain Ontology’s <a href="https://github.com/salmon-data-mobilization/salmon-domain-ontology/blob/d45f8f7cc857d92af8bbe54a7c89b2a4a14784b2/ontology/modules/07-controlled-vocabularies.ttl#L144-L151" class="external-link">Natural-origin
+definition</a>: fish born and reared in the wild. Its identifier is
+<code>https://w3id.org/smn/NaturalOrigin</code>. The starter dictionary
+uses natural-origin wording, but the official NuSEDS definition does not
+establish that restriction. A term can be well defined while its
+application to a dataset remains uncertain. Plain-language questions are
+enough for your sketch; choosing term identifiers comes in Chapter
+5.</p>
+<p>The <a href="../files/fraser-coho-workshop/reference/measurement-sketch-nodes.csv">worked
+node table</a>, <a href="../files/fraser-coho-workshop/reference/measurement-sketch-edges.csv">edge
+table</a>, and <a href="../files/fraser-coho-workshop/reference/measurement-sketch-working.mmd">editable
+diagram source</a> show the labels, evidence and questions behind this
+example.</p>
+</section><section><h2 class="section-heading" id="add-enough-context-to-explain-the-record">Add enough context to explain the record<a class="anchor" aria-label="anchor" href="#add-enough-context-to-explain-the-record"></a></h2>
+<hr class="half-width"><p>Return to the first record’s <code>WATERBODY</code>,
+<code>ANALYSIS_YR</code> and <code>SPECIES</code> values. Attach the
+named place, estimate year and species to the source-record context. A
+year or place that varies by row is different from a fixed constraint on
+the whole variable.</p>
+<p><a href="glossary.html#row-grain">Row grain</a> describes what a
+record represents. This source has <strong>173 rows and 164 distinct
+population–year pairs</strong>, so that pair does not uniquely identify
+a record. For example, population <code>46170</code> has two 2023
+records naming <code>NICOLA RIVER (DAM)</code> and
+<code>NICOLA RIVER (DOT)</code>. Keep the records separate and ask which
+additional context distinguishes them.</p>
+<p>The <a href="../files/fraser-coho-workshop/reference/dataset-graph-working.svg">expanded
+working graph</a> and its <a href="../files/fraser-coho-workshop/reference/dataset-graph-working.html">notes</a>
+provide further practice with location, time and source-record
+relationships. The table contains no Conservation Unit crosswalk; adding
+a population-to-CU relationship would need another source.</p>
 <div id="activity-draw-explain-and-revise" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
 <div id="activity-draw-explain-and-revise" class="callout-inner">
-<h3 class="callout-title">Activity: Draw, explain and revise</h3>
+<h3 class="callout-title">Activity: draw, explain and revise</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal"><li>
-<strong>Draw for 15 minutes.</strong> Include the six focus fields,
-one source record, one example value and the
-entity/property/variable/activity/result distinction. Label every
-relationship.</li>
+<strong>Draw for 15 minutes.</strong> Start with the three-cell
+example. Add the population, scope and method branches, a property, an
+activity and its result. Include at least one specific unanswered
+question.</li>
 <li>
-<strong>Explain for 10 minutes.</strong> Your partner traces one row
-through the drawing. Ask which arrows come directly from the file and
-which need a definition or other source.</li>
+<strong>Explain for 10 minutes.</strong> Your partner reads each
+arrow as a sentence. Compare the sketch with the worked drawing and
+identify which method or constraint claims need more evidence.</li>
 <li>
-<strong>Revise for 10 minutes.</strong> Correct ambiguous arrows,
-mark questions, and enter the nodes and edges in
-<code>worksheets/dataset-nodes.csv</code> and
-<code>worksheets/dataset-edges.csv</code>. Save the editable drawing or
-paper capture with them.</li>
-</ol><p>Use the <a href="../files/fraser-coho-workshop/reference/dataset-graph-working.svg">draft
-working diagram</a> only after making your first drawing. It is a
-comparison aid, not a scientifically approved answer key. Its <a href="../files/fraser-coho-workshop/reference/dataset-nodes-working.csv">node</a>
-and <a href="../files/fraser-coho-workshop/reference/dataset-edges-working.csv">edge</a>
-tables expose the underlying statements;
-<code>reference/dataset-graph-working.md</code> in the kit explains its
-limits.</p>
-<p><strong>Checkpoint:</strong> every arrow has a label; its endpoints
-exist in the node table; the source-record grain is stated; population,
-waterbody, species and CU are not collapsed; questions remain visible.
-Keep the diagram for the formal peer review in Chapter 3.</p>
+<strong>Revise for 10 minutes.</strong> Clarify the arrows, add the
+row’s place/year/species context, and enter your nodes and edges in the
+worksheets. Save the editable drawing or paper capture with them.</li>
+</ol><p><strong>Ready for Chapter 3:</strong> the three starting fields can
+be traced through your sketch; every arrow is labelled; example values
+and concepts are distinguishable; and open questions have a source or
+next step to investigate. Chapter 3 uses this drawing to describe the
+six focus fields and review the remaining eight fields before the
+package build.</p>
 </div>
 </div>
 </div>
@@ -601,16 +628,16 @@ Keep the diagram for the formal peer review in Chapter 3.</p>
 <span class="callout-header">Key Points</span>
 <div class="callout-inner">
 <div class="callout-content">
-<ul><li>Draw the dataset before packaging it or asking AI to interpret
-it.</li>
-<li>A useful graph makes relationships, row meaning, evidence and
-uncertainty explicit.</li>
-<li>Population, waterbody, species and Conservation Unit are distinct;
-this table does not supply a CU mapping.</li>
-<li>The observation activity, variable and result value need different
-nodes.</li>
-<li>An editable diagram plus text-based node/edge tables supports later
-reuse and formalization.</li>
+<ul><li>Start with one estimate and a few source fields, then add the
+relationships needed to interpret it.</li>
+<li>Entity, property and constraints describe the variable; the
+activity, method and result describe how a value was produced.</li>
+<li>A field-observation method and an estimate-calculation method answer
+different questions.</li>
+<li>Dashed arrows and precise questions make missing evidence
+visible.</li>
+<li>A saved sketch and node/edge notes give the dictionary exercise a
+clear starting point.</li>
 </ul></div>
 </div>
 </div>
@@ -674,7 +701,7 @@ reuse and formalization.</li>
   "url": "https://salmon-data-mobilization.github.io/salmon-data-standards-workshop/instructor/session-2.html",
   "identifier": "https://salmon-data-mobilization.github.io/salmon-data-standards-workshop/instructor/session-2.html",
   "dateCreated": "2025-01-22",
-  "dateModified": "2026-09-08",
+  "dateModified": "2026-09-22",
   "datePublished": "2026-09-22"
 }
 

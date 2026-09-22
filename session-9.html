@@ -377,7 +377,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Build and Steward a Small SKOS Vocabulary</h1>
-        <p>Last updated on 2026-09-09 |
+        <p>Last updated on 2026-09-22 |
 
         <a href="https://github.com/salmon-data-mobilization/salmon-data-standards-workshop/edit/main/episodes/session-9.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -421,9 +421,7 @@ separately from technical checks.</li>
 </div>
 </div>
 </div>
-<figure><img src="fig/workflow-9.svg" alt="Day 2 workflow, with building and stewarding a local vocabulary highlighted." class="figure mx-auto d-block"><div class="figcaption">Day 2 workflow, with building and stewarding a
-local vocabulary highlighted.</div>
-</figure><section><h2 class="section-heading" id="build-from-source-meanings-not-labels-alone">Build from source meanings, not labels alone<a class="anchor" aria-label="anchor" href="#build-from-source-meanings-not-labels-alone"></a></h2>
+<section><h2 class="section-heading" id="build-from-source-meanings-not-labels-alone">Build from source meanings, not labels alone<a class="anchor" aria-label="anchor" href="#build-from-source-meanings-not-labels-alone"></a></h2>
 <hr class="half-width"><p>Chapter 8 selected a local/profile teaching draft for a small set of
 estimate-method categories. Continue with your human dictionary and the
 same 173-row, 14-column source. The four values below all occur in
@@ -509,9 +507,8 @@ unresolved.</p>
 <p><code>Combined Methods</code> is not automatically a broader concept
 than every method that might be combined. The source also does not
 establish that <code>Fence</code> is a synonym of
-<code>Fixed Site Census</code>. Leave these relationships absent unless
-supported. The worked vocabulary therefore has no invented hierarchy or
-alternative labels.</p>
+<code>Fixed Site Census</code>. The worked vocabulary leaves these
+relationships open for investigation.</p>
 </section><section><h2 class="section-heading" id="read-and-write-a-small-skos-file">Read and write a small SKOS file<a class="anchor" aria-label="anchor" href="#read-and-write-a-small-skos-file"></a></h2>
 <hr class="half-width"><p>The <a href="https://www.w3.org/TR/2009/NOTE-skos-primer-20090818/" class="external-link">W3C SKOS
 Primer</a> describes concepts with identifiers, labels, documentation
@@ -543,16 +540,16 @@ becomes <code>skos:definition</code>; scope belongs in
 <code>dcterms:source</code>. Omit a <code>skos:definition</code>
 statement for the unresolved counter method rather than copying a guess
 into it.</p>
-<p>All new subject IRIs are in
-<code>https://example.org/fraser-coho-workshop/terms/</code>. This is a
-teaching namespace, not an official NuSEDS or SDO vocabulary. The source
-links identify evidence; they do not let us add labels or redefine terms
-in another organization’s namespace. The complete source and convention
-pins are in <a href="files/fraser-coho-workshop/semantic-lab/vocabulary/provenance.json">provenance.json</a>.</p>
+<p>All new subject IRIs are in the teaching namespace
+<code>https://example.org/fraser-coho-workshop/terms/</code>. Keeping
+local identifiers separate from existing shared identifiers makes it
+clear which resource defines each concept. The complete source and
+convention pins are in <a href="files/fraser-coho-workshop/semantic-lab/vocabulary/provenance.json">provenance.json</a>.</p>
 </section><section><h2 class="section-heading" id="check-the-artifact-and-its-limits">Check the artifact and its limits<a class="anchor" aria-label="anchor" href="#check-the-artifact-and-its-limits"></a></h2>
 <hr class="half-width"><p>A syntax check determines whether Turtle can be read. A vocabulary
 check examines selected expectations such as concept types, labels and
-scheme membership. Neither supplies scientific approval.</p>
+scheme membership. A domain reviewer assesses whether the definitions
+accurately describe the methods.</p>
 <p>After preparing the Day 2 Python environment in Setup, run the same
 small utility from any software lane. Start in the extracted
 workshop-kit root:</p>
@@ -579,19 +576,19 @@ identical literal used as both preferred and alternative label.</li>
 explicitly records its missing operational definition.</li>
 <li>Every concept retains evidence, scope and a pending-review note; no
 concept IRI is also declared an OWL class.</li>
-<li>No hierarchy or cross-vocabulary equivalence was invented to make
-the file look complete.</li>
+<li>Each proposed hierarchy or cross-vocabulary relationship has
+supporting evidence.</li>
 </ul><p>The label and scheme distinctions follow the <a href="https://www.w3.org/TR/2009/REC-skos-reference-20090818/" class="external-link">SKOS
 Reference</a>. Our exact four-concept inventory is a workshop check.
 SKOS scheme membership alone does not impose a closed list of permitted
 values on the source column; the dataset’s schema and code inventory do
 that job.</p>
 </section><section><h2 class="section-heading" id="steward-the-meaning-as-well-as-the-file">Steward the meaning as well as the file<a class="anchor" aria-label="anchor" href="#steward-the-meaning-as-well-as-the-file"></a></h2>
-<hr class="half-width"><p>Complete <code>semantic-lab/worksheets/stewardship.md</code>. A
-production resource needs decisions about its owner, users, identifier
-policy, evidence review, versioning, corrections and release. Today you
-prepare those decisions; filling a form does not appoint an agency
-steward.</p>
+<hr class="half-width"><p>Complete <code>semantic-lab/worksheets/stewardship.md</code>. Propose
+who would maintain the vocabulary, who would use it, and how
+identifiers, evidence review, versioning, corrections and release would
+work. Record which responsibilities still need agreement with the
+proposed owner.</p>
 <p>In the draft, distinguish a wording correction from a changed
 meaning. Record the former in a change log; a substantive change may
 need a new concept and an explicit replacement decision so old data can
@@ -615,8 +612,8 @@ stewardship record</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal"><li>
 <strong>Write for 15 minutes.</strong> Complete all four concept
-records against the source. Keep one definition explicitly unresolved.
-Do not add invented synonyms, parent concepts or approved stewards.</li>
+records against the source. Keep the missing definition and unsupported
+relationships as open questions.</li>
 <li>
 <strong>Build for 15 minutes.</strong> Create your own Turtle file
 from those records. Work in pairs if a text editor is unfamiliar. Trace
@@ -644,16 +641,15 @@ or decisions blank where no agreement exists.</li>
 <div class="accordion-body">
 <p>Compare <a href="files/fraser-coho-workshop/semantic-lab/vocabulary/concepts-working.csv">concepts-working.csv</a>
 and <a href="files/fraser-coho-workshop/semantic-lab/vocabulary/estimate-methods.ttl">estimate-methods.ttl</a>
-with your output. They are source-grounded teaching drafts with no
-scientific approval. The stewardship working example in
-<code>semantic-lab/vocabulary/stewardship-working.md</code> deliberately
-leaves reviewer names and agency decisions unset.</p>
+with your output. Trace their definitions and questions to the cited
+evidence. Use
+<code>semantic-lab/vocabulary/stewardship-working.md</code> to compare
+the proposed responsibilities and decisions still needed for
+release.</p>
 <p>Success means another person can recover all four exact source
 bindings, distinguish three supported paraphrases from one definition
-gap, and identify what must happen before adoption. A parsed file with
-an invented procedure definition fails that test. A draft with the gap
-clearly documented can pass the classroom exercise while remaining
-unsuitable for an approved vocabulary release.</p>
+gap, and identify what must happen before adoption. Documenting the gap
+gives a future reviewer a concrete question to resolve.</p>
 </div>
 </div>
 </div>
@@ -738,7 +734,7 @@ distinct outcomes.</li>
   "url": "https://salmon-data-mobilization.github.io/salmon-data-standards-workshop/session-9.html",
   "identifier": "https://salmon-data-mobilization.github.io/salmon-data-standards-workshop/session-9.html",
   "dateCreated": "2025-01-22",
-  "dateModified": "2026-09-09",
+  "dateModified": "2026-09-22",
   "datePublished": "2026-09-22"
 }
 

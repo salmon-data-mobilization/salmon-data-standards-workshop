@@ -1,0 +1,20 @@
+flowchart TB
+  subgraph draw["1. Draw the source relationships"]
+    record["First source record"]
+    population["Source population identified by POP_ID 46200"]
+    waterbody["Waterbody: BONAPARTE RIVER"]
+    result["Reported estimate: 758"]
+    record -->|refers to| population
+    record -->|names| waterbody
+    record -->|reports| result
+  end
+  dictionary["2. Dictionary and decomposition: entity = source population; property = abundance; natural scope unresolved"]
+  review["3. Peer-review the graph and dictionary"]
+  package["4. Build SDP; review terms and AI suggestions; compare smn:Abundance"]
+  catalog["Day 1: validate, export metadata, preview KNB test publication"]
+  terms["Day 2: draft a local vocabulary or ontology, or prepare a shared-term request"]
+  release["Steward review and term publication"]
+  draw --> dictionary --> review --> package
+  package --> catalog
+  package --> terms --> release
+  release -.->|link released IRIs in later metadata versions| package

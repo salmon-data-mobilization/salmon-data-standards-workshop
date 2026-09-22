@@ -443,7 +443,7 @@
         
 <section id="aio-session-1"><p>Content from <a href="session-1.html">See the Whole Journey: From NuSEDS to Reusable Data</a></p>
 <hr>
-<p>Last updated on 2026-09-09 |
+<p>Last updated on 2026-09-22 |
 
         <a href="https://github.com/salmon-data-mobilization/salmon-data-standards-workshop/edit/main/episodes/session-1.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 55 minutes</p>
@@ -486,20 +486,15 @@ metasalmon and AI.</li>
 </div>
 </div>
 </div>
-<figure><img src="../fig/workflow-1.svg" alt="Two-part workshop workflow: Day 1 through publication and Day 2 through vocabulary, ontology, bridge and contribution work; Chapter 1 highlighted." class="figure mx-auto d-block"><div class="figcaption">Two-part workshop workflow: Day 1 through
-publication and Day 2 through vocabulary, ontology, bridge and
-contribution work; Chapter 1 highlighted.</div>
-</figure><section><h2 class="section-heading" id="two-days-three-connected-outcomes">Two days, three connected outcomes<a class="anchor" aria-label="anchor" href="#two-days-three-connected-outcomes"></a>
+<section><h2 class="section-heading" id="two-days-three-connected-outcomes">Two days, three connected outcomes<a class="anchor" aria-label="anchor" href="#two-days-three-connected-outcomes"></a>
 </h2>
 <hr class="half-width">
 <p>This workshop supports <strong>reusable data publication</strong>,
 <strong>contributions to shared terminology</strong>, and <strong>local
 vocabulary or ontology stewardship connected to shared
-meanings</strong>. Day 1 is a complete six-hour beginner route through
+meanings</strong>. Day 1 is a six-hour beginner route through
 publication; Day 2 adds six hours of semantic authoring and contribution
-work. This chapter also stands alone as a 55-minute overview. Its tour
-includes the purpose and artifacts of both days without requiring code
-or formal syntax.</p>
+work.</p>
 <p>The same graph and dictionary support all three outcomes. On Day 1
 they make source meanings reviewable before software. On Day 2 we use
 them to decide which terms already exist, create small draft resources
@@ -507,30 +502,25 @@ where useful, and connect local meanings to the Salmon Domain Ontology
 without erasing their differences. A catalog record helps people find
 the dataset; explicit concepts and relationships help them compare and
 interpret its meanings.</p>
-<p>The <a href="advanced.html">Day 2 guide</a> shows the next artifacts:
-a <a href="glossary.html#skos">SKOS</a> controlled vocabulary, a small
-<a href="glossary.html#owl">OWL</a> model, a <a href="glossary.html#bridge">bridge</a>, and a <a href="glossary.html#term-request">term-request</a> or clarification
-draft. These classroom drafts do not create official shared terms.
-Briefly preview the files in <code>semantic-lab/</code> and return to
-the source; detailed authoring starts in Chapter 8.</p>
-</section><section><h2 class="section-heading" id="start-with-the-destination">Start with the destination<a class="anchor" aria-label="anchor" href="#start-with-the-destination"></a>
+<p>The <a href="advanced.html">Day 2 guide</a> introduces a <a href="glossary.html#skos">SKOS</a> controlled vocabulary, a small <a href="glossary.html#owl">OWL</a> model, a <a href="glossary.html#bridge">bridge</a>, and a <a href="glossary.html#term-request">term-request</a> or clarification
+draft. These examples are in the <code>semantic-lab/</code> folder
+inside the extracted workshop ZIP. The <a href="index.html#download-and-open-the-workshop-kit">setup
+instructions</a> explain how to download and open it. We will work with
+those files from Chapter 8 onward.</p>
+</section><section><h2 class="section-heading" id="framing-the-challenge">Framing the challenge<a class="anchor" aria-label="anchor" href="#framing-the-challenge"></a>
 </h2>
 <hr class="half-width">
-<p>Imagine finding a salmon <a href="glossary.html#dataset">dataset</a>
-produced by another team. Can you tell what was estimated, which
-population and place it concerns, how the estimate was made, and whether
-it is suitable for your question? A download button alone cannot answer
-those questions.</p>
-<p>The facilitator begins with the <a href="reference.html#teaching-record">Fraser Coho teaching record</a>,
-then opens the source CSV beside it. The reference page records the
-endpoint’s actual status and evidence. A draft or test record is a
-demonstration; it is not evidence that this workshop has a verified
-public deposit. If a verified endpoint is still pending, use the
-supplied local publication preview and say so explicitly.</p>
-<p>This is a <strong>tour of the result</strong>, not a software
-exercise. Participants do not send data to metasalmon or AI in this
-chapter. We will first create our own diagram and dictionary, then
-review them with another person in Chapters 2–3.</p>
+<p>Imagine you are comparing coho spawner estimates across rivers or
+years. A colleague sends you a <a href="glossary.html#dataset">dataset</a> produced by another team.
+Before combining its values with your own, you need to know which
+populations and life stages were included, how the estimates were
+produced, and what missing values mean. Differences in these details can
+change the biological questions the data can answer.</p>
+<p>Useful descriptions make that context available alongside the data.
+The <a href="reference.html#teaching-record">worked publication
+example</a> brings a table, its definitions, methods, and source
+information together. Use the questions below to assess how well these
+descriptions support reuse.</p>
 <div class="section level3">
 <h3 id="what-to-look-for-in-the-record">What to look for in the record<a class="anchor" aria-label="anchor" href="#what-to-look-for-in-the-record"></a>
 </h3>
@@ -563,21 +553,21 @@ Everyone follows the <strong>173-row, 14-column NuSEDS Fraser Coho
 <code>raw_data/nuseds-fraser-coho-2023-2024.csv</code>. Open a copy for
 viewing in a spreadsheet, or follow the projected table. Keep the source
 file unchanged.</p>
-<p>The slice comes from Fisheries and Oceans Canada’s Fraser and BC
-Interior NuSEDS workbook. The kit preserves its source information,
-derivation and the current <a href="../files/fraser-coho-workshop/raw_data/official-nuseds-dictionary.csv">official
+<p>The example is selected from Fisheries and Oceans Canada’s Fraser and
+BC Interior NuSEDS workbook, available through the <a href="https://open.canada.ca/data/en/dataset/c48669a3-045b-400d-b730-48aafe8c5ee6" class="external-link">Government
+of Canada’s Open Government Portal</a>. The kit preserves its source
+information, derivation and the current <a href="../files/fraser-coho-workshop/raw_data/official-nuseds-dictionary.csv">official
 DFO dictionary</a>. That dictionary was retrieved on 8 September 2026
-and may postdate the workbook used for this slice. It is a selected
-two-year teaching dataset, not the full NuSEDS database or a complete
-history of Fraser Coho.</p>
+and may postdate the workbook used for this slice. The teaching dataset
+covers Coho for 2023–2024; the full publication contains records beyond
+this selection.</p>
 <p>The table contains 87 distinct <code>POP_ID</code> values and
 <strong>164 distinct population–analysis-year pairs across 173
-rows</strong>. Some pairs occur more than once. A row is therefore a
-source record associated with a population, waterbody and analysis year;
-<strong>population plus year is not a verified unique key</strong>.
-Later we will examine what additional context distinguishes the records.
-Do not delete repeated pairs or sum their estimates during the
-workshop.</p>
+rows</strong>. Some pairs occur more than once. A row is a source record
+associated with a population, waterbody and analysis year;
+<strong>population plus year does not uniquely identify a row</strong>.
+Keep these records separate while investigating what additional context
+distinguishes them in Chapter 2.</p>
 <p>Six columns let us practice the main kinds of description:</p>
 <table class="table">
 <colgroup>
@@ -630,24 +620,72 @@ year?</td>
 </tr>
 </tbody>
 </table>
-<p>We will write descriptions for these six fields ourselves. The other
-eight fields remain in the table and must also be read and reviewed. A
-focused exercise is not permission to discard context.</p>
+<p>We will draft descriptions for these six fields and review the
+supplied descriptions for the other eight.</p>
 </section><section><h2 class="section-heading" id="values-and-descriptions-do-different-jobs">Values and descriptions do different jobs<a class="anchor" aria-label="anchor" href="#values-and-descriptions-do-different-jobs"></a>
 </h2>
 <hr class="half-width">
-<p>The first record associates population ID <code>46200</code>,
-<code>BONAPARTE RIVER</code>, analysis year <code>2023</code>,
-<code>Coho</code>, estimate <code>758</code> and method
-<code>Resistivity Counter</code>. Those are <strong>data
-values</strong>. Explaining what the identifier, estimate and method
-mean is <a href="glossary.html#metadata">metadata</a>: information that
-helps someone interpret and reuse those values.</p>
+<p>Here are the first three records from the source CSV, showing the six
+focus columns. The empty estimate in the second row is also empty in the
+source.</p>
+<table style="width:100%;" class="table">
+<colgroup>
+<col width="16%">
+<col width="16%">
+<col width="16%">
+<col width="16%">
+<col width="16%">
+<col width="16%">
+</colgroup>
+<thead><tr>
+<th>POP_<wbr>ID</wbr>
+</th>
+<th>WATERBODY</th>
+<th>ANALYSIS_<wbr>YR</wbr>
+</th>
+<th>SPECIES</th>
+<th>NATURAL_<wbr>ADULT_<wbr>SPAWNERS</wbr></wbr>
+</th>
+<th>ESTIMATE_<wbr>METHOD</wbr>
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>46200</td>
+<td>BONAPARTE RIVER</td>
+<td>2023</td>
+<td>Coho</td>
+<td>758</td>
+<td>Resistivity Counter</td>
+</tr>
+<tr>
+<td>44965</td>
+<td>CLAPPERTON CREEK</td>
+<td>2023</td>
+<td>Coho</td>
+<td></td>
+<td>Not Applicable</td>
+</tr>
+<tr>
+<td>46190</td>
+<td>COLDWATER RIVER</td>
+<td>2023</td>
+<td>Coho</td>
+<td>7943</td>
+<td>Combined Methods</td>
+</tr>
+</tbody>
+</table>
+<p>The identifiers, years, estimates and method labels are <strong>data
+values</strong>. Explaining what they mean is <a href="glossary.html#metadata">metadata</a>: information that helps
+someone interpret and reuse those values. For example, comparing the two
+numerical estimates requires understanding which fish were included and
+how each method produced its result.</p>
 <p>An identifier is a label used to refer to something. It is not the
 thing itself. Likewise, a waterbody, a biological population, a species
 category and a Conservation Unit describe different things. The table
-has no Conservation Unit field. We can discuss that wider context, but
-we cannot invent a CU assignment from these rows.</p>
+has no Conservation Unit field, so comparisons by CU would need a
+separate source linking populations to those units.</p>
 <p>One compound name is enough to motivate the next chapters:
 <code>NATURAL_ADULT_SPAWNERS</code>. A <a href="glossary.html#variable">variable</a> describes the question being
 represented, while its <a href="glossary.html#property">property</a> is
@@ -656,72 +694,67 @@ the characteristic of interest, such as abundance, and its <a href="glossary.htm
 may add different kinds of meaning. We will separate them and record
 uncertainty instead of treating the column name as a complete
 definition.</p>
-</section><section><h2 class="section-heading" id="the-journey-we-will-follow">The journey we will follow<a class="anchor" aria-label="anchor" href="#the-journey-we-will-follow"></a>
+</section><section><h2 class="section-heading" id="follow-one-estimate-through-the-workflow">Follow one estimate through the workflow<a class="anchor" aria-label="anchor" href="#follow-one-estimate-through-the-workflow"></a>
 </h2>
 <hr class="half-width">
-<table class="table">
-<colgroup>
-<col width="33%">
-<col width="33%">
-<col width="33%">
-</colgroup>
-<thead><tr>
-<th>Chapter</th>
-<th>Problem it addresses</th>
-<th>What you leave with</th>
-</tr></thead>
-<tbody>
-<tr>
-<td>1. See the whole journey</td>
-<td>A useful final result is hard to picture</td>
-<td>A shared purpose and one reuse question</td>
-</tr>
-<tr>
-<td>2. Draw the dataset</td>
-<td>Relationships and row meaning are implicit</td>
-<td>A human-created node-and-edge diagram with evidence and
-questions</td>
-</tr>
-<tr>
-<td>3. Describe and decompose</td>
-<td>Short column names hide assumptions</td>
-<td>A dictionary, variable decomposition and peer-review record</td>
-</tr>
-<tr>
-<td>4. Build the package</td>
-<td>Meaning and data can become separated</td>
-<td>An SDP built from the same table and reviewed human
-descriptions</td>
-</tr>
-<tr>
-<td>5. Compare AI-assisted interpretation</td>
-<td>Automated suggestions can seem more certain than their evidence</td>
-<td>A comparison with the human baseline and documented decisions</td>
-</tr>
-<tr>
-<td>6. Review shared meanings</td>
-<td>Similar labels may represent different concepts</td>
-<td>Reviewed mappings, code meanings and unresolved term questions</td>
-</tr>
-<tr>
-<td>7. Validate and share</td>
-<td>A valid file alone is not a reusable publication</td>
-<td>A checked package and an honest publication handoff</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Diagram → dictionary and decomposition → human peer review →
-metasalmon → AI-assisted comparison.</strong> This order is part of the
-method. Your first explanation of the dataset must exist before tools
-propose one for you.</p>
+<p>Take the first row’s estimate of <code>758</code>. Here is a preview
+of how we can turn that value and its context into descriptions other
+people can use, while keeping the source’s unanswered questions
+visible.</p>
+<figure><img src="../fig/record-to-reuse.svg" alt="Worked preview: draw the first record’s population, waterbody and result relationships; write and decompose its dictionary; peer review; build the package and review terms and AI suggestions. Day 1 previews catalog publication. Day 2 develops vocabulary, ontology and term-request drafts; released term identifiers can later link back to the metadata." class="figure mx-auto d-block"><div class="figcaption">Worked preview: draw the first record’s
+population, waterbody and result relationships; write and decompose its
+dictionary; peer review; build the package and review terms and AI
+suggestions. Day 1 previews catalog publication. Day 2 develops
+vocabulary, ontology and term-request drafts; released term identifiers
+can later link back to the metadata.</div>
+</figure><p>The same example in words:</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>Draw what the row describes.</strong> The record refers to
+the population identified by <code>46200</code>, names
+<code>BONAPARTE RIVER</code>, and reports <code>758</code>. The
+estimation activity and its result are distinct; the method describes
+how the result was produced. <a href="session-2.html">Chapter
+2</a>.</li>
+<li>
+<strong>Write and decompose the dictionary.</strong> A working
+definition is “reported adult-spawner estimate, excluding jacks; the
+scope of ‘natural’ needs confirmation.” Separate the
+<strong>entity</strong> (source population), <strong>property</strong>
+(abundance), <strong>result</strong> (<code>758</code>), and
+<strong>unit</strong> (individuals in the starter dictionary, to
+confirm). Keep year, place and method as context. Peer-review this
+explanation, then build the package. <a href="session-3.html">Chapters
+3–4</a>.</li>
+<li>
+<strong>Reuse terms whose definitions fit.</strong> Compare the
+property with the Salmon Domain Ontology’s existing <a href="https://github.com/salmon-data-mobilization/salmon-domain-ontology/blob/d45f8f7cc857d92af8bbe54a7c89b2a4a14784b2/ontology/modules/02-observation-measurement.ttl" class="external-link">Abundance
+definition</a>, and record a supported link to its IRI. Evaluate AI
+suggestions against the same human explanation and source evidence. <a href="session-5.html">Chapters 5–6</a>.</li>
+<li>
+<strong>Make the data discoverable.</strong> Validate the package,
+export its metadata and follow the KNB test publication preview. A
+catalog record lets someone find the data and follow its descriptions
+and term links. <a href="session-7.html">Chapter 7</a>.</li>
+<li>
+<strong>Develop meanings that are missing.</strong> Clarify unclear
+source definitions, then draft a local vocabulary or ontology, a <a href="glossary.html#bridge">bridge</a>, or a request for a reusable term
+in the Salmon Domain Ontology. After steward review and term
+publication, link the released identifiers in a later version of the
+dataset’s metadata. <a href="session-8.html">Chapters 8–12</a>.</li>
+</ol>
+<p>There are two connected outputs: <strong>a catalog record for finding
+and assessing the dataset</strong>, and <strong>maintained terms for
+describing meanings across datasets</strong>. Publishing the data and
+publishing a vocabulary or ontology each has its own review and release
+process.</p>
 <div class="section level3">
 <h3 id="a-few-names-you-will-hear-later">A few names you will hear later<a class="anchor" aria-label="anchor" href="#a-few-names-you-will-hear-later"></a>
 </h3>
 <p>A <strong>Salmon Data Package (SDP)</strong> keeps the table, <a href="glossary.html#data-dictionary">data dictionary</a>, code
 definitions, dataset description and other context together.
 <code>metasalmon</code> in R and <code>metasalmonpy</code> in Python
-help create and inspect that package. We introduce their names here;
-detailed commands belong in Chapter 4.</p>
+help create and inspect that package. We will use them in Chapter 4.</p>
 <p>The workshop <a href="glossary.html">Glossary</a> is a reading aid:
 it explains words used in these lessons. A <a href="glossary.html#controlled-vocabulary">controlled vocabulary</a> is
 a maintained set of terms and definitions used to describe data
@@ -759,8 +792,8 @@ help.</li>
 <li>The workshop stage where you expect to resolve it.</li>
 </ul>
 <p>Share one example. Keep unanswered questions for the diagram and
-dictionary exercises. An unresolved question is a useful result; an
-invented answer is not.</p>
+dictionary exercises, together with the additional information you would
+need to answer them.</p>
 </div>
 </div>
 </div>
@@ -780,8 +813,8 @@ relationships, sources and access conditions.</li>
 not uniquely identify every row.</li>
 <li>We draw and describe the dataset, then peer review our account,
 before using metasalmon or AI.</li>
-<li>A catalog preview, a draft record and a verified public deposit have
-different statuses.</li>
+<li>A catalog record helps people find data; its descriptions help them
+assess whether those data suit their question.</li>
 </ul>
 </div>
 </div>
@@ -789,7 +822,7 @@ different statuses.</li>
 </div>
 </section></section><section id="aio-session-2"><p>Content from <a href="session-2.html">Draw the Dataset Before Using Tools</a></p>
 <hr>
-<p>Last updated on 2026-09-08 |
+<p>Last updated on 2026-09-22 |
 
         <a href="https://github.com/salmon-data-mobilization/salmon-data-standards-workshop/edit/main/episodes/session-2.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 55 minutes</p>
@@ -804,11 +837,12 @@ different statuses.</li>
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>What is a row about, and which things must remain distinct?</li>
-<li>How can a simple diagram make hidden relationships and assumptions
-visible?</li>
-<li>What should we record now so the diagram could support formal
-ontology work later?</li>
+<li>What does one spawner estimate tell us, and what context is still
+implicit?</li>
+<li>Which fish does it concern, and how were they observed and the
+estimate calculated?</li>
+<li>How can a drawing distinguish supported relationships from open
+questions?</li>
 </ul>
 </div>
 </div>
@@ -818,241 +852,273 @@ ontology work later?</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Draw a node-and-edge model of the Fraser Coho table using
-plain-language relationships.</li>
-<li>Distinguish source records, population identifiers, waterbodies,
-species, years and estimates.</li>
-<li>Link diagram statements to source fields and mark unsupported
-relationships as questions.</li>
-<li>Save an editable diagram and text-based node/edge tables before
-using packaging or AI tools.</li>
+<li>Sketch one <code>NATURAL_ADULT_SPAWNERS</code> example using
+<code>POP_ID</code> and <code>ESTIMATE_METHOD</code> as starting
+context.</li>
+<li>Identify the population, possible constraints, and separate
+questions about field observations and estimate calculation.</li>
+<li>Use named nodes and verb-labelled arrows to explain a working
+interpretation or ask a precise question.</li>
+<li>Save the drawing and its node/edge notes for the dictionary exercise
+in Chapter 3.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<figure><img src="../fig/workflow-2.svg" alt="Seven workshop stages, with drawing the dataset highlighted." class="figure mx-auto d-block"><div class="figcaption">Seven workshop stages, with drawing the dataset
-highlighted.</div>
-</figure><section><h2 class="section-heading" id="start-with-people-and-the-source-table">Start with people and the source table<a class="anchor" aria-label="anchor" href="#start-with-people-and-the-source-table"></a>
+<section><h2 class="section-heading" id="start-with-three-columns">Start with three columns<a class="anchor" aria-label="anchor" href="#start-with-three-columns"></a>
 </h2>
 <hr class="half-width">
-<p>Use the same <code>raw_data/nuseds-fraser-coho-2023-2024.csv</code>
-from Chapter 1. This chapter uses paper, a whiteboard or an ordinary
-drawing application, plus a spreadsheet or text editor. <strong>Do not
-load the dataset into metasalmon or an AI service.</strong> First make
-your own account of what the data is about.</p>
+<p>Open <code>raw_data/nuseds-fraser-coho-2023-2024.csv</code> from the
+<a href="index.html#download-and-open-the-workshop-kit">extracted
+workshop kit</a>. Use paper, a whiteboard or a drawing application,
+together with a spreadsheet or text editor.</p>
+<p>Begin with three columns from the first record:</p>
+<table class="table">
+<thead><tr>
+<th>POP_ID</th>
+<th>NATURAL_ADULT_SPAWNERS</th>
+<th>ESTIMATE_METHOD</th>
+</tr></thead>
+<tbody><tr>
+<td>46200</td>
+<td>758</td>
+<td>Resistivity Counter</td>
+</tr></tbody>
+</table>
+<p>What would a biologist need to know before comparing <code>758</code>
+with another estimate? Start with the fish being described, which fish
+are included, and the work that produced the number.</p>
 <p>Work inside the extracted kit:</p>
 <pre class="text"><code>fraser-coho-workshop/
-  raw_data/       source CSV and supplied source information
-  worksheets/     your diagram tables, dictionary and review record
-  reference/      draft worked examples and scientific-review questions
-  scripts/        used after the human review in Chapter 3
-  output/         used for later generated packages</code></pre>
-<p>The worksheets are editable. Preserve the source files. If working on
-paper, photograph or scan the finished diagram and keep it in
-<code>worksheets/</code>; also complete the node/edge tables so the
-relationships can be read without an image.</p>
-</section><section><h2 class="section-heading" id="what-a-simple-graph-adds">What a simple graph adds<a class="anchor" aria-label="anchor" href="#what-a-simple-graph-adds"></a>
+  raw_data/       original CSV and source documentation
+  worksheets/     your drawing, node/edge notes and dictionary
+  reference/      worked examples and source questions</code></pre>
+<p>Save your work in <code>worksheets/</code> and keep the files in
+<code>raw_data/</code> unchanged. If drawing on paper, photograph or
+scan the finished sketch and save it with your notes.</p>
+</section><section><h2 class="section-heading" id="use-a-small-drawing-convention">Use a small drawing convention<a class="anchor" aria-label="anchor" href="#use-a-small-drawing-convention"></a>
 </h2>
 <hr class="half-width">
-<p>A <strong>node</strong> names something relevant to the dataset. An
-<strong>edge</strong> states how one node relates to another. Write a
-short verb phrase on each arrow, such as “identifies”, “is reported for”
-or “has result”. An unlabelled line leaves its meaning to the next
-reader.</p>
-<p>Give each node a local ID such as <code>N1</code>. These IDs connect
-the diagram to the worksheet. They are not official NuSEDS identifiers
-or newly minted ontology terms.</p>
+<p>A <strong>node</strong> names one thing or idea. An
+<strong>edge</strong> is an arrow expressing a relationship between two
+nodes. These are the basic elements described in <a href="https://yed.yworks.com/support/tutorial/create_graph.html" class="external-link">yEd’s
+graph tutorial</a>; paper and other drawing tools work equally well.</p>
+<p>Use these four conventions for our sketches:</p>
 <table class="table">
 <colgroup>
-<col width="50%">
-<col width="50%">
+<col width="33%">
+<col width="33%">
+<col width="33%">
 </colgroup>
 <thead><tr>
-<th>Record</th>
-<th>What to write</th>
+<th>Mark</th>
+<th>How to use it</th>
+<th>Example</th>
 </tr></thead>
 <tbody>
 <tr>
-<td>Node</td>
-<td>Local ID, plain label, kind of thing, related source fields,
-evidence, status and any question</td>
+<td>A labelled box with a local ID</td>
+<td>Put one idea in each node. Add its role or source field.</td>
+<td><code>N2: source population — identified by POP_ID 46200</code></td>
 </tr>
 <tr>
-<td>Edge</td>
-<td>Start-node ID, relationship phrase, end-node ID, related source
-fields, evidence, status and any question</td>
+<td>An arrow with a verb phrase</td>
+<td>Read from start to end as a sentence.</td>
+<td><code>variable → concerns → source population</code></td>
+</tr>
+<tr>
+<td>A clearly labelled example value</td>
+<td>Distinguish the reported result from the variable it describes.</td>
+<td><code>N9: reported result — example 758</code></td>
+</tr>
+<tr>
+<td>A dashed arrow and a question mark</td>
+<td>Record a possible relationship that needs evidence.</td>
+<td><code>variable ⇢ has constraint? ⇢ natural origin?</code></td>
 </tr>
 </tbody>
 </table>
-<p>The supplied <a href="../files/fraser-coho-workshop/worksheets/dataset-nodes.csv">node
-worksheet</a> and <a href="../files/fraser-coho-workshop/worksheets/dataset-edges.csv">edge
-worksheet</a> provide these columns. Use “observed in file”, “working
-interpretation” or “question” to show the kind of support behind a
-statement.</p>
-</section><section><h2 class="section-heading" id="begin-with-row-meaning">Begin with row meaning<a class="anchor" aria-label="anchor" href="#begin-with-row-meaning"></a>
+<p>Choose whatever layout, shapes or colours help you think. The labels,
+arrows and question marks carry the meaning. The dashed-line convention
+is our workshop shorthand for uncertainty; it is not an OWL
+assertion.</p>
+<p>Add a short evidence note beside a relationship or in the <a href="../files/fraser-coho-workshop/worksheets/dataset-nodes.csv">node</a>
+and <a href="../files/fraser-coho-workshop/worksheets/dataset-edges.csv">edge</a>
+worksheets. Use “observed in file”, “working interpretation” or
+“question”. Keep local drawing IDs such as <code>N2</code> separate from
+source identifiers such as <code>46200</code>. In yEd, the <a href="https://yed.yworks.com/support/manual/properties.html" class="external-link">description
+and URL properties</a> can hold supporting notes and source links.</p>
+</section><section><h2 class="section-heading" id="build-the-sketch-one-question-at-a-time">Build the sketch one question at a time<a class="anchor" aria-label="anchor" href="#build-the-sketch-one-question-at-a-time"></a>
 </h2>
 <hr class="half-width">
-<p><a href="glossary.html#row-grain">Row grain</a> describes what one
-record represents and the context needed to distinguish it from others.
-Start your drawing with <strong>a source record</strong>, then add the
-things that the record identifies or describes.</p>
-<p>The source has 173 rows but only 164 distinct
-<code>POP_ID</code>–<code>ANALYSIS_YR</code> pairs. For example,
-<code>POP_ID</code> <code>46170</code> has two records for
-<code>2023</code>: <code>NICOLA RIVER (DAM)</code> and
-<code>NICOLA RIVER (DOT)</code>. Both have a blank adult-spawner
-estimate and <code>NO SURVEY THIS YEAR</code> classification. Their
-shared population/year values are not evidence that one row should be
-removed.</p>
-<p>Draw the distinction between:</p>
-<ul>
-<li>the <strong>identifier value</strong> in <code>POP_ID</code> and the
-source population it identifies;</li>
-<li>the <strong>waterbody name</strong> and the place it refers to;</li>
-<li>the <strong>species label</strong> and the population/organisms
-being described;</li>
-<li>the <strong>analysis-year value</strong> and the biological or
-reporting basis that gives that year meaning;</li>
-<li>an <strong>estimate result</strong> and the observation or
-estimation activity that produced it.</li>
-</ul>
-<p>Do not assume every row represents exactly one field visit. The
-source’s method and survey-window fields may summarize work; the exact
-observation/estimation structure remains a question for source
-review.</p>
+<p>Write <strong>adult-spawner estimate</strong> and the source field
+<code>NATURAL_ADULT_SPAWNERS</code> in a central box. Keep the
+three-cell record beside it as evidence. The central box describes the
+<a href="glossary.html#variable">variable</a>; <code>758</code> is one
+reported <a href="glossary.html#result">result</a>.</p>
+<p>Add three branches:</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>What is it about?</strong> Add a population node and a
+“concerns” arrow. <code>POP_ID = 46200</code> identifies the source
+population. Ask what population or group of fish that identifier covers.
+This is the <a href="glossary.html#entity">entity</a> question.</li>
+<li>
+<strong>Which fish are included?</strong> Add scope or <a href="glossary.html#constraint">constraint</a> notes. The current
+official dictionary describes mature salmon excluding jacks. What does
+“natural” add? Put uncertain interpretations on dashed arrows with a
+question mark.</li>
+<li>
+<strong>How was the value obtained?</strong> Add an
+observation/estimation activity and connect it to the source <a href="glossary.html#method">method</a> label. Ask separately how
+observations were collected and how they became an estimate. Connect the
+activity to the reported result <code>758</code>.</li>
+</ol>
+<p>The characteristic of interest is <strong>abundance</strong>: how
+much of the population or group is represented. Add it as a <a href="glossary.html#property">property</a> node connected to the
+variable. Keep any unit claim beside the result; the starter dictionary
+supplies “Individual”, whose applicability still needs checking across
+estimate types.</p>
+<p>This introduces the decomposition approach used by <a href="https://www.rd-alliance.org/system/files/InteroperAble%20Descriptions%20of%20Observable%20Property%20Terminologies%20%28I-ADOPT%29%20WG%20-%20output%20and%20recommendations_0.pdf" class="external-link">I-ADOPT</a>:
+describe a variable through its property, entity and constraints. The
+Salmon Domain Ontology’s <a href="https://github.com/salmon-data-mobilization/salmon-domain-ontology/blob/main/ontology/views/README.md" class="external-link">metamodel
+view</a> connects that description to the activity, method and result.
+Chapter 3 develops the fuller decomposition in a dictionary.</p>
 <div class="section level3">
-<h3 id="where-does-a-conservation-unit-fit">Where does a Conservation Unit fit?<a class="anchor" aria-label="anchor" href="#where-does-a-conservation-unit-fit"></a>
+<h3 id="field-observations-and-estimate-calculation-are-different-questions">Field observations and estimate calculation are different
+questions<a class="anchor" aria-label="anchor" href="#field-observations-and-estimate-calculation-are-different-questions"></a>
 </h3>
-<p>A Conservation Unit, a biological population, a species and a stream
-are not interchangeable levels of one simple hierarchy. The current <a href="https://open.canada.ca/data/en/dataset/c48669a3-045b-400d-b730-48aafe8c5ee6" class="external-link">NuSEDS
-catalog description</a> describes populations by freshwater location and
-run timing, referenced to stream mouths; those populations can be
-grouped by CU. This table has no CU column or population-to-CU
-membership table. You may add a dashed <strong>“CU relationship to
-investigate”</strong> node beside your graph, but do not assign a CU,
-draw an asserted membership edge, or label the relationship “is a”
-without supporting evidence.</p>
-<p>Use the same discipline for stream relationships. “This source record
-names this waterbody” is supported directly by the table. The current
-official dictionary describes the waterbody or portion that bounds the
-population on its source estimate document (SEN). “This population
-occurs only in this waterbody” is a stronger biological claim that the
-table alone does not establish.</p>
-</div>
-</section><section><h2 class="section-heading" id="expand-one-estimate-into-meaningful-parts">Expand one estimate into meaningful parts<a class="anchor" aria-label="anchor" href="#expand-one-estimate-into-meaningful-parts"></a>
-</h2>
-<hr class="half-width">
-<p>The Salmon Domain Ontology’s <a href="https://github.com/salmon-data-mobilization/salmon-domain-ontology/blob/main/ontology/views/README.md" class="external-link">metamodel
-view</a> provides a plain-language guide. It is an <strong>optional,
-non-normative orientation model</strong>; the shared ontology’s core
-modules hold its reusable definitions.</p>
-<p>For <code>NATURAL_ADULT_SPAWNERS</code>, add nodes that help
-distinguish:</p>
+<p><code>ESTIMATE_METHOD</code> does not always answer both. Compare
+these source labels and definitions:</p>
 <table class="table">
 <colgroup>
-<col width="50%">
-<col width="50%">
+<col width="33%">
+<col width="33%">
+<col width="33%">
 </colgroup>
 <thead><tr>
-<th>Part</th>
-<th>Plain-language question</th>
+<th>Source label</th>
+<th>What the supplied evidence tells us</th>
+<th>What to ask next</th>
 </tr></thead>
 <tbody>
 <tr>
-<td><a href="glossary.html#entity">Entity</a></td>
-<td>What population or group does the estimate concern?</td>
+<td><code>Resistivity Counter</code></td>
+<td>The label occurs in the table, but its official dictionary
+definition is <code>N/A</code>.</td>
+<td>What was detected in the field? How were detections classified or
+adjusted to produce <code>758</code>?</td>
 </tr>
 <tr>
-<td><a href="glossary.html#property">Property</a></td>
-<td>What characteristic is represented, such as abundance?</td>
+<td><code>Area Under the Curve</code></td>
+<td>The official definition describes integrating abundance over time
+and dividing by survey life.</td>
+<td>How were the observations collected, and which survey-life
+assumption and calculation were used?</td>
 </tr>
 <tr>
-<td><a href="glossary.html#variable">Variable</a></td>
-<td>What complete data question is the column answering?</td>
-</tr>
-<tr>
-<td><a href="glossary.html#observation">Observation or estimation
-activity</a></td>
-<td>What work produced the result?</td>
-</tr>
-<tr>
-<td>
-<a href="glossary.html#result">Result</a> and <a href="glossary.html#unit">unit</a>
-</td>
-<td>What value was reported, and in what units?</td>
-</tr>
-<tr>
-<td><a href="glossary.html#method">Method</a></td>
-<td>How was the result determined?</td>
-</tr>
-<tr>
-<td>
-<a href="glossary.html#constraint">Constraint</a> and other
-context</td>
-<td>Which qualifiers change the meaning or scope?</td>
+<td><code>Combined Methods</code></td>
+<td>The definition describes a final estimate combining two or more
+estimate methods.</td>
+<td>Which field and analytical methods were combined, and how?</td>
 </tr>
 </tbody>
 </table>
-<p>Use <code>758</code> from the first source record as a labelled
-<strong>example value</strong>, not as the definition of the variable.
-Relate <code>ESTIMATE_METHOD</code> to the estimation activity. The
-current official dictionary defines adults as mature fish excluding
-jacks and the year as the year the estimate is for; surveys may extend
-into the next calendar year. It does not establish a natural-origin
-restriction. Keep that qualifier, applicability of current definitions
-to the source workbook, and any additional biological year-basis claim
-as review questions. The next chapter makes these distinctions explicit
-in the dictionary.</p>
-</section><section><h2 class="section-heading" id="keep-a-route-to-later-formalization">Keep a route to later formalization<a class="anchor" aria-label="anchor" href="#keep-a-route-to-later-formalization"></a>
+<p>Use the kit’s <a href="../files/fraser-coho-workshop/raw_data/official-nuseds-dictionary.csv">official
+dictionary</a> and <a href="../files/fraser-coho-workshop/reference/code-definitions-working.csv">method
+evidence table</a>. The dictionary was retrieved on 8 September 2026 and
+may postdate the 2025 source workbook. An unanswered method question is
+a useful part of the drawing. One source record may summarize several
+visits or calculations.</p>
+</div>
+</section><section><h2 class="section-heading" id="worked-drawing-a-small-model-with-questions">Worked drawing: a small model with questions<a class="anchor" aria-label="anchor" href="#worked-drawing-a-small-model-with-questions"></a>
 </h2>
 <hr class="half-width">
-<p>We are making a conceptual model, not writing OWL. Clear labels,
-typed nodes, directed relationships, evidence and uncertainty will help
-an ontology specialist formalize the model later. A local diagram does
-not approve new terms or prove equivalence with an existing term.</p>
-<p>Keep broad kinds of things separate from examples. A box labelled
-“waterbody” and an example <code>BONAPARTE RIVER</code> should not
-silently become the same object. Record whether a node is a concept,
-source record, identifier, example value or unresolved placeholder. The
-typed distinction is more useful now than formal syntax.</p>
+<p>This is a simplified view of the metamodel applied to the first
+record. Follow one arrow at a time; your own drawing can use different
+words or positions.</p>
+<figure><img src="../files/fraser-coho-workshop/reference/measurement-sketch-working.svg" alt="Worked measurement sketch: the variable concerns a source population, represents abundance and has adult scope. Natural origin is an open question. An estimation activity applies the variable, uses the source method label and generates a reported result." class="figure mx-auto d-block"><div class="figcaption">Worked measurement sketch: the variable concerns
+a source population, represents abundance and has adult scope. Natural
+origin is an open question. An estimation activity applies the variable,
+uses the source method label and generates a reported result.</div>
+</figure><p>The drawing reads as these statements:</p>
+<ul>
+<li>The adult-spawner <strong>variable</strong> concerns a source
+<strong>population</strong>, represents <strong>abundance</strong>, and
+has a working adult scope excluding jacks.</li>
+<li>An observation or estimation <strong>activity</strong> applies that
+variable, uses a <strong>method</strong>, and generates a
+<strong>result</strong>. The source labels the method
+<code>Resistivity Counter</code> and reports <code>758</code>; the
+detailed procedure remains a question.</li>
+<li>The possible <strong>natural-origin constraint</strong> is dashed
+because its applicability to this source field is unresolved.</li>
+</ul>
+<p>For a glimpse of later term reuse, compare that question with the
+Salmon Domain Ontology’s <a href="https://github.com/salmon-data-mobilization/salmon-domain-ontology/blob/d45f8f7cc857d92af8bbe54a7c89b2a4a14784b2/ontology/modules/07-controlled-vocabularies.ttl#L144-L151" class="external-link">Natural-origin
+definition</a>: fish born and reared in the wild. Its identifier is
+<code>https://w3id.org/smn/NaturalOrigin</code>. The starter dictionary
+uses natural-origin wording, but the official NuSEDS definition does not
+establish that restriction. A term can be well defined while its
+application to a dataset remains uncertain. Plain-language questions are
+enough for your sketch; choosing term identifiers comes in Chapter
+5.</p>
+<p>The <a href="../files/fraser-coho-workshop/reference/measurement-sketch-nodes.csv">worked
+node table</a>, <a href="../files/fraser-coho-workshop/reference/measurement-sketch-edges.csv">edge
+table</a>, and <a href="../files/fraser-coho-workshop/reference/measurement-sketch-working.mmd">editable
+diagram source</a> show the labels, evidence and questions behind this
+example.</p>
+</section><section><h2 class="section-heading" id="add-enough-context-to-explain-the-record">Add enough context to explain the record<a class="anchor" aria-label="anchor" href="#add-enough-context-to-explain-the-record"></a>
+</h2>
+<hr class="half-width">
+<p>Return to the first record’s <code>WATERBODY</code>,
+<code>ANALYSIS_YR</code> and <code>SPECIES</code> values. Attach the
+named place, estimate year and species to the source-record context. A
+year or place that varies by row is different from a fixed constraint on
+the whole variable.</p>
+<p><a href="glossary.html#row-grain">Row grain</a> describes what a
+record represents. This source has <strong>173 rows and 164 distinct
+population–year pairs</strong>, so that pair does not uniquely identify
+a record. For example, population <code>46170</code> has two 2023
+records naming <code>NICOLA RIVER (DAM)</code> and
+<code>NICOLA RIVER (DOT)</code>. Keep the records separate and ask which
+additional context distinguishes them.</p>
+<p>The <a href="../files/fraser-coho-workshop/reference/dataset-graph-working.svg">expanded
+working graph</a> and its <a href="../files/fraser-coho-workshop/reference/dataset-graph-working.html">notes</a>
+provide further practice with location, time and source-record
+relationships. The table contains no Conservation Unit crosswalk; adding
+a population-to-CU relationship would need another source.</p>
 <div id="activity-draw-explain-and-revise" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
 <div id="activity-draw-explain-and-revise" class="callout-inner">
-<h3 class="callout-title">Activity: Draw, explain and revise</h3>
+<h3 class="callout-title">Activity: draw, explain and revise</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal">
 <li>
-<strong>Draw for 15 minutes.</strong> Include the six focus fields,
-one source record, one example value and the
-entity/property/variable/activity/result distinction. Label every
-relationship.</li>
+<strong>Draw for 15 minutes.</strong> Start with the three-cell
+example. Add the population, scope and method branches, a property, an
+activity and its result. Include at least one specific unanswered
+question.</li>
 <li>
-<strong>Explain for 10 minutes.</strong> Your partner traces one row
-through the drawing. Ask which arrows come directly from the file and
-which need a definition or other source.</li>
+<strong>Explain for 10 minutes.</strong> Your partner reads each
+arrow as a sentence. Compare the sketch with the worked drawing and
+identify which method or constraint claims need more evidence.</li>
 <li>
-<strong>Revise for 10 minutes.</strong> Correct ambiguous arrows,
-mark questions, and enter the nodes and edges in
-<code>worksheets/dataset-nodes.csv</code> and
-<code>worksheets/dataset-edges.csv</code>. Save the editable drawing or
-paper capture with them.</li>
+<strong>Revise for 10 minutes.</strong> Clarify the arrows, add the
+row’s place/year/species context, and enter your nodes and edges in the
+worksheets. Save the editable drawing or paper capture with them.</li>
 </ol>
-<p>Use the <a href="../files/fraser-coho-workshop/reference/dataset-graph-working.svg">draft
-working diagram</a> only after making your first drawing. It is a
-comparison aid, not a scientifically approved answer key. Its <a href="../files/fraser-coho-workshop/reference/dataset-nodes-working.csv">node</a>
-and <a href="../files/fraser-coho-workshop/reference/dataset-edges-working.csv">edge</a>
-tables expose the underlying statements;
-<code>reference/dataset-graph-working.md</code> in the kit explains its
-limits.</p>
-<p><strong>Checkpoint:</strong> every arrow has a label; its endpoints
-exist in the node table; the source-record grain is stated; population,
-waterbody, species and CU are not collapsed; questions remain visible.
-Keep the diagram for the formal peer review in Chapter 3.</p>
+<p><strong>Ready for Chapter 3:</strong> the three starting fields can
+be traced through your sketch; every arrow is labelled; example values
+and concepts are distinguishable; and open questions have a source or
+next step to investigate. Chapter 3 uses this drawing to describe the
+six focus fields and review the remaining eight fields before the
+package build.</p>
 </div>
 </div>
 </div>
@@ -1064,23 +1130,23 @@ Keep the diagram for the formal peer review in Chapter 3.</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>Draw the dataset before packaging it or asking AI to interpret
-it.</li>
-<li>A useful graph makes relationships, row meaning, evidence and
-uncertainty explicit.</li>
-<li>Population, waterbody, species and Conservation Unit are distinct;
-this table does not supply a CU mapping.</li>
-<li>The observation activity, variable and result value need different
-nodes.</li>
-<li>An editable diagram plus text-based node/edge tables supports later
-reuse and formalization.</li>
+<li>Start with one estimate and a few source fields, then add the
+relationships needed to interpret it.</li>
+<li>Entity, property and constraints describe the variable; the
+activity, method and result describe how a value was produced.</li>
+<li>A field-observation method and an estimate-calculation method answer
+different questions.</li>
+<li>Dashed arrows and precise questions make missing evidence
+visible.</li>
+<li>A saved sketch and node/edge notes give the dictionary exercise a
+clear starting point.</li>
 </ul>
 </div>
 </div>
 </div>
 </section></section><section id="aio-session-3"><p>Content from <a href="session-3.html">Write the Dictionary, Decompose Meanings and Review Together</a></p>
 <hr>
-<p>Last updated on 2026-09-08 |
+<p>Last updated on 2026-09-22 |
 
         <a href="https://github.com/salmon-data-mobilization/salmon-data-standards-workshop/edit/main/episodes/session-3.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 65 minutes</p>
@@ -1123,16 +1189,14 @@ moving to metasalmon or AI.</li>
 </div>
 </div>
 </div>
-<figure><img src="../fig/workflow-3.svg" alt="Seven workshop stages, with dictionary writing and human review highlighted." class="figure mx-auto d-block"><div class="figcaption">Seven workshop stages, with dictionary writing
-and human review highlighted.</div>
-</figure><section><h2 class="section-heading" id="turn-the-diagram-into-a-usable-explanation">Turn the diagram into a usable explanation<a class="anchor" aria-label="anchor" href="#turn-the-diagram-into-a-usable-explanation"></a>
+<section><h2 class="section-heading" id="turn-the-diagram-into-a-usable-explanation">Turn the diagram into a usable explanation<a class="anchor" aria-label="anchor" href="#turn-the-diagram-into-a-usable-explanation"></a>
 </h2>
 <hr class="half-width">
 <p>Continue with the unchanged 173-row Fraser Coho table and your
 Chapter 2 diagram. Open <code>worksheets/data-dictionary.csv</code> and
 <code>worksheets/variable-decomposition.csv</code> from the kit in a
-spreadsheet or text editor. <strong>This is still human interpretation
-work: no metasalmon ingestion and no AI interpretation yet.</strong></p>
+spreadsheet or text editor. <strong>Write and peer-review your
+interpretation before using metasalmon or AI.</strong></p>
 <p>A <a href="glossary.html#data-dictionary">data dictionary</a>
 explains each field: what it means, how values are represented, which
 values or codes are allowed, what missing values may mean, and which
@@ -1213,16 +1277,13 @@ while the full worksheets remain supporting context.</p>
 </section><section><h2 class="section-heading" id="read-the-data-and-source-together">Read the data and source together<a class="anchor" aria-label="anchor" href="#read-the-data-and-source-together"></a>
 </h2>
 <hr class="half-width">
-<p>Do not copy every statement from the supplied starter dictionary into
-your own definition. That dictionary is a starting point, not scientific
-approval. The kit also includes the <a href="../files/fraser-coho-workshop/raw_data/official-nuseds-dictionary.csv">official
+<p>Compare the supplied starter dictionary with the <a href="../files/fraser-coho-workshop/raw_data/official-nuseds-dictionary.csv">official
 DFO dictionary</a> and its <a href="../files/fraser-coho-workshop/raw_data/official-dictionary-source.json">retrieval
-record</a>. It was retrieved on 8 September 2026 and may postdate the
-2025 workbook used for this slice. Its current definitions support
-useful corrections to the starter. The
+record</a>. The official dictionary was retrieved on 8 September 2026
+and may postdate the 2025 workbook used for this slice. Its current
+definitions support useful corrections to the starter. The
 <a href="../files/fraser-coho-workshop/reference/scientific-review-packet.html" download>scientific-review
-packet</a> records the remaining questions that Brett will take to Bruno
-and Tom; its reviewer fields intentionally remain blank.</p>
+packet</a> records source questions that still need investigation.</p>
 <p>Keep these checks beside the six writing tasks:</p>
 <table class="table">
 <colgroup>
@@ -1360,8 +1421,8 @@ estimate classification and any other demonstrated context.</td>
 current official DFO definition describes maturity and excludes jacks,
 without establishing natural origin. Our worksheet retains the starter
 phrase as <strong>source wording requiring review</strong>, alongside
-the more cautious working definition. It must not become an accepted
-natural-origin constraint merely because software finds a matching term.
+the more cautious working definition. Finding a vocabulary term with the
+same wording would still leave this source question unanswered.
 Likewise, a year value varies between rows; it is not a fixed constraint
 on the entire measurement column. The official definition identifies the
 estimate year; a claim that it is a brood year or another
@@ -1375,24 +1436,22 @@ later.</p>
 </h2>
 <hr class="half-width">
 <p>Exchange the diagram, node/edge tables, dictionary and decomposition
-with another person. A peer review checks whether the explanation is
-understandable, internally consistent and honest about evidence. It does
-<strong>not</strong> grant scientific publication approval or settle
-questions beyond the available sources.</p>
-<p>Use <code>worksheets/peer-review.md</code> to record the actual
-reviewer, review date, observations, revisions and unresolved questions.
-The supplied form starts with <code>Completion: pending</code> and a
-blank reviewer. After the reviewer has checked the artifacts and
-required revisions are complete, record their name and date (as
+with another person. Check whether the explanation is understandable,
+internally consistent and supported by the cited evidence. Identify any
+questions that need further source information or specialist review.</p>
+<p>Use <code>worksheets/peer-review.md</code> to record the reviewer,
+review date, observations, revisions and unresolved questions. The
+supplied form starts with <code>Completion: pending</code> and a blank
+reviewer. After the reviewer has checked the artifacts and required
+revisions are complete, record their name and date (as
 <code>YYYY-MM-DD</code>) and change that marker to
-<code>Completion: complete</code>. Leave unresolved scientific questions
-visible with a next step; never fill in a review that did not
-happen.</p>
-<p>An open scientific question can travel into a draft package as an
-open question. A missing human explanation or an undocumented peer
-review cannot be replaced by asking AI to supply one. Chapter 4’s build
-checks the review marker; the human review itself is what gives the
-marker meaning.</p>
+<code>Completion: complete</code>. Give each unresolved scientific
+question a next step.</p>
+<p>A peer-reviewed draft can include open scientific questions. The
+handoff requires a working interpretation or explicit question for every
+field, agreement between the graph and dictionary, and a completed
+peer-review record. Chapter 4’s build checks that record before creating
+the package.</p>
 <div id="activity-write-reconcile-and-peer-review" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1424,8 +1483,8 @@ record only when the described review has actually occurred.</li>
 </ol>
 <p>Compare your results with the <a href="../files/fraser-coho-workshop/reference/data-dictionary-working.csv">draft
 dictionary</a> and <a href="../files/fraser-coho-workshop/reference/variable-decomposition-working.csv">draft
-decomposition</a> after your first attempt. They show a cautious working
-interpretation; they do not carry Bruno’s or Tom’s approval.</p>
+decomposition</a> after your first attempt. Discuss differences in the
+interpretations, their evidence and their remaining questions.</p>
 <p><strong>Ready for Chapter 4:</strong> the diagram and node/edge
 tables agree; all 14 dictionary fields have been read; the six writing
 tasks and one decomposition are complete; a real reviewer and date are
@@ -1460,7 +1519,7 @@ save the baseline for later comparison.</li>
 </div>
 </section></section><section id="aio-session-4"><p>Content from <a href="session-4.html">Build the Package from Your Human Description</a></p>
 <hr>
-<p>Last updated on 2026-09-08 |
+<p>Last updated on 2026-09-22 |
 
         <a href="https://github.com/salmon-data-mobilization/salmon-data-standards-workshop/edit/main/episodes/session-4.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 40 minutes</p>
@@ -1503,9 +1562,7 @@ readiness.</li>
 </div>
 </div>
 </div>
-<figure><img src="../fig/workflow-4.svg" alt="Workflow: build the package after understanding, diagramming, and describing the data." class="figure mx-auto d-block"><div class="figcaption">Workflow: build the package after understanding,
-diagramming, and describing the data.</div>
-</figure><section><h2 class="section-heading" id="the-problem-useful-descriptions-need-to-travel-with-the-data">The problem: useful descriptions need to travel with the data<a class="anchor" aria-label="anchor" href="#the-problem-useful-descriptions-need-to-travel-with-the-data"></a>
+<section><h2 class="section-heading" id="the-problem-useful-descriptions-need-to-travel-with-the-data">The problem: useful descriptions need to travel with the data<a class="anchor" aria-label="anchor" href="#the-problem-useful-descriptions-need-to-travel-with-the-data"></a>
 </h2>
 <hr class="half-width">
 <p>Your diagram explains the relationships. Your dictionary explains the
@@ -1518,14 +1575,14 @@ reasoning in the workshop project.</p>
 AI</strong>, complete <code>worksheets/dataset-nodes.csv</code>,
 <code>worksheets/dataset-edges.csv</code>,
 <code>worksheets/data-dictionary.csv</code>, and
-<code>worksheets/variable-decomposition.csv</code>. Record the actual
-peer reviewer, date, decision, and remaining questions in
-<code>worksheets/peer-review.md</code>. Revisit any relationship or
-definition the reviewer cannot explain. A question may remain explicitly
-unresolved; a guess must not become an asserted fact.</p>
-<p>The facilitator’s <code>reference/*-working.csv</code> files are
-comparison drafts. Copying them does not constitute peer review. Keep
-your own decisions and their evidence visible.</p>
+<code>worksheets/variable-decomposition.csv</code>. Record the peer
+reviewer, date, decision, and remaining questions in
+<code>worksheets/peer-review.md</code>. Revise any relationship or
+definition the reviewer cannot explain, and identify questions that need
+further evidence.</p>
+<p>Use the <code>reference/*-working.csv</code> files to compare
+interpretations with your own reviewed worksheets. Keep the reasons for
+your decisions alongside them.</p>
 </section><section><h2 class="section-heading" id="open-the-common-workshop-project">Open the common workshop project<a class="anchor" aria-label="anchor" href="#open-the-common-workshop-project"></a>
 </h2>
 <hr class="half-width">
@@ -1706,7 +1763,7 @@ their meanings are supported.</p>
 Methods that vary by row remain associated with the
 <code>ESTIMATE_METHOD</code> code column; the SDP dictionary has no
 general-purpose <code>method_iri</code> column.</p>
-</section><section><h2 class="section-heading" id="check-the-structure-and-keep-the-draft-honest">Check the structure and keep the draft honest<a class="anchor" aria-label="anchor" href="#check-the-structure-and-keep-the-draft-honest"></a>
+</section><section><h2 class="section-heading" id="check-the-package-structure">Check the package structure<a class="anchor" aria-label="anchor" href="#check-the-package-structure"></a>
 </h2>
 <hr class="half-width">
 <p>Run the prepared validation script for your lane, or inspect the
@@ -1752,17 +1809,15 @@ and connect them to the relevant metadata field.</p>
 <div id="nav-tabpanel-2-Spreadsheet" class="tab-pane" aria-labelledby="nav-tab-2-Spreadsheet" role="tabpanel">
 <p>Use the <a href="field-reference.html#review-and-validation">metadata
 field reference</a> to inspect required fields and allowed values. Ask
-your collaborator to run the validator against your edited files. Manual
-inspection and an automated result are different records; say which
-occurred.</p>
+your collaborator to run the validator against your edited files. Record
+your inspection notes and the validator’s results so you can compare
+them.</p>
 </div>
 </div>
 </div>
-<p>Passing draft validation means that the tested structural rules pass.
-It does not approve a biological interpretation, establish a licence, or
-make the draft publication-ready. Checkpoint labels describe their
-actual stage: a technical reference remains a draft until its scientific
-review is recorded.</p>
+<p>Draft validation checks the package’s structure. Reviewing the source
+definitions, biological interpretation and licence requires separate
+evidence; carry those questions into the next chapters.</p>
 <div id="activity-trace-and-explain-one-field" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1803,15 +1858,15 @@ packaging tools and AI.</li>
 <li>The same full Fraser Coho source is used in every chapter.</li>
 <li>Canonical metadata fields have defined roles; the working worksheets
 preserve richer reasoning.</li>
-<li>A structural validation result is evidence about structure, not
-scientific approval.</li>
+<li>Validation checks structure; source review checks whether the
+descriptions fit the data.</li>
 </ul>
 </div>
 </div>
 </div>
 </section></section><section id="aio-session-5"><p>Content from <a href="session-5.html">Map Meanings and Compare AI Suggestions</a></p>
 <hr>
-<p>Last updated on 2026-09-08 |
+<p>Last updated on 2026-09-22 |
 
         <a href="https://github.com/salmon-data-mobilization/salmon-data-standards-workshop/edit/main/episodes/session-5.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 70 minutes</p>
@@ -1855,9 +1910,7 @@ free-only live assessment.</li>
 </div>
 </div>
 </div>
-<figure><img src="../fig/workflow-5.svg" alt="Workflow: map and review meanings after the human description and package build." class="figure mx-auto d-block"><div class="figcaption">Workflow: map and review meanings after the
-human description and package build.</div>
-</figure><section><h2 class="section-heading" id="the-problem-the-same-label-can-describe-different-things">The problem: the same label can describe different things<a class="anchor" aria-label="anchor" href="#the-problem-the-same-label-can-describe-different-things"></a>
+<section><h2 class="section-heading" id="the-problem-the-same-label-can-describe-different-things">The problem: the same label can describe different things<a class="anchor" aria-label="anchor" href="#the-problem-the-same-label-can-describe-different-things"></a>
 </h2>
 <hr class="half-width">
 <p>A <a href="glossary.html#controlled-vocabulary">controlled
@@ -2061,11 +2114,8 @@ changed cell alone does not preserve the reasoning. Preserve the current
 package before metadata editing, and use the package writer or an R
 collaborator to keep the generated descriptor consistent with the
 CSVs.</p>
-<p>Do not call missing R-style functions in Python. The saved candidate
-evidence keeps this exercise reproducible while those review APIs are
-unavailable in v0.4.0. Revisit this lane when a pinned Python release
-provides the required review workflow and passes the same-source
-exercises.</p>
+<p>The saved candidate evidence supports the same mapping decisions in
+Python while native review helpers are unavailable in v0.4.0.</p>
 </div>
 <div id="nav-tabpanel-1-Spreadsheet" class="tab-pane" aria-labelledby="nav-tab-1-Spreadsheet" role="tabpanel">
 <p>Open <code>checkpoints/seeded-sdp/semantic_suggestions.csv</code>
@@ -2094,11 +2144,8 @@ those proposals against an independent interpretation instead of
 accepting fluent text as evidence.</p>
 <p>Open <code>ai/README.md</code> in the kit and use the recorded
 outputs it identifies. Read the input context, provider/model identity,
-run date, and success or failure status. Compare actual saved responses;
-do not treat an example prompt, a failed request, or a facilitator’s
-hypothetical response as a completed model run. If a saved response is
-unavailable, record that limitation and perform the source-and-candidate
-review with the material that is present.</p>
+run date, and success or failure status. These details let you trace
+each response to the information the model received.</p>
 <p>The common recording is <code>ai/recorded-assessment.md</code>,
 produced by the Codex authoring assistant and preserved as such.
 <code>ai/recorded-suggestions.csv</code> gives its individually numbered
@@ -2127,10 +2174,9 @@ decision. Agreement among models is not source confirmation.</p>
 </h2>
 <hr class="half-width">
 <p>Recheck that your diagram, dictionary, decomposition, and peer review
-are complete before a live call. Read the payload and the provider
-information in <code>ai/README.md</code>; only use the approved public
-teaching material. A live AI request sends that context to the
-provider.</p>
+are complete before a live call. Read the prepared teaching payload and
+provider information in <code>ai/README.md</code> so you know which
+public source excerpts and context will be sent to the provider.</p>
 <p>The kit’s optional scripts use the fixed
 <strong><code>openrouter/free</code> route</strong> and do not fall back
 to a paid model. Free availability and rate limits can change. If no
@@ -2164,11 +2210,10 @@ comparison activity and keep the failure visible.</p>
 <span><span class="co"># Read the script and prepared payload before choosing to send the request.</span></span>
 <span><span class="kw">source</span><span class="op">(</span><span class="st">"scripts/review_ai.R"</span><span class="op">)</span></span></code></pre>
 </div>
-<p>Supplying context to metasalmon does not itself authorize an AI call.
-Package-native LLM review requires its explicit
-<code>llm_assess = TRUE</code> opt-in. Choosing to run this optional
-comparison script enables that setting and sends the prepared
-request.</p>
+<p>Providing context alone does not trigger an AI request in metasalmon.
+Package-native LLM review requires <code>llm_assess = TRUE</code>.
+Running this optional comparison script enables that setting and sends
+the prepared request.</p>
 </div>
 <div id="nav-tabpanel-2-Python" class="tab-pane" aria-labelledby="nav-tab-2-Python" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb5">
@@ -2177,9 +2222,8 @@ request.</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="co"># Follow ai/README.md for explicit opt-in and runtime credential setup.</span></span>
 <span id="cb5-2"><a href="#cb5-2" tabindex="-1" aria-label="code-block-5-2"></a><span class="ex">python</span> scripts/review_ai.py</span></code></pre>
 </div>
-<p>The comparison script does not imply that Python’s missing native
-semantic-review APIs have shipped. Review the resulting assessment
-against your human artifacts before changing package metadata.</p>
+<p>The script returns an assessment for you to compare with your graph,
+dictionary and source evidence before changing package metadata.</p>
 </div>
 <div id="nav-tabpanel-2-Spreadsheet" class="tab-pane" aria-labelledby="nav-tab-2-Spreadsheet" role="tabpanel">
 <p>The saved-output activity gives you the same comparison task without
@@ -2191,8 +2235,8 @@ prerequisite for completing this chapter.</p>
 </div>
 </div>
 <p>Keep API keys out of worksheets, scripts, saved outputs, and
-screenshots. The response is review evidence; it is not an instruction
-to modify the package automatically.</p>
+screenshots. Review each suggestion against your source evidence before
+applying a metadata change.</p>
 <div id="activity-make-one-defensible-mapping-decision" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -2238,7 +2282,7 @@ including unresolved questions.</li>
 </div>
 </section></section><section id="aio-session-6"><p>Content from <a href="session-6.html">Explain Code Values and Route Unresolved Meanings</a></p>
 <hr>
-<p>Last updated on 2026-09-09 |
+<p>Last updated on 2026-09-22 |
 
         <a href="https://github.com/salmon-data-mobilization/salmon-data-standards-workshop/edit/main/episodes/session-6.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 30 minutes</p>
@@ -2276,9 +2320,7 @@ missing-information state.</li>
 </div>
 </div>
 </div>
-<figure><img src="../fig/workflow-6.svg" alt="Workflow: review code meanings and unresolved terms before final validation." class="figure mx-auto d-block"><div class="figcaption">Workflow: review code meanings and unresolved
-terms before final validation.</div>
-</figure><section><h2 class="section-heading" id="the-problem-readable-codes-can-still-hide-important-distinctions">The problem: readable codes can still hide important
+<section><h2 class="section-heading" id="the-problem-readable-codes-can-still-hide-important-distinctions">The problem: readable codes can still hide important
 distinctions<a class="anchor" aria-label="anchor" href="#the-problem-readable-codes-can-still-hide-important-distinctions"></a>
 </h2>
 <hr class="half-width">
@@ -2357,7 +2399,7 @@ recorded?</td>
 </tr>
 </tbody>
 </table>
-<p>These are sample counts, not claims about all NuSEDS records.
+<p>These counts describe the 173-row teaching example.
 <code>Not Applicable</code> is not automatically a procedure.
 <code>Combined Methods</code> needs context that a generic label may not
 supply.</p>
@@ -2486,14 +2528,13 @@ code, the supported meaning, examples from this dataset, evidence,
 nearby terms that do not fit, the proposed route, and the unresolved
 question or requested change. Refer back to the relevant graph node or
 edge and dictionary row.</p>
-<p>The workshop does not post requests automatically. A maintainer can
-review a draft at the <a href="https://github.com/salmon-data-mobilization/salmon-domain-ontology/issues/new/choose" class="external-link">Salmon
-Domain Ontology request page</a> or the <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/issues/new/choose" class="external-link">DFO
-Salmon Ontology request page</a> when a request is warranted. This short
-Day 1 decision prepares <a href="advanced.html">Day 2</a>: Chapter 8
-compares representation and stewardship choices, Chapter 9 builds a SKOS
-vocabulary, Chapters 10–11 develop a model and bridge, and Chapter 12
-prepares a complete request or clarification draft.</p>
+<p>The <a href="https://github.com/salmon-data-mobilization/salmon-domain-ontology/issues/new/choose" class="external-link">Salmon
+Domain Ontology request page</a> and <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/issues/new/choose" class="external-link">DFO
+Salmon Ontology request page</a> show what maintainers need to evaluate
+a proposal. This short Day 1 decision prepares <a href="advanced.html">Day 2</a>: Chapter 8 compares representation and
+stewardship choices, Chapter 9 builds a SKOS vocabulary, Chapters 10–11
+develop a model and bridge, and Chapter 12 prepares a complete request
+or clarification draft.</p>
 <div id="activity-explain-one-method-and-one-unresolved-meaning" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -2508,7 +2549,7 @@ definition with a partner. Record the exact code, its interpretation,
 and the evidence. Then choose one unresolved question from your graph,
 dictionary, or mapping review and draft its next action.</p>
 <p>Success is a code explanation that preserves the source meaning and a
-route another person can assess. An honest request for source
+route another person can assess. A specific request for source
 clarification is a useful outcome.</p>
 </div>
 </div>
@@ -2532,7 +2573,7 @@ questions are different outcomes.</li>
 </div>
 </section></section><section id="aio-session-7"><p>Content from <a href="session-7.html">Validate, Inspect the Test Record, and Explain Publication</a></p>
 <hr>
-<p>Last updated on 2026-09-09 |
+<p>Last updated on 2026-09-22 |
 
         <a href="https://github.com/salmon-data-mobilization/salmon-data-standards-workshop/edit/main/episodes/session-7.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 45 minutes</p>
@@ -2575,9 +2616,7 @@ deposit.</li>
 </div>
 </div>
 </div>
-<figure><img src="../fig/workflow-7.svg" alt="Workflow: validate the package and inspect its test catalog representation." class="figure mx-auto d-block"><div class="figcaption">Workflow: validate the package and inspect its
-test catalog representation.</div>
-</figure><section><h2 class="section-heading" id="the-problem-a-reusable-package-needs-both-meaning-and-a-reliable-access-path">The problem: a reusable package needs both meaning and a reliable
+<section><h2 class="section-heading" id="the-problem-a-reusable-package-needs-both-meaning-and-a-reliable-access-path">The problem: a reusable package needs both meaning and a reliable
 access path<a class="anchor" aria-label="anchor" href="#the-problem-a-reusable-package-needs-both-meaning-and-a-reliable-access-path"></a>
 </h2>
 <hr class="half-width">
@@ -2596,12 +2635,10 @@ of it in this workshop.</p>
 </section><section><h2 class="section-heading" id="check-what-is-ready-and-what-still-needs-work">Check what is ready and what still needs work<a class="anchor" aria-label="anchor" href="#check-what-is-ready-and-what-still-needs-work"></a>
 </h2>
 <hr class="half-width">
-<p>The classroom draft is <code>output/fraser-coho-workshop-sdp</code>.
-Preserve it, its worksheets, and the actual review decisions. The kit’s
-<code>checkpoints/reference-sdp/</code> is a facilitator comparison
-artifact; read its stage and review notes before describing it as
-reviewed. A technical validation result does not substitute for a named
-human scientific review.</p>
+<p>Use <code>output/fraser-coho-workshop-sdp</code> together with your
+worksheets and review decisions. Compare them with the kit’s
+<code>checkpoints/reference-sdp/</code>, whose <a href="reference.html#teaching-record">reference notes</a> identify
+completed checks and remaining review work.</p>
 <p>Use these questions to assess the package:</p>
 <table class="table">
 <colgroup>
@@ -2737,15 +2774,12 @@ find the source citation, teaching-record label, and test-environment
 URLs. Use the canonical <a href="https://github.com/salmon-data-mobilization/metasalmon/blob/main/vignettes/post-review-package-publication.Rmd" class="external-link">SDP-to-EML
 workflow</a> and <a href="https://github.com/salmon-data-mobilization/metasalmon/blob/main/inst/extdata/eml-mapping-template.yml" class="external-link">mapping
 template</a> for the full requirements.</p>
-<p>The pinned R and Python exporters also require checksum-bound
-semantic evidence and accepted-selection files. The R package validates
-this closure but does not provide a general public function that
-produces every required file. The supplied reference build must document
-how those artifacts were made and what was actually reviewed. Do not
-fabricate a reviewer, licence, checksum, missing-value explanation, or
-accepted decision to satisfy the exporter. This limitation can be
-retired when the pinned release supplies and verifies the complete
-producer workflow.</p>
+<p>The pinned R and Python exporters also require semantic-evidence and
+accepted-selection files tied to the package by checksums. The supplied
+reference checkpoint includes these files and their preparation notes.
+Trace the recorded selections to their evidence and review status; the
+pinned R package checks the files but does not yet provide a general
+public function to produce the complete set.</p>
 </section><section><h2 class="section-heading" id="preview-a-test-deposit">Preview a test deposit<a class="anchor" aria-label="anchor" href="#preview-a-test-deposit"></a>
 </h2>
 <hr class="half-width">
@@ -2754,12 +2788,11 @@ relationships without credentials or network calls. The workshop scripts
 explicitly target <code>knb_environment = "test"</code> and use the
 expanded representation so the metadata files remain individually
 inspectable.</p>
-<p>Run this only when the package has the required export facts, or
-inspect the supplied reference plan. The script requires an explicit
-package copy beneath <code>output/</code> and refuses checkpoint paths.
-For practice, copy the reference checkpoint to a new destination;
-preserve the supplied checkpoint and its stage notes. This copy does not
-make its scientific review complete.</p>
+<p>Run this when the package has the required export facts, or inspect
+the supplied reference plan. The script requires a package copy beneath
+<code>output/</code> and refuses checkpoint paths. For practice, copy
+the reference checkpoint to a new destination, keeping its stage notes
+with the copy.</p>
 <div class="tabs">
 <nav><div id="nav-tab-2" class="nav nav-tabs" role="tablist">
 <button class="nav-link active" id="nav-tab-2-R" name="R" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-R" type="button" role="tab" aria-controls="nav-tabpanel-2-R" aria-selected="true">
@@ -2803,8 +2836,8 @@ copy:</p>
 </div>
 <p>The key call is
 <code>publish_sdp_to_knb(..., public = TRUE, dry_run = TRUE, representation = "expanded", knb_environment = "test")</code>.
-Read the exact planned object list and intended public access before any
-separately authorized deposit.</p>
+Inspect the planned objects and access settings to see which files a
+test deposit would make public.</p>
 </div>
 <div id="nav-tabpanel-2-Python" class="tab-pane" aria-labelledby="nav-tab-2-Python" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb5">
@@ -2859,24 +2892,21 @@ open it without signing in, read the metadata, and download the intended
 example files. Follow a description from the source and human dictionary
 into the displayed catalog metadata. Inspect the separate package
 components and their relationships.</p>
-<p>If the reference page says the deposit is pending, private,
-unavailable, or not yet verified, use the supplied local artifacts and
-screenshots and report exactly that status.
-<code>published_pending_catalog</code> means object storage has
-progressed but the required catalog evidence is incomplete. It is not a
-completed catalog demonstration, and recreating identifiers does not fix
-the indexing question.</p>
+<p>The supplied local artifacts let you inspect the package while a
+public test record is unavailable. The <a href="reference.html#teaching-record">reference page</a> records its
+current status. For example, <code>published_pending_catalog</code>
+means object storage has progressed but catalog indexing and access
+still need verification.</p>
 <p>Test services can change or remove records. The downloadable kit
 remains the common classroom reference and makes the example inspectable
 when the test service is unavailable.</p>
-</section><section><h2 class="section-heading" id="explain-the-production-steps-without-executing-them">Explain the production steps without executing them<a class="anchor" aria-label="anchor" href="#explain-the-production-steps-without-executing-them"></a>
+</section><section><h2 class="section-heading" id="what-production-publication-adds">What production publication adds<a class="anchor" aria-label="anchor" href="#what-production-publication-adds"></a>
 </h2>
 <hr class="half-width">
-<p>A production publication needs its own source-rights decision, final
+<p>A production publication needs a source-rights decision, final
 metadata review, repository choice, intended access, and responsible
-depositor. It also needs a fresh production plan and production
-identifiers. A test record is never a shortcut around these
-decisions.</p>
+depositor. Test and production services are independent, so production
+also needs a fresh plan and identifiers.</p>
 <p>For an appropriate future dataset, the sequence is:</p>
 <ol style="list-style-type: decimal">
 <li>Confirm source rights, attribution, intended reuse, and whether
@@ -2892,10 +2922,10 @@ user-facing record.</li>
 <li>Follow the repository’s public-release and DOI process when
 applicable, and preserve the record for later versioning.</li>
 </ol>
-<p>These are explanatory steps in this workshop. The learner scripts
-contain no live upload or production-deposit action. The source’s
+<p>The learner scripts generate a test publication preview. The source’s
 existing Open Canada record remains the authoritative source
-publication.</p>
+publication; use the sequence above when preparing an appropriate
+dataset for a production repository.</p>
 <p>For a later metadata revision, preserve the previous package and
 manifest, build a new version in a separate directory, document the
 change, and review its new plan. Published object bytes and identities
@@ -2906,9 +2936,8 @@ are not edited in place.</p>
 <p>This completes the six-hour beginner route. Keep the human graph,
 dictionary, review decisions, and unresolved questions. In <a href="advanced.html">Day 2</a>, the same evidence supports a small
 controlled vocabulary, an OWL model, explicit bridges, and a
-contribution draft. A working catalog link is not required to study
-those meanings; keep its actual publication status separate. Begin with
-<a href="session-8.html">Chapter 8</a> when ready.</p>
+contribution draft. Begin with <a href="session-8.html">Chapter 8</a>
+when ready.</p>
 <div id="activity-tell-the-full-story-of-one-estimate" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -2944,15 +2973,15 @@ evidence, and usable access.</li>
 scientific approval.</li>
 <li>The classroom destination is a clearly labelled test demonstration
 of the same NuSEDS source.</li>
-<li>Production publication is explained, separately authorized, and not
-executed here.</li>
+<li>Production publication needs a fresh plan, reviewed metadata,
+appropriate rights and a responsible depositor.</li>
 </ul>
 </div>
 </div>
 </div>
 </section></section><section id="aio-session-8"><p>Content from <a href="session-8.html">Choose What to Reuse, Define Locally, or Propose Together</a></p>
 <hr>
-<p>Last updated on 2026-09-09 |
+<p>Last updated on 2026-09-22 |
 
         <a href="https://github.com/salmon-data-mobilization/salmon-data-standards-workshop/edit/main/episodes/session-8.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 60 minutes</p>
@@ -2995,9 +3024,7 @@ different roles.</li>
 </div>
 </div>
 </div>
-<figure><img src="../fig/workflow-8.svg" alt="Day 2 workflow, with decisions about reuse, representation and stewardship highlighted." class="figure mx-auto d-block"><div class="figcaption">Day 2 workflow, with decisions about reuse,
-representation and stewardship highlighted.</div>
-</figure><section><h2 class="section-heading" id="start-with-the-human-work-already-completed">Start with the human work already completed<a class="anchor" aria-label="anchor" href="#start-with-the-human-work-already-completed"></a>
+<section><h2 class="section-heading" id="start-with-the-human-work-already-completed">Start with the human work already completed<a class="anchor" aria-label="anchor" href="#start-with-the-human-work-already-completed"></a>
 </h2>
 <hr class="half-width">
 <p>Day 1 followed all <strong>173 rows and 14 columns</strong> of the
@@ -3170,9 +3197,10 @@ program/profile steward</td>
 </table>
 <p>For this dataset, the abundance property already has the shared
 anchor <code>https://w3id.org/smn/Abundance</code>. The <a href="https://github.com/salmon-data-mobilization/salmon-domain-ontology/blob/d45f8f7cc857d92af8bbe54a7c89b2a4a14784b2/ontology/modules/02-observation-measurement.ttl" class="external-link">pinned
-definition</a> concerns a reusable characteristic. Reusing it does not
-resolve the complete adult-spawner variable, authorize aggregation, or
-establish natural origin.</p>
+definition</a> concerns a reusable characteristic. The complete
+adult-spawner variable still needs its population, qualifiers, units and
+method context before you can assess whether estimates are
+comparable.</p>
 <p>The current SDO conventions keep estimate-method and estimate-type
 schemes in the profile layer. Chapter 9 therefore builds a
 <strong>teaching draft of selected source categories</strong>, without
@@ -3234,9 +3262,8 @@ Chapter 9.</li>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<p>Compare with <a href="../files/fraser-coho-workshop/semantic-lab/vocabulary/routing-decisions-working.csv">worked
-routing decisions</a> after your attempt. These are draft proposals, not
-approvals.</p>
+<p>Compare your proposed routes and reasons with the <a href="../files/fraser-coho-workshop/semantic-lab/vocabulary/routing-decisions-working.csv">worked
+routing decisions</a> after your attempt.</p>
 <ul>
 <li>Abundance can reuse an existing shared characteristic while the full
 compound variable remains separately described.</li>
@@ -3280,7 +3307,7 @@ remains a steward decision.</li>
 </div>
 </section></section><section id="aio-session-9"><p>Content from <a href="session-9.html">Build and Steward a Small SKOS Vocabulary</a></p>
 <hr>
-<p>Last updated on 2026-09-09 |
+<p>Last updated on 2026-09-22 |
 
         <a href="https://github.com/salmon-data-mobilization/salmon-data-standards-workshop/edit/main/episodes/session-9.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 75 minutes</p>
@@ -3323,9 +3350,7 @@ separately from technical checks.</li>
 </div>
 </div>
 </div>
-<figure><img src="../fig/workflow-9.svg" alt="Day 2 workflow, with building and stewarding a local vocabulary highlighted." class="figure mx-auto d-block"><div class="figcaption">Day 2 workflow, with building and stewarding a
-local vocabulary highlighted.</div>
-</figure><section><h2 class="section-heading" id="build-from-source-meanings-not-labels-alone">Build from source meanings, not labels alone<a class="anchor" aria-label="anchor" href="#build-from-source-meanings-not-labels-alone"></a>
+<section><h2 class="section-heading" id="build-from-source-meanings-not-labels-alone">Build from source meanings, not labels alone<a class="anchor" aria-label="anchor" href="#build-from-source-meanings-not-labels-alone"></a>
 </h2>
 <hr class="half-width">
 <p>Chapter 8 selected a local/profile teaching draft for a small set of
@@ -3460,9 +3485,8 @@ unresolved.</p>
 <p><code>Combined Methods</code> is not automatically a broader concept
 than every method that might be combined. The source also does not
 establish that <code>Fence</code> is a synonym of
-<code>Fixed Site Census</code>. Leave these relationships absent unless
-supported. The worked vocabulary therefore has no invented hierarchy or
-alternative labels.</p>
+<code>Fixed Site Census</code>. The worked vocabulary leaves these
+relationships open for investigation.</p>
 </section><section><h2 class="section-heading" id="read-and-write-a-small-skos-file">Read and write a small SKOS file<a class="anchor" aria-label="anchor" href="#read-and-write-a-small-skos-file"></a>
 </h2>
 <hr class="half-width">
@@ -3496,18 +3520,18 @@ becomes <code>skos:definition</code>; scope belongs in
 <code>dcterms:source</code>. Omit a <code>skos:definition</code>
 statement for the unresolved counter method rather than copying a guess
 into it.</p>
-<p>All new subject IRIs are in
-<code>https://example.org/fraser-coho-workshop/terms/</code>. This is a
-teaching namespace, not an official NuSEDS or SDO vocabulary. The source
-links identify evidence; they do not let us add labels or redefine terms
-in another organization’s namespace. The complete source and convention
-pins are in <a href="../files/fraser-coho-workshop/semantic-lab/vocabulary/provenance.json">provenance.json</a>.</p>
+<p>All new subject IRIs are in the teaching namespace
+<code>https://example.org/fraser-coho-workshop/terms/</code>. Keeping
+local identifiers separate from existing shared identifiers makes it
+clear which resource defines each concept. The complete source and
+convention pins are in <a href="../files/fraser-coho-workshop/semantic-lab/vocabulary/provenance.json">provenance.json</a>.</p>
 </section><section><h2 class="section-heading" id="check-the-artifact-and-its-limits">Check the artifact and its limits<a class="anchor" aria-label="anchor" href="#check-the-artifact-and-its-limits"></a>
 </h2>
 <hr class="half-width">
 <p>A syntax check determines whether Turtle can be read. A vocabulary
 check examines selected expectations such as concept types, labels and
-scheme membership. Neither supplies scientific approval.</p>
+scheme membership. A domain reviewer assesses whether the definitions
+accurately describe the methods.</p>
 <p>After preparing the Day 2 Python environment in Setup, run the same
 small utility from any software lane. Start in the extracted
 workshop-kit root:</p>
@@ -3535,8 +3559,8 @@ identical literal used as both preferred and alternative label.</li>
 explicitly records its missing operational definition.</li>
 <li>Every concept retains evidence, scope and a pending-review note; no
 concept IRI is also declared an OWL class.</li>
-<li>No hierarchy or cross-vocabulary equivalence was invented to make
-the file look complete.</li>
+<li>Each proposed hierarchy or cross-vocabulary relationship has
+supporting evidence.</li>
 </ul>
 <p>The label and scheme distinctions follow the <a href="https://www.w3.org/TR/2009/REC-skos-reference-20090818/" class="external-link">SKOS
 Reference</a>. Our exact four-concept inventory is a workshop check.
@@ -3546,11 +3570,11 @@ that job.</p>
 </section><section><h2 class="section-heading" id="steward-the-meaning-as-well-as-the-file">Steward the meaning as well as the file<a class="anchor" aria-label="anchor" href="#steward-the-meaning-as-well-as-the-file"></a>
 </h2>
 <hr class="half-width">
-<p>Complete <code>semantic-lab/worksheets/stewardship.md</code>. A
-production resource needs decisions about its owner, users, identifier
-policy, evidence review, versioning, corrections and release. Today you
-prepare those decisions; filling a form does not appoint an agency
-steward.</p>
+<p>Complete <code>semantic-lab/worksheets/stewardship.md</code>. Propose
+who would maintain the vocabulary, who would use it, and how
+identifiers, evidence review, versioning, corrections and release would
+work. Record which responsibilities still need agreement with the
+proposed owner.</p>
 <p>In the draft, distinguish a wording correction from a changed
 meaning. Record the former in a change log; a substantive change may
 need a new concept and an explicit replacement decision so old data can
@@ -3575,8 +3599,8 @@ stewardship record</h3>
 <ol style="list-style-type: decimal">
 <li>
 <strong>Write for 15 minutes.</strong> Complete all four concept
-records against the source. Keep one definition explicitly unresolved.
-Do not add invented synonyms, parent concepts or approved stewards.</li>
+records against the source. Keep the missing definition and unsupported
+relationships as open questions.</li>
 <li>
 <strong>Build for 15 minutes.</strong> Create your own Turtle file
 from those records. Work in pairs if a text editor is unfamiliar. Trace
@@ -3605,16 +3629,15 @@ or decisions blank where no agreement exists.</li>
 <div class="accordion-body">
 <p>Compare <a href="../files/fraser-coho-workshop/semantic-lab/vocabulary/concepts-working.csv">concepts-working.csv</a>
 and <a href="../files/fraser-coho-workshop/semantic-lab/vocabulary/estimate-methods.ttl">estimate-methods.ttl</a>
-with your output. They are source-grounded teaching drafts with no
-scientific approval. The stewardship working example in
-<code>semantic-lab/vocabulary/stewardship-working.md</code> deliberately
-leaves reviewer names and agency decisions unset.</p>
+with your output. Trace their definitions and questions to the cited
+evidence. Use
+<code>semantic-lab/vocabulary/stewardship-working.md</code> to compare
+the proposed responsibilities and decisions still needed for
+release.</p>
 <p>Success means another person can recover all four exact source
 bindings, distinguish three supported paraphrases from one definition
-gap, and identify what must happen before adoption. A parsed file with
-an invented procedure definition fails that test. A draft with the gap
-clearly documented can pass the classroom exercise while remaining
-unsuitable for an approved vocabulary release.</p>
+gap, and identify what must happen before adoption. Documenting the gap
+gives a future reviewer a concrete question to resolve.</p>
 </div>
 </div>
 </div>
@@ -3643,7 +3666,7 @@ distinct outcomes.</li>
 </div>
 </section></section><section id="aio-session-10"><p>Content from <a href="session-10.html">Turn the Human Graph into a Small OWL Model</a></p>
 <hr>
-<p>Last updated on 2026-09-09 |
+<p>Last updated on 2026-09-22 |
 
         <a href="https://github.com/salmon-data-mobilization/salmon-data-standards-workshop/edit/main/episodes/session-10.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 90 minutes</p>
@@ -3687,9 +3710,7 @@ method concepts distinct.</li>
 </div>
 </div>
 </div>
-<figure><img src="../fig/workflow-10.svg" alt="Workflow: formalize a small part of the human model after reviewing its meanings." class="figure mx-auto d-block"><div class="figcaption">Workflow: formalize a small part of the human
-model after reviewing its meanings.</div>
-</figure><section><h2 class="section-heading" id="start-with-a-question-the-model-should-answer">Start with a question the model should answer<a class="anchor" aria-label="anchor" href="#start-with-a-question-the-model-should-answer"></a>
+<section><h2 class="section-heading" id="start-with-a-question-the-model-should-answer">Start with a question the model should answer<a class="anchor" aria-label="anchor" href="#start-with-a-question-the-model-should-answer"></a>
 </h2>
 <hr class="half-width">
 <p>We have already described the data and built a small vocabulary. Now
@@ -3985,11 +4006,11 @@ workshop project root, with that Python environment active:</p>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="ex">python</span> semantic-lab/scripts/check_model.py <span class="at">--report</span> output/semantic-lab/model-check-01.json</span></code></pre>
 </div>
-<p>This utility works alongside either the R or Python SDP lane. It is a
-Python graph tool, not a new MetaSalmon function. Spreadsheet
-participants can make the statement table and predictions, then inspect
-a partner’s or facilitator’s actual run. Record whether you executed or
-inspected the result.</p>
+<p>Run this utility in the separate Python RDF environment from Setup,
+whichever SDP lane you chose. Spreadsheet participants can make the
+statement table and predictions, then inspect a partner’s or
+facilitator’s run. Record whether you executed or inspected the
+result.</p>
 <p>The learner command checks the Chapter 2–3 preparation record before
 loading the model. It reads local Turtle files, resolves no ontology
 imports, makes no API calls, preserves the source, and refuses to
@@ -4079,7 +4100,7 @@ review establish different things.</li>
 </div>
 </section></section><section id="aio-session-11"><p>Content from <a href="session-11.html">Build and Test Bridges to Shared Salmon Meanings</a></p>
 <hr>
-<p>Last updated on 2026-09-09 |
+<p>Last updated on 2026-09-22 |
 
         <a href="https://github.com/salmon-data-mobilization/salmon-data-standards-workshop/edit/main/episodes/session-11.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 75 minutes</p>
@@ -4098,8 +4119,8 @@ review establish different things.</li>
 become a proposed shared contribution?</li>
 <li>What does each mapping predicate actually claim, and in which
 direction?</li>
-<li>How can we test a bridge without erasing source meaning or
-pretending it has been approved?</li>
+<li>How can we test what a bridge implies while preserving the source
+meaning?</li>
 </ul>
 </div>
 </div>
@@ -4125,9 +4146,7 @@ status.</li>
 </div>
 </div>
 </div>
-<figure><img src="../fig/workflow-11.svg" alt="Workflow: connect reviewed local meanings to shared definitions using explicit bridge decisions." class="figure mx-auto d-block"><div class="figcaption">Workflow: connect reviewed local meanings to
-shared definitions using explicit bridge decisions.</div>
-</figure><section><h2 class="section-heading" id="preserve-local-meaning-while-making-it-discoverable">Preserve local meaning while making it discoverable<a class="anchor" aria-label="anchor" href="#preserve-local-meaning-while-making-it-discoverable"></a>
+<section><h2 class="section-heading" id="preserve-local-meaning-while-making-it-discoverable">Preserve local meaning while making it discoverable<a class="anchor" aria-label="anchor" href="#preserve-local-meaning-while-making-it-discoverable"></a>
 </h2>
 <hr class="half-width">
 <p>A collaborator wants to find salmon enumeration information across
@@ -4332,8 +4351,9 @@ count. Replacing <code>Area Under the Curve</code> with
 <code>Enumeration method</code> would remove information a reader needs
 to interpret row 5. A discovery interface may show this record under a
 reviewed “related methods” expansion while still displaying the original
-method and classification. That discovery use does not authorize
-aggregating its value with other estimates.</p>
+method and classification. Whether its value can be combined with other
+estimates still depends on the methods and coverage of those
+estimates.</p>
 <p>Compare data row <strong>39</strong>, Dunn Creek (Clearwater) Coho,
 which stores <code>Fixed Site Census</code>. The official source
 describes combining raw observations into an estimate. The label alone
@@ -4346,7 +4366,7 @@ link between the same endpoints. B05 defers a Resistivity Counter
 mapping because the current dictionary lacks an operational definition.
 A rejected or deferred row stays in the decision record without becoming
 a mapping triple.</p>
-</section><section><h2 class="section-heading" id="work-through-a-class-bridge-without-inventing-biology">Work through a class bridge without inventing biology<a class="anchor" aria-label="anchor" href="#work-through-a-class-bridge-without-inventing-biology"></a>
+</section><section><h2 class="section-heading" id="work-through-a-bridge-between-record-classes">Work through a bridge between record classes<a class="anchor" aria-label="anchor" href="#work-through-a-bridge-between-record-classes"></a>
 </h2>
 <hr class="half-width">
 <p>Chapter 10 includes a documentation item,
@@ -4402,11 +4422,9 @@ production integration.</p>
 <p><a href="glossary.html#sssom">SSSOM</a> is a format for sharing
 mappings and their metadata. It carries a mapping predicate; it does not
 choose the predicate’s semantics or make an uncertain relationship
-exact. A CSV with two identifier columns is not automatically valid
-SSSOM. The lab’s decision table is a workshop worksheet; no
-SSSOM-conformance claim is made. If you later export it, preserve the
-predicate, provenance, and review decision and validate against the
-chosen SSSOM version. <a href="https://mapping-commons.github.io/sssom/dev/" class="external-link">SSSOM
+exact. To export the lab’s decision worksheet as SSSOM, use the required
+format fields, preserve the predicate, provenance and review decision,
+and validate against the chosen SSSOM version. <a href="https://mapping-commons.github.io/sssom/dev/" class="external-link">SSSOM
 documentation</a>.</p>
 </section><section><h2 class="section-heading" id="test-the-bridge-then-inspect-what-the-test-leaves-open">Test the bridge, then inspect what the test leaves open<a class="anchor" aria-label="anchor" href="#test-the-bridge-then-inspect-what-the-test-leaves-open"></a>
 </h2>
@@ -4445,8 +4463,8 @@ lab’s per-pair policy.</li>
 expectations. They do not prove that every possible bridge is sound, run
 a full OWL DL classifier, or establish scientific agreement. If an
 edited proposal changes an expected outcome, a failing check is a prompt
-to inspect the new claim and revise its documented test deliberately. Do
-not delete a check merely to obtain a pass.</p>
+to inspect the new claim and revise its documented test
+deliberately.</p>
 </section><section><h2 class="section-heading" id="decide-whether-to-reuse-keep-local-or-request-a-shared-term">Decide whether to reuse, keep local, or request a shared term<a class="anchor" aria-label="anchor" href="#decide-whether-to-reuse-keep-local-or-request-a-shared-term"></a>
 </h2>
 <hr class="half-width">
@@ -4551,7 +4569,7 @@ stewardship decision remain separate.</li>
 </div>
 </section></section><section id="aio-session-12"><p>Content from <a href="session-12.html">Draft a Term Request and Follow Its Stewardship</a></p>
 <hr>
-<p>Last updated on 2026-09-09 |
+<p>Last updated on 2026-09-22 |
 
         <a href="https://github.com/salmon-data-mobilization/salmon-data-standards-workshop/edit/main/episodes/session-12.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 60 minutes</p>
@@ -4594,9 +4612,7 @@ without posting an issue.</li>
 </div>
 </div>
 </div>
-<figure><img src="../fig/workflow-12.svg" alt="Workflow: prepare a source-backed request and follow its stewardship lifecycle." class="figure mx-auto d-block"><div class="figcaption">Workflow: prepare a source-backed request and
-follow its stewardship lifecycle.</div>
-</figure><section><h2 class="section-heading" id="the-problem-an-unresolved-label-needs-a-useful-next-action">The problem: an unresolved label needs a useful next action<a class="anchor" aria-label="anchor" href="#the-problem-an-unresolved-label-needs-a-useful-next-action"></a>
+<section><h2 class="section-heading" id="the-problem-an-unresolved-label-needs-a-useful-next-action">The problem: an unresolved label needs a useful next action<a class="anchor" aria-label="anchor" href="#the-problem-an-unresolved-label-needs-a-useful-next-action"></a>
 </h2>
 <hr class="half-width">
 <p>Continue with the unchanged <strong>173-row, 14-column NuSEDS Fraser
@@ -4614,7 +4630,7 @@ issue.</p>
 <p>Use the <a href="../files/fraser-coho-workshop/semantic-lab/worksheets/term-request.html">request
 worksheet</a> in the kit. Read the <a href="../files/fraser-coho-workshop/semantic-lab/contributions/source-clarification-example.html">filled
 source-clarification example</a> after choosing your own unresolved
-question. These are working documents, not approval records.</p>
+question.</p>
 </section><section><h2 class="section-heading" id="choose-the-request-before-choosing-a-repository">Choose the request before choosing a repository<a class="anchor" aria-label="anchor" href="#choose-the-request-before-choosing-a-repository"></a>
 </h2>
 <hr class="half-width">
@@ -4666,13 +4682,11 @@ cross-organization meaning; <code>gcdfo:</code> holds DFO-specific or
 intentionally profile-scoped meaning. A DFO source document alone does
 not decide where a concept belongs. A bridge connects meanings but does
 not transfer their ownership.</p>
-<p>Do not create a compound shared class merely because a source column
-has a long name. Keep the variable’s property, entity, unit,
-constraints, statistical modifier, and method context distinguishable.
-<code>method_iri</code> is not a column-dictionary slot in SDP v0.3; a
-source method value belongs with its code context. The upstream request
-form’s method prompt is context for discussion, not permission to add a
-dictionary field.</p>
+<p>Use your decomposition to identify which part of a compound variable
+needs a term: its property, entity, unit, constraints or statistical
+modifier. Include the method as supporting context in the request. In
+SDP v0.3, a row-varying method belongs with its code metadata;
+<code>method_iri</code> is not a column-dictionary field.</p>
 </section><section><h2 class="section-heading" id="inspect-existing-definitions-and-record-the-search-boundary">Inspect existing definitions and record the search boundary<a class="anchor" aria-label="anchor" href="#inspect-existing-definitions-and-record-the-search-boundary"></a>
 </h2>
 <hr class="half-width">
@@ -4723,7 +4737,7 @@ They do not search the web, call AI, or post issues.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-R" class="tab-pane show active" aria-labelledby="nav-tab-1-R" role="tabpanel">
+<div id="nav-tabpanel-1-R" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-R">
 <p>Run from the extracted <code>fraser-coho-workshop/</code> project
 root:</p>
 <div class="codewrapper sourceCode" id="cb1">
@@ -4747,7 +4761,7 @@ root:</p>
 for inspection. It does not make a stewardship decision. Read the local
 files under <code>output/term-request-preview-r/</code>.</p>
 </div>
-<div id="nav-tabpanel-1-Python" class="tab-pane" aria-labelledby="nav-tab-1-Python" role="tabpanel">
+<div id="nav-tabpanel-1-Python" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Python">
 <p>Run from the same project root using the pinned Python
 environment:</p>
 <div class="codewrapper sourceCode" id="cb3">
@@ -4769,7 +4783,7 @@ environment:</p>
 separate native-review and metadata-setter gaps. Inspect
 <code>output/term-request-preview-python/</code>.</p>
 </div>
-<div id="nav-tabpanel-1-Spreadsheet" class="tab-pane" aria-labelledby="nav-tab-1-Spreadsheet" role="tabpanel">
+<div id="nav-tabpanel-1-Spreadsheet" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Spreadsheet">
 <p>Open <code>semantic-lab/contributions/recorded-gap-preview.csv</code>
 and <code>recorded-preview-notes.md</code> in the kit, or inspect a
 partner’s new preview folder. Compare <code>dictionary_role</code>, the
@@ -4788,11 +4802,10 @@ already supplies a reusable characteristic to inspect, while the
 complete source variable raises other scope questions. A renderer can
 make a search limitation look like a confident new-term request; revise
 the draft using your evidence.</p>
-<p>The recorded preview is a software execution record. It is not a
-human-approved gap, an actual submission, or a substitute for reading
-source definitions. New evidence or software versions may change the
-candidate list; keep the actual output rather than forcing it to match
-the recording.</p>
+<p>The recorded preview shows what the software proposed. Evaluate each
+candidate against the source definitions and your search evidence. If a
+later run returns different candidates, retain its output and
+investigate what changed.</p>
 </section><section><h2 class="section-heading" id="write-the-request-a-steward-can-evaluate">Write the request a steward can evaluate<a class="anchor" aria-label="anchor" href="#write-the-request-a-steward-can-evaluate"></a>
 </h2>
 <hr class="half-width">
@@ -4812,11 +4825,10 @@ repository’s form.</p>
 that the preferred label was absent. Name the expected consequence of
 the requested change: a clearer definition, a local code interpretation,
 a reviewed mapping, or a new reusable concept. If a mapping is proposed,
-state what evidence supports its strength.
-<code>owl:equivalentClass</code> has logical consequences; neither a
-high score nor approval to discuss it proves those consequences are
-justified.</p>
-</section><section><h2 class="section-heading" id="follow-the-lifecycle-without-inventing-its-outcome">Follow the lifecycle without inventing its outcome<a class="anchor" aria-label="anchor" href="#follow-the-lifecycle-without-inventing-its-outcome"></a>
+state what evidence supports its strength. For
+<code>owl:equivalentClass</code>, test the logical consequences as you
+did in Chapter 11 and explain why they fit the intended meaning.</p>
+</section><section><h2 class="section-heading" id="follow-a-proposal-through-review-release-and-reuse">Follow a proposal through review, release and reuse<a class="anchor" aria-label="anchor" href="#follow-a-proposal-through-review-release-and-reuse"></a>
 </h2>
 <hr class="half-width">
 <table class="table">
@@ -4875,10 +4887,10 @@ Repository labels and decisions may differ. A merged change, a released
 term, a scientifically adequate definition, and a correct dataset
 mapping are separate claims. A declined or deferred request can still
 improve the local definition and preserve a useful explanation.</p>
-<p>In this workshop the final handoff is <strong>a saved draft</strong>,
-with a proposed destination and next step. Posting to GitHub or
-contacting a steward is a separate action by an authorized person. No
-submission is required for completion.</p>
+<p>Finish the workshop with <strong>a saved draft</strong>, a proposed
+destination and a next step. The lifecycle above shows how that draft
+could become a maintained term and then return to your dataset’s
+metadata.</p>
 <div id="activity-hand-over-one-reviewable-request" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -4934,8 +4946,8 @@ different questions.</li>
 uncertainty, and compatibility effects.</li>
 <li>Stewardship continues through decision, release, contextual reuse,
 and later revision.</li>
-<li>The workshop produces an unsubmitted draft and an honest next
-step.</li>
+<li>The workshop produces a contribution draft with evidence and a
+concrete next step.</li>
 </ul>
 </div>
 </div>
