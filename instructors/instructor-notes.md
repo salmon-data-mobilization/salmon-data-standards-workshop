@@ -10,6 +10,19 @@ Show the three outcomes in Chapter 1: reusable data publication, shared-term con
 
 The supplied reference package is a **technical draft pending Bruno and Tom's domain review**. Label it that way in handouts and demonstrations. Structural validation and a successful test upload are useful technical evidence; neither is an expert ruling about biological meanings.
 
+## Delivery formats
+
+Every format uses the same chapters and the same Fraser Coho dataset.
+
+| Format | What it covers |
+| --- | --- |
+| 1-hour primer | The whole journey without detail: Chapter 1 on its own, run as the [standalone 55-minute overview](#standalone-55-minute-overview). |
+| 1-day workshop | Day 1, Chapters 1–7. |
+| 2-day workshop | Day 1 and Day 2, Chapters 1–12. |
+| Webinar series | Three or four weekly sessions of about two hours each, covering about two chapters per session. Record every session so a learner who misses a week can catch up before the next one. |
+
+Learners who bring their own data work with it in a separate solo hour after the group walkthrough, never during a group exercise. The chapter timings below do not include that hour.
+
 ## Day 1 — six-hour beginner route to publication
 
 | Elapsed time | Chapter | Minutes | Learner result |
@@ -78,7 +91,7 @@ The test deposit is authorized under Brett's identity and scoped to the KNB Test
 
 For mixed groups, rotate four roles: source reader, graph or dictionary editor, skeptical reviewer, and recorder. Spreadsheet users can lead source interpretation and peer review; R and Python users should complete those activities before automating them.
 
-In Chapter 2, ask what each arrow claims. Keep the observation activity separate from its result, the property from the entity, and the method from the variable meaning. A sketch can contain useful open questions. It need not become a formal ontology during the exercise.
+In Chapter 2, ask what each arrow claims. Keep the observation activity separate from its result, the property from the entity, and the method from the variable meaning. A sketch can contain useful open questions. It need not become a formal ontology during the exercise. Offer the drawing skeleton to anyone stuck on a blank page, and keep the answer key closed until each pair has drawn and explained its own variable.
 
 In Chapter 3, ask another pair to explain a field using only the draft definition and cited context. Record where their interpretation differs. Check proposed row grain and keys against the source records, and preserve missing estimates as missing. Do not silently resolve uncertainty because the reference worksheet supplies a plausible answer.
 

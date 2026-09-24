@@ -23,11 +23,23 @@ exercises: 25
 
 ## Two days, three connected outcomes
 
-This workshop supports **reusable data publication**, **contributions to shared terminology**, and **local vocabulary or ontology stewardship connected to shared meanings**. Day 1 is a six-hour beginner route through publication; Day 2 adds six hours of semantic authoring and contribution work.
+This workshop supports the following intended outcomes:
 
-The same graph and dictionary support all three outcomes. On Day 1 they make source meanings reviewable before software. On Day 2 we use them to decide which terms already exist, create small draft resources where useful, and connect local meanings to the Salmon Domain Ontology without erasing their differences. A catalog record helps people find the dataset; explicit concepts and relationships help them compare and interpret its meanings.
+1. **Reusable data publication.** Publish a [metadata](glossary.html#metadata) file that public catalogs and databases can read, so other people can find, understand and reuse your data.
+2. **Contribution to shared terminology.** Describe your data with terms from a shared [controlled vocabulary](glossary.html#controlled-vocabulary), and propose a new term when none fits.
+3. **Local vocabulary and ontology stewardship connected to shared meanings.** Maintain your organization's own vocabulary or [ontology](glossary.html#ontology), and link local terms to the shared meanings they match or relate to.
 
-The [Day 2 guide](advanced.html) introduces a [SKOS](glossary.html#skos) controlled vocabulary, a small [OWL](glossary.html#owl) model, a [bridge](glossary.html#bridge), and a [term-request](glossary.html#term-request) or clarification draft. These examples are in the `semantic-lab/` folder inside the extracted workshop ZIP. The [setup instructions](index.html#download-and-open-the-workshop-kit) explain how to download and open it. We will work with those files from Chapter 8 onward.
+| Outcome | Day 1 | Day 2 |
+| --- | --- | --- |
+| 1. Reusable data publication | Build a package and export its catalog metadata | — |
+| 2. Contribution to shared terminology | Reuse published terms | Propose and steward terms |
+| 3. Local stewardship connected to shared meanings | — | Build a vocabulary and model; bridge local terms to shared ones |
+
+**Day 1** is for the biologist who wants to reuse standardized terms and publish data in a [FAIR](glossary.html#fair) way: create a [Salmon Data Package](glossary.html#salmon-data-package), reuse published terms and practise publishing it to a test catalog. On **Day 2**, you build and steward a small vocabulary and [OWL](glossary.html#owl) model and [bridge](glossary.html#bridge) local terms to the Salmon Domain Ontology. It suits people setting up data stewardship for an organization.
+
+![How the three outcomes connect.](fig/outcomes-overview.svg){alt="The three outcomes in the bigger picture. A Salmon Data Package reuses terms from shared ontologies and vocabularies (outcome 2, Day 1) and publishes its metadata to public catalogs and databases (outcome 1, Day 1). Its local meanings go into an organization's own vocabulary and ontology (Day 2), which bridges local terms to shared meanings (outcome 3, Day 2) and proposes new shared terms (outcome 2, Day 2) that later packages can reuse."}
+
+The same hand-drawn graph and dictionary support all three outcomes. The [Day 2 guide](advanced.html) introduces a [SKOS](glossary.html#skos) controlled vocabulary, a small [OWL](glossary.html#owl) model, a [bridge](glossary.html#bridge), and a [term-request](glossary.html#term-request) or clarification draft. These examples are in the `semantic-lab/` folder inside the extracted workshop ZIP. The [setup instructions](index.html#download-and-open-the-workshop-kit) explain how to download and open it. We will work with those files from Chapter 8 onward.
 
 ## Framing the challenge
 
@@ -128,6 +140,7 @@ Share one example. Keep unanswered questions for the diagram and dictionary exer
 ::::::::::::::::::::::::::::::::::::: keypoints
 
 - The same 173-row, 14-column Fraser Coho slice carries every chapter.
+- The workshop supports three intended outcomes: reusable data publication on Day 1, shared terminology on both days, and local stewardship connected to shared meanings on Day 2.
 - A reusable dataset needs understandable values, context, relationships, sources and access conditions.
 - The dataset has 164 distinct population–year pairs; that pair does not uniquely identify every row.
 - We draw and describe the dataset, then peer review our account, before using metasalmon or AI.
