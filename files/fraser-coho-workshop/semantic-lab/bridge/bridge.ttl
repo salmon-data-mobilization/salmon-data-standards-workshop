@@ -1,0 +1,33 @@
+# DRAFT teaching proposals, separate from both local definitions and SDO.
+# Loading this file ASSERTS the following two triples, despite the draft label.
+# Load it only in the classroom experiment; no production integration is approved.
+@prefix ex: <https://example.org/fraser-coho-workshop/terms/> .
+@prefix bridge: <https://example.org/fraser-coho-workshop/bridge/> .
+@prefix smn: <https://w3id.org/smn/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+bridge: a owl:Ontology ;
+    rdfs:label "Draft Fraser Coho teaching bridge"@en ;
+    ex:reviewStatus "draft; not approved for source annotation or production inference" .
+
+ex:area-under-the-curve skos:relatedMatch smn:EnumerationMethod .
+ex:NuSEDSMethodDescription rdfs:subClassOf smn:MethodDocumentation .
+
+bridge:B01 a rdf:Statement ;
+    rdf:subject ex:area-under-the-curve ;
+    rdf:predicate skos:relatedMatch ;
+    rdf:object smn:EnumerationMethod ;
+    ex:reviewStatus "proposed; human review pending" ;
+    dcterms:source <https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv> ;
+    rdfs:comment "Related method purposes are proposed. NuSEDS AUC calculates an estimate from a series and survey-life assumption; the shared concept describes field enumeration. Relatedness does not license replacing the source label or treating the estimate as a direct count. See mapping-decisions-working.csv for the counterexample and rejected stronger alternative."@en .
+
+bridge:B06 a owl:Axiom ;
+    owl:annotatedSource ex:NuSEDSMethodDescription ;
+    owl:annotatedProperty rdfs:subClassOf ;
+    owl:annotatedTarget smn:MethodDocumentation ;
+    ex:reviewStatus "proposed; human review pending" ;
+    rdfs:comment "The local class is explicitly scoped to documentation explaining a NuSEDS estimate method. Such documentation fits the shared MethodDocumentation definition. Other salmon method documentation need not be NuSEDS documentation: the reverse subclass and equivalence are not asserted."@en .

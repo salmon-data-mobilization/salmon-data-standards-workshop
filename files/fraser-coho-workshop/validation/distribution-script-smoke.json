@@ -1,0 +1,183 @@
+{
+  "observed_utc": "2026-09-08T17:24:10.692905+00:00",
+  "scope": "Isolated script fixtures; synthetic verification responses do not establish a public KNB deposit.",
+  "scripts": {
+    "check-workshop.py": "a5010f7974a3822b6312ff4ec9fdf8e5574f1880174b33f5813fe70240eaaa30",
+    "build-workshop-kit.py": "db0668391d4561185924d8150599c83978e622d0939a7b8bcb410ff22ef6fffd",
+    "verify-test-record.py": "e16f5a127bc6c41cf61e895833f4015da17bf9e557e86cd6424a0d74bc56921b"
+  },
+  "distribution_fixture_tests": [
+    {
+      "case": "baseline",
+      "passed": true,
+      "expected": "pass"
+    },
+    {
+      "case": "omitted inventory entry",
+      "passed": true,
+      "expected": "rejected"
+    },
+    {
+      "case": "wrong inventory digest",
+      "passed": true,
+      "expected": "rejected"
+    },
+    {
+      "case": "missing ZIP member",
+      "passed": true,
+      "expected": "rejected"
+    },
+    {
+      "case": "duplicate ZIP member",
+      "passed": true,
+      "expected": "rejected"
+    },
+    {
+      "case": "source identity change",
+      "passed": true,
+      "expected": "rejected"
+    },
+    {
+      "case": "planned object digest change",
+      "passed": true,
+      "expected": "rejected"
+    },
+    {
+      "case": "nested valid HTML and anchor",
+      "passed": true,
+      "expected": "pass"
+    },
+    {
+      "case": "nested missing download",
+      "passed": true,
+      "expected": "rejected"
+    },
+    {
+      "case": "nested missing anchor",
+      "passed": true,
+      "expected": "rejected"
+    },
+    {
+      "case": "existing file outside site",
+      "passed": true,
+      "expected": "rejected"
+    },
+    {
+      "case": "exact missing theme icon reported warning",
+      "passed": true,
+      "expected": "pass"
+    },
+    {
+      "case": "same filename used as content image fails",
+      "passed": true,
+      "expected": "rejected"
+    },
+    {
+      "case": "missing stylesheet fails",
+      "passed": true,
+      "expected": "rejected"
+    },
+    {
+      "case": "stale rendered ZIP rejected",
+      "passed": true,
+      "expected": "rejected"
+    },
+    {
+      "case": "stale rendered kit file rejected",
+      "passed": true,
+      "expected": "rejected"
+    },
+    {
+      "case": "stale rendered workflow figure rejected",
+      "passed": true,
+      "expected": "rejected"
+    },
+    {
+      "case": "final rendered baseline",
+      "passed": true,
+      "expected": "pass"
+    }
+  ],
+  "anonymous_verifier_mock_tests": [
+    {
+      "case": "completed public deposit",
+      "passed": true,
+      "transport": "simulated urllib responses only",
+      "http_calls_made": 0,
+      "simulated_requests": 8
+    },
+    {
+      "case": "pending catalog status accepted",
+      "passed": true,
+      "transport": "simulated urllib responses only",
+      "http_calls_made": 0,
+      "simulated_requests": 8
+    },
+    {
+      "case": "dry run rejected before HTTP",
+      "passed": true,
+      "transport": "simulated urllib responses only",
+      "http_calls_made": 0,
+      "simulated_requests": 0
+    },
+    {
+      "case": "production node rejected before HTTP",
+      "passed": true,
+      "transport": "simulated urllib responses only",
+      "http_calls_made": 0,
+      "simulated_requests": 0
+    },
+    {
+      "case": "private manifest rejected before HTTP",
+      "passed": true,
+      "transport": "simulated urllib responses only",
+      "http_calls_made": 0,
+      "simulated_requests": 0
+    },
+    {
+      "case": "incorrect object bytes rejected",
+      "passed": true,
+      "transport": "simulated urllib responses only",
+      "http_calls_made": 0,
+      "simulated_requests": 3
+    },
+    {
+      "case": "private object ACL rejected",
+      "passed": true,
+      "transport": "simulated urllib responses only",
+      "http_calls_made": 0,
+      "simulated_requests": 2
+    },
+    {
+      "case": "unindexed metadata rejected",
+      "passed": true,
+      "transport": "simulated urllib responses only",
+      "http_calls_made": 0,
+      "simulated_requests": 7
+    },
+    {
+      "case": "missing resource-map membership rejected",
+      "passed": true,
+      "transport": "simulated urllib responses only",
+      "http_calls_made": 0,
+      "simulated_requests": 6
+    }
+  ],
+  "live_knb_http_calls": 0,
+  "actual_kit_mutations_in_tests": false,
+  "all_passed": true,
+  "python_seeding_followup": {
+    "live_vocabulary_probe": "timed out after 180 seconds; no API callback used",
+    "offline_retrieval_fixture": "actual saved seeded-sdp candidates supplied via public search_fn callback",
+    "pandas_version": "3.0.5",
+    "metasalmonpy_version": "0.4.0 exact tagged source",
+    "same_source_shape": [
+      173,
+      14
+    ],
+    "returned_suggestions": 12,
+    "applied_dictionary_rows": 14,
+    "result": "passed; prior dtype error not reproduced",
+    "live_ai_calls": 0
+  }
+}

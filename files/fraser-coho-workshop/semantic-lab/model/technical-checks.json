@@ -1,0 +1,64 @@
+{
+  "scope": "Isolated reference regression and failure fixtures; no human review performed or simulated; no live network requests.",
+  "reference_check_counts": {
+    "model": 15,
+    "bridge": 10
+  },
+  "cases": [
+    {
+      "case": "supplied reference checks",
+      "passed": true,
+      "expected": "pass"
+    },
+    {
+      "case": "learner model blocked on pending review",
+      "passed": true,
+      "expected": "rejected"
+    },
+    {
+      "case": "learner bridge blocked on pending review",
+      "passed": true,
+      "expected": "rejected"
+    },
+    {
+      "case": "malformed Turtle rejected",
+      "passed": true,
+      "expected": "rejected"
+    },
+    {
+      "case": "source change rejected",
+      "passed": true,
+      "expected": "rejected"
+    },
+    {
+      "case": "class-concept collision rejected",
+      "passed": true,
+      "expected": "rejected"
+    },
+    {
+      "case": "conflicting bridge rejected",
+      "passed": true,
+      "expected": "rejected"
+    },
+    {
+      "case": "anchor excerpt change rejected",
+      "passed": true,
+      "expected": "rejected"
+    },
+    {
+      "case": "restored reference checks",
+      "passed": true,
+      "expected": "pass"
+    }
+  ],
+  "script_hashes": {
+    "check_bridge.py": "951f96abe2c12c97060b3c9f8082379d38685a5efdb0dfb81267df2973507c2d",
+    "check_reference.py": "c4124ec784d1cadc7b5d321b1eb9212e5fa565ba1d4fb04ec345906f67e55e9b",
+    "check_model.py": "b760df44dbdc802f9f9feea602b96742f5f27c07cc25c7c84021d69f301b8a74",
+    "lab_common.py": "4d2cccfad8c545695112bc3762e90146264eabb614d0f32ffb03986c41162f41"
+  },
+  "human_review": "pending",
+  "source_unchanged": true,
+  "svg_xml_parse": "passed",
+  "all_passed": true
+}

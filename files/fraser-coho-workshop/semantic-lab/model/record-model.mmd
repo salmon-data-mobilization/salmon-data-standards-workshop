@@ -1,0 +1,15 @@
+flowchart LR
+  record1["record-1: NuSEDS record<br/>source row 1; analysis year 2023"]
+  result1["result-1: reported result"]
+  value["758: decimal literal"]
+  population["population-reference-46200<br/>identifier and source label"]
+  variable["adult-spawner-field<br/>description of the source variable"]
+  record2["record-2: NuSEDS record<br/>source row 2; blank estimate<br/>no result asserted"]
+  record1 -->|hasReportedResult| result1
+  result1 -->|numericValue| value
+  record1 -->|concernsPopulationReference| population
+  result1 -->|reportedUnderVariable| variable
+  classDef literal fill:#eaf3fb,stroke:#386b93;
+  class value literal;
+%% The graph illustrates objects and a literal. Class rules are in model.ttl.
+%% These two rows are examples, not a replacement for the unchanged 173-row source.

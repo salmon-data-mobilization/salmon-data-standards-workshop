@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">README</h1>
+</header>
+<h1 id="day-2-semantic-lab">Day 2 semantic lab</h1>
+<p>Use this lab from the extracted <code>fraser-coho-workshop/</code>
+project root after the actual human graph, dictionary, decomposition and
+peer review from Day 1. It supplies the five chapters of Part 2:
+<strong>60 + 75 + 90 + 75 + 60 = 360 minutes</strong>. Both days
+together contain 720 minutes of teaching and activities, excluding
+breaks.</p>
+<p>The source remains
+<code>raw_data/nuseds-fraser-coho-2023-2024.csv</code>, all 173 rows and
+14 columns. The model illustrates selected actual rows with a source
+hash and row-position trace; it does not replace the full source table
+or declare a population/year key. No source data are renamed,
+synthesized, deduplicated or aggregated.</p>
+<h2 id="what-you-will-make">What you will make</h2>
+<table>
+<thead>
+<tr>
+<th>Chapter</th>
+<th>Start with</th>
+<th>Create or review</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8 — choose a route</td>
+<td><code>worksheets/routing-decisions.csv</code></td>
+<td>Evidence-backed choices about reuse, representation and
+stewardship</td>
+</tr>
+<tr>
+<td>9 — build a vocabulary</td>
+<td><code>worksheets/vocabulary-concepts.csv</code> and <a
+href="vocabulary/README.html">vocabulary guide</a></td>
+<td>Four draft concepts in a SKOS scheme, with three sourced definitions
+and one explicit gap; stewardship record</td>
+</tr>
+<tr>
+<td>10 — formalize the graph</td>
+<td><code>worksheets/model-statements.csv</code>,
+<code>model/model.ttl</code>, <code>model/instances.ttl</code>,
+<code>model/record-shapes.ttl</code></td>
+<td>Small local RDF/OWL model and checks of selected consequences and
+required data</td>
+</tr>
+<tr>
+<td>11 — build bridges</td>
+<td><code>worksheets/bridge-decisions.csv</code>,
+<code>bridge/mapping-decisions-working.csv</code>,
+<code>bridge/bridge.ttl</code></td>
+<td>A proposed mapping with evidence, rejected alternatives and
+consequence checks</td>
+</tr>
+<tr>
+<td>12 — prepare a contribution</td>
+<td><a href="contributions/README.html">contribution guide</a> and <a
+href="worksheets/term-request.html">request worksheet</a></td>
+<td>A complete unsubmitted term request or source-clarification draft
+and next review step</td>
+</tr>
+</tbody>
+</table>
+<p>Paths in this table are relative to <code>semantic-lab/</code>. In
+the terminal, stay at the <strong>kit root</strong> and include that
+prefix. Preserve the supplied working examples; save your own generated
+Turtle and check reports under <code>output/semantic-lab/</code>. Edit
+the blank worksheets as the chapters direct. Candidate request previews
+use their separate, explicitly named folders under
+<code>output/</code>.</p>
+<h2 id="install-checking-tools-before-the-class">Install checking tools
+before the class</h2>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> venv .venv-semantic</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">.</span> .venv-semantic/bin/activate</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install <span class="at">-r</span> semantic-lab/scripts/requirements.txt</span></code></pre></div>
+<p>On Windows activate <code>.venv-semantic/Scripts/Activate.ps1</code>
+in PowerShell. The requirements pin rdflib 7.1.4, owlrl 7.1.4 and
+pyshacl 0.30.1. Installation downloads software; the subsequent lab
+checks read local files without retrieval, ontology imports or AI
+requests. R and spreadsheet users can author and review the same
+artifacts with a partner running Python checks. The optional Chapter 12
+R/Python request preview uses the Day 1 package environment, not this
+small RDF-only environment.</p>
+<p>After completing the chapter's actual preparation and authoring:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> semantic-lab/vocabulary/check_vocabulary.py <span class="at">--vocabulary</span> output/semantic-lab/estimate-methods.ttl</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> semantic-lab/scripts/check_model.py</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> semantic-lab/scripts/check_bridge.py</span></code></pre></div>
+<p>The vocabulary command reads your four completed concept rows. The
+model and bridge commands default to the supplied reference artifacts;
+use the <code>--model</code>, <code>--instances</code>,
+<code>--shapes</code> or <code>--bridge</code> options shown in Chapters
+10–11 to inspect your copies. Reference checks have deliberately bounded
+expectations. A changed example can fail because it no longer makes the
+taught claims; investigate and document the difference rather than
+weakening the check to obtain a pass. Preserve reports with
+<code>--report output/semantic-lab/new-report-name.json</code> where
+supported.</p>
+<h2 id="understand-the-technical-evidence">Understand the technical
+evidence</h2>
+<p>The supplied <a href="../validation/day2-reference-checks.json">Day 2
+validation receipt</a> records maintainer checks of the shipped draft
+artifacts. It does <strong>not</strong> complete a learner's human
+review. The learner commands require the existing Day 1 preparation
+record. The separate maintainer command
+<code>python semantic-lab/scripts/check_reference.py</code> explicitly
+inspects model/bridge references with a still-pending distributed
+worksheet; it creates no learner answer or approval.</p>
+<p>The exercises include Turtle parsing, selected OWL RL inferences,
+concrete SHACL conditions, source-value traces, and checks against
+mixing SKOS concept and OWL class IRIs. Some deliberately changed
+assertions are examined only in memory to demonstrate errors. The
+original table and shipped examples remain unchanged. A statement absent
+from this bounded rule closure is not automatically false. These checks
+do not constitute a full OWL DL consistency assessment of the SDO and
+all its imports.</p>
+<h2 id="keep-identity-evidence-and-authority-separate">Keep identity,
+evidence and authority separate</h2>
+<p>Every newly defined teaching term uses
+<code>https://example.org/fraser-coho-workshop/terms/</code>;
+source-record illustration instances have their own
+<code>https://example.org/fraser-coho-workshop/instances/</code>
+identifiers. These are classroom identifiers, not production vocabulary
+pages or official DFO/SDO terms. Each new resource remains draft. The
+shared-anchor excerpt records its original namespace and source commit;
+it does not give us authority to rename or redefine those terms.</p>
+<p>Source wording, working interpretation, a proposed bridge, and a
+steward's decision are different evidence. Draft annotations do not turn
+off RDF or OWL inference when the file is loaded, so keep experimental
+bridges out of production imports. Do not copy these lab files into
+canonical SDP metadata or update the Day 1 package mappings without the
+applicable review and rebuild.</p>
+<p>The supplied scientific interpretations remain pending Bruno and
+Tom's review through Brett. No live AI, issue submission, ontology
+release, production deposit or DOI request is required. A justified
+source question or local-retention decision is a useful outcome; this
+dataset need not contain a previously unknown shared concept.</p>
+</body>
+</html>

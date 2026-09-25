@@ -1,0 +1,126 @@
+---
+title: "Explain Code Values and Route Unresolved Meanings"
+teaching: 15
+exercises: 15
+---
+
+:::::::::::::::::::::::::::::::::::::: questions
+
+- What does each stored code mean in this source?
+- When should a definition stay local, reuse a shared term, or become a term request?
+- What should we do when the source does not settle the meaning?
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+- Document a method value without changing the source code.
+- Distinguish an actual procedure from a reporting label or missing-information state.
+- Draft one evidence-based route for an unresolved meaning.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## The problem: readable codes can still hide important distinctions
+
+The same Fraser Coho package contains `ESTIMATE_METHOD`, `ESTIMATE_CLASSIFICATION`, `ESTIMATE_STAGE`, and `RUN_TYPE`. These columns answer different questions. A [code list](glossary.html#controlled-vocabulary) records the exact stored values and what each one means in context. The [code-field reference](field-reference.html#code-fields) explains the canonical `metadata/codes.csv` fields.
+
+Return to your graph and human dictionary before assigning a shared definition. In particular, a method label does not establish whether an estimate is absolute or relative, and a numeric-looking run-type code does not establish a biological definition.
+
+## Inspect the method values in the unchanged source
+
+`ESTIMATE_METHOD` varies by row, so its procedure information belongs with those coded values. It must not be promoted to one table-wide method merely because a single method is common.
+
+| Stored value | Rows in the 173-row source | Review question |
+| --- | ---: | --- |
+| `Area Under the Curve` | 84 | Which documented procedure does this label denote? |
+| `Peak Live * Expansion` | 39 | What is expanded, and under what assumptions? |
+| `Not Applicable` | 27 | Why is no method applicable in this record? |
+| `Combined Methods` | 12 | Which methods were combined, and where is that context recorded? |
+| `Resistivity Counter` | 4 | What procedure does the counter support? |
+| `Sonar-ARIS` | 4 | Does the source describe a method, an instrument, or both? |
+| `Sonar-DIDSON` | 1 | What procedure and instrument context are available? |
+| `Fixed Site Census` | 1 | What is counted and how? |
+| `Fence` | 1 | What operational definition accompanies this label? |
+
+These counts describe the 173-row teaching example. `Not Applicable` is not automatically a procedure. `Combined Methods` needs context that a generic label may not supply.
+
+::::::::::::::::::::::::::::::::::::: group-tab
+
+### R
+
+
+``` r
+pkg <- metasalmon::read_salmon_datapackage(
+  file.path("output", "fraser-coho-workshop-sdp")
+)
+
+# Inspect stored categories without changing source values.
+pkg$resources$escapement |>
+  dplyr::count(ESTIMATE_METHOD, name = "sample_rows")
+
+pkg$codes |>
+  dplyr::filter(column_name == "ESTIMATE_METHOD")
+```
+
+### Python
+
+```python
+from pathlib import Path
+from metasalmonpy import read_salmon_datapackage
+
+pkg = read_salmon_datapackage(
+    str(Path("output") / "fraser-coho-workshop-sdp")
+)
+print(pkg["resources"]["escapement"]["ESTIMATE_METHOD"].value_counts(dropna=False))
+print(pkg["codes"].loc[pkg["codes"]["column_name"] == "ESTIMATE_METHOD"])
+```
+
+### Spreadsheet
+
+Open the source read-only and filter `ESTIMATE_METHOD`, or create a pivot table in a separate workbook. Compare the observed values with the rows for `ESTIMATE_METHOD` in the draft's `metadata/codes.csv`.
+
+Keep `code_value` exactly as stored. Use `code_label` and `code_description` for the explanation, and preserve the source and review rationale in your working notes. Have a collaborator regenerate the descriptor and validate any edited package files.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+Every observed non-empty value in a categorical column needs a matching code row. A `vocabulary_iri` alone does not explain undocumented values. Do not replace a source value with a prettier label and lose the link back to the data.
+
+## Decide where a meaning belongs
+
+An [ontology](glossary.html#ontology) can express concepts and their relationships; an organization also needs authority to maintain its own definitions. Sharing a word does not mean sharing its exact meaning.
+
+| Finding | Next action |
+| --- | --- |
+| An existing shared definition fits the supported local meaning | Reuse its IRI and record the evidence. |
+| A well-supported concept could be reused across organizations | Draft a request for the Salmon Domain Ontology or the appropriate shared vocabulary. |
+| The definition depends on DFO policy or NuSEDS operations | Keep the local definition explicit and consider the DFO-specific resource or a local profile. |
+| The source evidence is insufficient | Retain an unresolved question and identify the person or document that could answer it. |
+
+A `POP_ID` is a source-system identifier, not automatically the name of a new domain class. A label containing “natural” is not enough evidence to mint a natural-origin concept. Broadly useful concepts and locally governed definitions can be connected later with a documented mapping whose strength matches the evidence.
+
+The packages provide `detect_semantic_term_gaps()` and `render_ontology_term_request()` to prepare candidate requests. Their suggested route is review evidence, not a governance decision. A saved suggestion CSV cannot prove that every zero-candidate target or later human rejection was included, so check it against your own unresolved-question log. Rendering a request does not submit it.
+
+## Draft one useful request or source question
+
+Keep the draft in your workshop notes. Include the source column or code, the supported meaning, examples from this dataset, evidence, nearby terms that do not fit, the proposed route, and the unresolved question or requested change. Refer back to the relevant graph node or edge and dictionary row.
+
+The [Salmon Domain Ontology request page][smn-issues] and [DFO Salmon Ontology request page][gcdfo-issues] show what maintainers need to evaluate a proposal. This short Day 1 decision prepares [Day 2](advanced.html): Chapter 8 compares representation and stewardship choices, Chapter 9 builds a SKOS vocabulary, Chapters 10–11 develop a model and bridge, and Chapter 12 prepares a complete request or clarification draft.
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Activity: explain one method and one unresolved meaning
+
+In 15 minutes, choose one method value and check its source definition with a partner. Record the exact code, its interpretation, and the evidence. Then choose one unresolved question from your graph, dictionary, or mapping review and draft its next action.
+
+Success is a code explanation that preserves the source meaning and a route another person can assess. A specific request for source clarification is a useful outcome.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: keypoints
+
+- A readable source label still needs context and evidence.
+- Row-varying methods remain linked to their code values.
+- Reuse, shared contribution, local definition, and unresolved source questions are different outcomes.
+- Term requests are drafts for human stewardship decisions.
+
+::::::::::::::::::::::::::::::::::::::::::::::::

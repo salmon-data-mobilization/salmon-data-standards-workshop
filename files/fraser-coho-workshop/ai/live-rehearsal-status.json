@@ -1,0 +1,22 @@
+{
+  "observed_date": "2026-09-08",
+  "requested_provider": "openrouter",
+  "requested_model": "openrouter/free",
+  "r_package_version": "0.5.0",
+  "r_package_commit": "af84689df5d6365c1abaa49f8cd9012cbe8494c5",
+  "status": "blocked-authentication",
+  "http_attempts": 1,
+  "http_statuses": [
+    401
+  ],
+  "successful_model_responses": 0,
+  "retry_attempts": 0,
+  "actual_routed_model": null,
+  "response_tokens": null,
+  "credits_purchased": false,
+  "paid_fallback_used": false,
+  "python_live_run": "not attempted; same credential is invalid",
+  "note": "A failed 401 request is not an AI assessment. The separate Codex authoring-assistant recording supports the offline comparison. Successful free-path consumption remains to be measured before teaching. No credentials or raw error body retained in this public receipt.",
+  "documentation_verified": "https://openrouter.ai/docs/guides/routing/routers/free-router",
+  "documentation_checked_date": "2026-09-08"
+}

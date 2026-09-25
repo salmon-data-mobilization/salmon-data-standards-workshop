@@ -1,0 +1,745 @@
+{
+  "description": "SHA-256 inventory of included teaching files; this inventory excludes itself.",
+  "files": [
+    {
+      "path": "README.html",
+      "bytes": 9808,
+      "sha256": "b8e6e4614f3d4b2098334c0959df5e4962e837ad151bb524b06f8436bb908b4e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5070,
+      "sha256": "d3e602466d52adf8b760d6f6213cf2f5c4e3f45f0767b9912ea801dfda917185"
+    },
+    {
+      "path": "ai/README.html",
+      "bytes": 11980,
+      "sha256": "c2a5d9236138bc7d4ff03ebc476de141e5e13da23acee9a87722aaa2ea068456"
+    },
+    {
+      "path": "ai/README.md",
+      "bytes": 7300,
+      "sha256": "7535f29b6d867fcaf3e2b8d967c300ce08900ba948e7036d7e75267276f38c2b"
+    },
+    {
+      "path": "ai/comparison-worksheet.csv",
+      "bytes": 2003,
+      "sha256": "b7af5c414e43c05c3ca55accbed2ae876144e4f19a850dddc7b184bccba04f80"
+    },
+    {
+      "path": "ai/live-rehearsal-status.json",
+      "bytes": 968,
+      "sha256": "0743eebc7d81c0cc6230045d9f5284732ed9fdf7bad2a9fb6539d0f8108591df"
+    },
+    {
+      "path": "ai/recorded-assessment.html",
+      "bytes": 13508,
+      "sha256": "6bf68f47103d552355c7b7967a3f37dddd3cab62b76311e99ed09791c32d94b9"
+    },
+    {
+      "path": "ai/recorded-assessment.md",
+      "bytes": 8505,
+      "sha256": "4b66f60f7462f315caf03ddeace0c2c7b8d6e907a1a23d128538502a2fe9efb2"
+    },
+    {
+      "path": "ai/recorded-suggestions.csv",
+      "bytes": 7538,
+      "sha256": "a2773b50cd94a46b57fd7f8c9036ef19ce9ae8c799d9c735fc6f46ef941deb30"
+    },
+    {
+      "path": "checkpoints/draft-sdp/README-review.txt",
+      "bytes": 2398,
+      "sha256": "cef6266d46ac10940f966cfd753d7af5ea36708c9bd21adc16fb69375bb6f002"
+    },
+    {
+      "path": "checkpoints/draft-sdp/REVIEW-STATUS.md",
+      "bytes": 316,
+      "sha256": "6f51eed531884b2895a6a6e11881e317d1f18df6c00c1ec15cbc54371a20c2d8"
+    },
+    {
+      "path": "checkpoints/draft-sdp/STAGE.md",
+      "bytes": 418,
+      "sha256": "7d6538f9a7cab889e623473bc1d5fad50fe8f3524e5df1b5a2edeb344c145a2c"
+    },
+    {
+      "path": "checkpoints/draft-sdp/data/escapement.csv",
+      "bytes": 35427,
+      "sha256": "ae7cd8f9f4facee1b1c8a75b2f9ead046e3eca0d3545cec7ef223c0f816d47b1"
+    },
+    {
+      "path": "checkpoints/draft-sdp/datapackage.json",
+      "bytes": 7739,
+      "sha256": "d07138d33b7cd100c1a227cca41ade37dd209a67ce8b31ec0becf737f7a0f5bd"
+    },
+    {
+      "path": "checkpoints/draft-sdp/metadata/codes.csv",
+      "bytes": 5212,
+      "sha256": "8a185ffe697c97c72d6e434310c427876e638d6993102693e0ce9f8f3ef7edb5"
+    },
+    {
+      "path": "checkpoints/draft-sdp/metadata/column_dictionary.csv",
+      "bytes": 3621,
+      "sha256": "00dd4310dd60a35e51c57789708da3ddc632d15283e1688f0e6b5ac6d8591677"
+    },
+    {
+      "path": "checkpoints/draft-sdp/metadata/dataset.csv",
+      "bytes": 1311,
+      "sha256": "7055466f34d86244f9dfe7814d0712e788924eb4c70a144b24f72be48ff3bd7c"
+    },
+    {
+      "path": "checkpoints/draft-sdp/metadata/tables.csv",
+      "bytes": 511,
+      "sha256": "389d1742d9d3bee82dbcb7247b5430a1cbdb03dfdee01fde0e2a8206e616f7d8"
+    },
+    {
+      "path": "checkpoints/reference-sdp/README-review.txt",
+      "bytes": 2398,
+      "sha256": "cef6266d46ac10940f966cfd753d7af5ea36708c9bd21adc16fb69375bb6f002"
+    },
+    {
+      "path": "checkpoints/reference-sdp/REVIEW-STATUS.md",
+      "bytes": 316,
+      "sha256": "6f51eed531884b2895a6a6e11881e317d1f18df6c00c1ec15cbc54371a20c2d8"
+    },
+    {
+      "path": "checkpoints/reference-sdp/STAGE.md",
+      "bytes": 821,
+      "sha256": "1b4a5aab6191225779b44cdf8b3831c6658104d37bf00dbebde81e9661011b32"
+    },
+    {
+      "path": "checkpoints/reference-sdp/data/escapement.csv",
+      "bytes": 35427,
+      "sha256": "ae7cd8f9f4facee1b1c8a75b2f9ead046e3eca0d3545cec7ef223c0f816d47b1"
+    },
+    {
+      "path": "checkpoints/reference-sdp/datapackage.json",
+      "bytes": 8034,
+      "sha256": "35d707c4e068fe2d53159a2cde0bb34e2b7e820e17c3d814b5240858d4f2579d"
+    },
+    {
+      "path": "checkpoints/reference-sdp/metadata/codes.csv",
+      "bytes": 19765,
+      "sha256": "c849dd8a3818777f6d5cb644e81f24618085433eb4bfd419acbeb1a712ce52b0"
+    },
+    {
+      "path": "checkpoints/reference-sdp/metadata/column_dictionary.csv",
+      "bytes": 3769,
+      "sha256": "489985e7f6220472b7fc6a691db8a0320d6a169ccf5af6eb4c93341ae3ab2e28"
+    },
+    {
+      "path": "checkpoints/reference-sdp/metadata/dataset.csv",
+      "bytes": 1311,
+      "sha256": "7055466f34d86244f9dfe7814d0712e788924eb4c70a144b24f72be48ff3bd7c"
+    },
+    {
+      "path": "checkpoints/reference-sdp/metadata/eml-mapping.yml",
+      "bytes": 3812,
+      "sha256": "b8e671b227d4d691b9328c150988741843e2e8506e4982906c4720117ec85b26"
+    },
+    {
+      "path": "checkpoints/reference-sdp/metadata/eml.xml",
+      "bytes": 38399,
+      "sha256": "3828526fc2a1ad8ba85be48e6e5feb359f53e743197ca446fa22c6258fae215d"
+    },
+    {
+      "path": "checkpoints/reference-sdp/metadata/semantic_vocabulary.csv",
+      "bytes": 1812,
+      "sha256": "9a299598a72886f9437a5cabd7953d0846ffe45bcb77fd9bd4651694dc7c4a4c"
+    },
+    {
+      "path": "checkpoints/reference-sdp/metadata/tables.csv",
+      "bytes": 542,
+      "sha256": "664bb211fe163737e1748d7026981b3357e4d3df0e3c685a8ca623a992ca21fc"
+    },
+    {
+      "path": "checkpoints/reference-sdp/publication/test/eml.xml",
+      "bytes": 47188,
+      "sha256": "c0741ad78f483539812c9a2b63b082120e1270a188d4065551f3add724be9d5a"
+    },
+    {
+      "path": "checkpoints/reference-sdp/publication/test/knb-manifest.json",
+      "bytes": 4950,
+      "sha256": "f8a4354b4101dcce65821c082685ff804a88ca47834d9f3da40eda40578507af"
+    },
+    {
+      "path": "checkpoints/reference-sdp/publication/test/resource-map.rdf",
+      "bytes": 9561,
+      "sha256": "bd5f85bbe1b03b68a91bd4e69956523e5f811d80158f1019950d736131649d08"
+    },
+    {
+      "path": "checkpoints/reference-sdp/reviewed_semantic_selections.csv",
+      "bytes": 1961,
+      "sha256": "4a04bad35597e8a310111f4502551e24afccb6f4b7cd0aab26cdb8e2847594ee"
+    },
+    {
+      "path": "checkpoints/seeded-sdp/README-review.txt",
+      "bytes": 2398,
+      "sha256": "cef6266d46ac10940f966cfd753d7af5ea36708c9bd21adc16fb69375bb6f002"
+    },
+    {
+      "path": "checkpoints/seeded-sdp/REVIEW-STATUS.md",
+      "bytes": 316,
+      "sha256": "6f51eed531884b2895a6a6e11881e317d1f18df6c00c1ec15cbc54371a20c2d8"
+    },
+    {
+      "path": "checkpoints/seeded-sdp/STAGE.md",
+      "bytes": 388,
+      "sha256": "9e5356110f8e981d99bb76840eff54dd6a9b5fdf0d76c08dfb3322b88b9f6954"
+    },
+    {
+      "path": "checkpoints/seeded-sdp/candidate-provenance.json",
+      "bytes": 429,
+      "sha256": "9fc6ad51199573c3b9db035b97b73964a0154aa714cfc5c86b3074a74cda0113"
+    },
+    {
+      "path": "checkpoints/seeded-sdp/data/escapement.csv",
+      "bytes": 35427,
+      "sha256": "ae7cd8f9f4facee1b1c8a75b2f9ead046e3eca0d3545cec7ef223c0f816d47b1"
+    },
+    {
+      "path": "checkpoints/seeded-sdp/datapackage.json",
+      "bytes": 7739,
+      "sha256": "d07138d33b7cd100c1a227cca41ade37dd209a67ce8b31ec0becf737f7a0f5bd"
+    },
+    {
+      "path": "checkpoints/seeded-sdp/metadata/codes.csv",
+      "bytes": 5212,
+      "sha256": "8a185ffe697c97c72d6e434310c427876e638d6993102693e0ce9f8f3ef7edb5"
+    },
+    {
+      "path": "checkpoints/seeded-sdp/metadata/column_dictionary.csv",
+      "bytes": 3621,
+      "sha256": "00dd4310dd60a35e51c57789708da3ddc632d15283e1688f0e6b5ac6d8591677"
+    },
+    {
+      "path": "checkpoints/seeded-sdp/metadata/dataset.csv",
+      "bytes": 1311,
+      "sha256": "7055466f34d86244f9dfe7814d0712e788924eb4c70a144b24f72be48ff3bd7c"
+    },
+    {
+      "path": "checkpoints/seeded-sdp/metadata/tables.csv",
+      "bytes": 511,
+      "sha256": "389d1742d9d3bee82dbcb7247b5430a1cbdb03dfdee01fde0e2a8206e616f7d8"
+    },
+    {
+      "path": "checkpoints/seeded-sdp/semantic_suggestions.csv",
+      "bytes": 33222,
+      "sha256": "b140f28be1e6d6bf4b4d1adac95351fccd4756ed386c8c232d3790a34fa4dc7a"
+    },
+    {
+      "path": "publication/README.html",
+      "bytes": 8038,
+      "sha256": "6962432d7f3d6465a894f024e08b7763ae36982c1c45a7c88703ff347c22189c"
+    },
+    {
+      "path": "publication/README.md",
+      "bytes": 3690,
+      "sha256": "3112caa93a1f02a718d8f62753a63dc6028d1deafab77a7204d102fedad09a06"
+    },
+    {
+      "path": "raw_data/PROVENANCE.html",
+      "bytes": 7914,
+      "sha256": "6e6ea61588f56a391fed2cb32b2ff29b8abc5116b52e84a4a55467ed5833ba79"
+    },
+    {
+      "path": "raw_data/PROVENANCE.md",
+      "bytes": 3499,
+      "sha256": "3df5268a68a6bd1007d8aa87fb6926b62b3b31aeb3d57fb5a3ac8a6c93120d00"
+    },
+    {
+      "path": "raw_data/nuseds-fraser-coho-2023-2024.csv",
+      "bytes": 35427,
+      "sha256": "ae7cd8f9f4facee1b1c8a75b2f9ead046e3eca0d3545cec7ef223c0f816d47b1"
+    },
+    {
+      "path": "raw_data/official-dictionary-source.json",
+      "bytes": 287,
+      "sha256": "393da6de4caacb101764796f42186f8fcf6a77f44be60b0ca0aa18705b1f39d7"
+    },
+    {
+      "path": "raw_data/official-nuseds-dictionary.csv",
+      "bytes": 17166,
+      "sha256": "195a164956d6c748f70856111d48ba9ca6c7d6ae2080736411b89c975bda08f0"
+    },
+    {
+      "path": "raw_data/open-canada-record.json",
+      "bytes": 7680,
+      "sha256": "0a39d29113b2caccb103f1851dce4bd176ecf11a9b91403e88deb1a121b1ed61"
+    },
+    {
+      "path": "raw_data/source-column-dictionary.csv",
+      "bytes": 2407,
+      "sha256": "ea4f5bbd703374f16d52be2706946b400a2a753e1a94ac8b9a5753134f198c78"
+    },
+    {
+      "path": "raw_data/source-manifest.json",
+      "bytes": 1552,
+      "sha256": "d8ca899f78890417a716ec2b65ff8023e49c8cf765d0428b17d2aeee412a05aa"
+    },
+    {
+      "path": "raw_data/upstream-derivation.R",
+      "bytes": 3432,
+      "sha256": "4453fd53f9108ef041c75956a8886828d3c2c787c5fb174ad82f476d0c78ac46"
+    },
+    {
+      "path": "raw_data/upstream-example-data-README.md",
+      "bytes": 6345,
+      "sha256": "8e11cf43fbd31fc0c6b5e398a4a31be80b165faab10d27ba1b88eaa7d9d7a214"
+    },
+    {
+      "path": "reference/code-definitions-working.csv",
+      "bytes": 19474,
+      "sha256": "3dbb824fedbf73e100dd81858a358d7570a2ba45991a1c77821b92eef08479c0"
+    },
+    {
+      "path": "reference/data-dictionary-working.csv",
+      "bytes": 13712,
+      "sha256": "f93f0f5898fd4209de10a6313797d7cb888b5943da34bc71e5268d5bd800aac9"
+    },
+    {
+      "path": "reference/dataset-edges-working.csv",
+      "bytes": 2478,
+      "sha256": "2c5f12a039c0c5c520d0f59a7d8e9913e775d7b8a17b7aa26f407f26af7653ae"
+    },
+    {
+      "path": "reference/dataset-graph-working.html",
+      "bytes": 7171,
+      "sha256": "3c1007eadb8a13520e766dd13cb309df3d1dd6036f181bb3c6bde0cf061935b3"
+    },
+    {
+      "path": "reference/dataset-graph-working.md",
+      "bytes": 2957,
+      "sha256": "79abf6f71483fda608f2598843c7a26576ae528cc21286c57457f16464dfc8aa"
+    },
+    {
+      "path": "reference/dataset-graph-working.svg",
+      "bytes": 9523,
+      "sha256": "77e1372a01aa49c9f346cf9b4cec9441174154505828804a1bdb2c3896a1a7c5"
+    },
+    {
+      "path": "reference/dataset-nodes-working.csv",
+      "bytes": 3540,
+      "sha256": "edacef3e2b46b2baabc76d550c58ba51948968545770d8e91fb6bdd5cb934d5d"
+    },
+    {
+      "path": "reference/measurement-sketch-edges.csv",
+      "bytes": 1515,
+      "sha256": "b3344469d1ae9e2889b765d746b71b6234989e9b78a0ad3c0dfe0952e89933f6"
+    },
+    {
+      "path": "reference/measurement-sketch-nodes.csv",
+      "bytes": 2185,
+      "sha256": "7a333ec4b8ad94c6828db4c387c918fa0e45716e1f85fe574250ca6877a5d415"
+    },
+    {
+      "path": "reference/measurement-sketch-working.mmd",
+      "bytes": 618,
+      "sha256": "0ef6e1888ea139e393e7c54dd93f2b24411917c4287647801c14ccd22a27f28a"
+    },
+    {
+      "path": "reference/measurement-sketch-working.svg",
+      "bytes": 7922,
+      "sha256": "c9984bb8e7e0acb9c4af4dc620032e3e331f5a8df1afe00305675f6e8f7a50ae"
+    },
+    {
+      "path": "reference/metamodel-source-notes.html",
+      "bytes": 6866,
+      "sha256": "74b6a2bfb1095c45699df8c7251d7f85a698156e23662b9ae5853c302dd7a9fe"
+    },
+    {
+      "path": "reference/metamodel-source-notes.md",
+      "bytes": 2486,
+      "sha256": "2542196eadedf1abf65a06729339aca2b47c0f9a01a52ae9440e3b4a0ea1fc6f"
+    },
+    {
+      "path": "reference/scientific-review-packet.html",
+      "bytes": 13511,
+      "sha256": "085a35839d183a33ab50cd689e098f031932ecabf11b0255019e1676ee3c9b61"
+    },
+    {
+      "path": "reference/scientific-review-packet.md",
+      "bytes": 8049,
+      "sha256": "fac88d288b70107d859d44b204f83606665312179f523d82541d2295c7a3cf42"
+    },
+    {
+      "path": "reference/variable-decomposition-working.csv",
+      "bytes": 1271,
+      "sha256": "c937acb04916b398b790bc33c12d5859d1e53a7b0663601eac2ecb02f081b3e3"
+    },
+    {
+      "path": "scripts/build_sdp.R",
+      "bytes": 1178,
+      "sha256": "112cc0a0aaf78c5984155f5621cb1588bfcfb44bc904ee10a36a8b13bf4526b8"
+    },
+    {
+      "path": "scripts/build_sdp.py",
+      "bytes": 1108,
+      "sha256": "0c85da9f7b90dc453d4e2af5b891415020521295a78e0c414d92f7c54072b26f"
+    },
+    {
+      "path": "scripts/plan_test_deposit.R",
+      "bytes": 1201,
+      "sha256": "1ffb5596ca55e25e0d230b75b6103aa4f3b206a312959d572a532e73c640a033"
+    },
+    {
+      "path": "scripts/plan_test_deposit.py",
+      "bytes": 993,
+      "sha256": "d25c9d48ff998feec19d8e86b127c3654a76fdd93061e54638fd57b6e1fba0d3"
+    },
+    {
+      "path": "scripts/review_ai.R",
+      "bytes": 5483,
+      "sha256": "3acc5b750bf91ffca2ffaca53aafed2c3d5ce607895e4ef15df444c983003e69"
+    },
+    {
+      "path": "scripts/review_ai.py",
+      "bytes": 4947,
+      "sha256": "807408b5c1bfa431feb01be46aa617df440b7dfcb4fefadae120622e257a5a53"
+    },
+    {
+      "path": "scripts/validate_sdp.R",
+      "bytes": 653,
+      "sha256": "e751fc703764b4971574e3c073b2821ebc2b1c64ed01e7ac2811ac2664b6736d"
+    },
+    {
+      "path": "scripts/validate_sdp.py",
+      "bytes": 663,
+      "sha256": "316a81743a0cd04486d95e5c1857dd47fc6a9a1457fcdc918d827213bd07523e"
+    },
+    {
+      "path": "scripts/workshop.R",
+      "bytes": 9135,
+      "sha256": "bbad84b611160e63934df3c1c7c1b0814ed97d737dabd84f326f0e2ebf793aaf"
+    },
+    {
+      "path": "scripts/workshop.py",
+      "bytes": 7455,
+      "sha256": "7c63ca0670bade8c1c70eb7453970fae4f7f3e6692c518a3629d0a59c01b7c69"
+    },
+    {
+      "path": "semantic-lab/README.html",
+      "bytes": 14866,
+      "sha256": "e29de7b6cc6ddd02e51e1a78c8bd28a415ce87a5784b7898668a5260894df40f"
+    },
+    {
+      "path": "semantic-lab/README.md",
+      "bytes": 5903,
+      "sha256": "ae4d80b7e771fc0e020e942304e291785d5fd8dcd2ed477c61df166eb77703ca"
+    },
+    {
+      "path": "semantic-lab/bridge/README.html",
+      "bytes": 10806,
+      "sha256": "030bfd9b0bc213dca17884b371fe159735125bf777d245b70400fcd8e2ec8997"
+    },
+    {
+      "path": "semantic-lab/bridge/README.md",
+      "bytes": 3041,
+      "sha256": "0c15fe5d4c6ded14bead4805f6c3c44b4287576bd691da4c281396a9d67cecd6"
+    },
+    {
+      "path": "semantic-lab/bridge/bridge.ttl",
+      "bytes": 2259,
+      "sha256": "3e905914c1503f4caa40dfb08238af67643c7b9e33bca5832514830899b03264"
+    },
+    {
+      "path": "semantic-lab/bridge/mapping-decisions-working.csv",
+      "bytes": 2638,
+      "sha256": "ba581f4abcffb1a9b3780982b7b9c37120ce984249220894edb2038c516181d0"
+    },
+    {
+      "path": "semantic-lab/bridge/shared-anchor-sources.json",
+      "bytes": 2133,
+      "sha256": "26b62b743d7050f0c2af30785e885e8e0d9af100e2b1e078b4d0c43e4386725d"
+    },
+    {
+      "path": "semantic-lab/bridge/shared-anchors.ttl",
+      "bytes": 4326,
+      "sha256": "d5e24e26667dc8d062a4c7a1f8db7b9f97370eb90a727c7f4974c20d25e11bd3"
+    },
+    {
+      "path": "semantic-lab/bridge/skos-rules-excerpt.ttl",
+      "bytes": 1066,
+      "sha256": "3884151968d36f0655b925fd4b3988f59fd6c7180b74fa46423528f42bafe02a"
+    },
+    {
+      "path": "semantic-lab/contributions/README.html",
+      "bytes": 4938,
+      "sha256": "e4eeaa0b9f0f1aa244e8f6f165a348f2b730f2fc4bf794dbd7682a9a368a4123"
+    },
+    {
+      "path": "semantic-lab/contributions/README.md",
+      "bytes": 894,
+      "sha256": "0faac8a2f50a161032e2d1f88e4455c1bf8a68843a00d8ab9233ab541fcb6881"
+    },
+    {
+      "path": "semantic-lab/contributions/preview-receipt.json",
+      "bytes": 754,
+      "sha256": "b1270c0aacad7e2e5ac25305d79ed08aaf4e2fa12955e12d4c9ac28e2e3495de"
+    },
+    {
+      "path": "semantic-lab/contributions/preview-term-requests.R",
+      "bytes": 1291,
+      "sha256": "3793f26c441c6502b224b980195f4c5fbc675f3e4c689bd881980f2b3637137b"
+    },
+    {
+      "path": "semantic-lab/contributions/preview-term-requests.py",
+      "bytes": 1347,
+      "sha256": "16bb0c7ef69fdc9dcbe977ed6bb9b479f2b5cbce6ada2177c5904fa781325cb7"
+    },
+    {
+      "path": "semantic-lab/contributions/recorded-gap-preview.csv",
+      "bytes": 349,
+      "sha256": "33089766666d2c4456c5b9e44ced776cff804664a64839456f9f3907c0ce3468"
+    },
+    {
+      "path": "semantic-lab/contributions/recorded-preview-notes.html",
+      "bytes": 5892,
+      "sha256": "c3b6033160c9a463cc334a887ce35cf461353f1bd8de3ea6582293364e9ce600"
+    },
+    {
+      "path": "semantic-lab/contributions/recorded-preview-notes.md",
+      "bytes": 1796,
+      "sha256": "0b0d58d1aee21c279ce34f3e643cf49134aad3076372c3d886c6ef0315c259da"
+    },
+    {
+      "path": "semantic-lab/contributions/source-clarification-example.html",
+      "bytes": 8984,
+      "sha256": "9c4b0fbeb897007c57dde2aef0de2cf0174f0fcff6a3097d2837336cb5c7574f"
+    },
+    {
+      "path": "semantic-lab/contributions/source-clarification-example.md",
+      "bytes": 4313,
+      "sha256": "f196bda8481cf799d0757baba7d193182c6bfdcc757945fc447d0eb996f33cb1"
+    },
+    {
+      "path": "semantic-lab/model/README.html",
+      "bytes": 11005,
+      "sha256": "a8477987cd749887388471dcf3e2ba57a2828257bc1baa1bfd68363ab94ee1ed"
+    },
+    {
+      "path": "semantic-lab/model/README.md",
+      "bytes": 3221,
+      "sha256": "d37f5a029238aa6171002558d6532bde658cc407c7eddb037c553e826b810dbc"
+    },
+    {
+      "path": "semantic-lab/model/instances.ttl",
+      "bytes": 2607,
+      "sha256": "0ff9a2875079209b4a1407c170b43d8d93333f215e316c67d011a6018471d0df"
+    },
+    {
+      "path": "semantic-lab/model/model.ttl",
+      "bytes": 3530,
+      "sha256": "04f0f66ec83d2ea5b226ded0ea34cff26d28b0dd892ee188fc25f3a232ac5caa"
+    },
+    {
+      "path": "semantic-lab/model/record-model.mmd",
+      "bytes": 807,
+      "sha256": "1c9b98305e3ec36807c9429470ebdd93c0040780d176c9897038eec6729acea3"
+    },
+    {
+      "path": "semantic-lab/model/record-model.svg",
+      "bytes": 3145,
+      "sha256": "f436d57c34a4832ef987e7131b6ed8b9f90468a89148826320b25fa2081accb8"
+    },
+    {
+      "path": "semantic-lab/model/record-shapes.ttl",
+      "bytes": 985,
+      "sha256": "e675970505abb01f498684d8771bd30a7bb7d600f1d42195ea5e9a7594976035"
+    },
+    {
+      "path": "semantic-lab/model/source-trace.json",
+      "bytes": 3243,
+      "sha256": "1a3db3fa7b8b7d9c47938c7984d7e6f725005d8acf5b987a4feca90af9426be7"
+    },
+    {
+      "path": "semantic-lab/model/technical-checks.json",
+      "bytes": 1713,
+      "sha256": "f0b130a8504acc64406e087700c1cc1b45c68b992a6bc07e058f126cc384f21a"
+    },
+    {
+      "path": "semantic-lab/scripts/check_bridge.py",
+      "bytes": 7063,
+      "sha256": "951f96abe2c12c97060b3c9f8082379d38685a5efdb0dfb81267df2973507c2d"
+    },
+    {
+      "path": "semantic-lab/scripts/check_model.py",
+      "bytes": 6269,
+      "sha256": "b760df44dbdc802f9f9feea602b96742f5f27c07cc25c7c84021d69f301b8a74"
+    },
+    {
+      "path": "semantic-lab/scripts/check_reference.py",
+      "bytes": 1133,
+      "sha256": "c4124ec784d1cadc7b5d321b1eb9212e5fa565ba1d4fb04ec345906f67e55e9b"
+    },
+    {
+      "path": "semantic-lab/scripts/lab_common.py",
+      "bytes": 5038,
+      "sha256": "4d2cccfad8c545695112bc3762e90146264eabb614d0f32ffb03986c41162f41"
+    },
+    {
+      "path": "semantic-lab/scripts/requirements.txt",
+      "bytes": 43,
+      "sha256": "0b59f9b95c08d8c1614d763cb270a7977b087a0fd4c2b06e40c23ccf1ea662e7"
+    },
+    {
+      "path": "semantic-lab/vocabulary/README.html",
+      "bytes": 12138,
+      "sha256": "a1780270cde0ef84833dbf6e4f075dd59b26ff1cd16057fc675cf612cfadeb8f"
+    },
+    {
+      "path": "semantic-lab/vocabulary/README.md",
+      "bytes": 4020,
+      "sha256": "fee403f3b9b06465bee60439e7693001e737f8bfeeacee968e120eb9c951187b"
+    },
+    {
+      "path": "semantic-lab/vocabulary/check_vocabulary.py",
+      "bytes": 6786,
+      "sha256": "132a16bcd419969de8d0c652be34fb95f526de2db9a9f2a4fa77ac85afc46cba"
+    },
+    {
+      "path": "semantic-lab/vocabulary/concepts-working.csv",
+      "bytes": 4625,
+      "sha256": "462b0b6e190209fe965d727367f02522ba4febb02575caa3aab939dcf235471b"
+    },
+    {
+      "path": "semantic-lab/vocabulary/estimate-methods.ttl",
+      "bytes": 4990,
+      "sha256": "8ab01bba564a6dea4b5cc547f078c01a06c1877d4d94c8eeb32fcc36421fd75c"
+    },
+    {
+      "path": "semantic-lab/vocabulary/provenance.json",
+      "bytes": 2222,
+      "sha256": "408b6bb00dd2c0dd104986f683a4bd2d2bb14addfcca8206dc01cedf9b15b89f"
+    },
+    {
+      "path": "semantic-lab/vocabulary/routing-decisions-working.csv",
+      "bytes": 4737,
+      "sha256": "b6d85f27bfef2b54cbfd9a1dc461aa822c9e570429a334fd5d8d3625b9365df4"
+    },
+    {
+      "path": "semantic-lab/vocabulary/stewardship-working.html",
+      "bytes": 7824,
+      "sha256": "4f093aefdaf4b72442f590e818d0eb1885170d05b7716818768b912b900b6e62"
+    },
+    {
+      "path": "semantic-lab/vocabulary/stewardship-working.md",
+      "bytes": 3443,
+      "sha256": "ac2d7f113b3fcc1f742986734754efc6e3c920227fe902564cf350739a92203b"
+    },
+    {
+      "path": "semantic-lab/worksheets/bridge-decisions.csv",
+      "bytes": 2638,
+      "sha256": "ba581f4abcffb1a9b3780982b7b9c37120ce984249220894edb2038c516181d0"
+    },
+    {
+      "path": "semantic-lab/worksheets/model-statements.csv",
+      "bytes": 2108,
+      "sha256": "2963a67269eedff06c4a32e96c4b0e9bc123b66edb495dafc577b17409ebf983"
+    },
+    {
+      "path": "semantic-lab/worksheets/routing-decisions.csv",
+      "bytes": 1180,
+      "sha256": "daf5486e673997cc7d126f16b658ba5dc584409e97f827346c4c6d2a9e0cb043"
+    },
+    {
+      "path": "semantic-lab/worksheets/stewardship.html",
+      "bytes": 6685,
+      "sha256": "3971121fe34f068e08b099c96f919fbe1cf634ab99047d9ed9b302c4330a81cd"
+    },
+    {
+      "path": "semantic-lab/worksheets/stewardship.md",
+      "bytes": 2127,
+      "sha256": "4cee43d6f115b6c8d8778c6e6927a19f4887d0526d969af74c1ea210e63cffbc"
+    },
+    {
+      "path": "semantic-lab/worksheets/term-request.html",
+      "bytes": 7812,
+      "sha256": "d5c716d86ca83fc2bebd872c2faa57817f59851b50ea2f9b41e6ff85cdde3f8f"
+    },
+    {
+      "path": "semantic-lab/worksheets/term-request.md",
+      "bytes": 3152,
+      "sha256": "a918c42d26c19071f1ef21ae0232f124ad5ee41499a7fa0ed4f23c5636eb0d63"
+    },
+    {
+      "path": "semantic-lab/worksheets/vocabulary-concepts.csv",
+      "bytes": 2863,
+      "sha256": "101b0749b2fe8733a27910b72a78a0f2ab068e10e8547c80e44fc52b63fd54da"
+    },
+    {
+      "path": "validation/README.html",
+      "bytes": 10325,
+      "sha256": "088ac2c0913705bb1e009a083c70f88cdd83fed90cdc7de6eefef71a413031f8"
+    },
+    {
+      "path": "validation/README.md",
+      "bytes": 5747,
+      "sha256": "1f2a01967ddc007fa9dfbaf920d4ccc01a5b8a69facafca66f96a3a62b3ea594"
+    },
+    {
+      "path": "validation/day2-reference-checks.json",
+      "bytes": 11760,
+      "sha256": "cc16ac71f0c5136c1c6cccd9b155e80c32420443721a39918b6f604fa062048f"
+    },
+    {
+      "path": "validation/distribution-script-smoke.json",
+      "bytes": 4856,
+      "sha256": "0b443ef5c1ff60a2c7bf97eb4793a074a2f3575673d2129a3b5930e4afaa24fb"
+    },
+    {
+      "path": "validation/lane-smoke.json",
+      "bytes": 14016,
+      "sha256": "4db750ccbffceac21273bf0c7fe89d25a4b0dd43b91490e02335cf1c75118e2e"
+    },
+    {
+      "path": "validation/reference-validation.json",
+      "bytes": 2791,
+      "sha256": "7059627b22f9e3029a281dd9626988f52fcc2541846f1fd0c7aa71c85fb1570b"
+    },
+    {
+      "path": "validation/unseeded-code-iri-issue.html",
+      "bytes": 13048,
+      "sha256": "76a364c4a37c4b41d93ba4e461f685aaeeb131c5c70e34582a9ad1a2d1f7fe3a"
+    },
+    {
+      "path": "validation/unseeded-code-iri-issue.md",
+      "bytes": 3084,
+      "sha256": "bd2606b24c255d4a8e868dbacca56c0ef17aa4cfef208c54e0a0543bbc9ae629"
+    },
+    {
+      "path": "validation/upstream-validator-issue.html",
+      "bytes": 13298,
+      "sha256": "3eb0df9e3e4adc08078d34c2af89079f89e68759608eee9fa965191fc0a8b5a0"
+    },
+    {
+      "path": "validation/upstream-validator-issue.md",
+      "bytes": 3933,
+      "sha256": "e50e812196894e5ac09be39f83e18ff520581400cc7c9a769f71db14fb982ecd"
+    },
+    {
+      "path": "worksheets/data-dictionary.csv",
+      "bytes": 10565,
+      "sha256": "fea0d45cf6a7e04db86b12e1386bc6444f90877f0993cc11a318d3d216c525fa"
+    },
+    {
+      "path": "worksheets/dataset-edges.csv",
+      "bytes": 88,
+      "sha256": "08241e3baeabaa659c7154c9db4345cea3d3d26229596aeee87619d9e8214e75"
+    },
+    {
+      "path": "worksheets/dataset-nodes.csv",
+      "bytes": 165,
+      "sha256": "5c5ed03215a3352bbd5918be5a6b8522bb018d7f579728fa1287f5118f4967e1"
+    },
+    {
+      "path": "worksheets/peer-review.md",
+      "bytes": 3235,
+      "sha256": "691d613b3ff1669b78cf2f96e860b338c46923aad6525cba1aed2854230d9cad"
+    },
+    {
+      "path": "worksheets/variable-decomposition.csv",
+      "bytes": 218,
+      "sha256": "a67900162fdb3108491772231185f5cd32210f4244bbe38963bac287082ede2e"
+    }
+  ]
+}

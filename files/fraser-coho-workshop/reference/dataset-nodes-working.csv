@@ -1,0 +1,17 @@
+node_id,label,node_kind,source_fields,evidence,status,question
+N1,NuSEDS source record,record concept,all 14 fields,Source CSV: 173 rows; 164 distinct POP_ID and ANALYSIS_YR pairs,working interpretation,What distinguishes the original estimate/SEN records when identifiers repeat?
+N2,Source population,entity concept,POP_ID; POPULATION; RUN_TYPE,Official dictionary; current Open Government catalog description,working interpretation,What exact source population boundaries apply to these records?
+N3,Waterbody or portion,place concept,WATERBODY; WATERSHED_CDE,Official dictionary: waterbody or portion bounding population on SEN,source-supported wording,What spatial extent and identifier authority apply?
+N4,Species designation,categorical concept,SPECIES,Source CSV has Coho in every row; official dictionary Species of Fish,observed in file,Which taxon term will be reviewed later?
+N5,Year the estimate is for,coordinate concept,ANALYSIS_YR,Official dictionary: estimate year; surveys may continue into next calendar year,source-supported wording,Do later uses require further biological year-basis information?
+N6,Adult-spawner estimate variable,variable concept,NATURAL_ADULT_SPAWNERS,Official dictionary defines adults excluding jacks; column represents reported estimate,working interpretation,Meaning of natural is not established as natural origin.
+N7,Abundance,property concept,NATURAL_ADULT_SPAWNERS,Salmon Domain Ontology module02: reusable abundance characteristic,working interpretation,Confirm applicability and entity grain before accepting a mapping.
+N8,Observation or estimation activity,activity concept,ESTIMATE_METHOD; START_DTT; END_DTT,Official dictionary describes inspections and estimate methods; metamodel distinguishes activity/result,working interpretation,One source record need not equal one field visit; exact activity grain requires review.
+N9,Reported estimate result,result concept,NATURAL_ADULT_SPAWNERS,Source CSV includes numeric and missing estimates,working interpretation,13 blanks are preserved; meaning is not assumed.
+N10,Individuals,unit concept,NATURAL_ADULT_SPAWNERS,Supplied starter dictionary unit_label=Individual,working interpretation,Confirm unit and interpretation of relative estimates.
+N11,Estimate-method value,method concept,ESTIMATE_METHOD,Nine distinct source labels; official dictionary definitions vary in completeness,observed in file,Find extra sources for labels defined only as N/A or absent.
+N12,Inspection window,temporal-context concept,START_DTT; END_DTT,Official dictionary describes inspection start/end dates,source-supported wording,16 missing values in each date field; no complete survey-event reconstruction.
+N13,Adult and natural scope questions,qualifier concept,NATURAL_ADULT_SPAWNERS,Official definition excludes jacks; does not establish natural-origin restriction,question,Which qualifiers are supported for the 2025 workbook and intended use?
+N14,Conservation Unit relationship to investigate,unresolved placeholder,none in this slice,Current catalog describes possible population/CU grouping; no CU field or crosswalk included,question,Which dated source would establish actual population-to-CU assignments? No membership edge is asserted.
+N15,758,example value,NATURAL_ADULT_SPAWNERS,First data record in unchanged source CSV,observed in file,Example value only; not the definition of the variable.
+N16,46200,example identifier,POP_ID,First data record in unchanged source CSV,observed in file,Source population ID only; not a unique record identifier.

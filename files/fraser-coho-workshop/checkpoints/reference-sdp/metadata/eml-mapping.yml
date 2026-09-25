@@ -1,0 +1,97 @@
+version: 1
+status: final
+dataset_id: fraser-coho-workshop
+series_key: nuseds-fraser-coho-workshop-test
+system: knb
+language: eng
+publication_date: '2026-09-08'
+semantic_vocabulary:
+  path: metadata/semantic_vocabulary.csv
+  sha256: 9a299598a72886f9437a5cabd7953d0846ffe45bcb77fd9bd4651694dc7c4a4c
+semantic_review:
+  path: reviewed_semantic_selections.csv
+  sha256: 4a04bad35597e8a310111f4502551e24afccb6f4b7cd0aab26cdb8e2847594ee
+publication:
+  public: yes
+rights_authorization:
+  status: confirmed
+  evidence: Open Canada record c48669a3-045b-400d-b730-48aafe8c5ee6 identifies the
+    source publisher as Fisheries and Oceans Canada and the licence as Open Government
+    Licence - Canada. The licence permits redistribution with attribution. This teaching
+    derivative makes no claim of DFO endorsement.
+source_provenance:
+  source_citation: 'Fisheries and Oceans Canada. NuSEDS: Fraser and BC Interior NuSEDS_20251014.
+    Original publication: https://open.canada.ca/data/en/dataset/c48669a3-045b-400d-b730-48aafe8c5ee6'
+  provenance_note: The metasalmon v0.5.0 derivation selects Coho and analysis years
+    2023-2024, retains 14 columns and converts survey dates to ISO format. The workshop
+    preserves all 173 rows and source values.
+  supporting_document:
+    citation: metasalmon contributors. Built-in NuSEDS example data, v0.5.0.
+    url: https://raw.githubusercontent.com/salmon-data-mobilization/metasalmon/af84689df5d6365c1abaa49f8cd9012cbe8494c5/inst/extdata/example-data-README.md
+    sha256: 8e11cf43fbd31fc0c6b5e398a4a31be80b165faab10d27ba1b88eaa7d9d7a214
+creators:
+- organization_name: Fisheries and Oceans Canada (source data)
+metadata_providers:
+- given_name: Brett
+  surname: Johnson
+  email: brett.johnson@dfo-mpo.gc.ca
+  orcid: https://orcid.org/0000-0001-9317-0364
+contacts:
+- given_name: Brett
+  surname: Johnson
+  email: brett.johnson@dfo-mpo.gc.ca
+publisher:
+  organization_name: Salmon Data Standards Workshop (teaching derivative)
+intellectual_rights:
+  paragraphs:
+  - Contains information licensed under the Open Government Licence - Canada (https://open.canada.ca/en/open-government-licence-canada).
+  - The source data publisher is Fisheries and Oceans Canada. This KNB test teaching
+    derivative does not imply endorsement, replace the Open Canada publication, or
+    provide durable preservation.
+methods:
+- description: Source records report spawner estimates and ESTIMATE_METHOD; methods
+    vary among records. The 173-row teaching slice is derived by the pinned metasalmon
+    script. The official dictionary defines the adult field as mature salmon excluding
+    jacks; natural origin is not inferred. Working semantic selections are agent-authored
+    and await independent scientific review.
+taxonomic_coverage:
+  scientific_name: Oncorhynchus kisutch
+  common_name: Coho salmon
+  rank: Species
+tables:
+  escapement:
+    attributes:
+      POP_ID:
+        measurement_scale: nominal
+      POPULATION:
+        measurement_scale: nominal
+      AREA:
+        measurement_scale: nominal
+      WATERBODY:
+        measurement_scale: nominal
+      ANALYSIS_YR:
+        measurement_scale: nominal
+      SPECIES:
+        measurement_scale: nominal
+      RUN_TYPE:
+        measurement_scale: nominal
+      NATURAL_ADULT_SPAWNERS:
+        measurement_scale: ratio
+        eml_unit: number
+        number_type: real
+        minimum: 0.0
+        minimum_exclusive: no
+      ESTIMATE_METHOD:
+        measurement_scale: nominal
+      ESTIMATE_CLASSIFICATION:
+        measurement_scale: nominal
+      ESTIMATE_STAGE:
+        measurement_scale: nominal
+      START_DTT:
+        measurement_scale: dateTime
+        format_string: YYYY-MM-DD
+      END_DTT:
+        measurement_scale: dateTime
+        format_string: YYYY-MM-DD
+      WATERSHED_CDE:
+        measurement_scale: nominal

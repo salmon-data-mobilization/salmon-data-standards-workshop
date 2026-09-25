@@ -1,0 +1,469 @@
+{
+  "observed_date": "2026-09-08",
+  "scope": "Disposable isolated mechanical smoke tests; no human review or scientific approval claimed. No live API calls or deposit actions.",
+  "r_package": "metasalmon 0.5.0",
+  "python_package": "metasalmonpy 0.4.0 exact tagged source via isolated PYTHONPATH",
+  "shipped_worksheets_unchanged": true,
+  "lanes": {
+    "r": [
+      {
+        "case": "pending_worksheet_rejected",
+        "passed": true,
+        "exit_code": 1,
+        "expected": "rejection",
+        "command": [
+          "Rscript",
+          "--vanilla",
+          "scripts/build_sdp.R"
+        ],
+        "output_not_created": true
+      },
+      {
+        "case": "blank_node_label",
+        "passed": true,
+        "exit_code": 1,
+        "expected": "rejection",
+        "command": [
+          "Rscript",
+          "--vanilla",
+          "-e",
+          "source(\"scripts/workshop.R\"); check_preparation()"
+        ]
+      },
+      {
+        "case": "invalid_edge_endpoint",
+        "passed": true,
+        "exit_code": 1,
+        "expected": "rejection",
+        "command": [
+          "Rscript",
+          "--vanilla",
+          "-e",
+          "source(\"scripts/workshop.R\"); check_preparation()"
+        ]
+      },
+      {
+        "case": "invalid_review_date",
+        "passed": true,
+        "exit_code": 1,
+        "expected": "rejection",
+        "command": [
+          "Rscript",
+          "--vanilla",
+          "-e",
+          "source(\"scripts/workshop.R\"); check_preparation()"
+        ]
+      },
+      {
+        "case": "missing_review_date",
+        "passed": true,
+        "exit_code": 1,
+        "expected": "rejection",
+        "command": [
+          "Rscript",
+          "--vanilla",
+          "-e",
+          "source(\"scripts/workshop.R\"); check_preparation()"
+        ]
+      },
+      {
+        "case": "mechanical_fixture_build",
+        "passed": true,
+        "exit_code": 0,
+        "expected": "success",
+        "command": [
+          "Rscript",
+          "--vanilla",
+          "scripts/build_sdp.R"
+        ]
+      },
+      {
+        "case": "draft_validation",
+        "passed": true,
+        "exit_code": 0,
+        "expected": "success",
+        "command": [
+          "Rscript",
+          "--vanilla",
+          "scripts/validate_sdp.R"
+        ]
+      },
+      {
+        "case": "source_values_and_ids",
+        "passed": true,
+        "rows": 173,
+        "columns": 14,
+        "parsed_csv_exact_equality": true
+      },
+      {
+        "case": "code_role_consistency",
+        "passed": true,
+        "categorical_fields": [
+          "AREA",
+          "ESTIMATE_CLASSIFICATION",
+          "ESTIMATE_METHOD",
+          "ESTIMATE_STAGE",
+          "RUN_TYPE",
+          "SPECIES"
+        ]
+      },
+      {
+        "case": "existing_output_refused",
+        "passed": true,
+        "exit_code": 1,
+        "expected": "rejection",
+        "command": [
+          "Rscript",
+          "--vanilla",
+          "scripts/build_sdp.R"
+        ],
+        "unchanged_output": true
+      }
+    ],
+    "python": [
+      {
+        "case": "pending_worksheet_rejected",
+        "passed": true,
+        "exit_code": 1,
+        "expected": "rejection",
+        "command": [
+          "python",
+          "scripts/build_sdp.py"
+        ],
+        "output_not_created": true
+      },
+      {
+        "case": "blank_node_label",
+        "passed": true,
+        "exit_code": 1,
+        "expected": "rejection",
+        "command": [
+          "python",
+          "-c",
+          "import sys; sys.path.insert(0,\"scripts\"); from workshop import check_preparation; check_preparation()"
+        ]
+      },
+      {
+        "case": "invalid_edge_endpoint",
+        "passed": true,
+        "exit_code": 1,
+        "expected": "rejection",
+        "command": [
+          "python",
+          "-c",
+          "import sys; sys.path.insert(0,\"scripts\"); from workshop import check_preparation; check_preparation()"
+        ]
+      },
+      {
+        "case": "invalid_review_date",
+        "passed": true,
+        "exit_code": 1,
+        "expected": "rejection",
+        "command": [
+          "python",
+          "-c",
+          "import sys; sys.path.insert(0,\"scripts\"); from workshop import check_preparation; check_preparation()"
+        ]
+      },
+      {
+        "case": "missing_review_date",
+        "passed": true,
+        "exit_code": 1,
+        "expected": "rejection",
+        "command": [
+          "python",
+          "-c",
+          "import sys; sys.path.insert(0,\"scripts\"); from workshop import check_preparation; check_preparation()"
+        ]
+      },
+      {
+        "case": "mechanical_fixture_build",
+        "passed": true,
+        "exit_code": 0,
+        "expected": "success",
+        "command": [
+          "python",
+          "scripts/build_sdp.py"
+        ]
+      },
+      {
+        "case": "draft_validation",
+        "passed": true,
+        "exit_code": 0,
+        "expected": "success",
+        "command": [
+          "python",
+          "scripts/validate_sdp.py"
+        ]
+      },
+      {
+        "case": "source_values_and_ids",
+        "passed": true,
+        "rows": 173,
+        "columns": 14,
+        "parsed_csv_exact_equality": true
+      },
+      {
+        "case": "code_role_consistency",
+        "passed": true,
+        "categorical_fields": [
+          "AREA",
+          "ESTIMATE_CLASSIFICATION",
+          "ESTIMATE_METHOD",
+          "ESTIMATE_STAGE",
+          "RUN_TYPE",
+          "SPECIES"
+        ]
+      },
+      {
+        "case": "existing_output_refused",
+        "passed": true,
+        "exit_code": 1,
+        "expected": "rejection",
+        "command": [
+          "python",
+          "scripts/build_sdp.py"
+        ],
+        "unchanged_output": true
+      }
+    ]
+  },
+  "ai_callbacks": {
+    "r": [
+      {
+        "case": "free_route_guard",
+        "passed": true,
+        "mocked": true,
+        "network_calls": 0
+      },
+      {
+        "case": "eight_attempt_cap_including_failures",
+        "passed": true,
+        "mocked": true,
+        "attempts": 8,
+        "ninth_blocked": true
+      },
+      {
+        "case": "malformed_json_counted_and_failed",
+        "passed": true,
+        "mocked": true,
+        "attempts": 1
+      },
+      {
+        "case": "whole_script_failed_assessment_is_failure",
+        "passed": true,
+        "mocked": true,
+        "actual_http_attempts": 0,
+        "successful_assessment_rows": 0
+      }
+    ],
+    "python": [
+      {
+        "case": "free_route_guard",
+        "passed": true,
+        "mocked": true,
+        "network_calls": 0
+      },
+      {
+        "case": "eight_attempt_cap_including_failures",
+        "passed": true,
+        "mocked": true,
+        "attempts": 8,
+        "ninth_blocked": true
+      },
+      {
+        "case": "malformed_json_counted_and_failed",
+        "passed": true,
+        "mocked": true,
+        "attempts": 1
+      },
+      {
+        "case": "whole_script_failed_assessment_is_failure",
+        "passed": true,
+        "mocked": true,
+        "actual_http_attempts": 0,
+        "successful_assessment_rows": 0
+      }
+    ]
+  },
+  "unseeded_upstream_probe": {
+    "r": {
+      "upstream_unseeded_code_iris": [
+        {
+          "column_name": "ESTIMATE_METHOD",
+          "code_value": "Resistivity Counter",
+          "term_iri": "https://w3id.org/gcdfo/salmon#FixedStationTally",
+          "term_type": ""
+        },
+        {
+          "column_name": "ESTIMATE_METHOD",
+          "code_value": "Combined Methods",
+          "term_iri": "https://w3id.org/gcdfo/salmon#EstimateMethod",
+          "term_type": ""
+        },
+        {
+          "column_name": "ESTIMATE_METHOD",
+          "code_value": "Area Under the Curve",
+          "term_iri": "https://w3id.org/gcdfo/salmon#AreaUnderTheCurve",
+          "term_type": ""
+        },
+        {
+          "column_name": "ESTIMATE_METHOD",
+          "code_value": "Peak Live * Expansion",
+          "term_iri": "https://w3id.org/gcdfo/salmon#ExpansionMathematicalOperations",
+          "term_type": ""
+        },
+        {
+          "column_name": "ESTIMATE_METHOD",
+          "code_value": "Sonar-DIDSON",
+          "term_iri": "https://w3id.org/gcdfo/salmon#HydroacousticModelling",
+          "term_type": ""
+        },
+        {
+          "column_name": "ESTIMATE_METHOD",
+          "code_value": "Fixed Site Census",
+          "term_iri": "https://w3id.org/gcdfo/salmon#FixedStationTally",
+          "term_type": ""
+        },
+        {
+          "column_name": "ESTIMATE_METHOD",
+          "code_value": "Sonar-ARIS",
+          "term_iri": "https://w3id.org/gcdfo/salmon#HydroacousticModelling",
+          "term_type": ""
+        },
+        {
+          "column_name": "ESTIMATE_CLASSIFICATION",
+          "code_value": "TRUE ABUNDANCE (TYPE-1)",
+          "term_iri": "https://w3id.org/gcdfo/salmon#Type1",
+          "term_type": ""
+        },
+        {
+          "column_name": "ESTIMATE_CLASSIFICATION",
+          "code_value": "RELATIVE ABUNDANCE (TYPE-3)",
+          "term_iri": "https://w3id.org/gcdfo/salmon#Type3",
+          "term_type": ""
+        },
+        {
+          "column_name": "ESTIMATE_CLASSIFICATION",
+          "code_value": "RELATIVE ABUNDANCE (TYPE-4)",
+          "term_iri": "https://w3id.org/gcdfo/salmon#Type4",
+          "term_type": ""
+        },
+        {
+          "column_name": "ESTIMATE_CLASSIFICATION",
+          "code_value": "RELATIVE ABUNDANCE (TYPE-5)",
+          "term_iri": "https://w3id.org/gcdfo/salmon#Type5",
+          "term_type": ""
+        }
+      ],
+      "workshop_draft_code_iris_empty": true,
+      "command": [
+        "create_sdp",
+        "seed_semantics=False",
+        "llm_assess=False",
+        "check_updates=False"
+      ]
+    },
+    "python": {
+      "upstream_unseeded_code_iris": [
+        {
+          "column_name": "ESTIMATE_METHOD",
+          "code_value": "Resistivity Counter",
+          "term_iri": "https://w3id.org/gcdfo/salmon#FixedStationTally",
+          "term_type": ""
+        },
+        {
+          "column_name": "ESTIMATE_METHOD",
+          "code_value": "Combined Methods",
+          "term_iri": "https://w3id.org/gcdfo/salmon#EstimateMethod",
+          "term_type": ""
+        },
+        {
+          "column_name": "ESTIMATE_METHOD",
+          "code_value": "Area Under the Curve",
+          "term_iri": "https://w3id.org/gcdfo/salmon#AreaUnderTheCurve",
+          "term_type": ""
+        },
+        {
+          "column_name": "ESTIMATE_METHOD",
+          "code_value": "Peak Live * Expansion",
+          "term_iri": "https://w3id.org/gcdfo/salmon#ExpansionMathematicalOperations",
+          "term_type": ""
+        },
+        {
+          "column_name": "ESTIMATE_METHOD",
+          "code_value": "Sonar-DIDSON",
+          "term_iri": "https://w3id.org/gcdfo/salmon#HydroacousticModelling",
+          "term_type": ""
+        },
+        {
+          "column_name": "ESTIMATE_METHOD",
+          "code_value": "Fixed Site Census",
+          "term_iri": "https://w3id.org/gcdfo/salmon#FixedStationTally",
+          "term_type": ""
+        },
+        {
+          "column_name": "ESTIMATE_METHOD",
+          "code_value": "Sonar-ARIS",
+          "term_iri": "https://w3id.org/gcdfo/salmon#HydroacousticModelling",
+          "term_type": ""
+        },
+        {
+          "column_name": "ESTIMATE_CLASSIFICATION",
+          "code_value": "TRUE ABUNDANCE (TYPE-1)",
+          "term_iri": "https://w3id.org/gcdfo/salmon#Type1",
+          "term_type": ""
+        },
+        {
+          "column_name": "ESTIMATE_CLASSIFICATION",
+          "code_value": "RELATIVE ABUNDANCE (TYPE-3)",
+          "term_iri": "https://w3id.org/gcdfo/salmon#Type3",
+          "term_type": ""
+        },
+        {
+          "column_name": "ESTIMATE_CLASSIFICATION",
+          "code_value": "RELATIVE ABUNDANCE (TYPE-4)",
+          "term_iri": "https://w3id.org/gcdfo/salmon#Type4",
+          "term_type": ""
+        },
+        {
+          "column_name": "ESTIMATE_CLASSIFICATION",
+          "code_value": "RELATIVE ABUNDANCE (TYPE-5)",
+          "term_iri": "https://w3id.org/gcdfo/salmon#Type5",
+          "term_type": ""
+        }
+      ],
+      "workshop_draft_code_iris_empty": true,
+      "command": [
+        "create_sdp",
+        "seed_semantics=False",
+        "llm_assess=False",
+        "check_updates=False"
+      ]
+    }
+  },
+  "fixture_policy": "Only disposable copies under temporary test directories received an explicitly labelled automated readiness fixture. The shipped pending worksheets were neither completed nor modified by the tests.",
+  "source_sha256": "ae7cd8f9f4facee1b1c8a75b2f9ead046e3eca0d3545cec7ef223c0f816d47b1",
+  "tested_script_sha256": {
+    "plan_test_deposit.R": "1ffb5596ca55e25e0d230b75b6103aa4f3b206a312959d572a532e73c640a033",
+    "validate_sdp.py": "316a81743a0cd04486d95e5c1857dd47fc6a9a1457fcdc918d827213bd07523e",
+    "build_sdp.py": "0c85da9f7b90dc453d4e2af5b891415020521295a78e0c414d92f7c54072b26f",
+    "plan_test_deposit.py": "d25c9d48ff998feec19d8e86b127c3654a76fdd93061e54638fd57b6e1fba0d3",
+    "workshop.py": "7c63ca0670bade8c1c70eb7453970fae4f7f3e6692c518a3629d0a59c01b7c69",
+    "review_ai.py": "807408b5c1bfa431feb01be46aa617df440b7dfcb4fefadae120622e257a5a53",
+    "build_sdp.R": "112cc0a0aaf78c5984155f5621cb1588bfcfb44bc904ee10a36a8b13bf4526b8",
+    "review_ai.R": "3acc5b750bf91ffca2ffaca53aafed2c3d5ce607895e4ef15df444c983003e69",
+    "validate_sdp.R": "e751fc703764b4971574e3c073b2821ebc2b1c64ed01e7ac2811ac2664b6736d",
+    "workshop.R": "bbad84b611160e63934df3c1c7c1b0814ed97d737dabd84f326f0e2ebf793aaf"
+  },
+  "same_script_bytes_as_test_copies": true,
+  "callback_bytes_match_offline_test_snapshot": true,
+  "all_reported_cases_passed": true,
+  "not_established": [
+    "Independent scientific review",
+    "Live AI provider success",
+    "Live catalog deposit or catalog verification",
+    "Strict reference/EML/spec-validator outcomes, which have separate receipts",
+    "Python live semantic-seeding reliability; no live search was attempted in this smoke run"
+  ]
+}
