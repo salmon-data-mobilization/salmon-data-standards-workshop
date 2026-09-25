@@ -19,7 +19,7 @@ Every format uses the same chapters and the same Fraser Coho dataset.
 | 1-hour primer | The whole journey without detail: Chapter 1 on its own, run as the [standalone 55-minute overview](#standalone-55-minute-overview). |
 | 1-day workshop | Day 1, Chapters 1–7. |
 | 2-day workshop | Day 1 and Day 2, Chapters 1–12. |
-| Webinar series | Three or four weekly sessions of about two hours each, covering about two chapters per session. Record every session so a learner who misses a week can catch up before the next one. |
+| Webinar series | Three or four weekly sessions of about two hours each. That is six to eight hours against the two-day workshop's twelve, so a series covers part of the curriculum: three sessions fit Day 1, Chapters 1–7. Which Day 2 chapters a fourth session takes is for the lesson maintainer to choose. Record every session so a learner who misses a week can catch up before the next one. |
 
 Learners who bring their own data work with it in a separate solo hour after the group walkthrough, never during a group exercise. The chapter timings below do not include that hour.
 
