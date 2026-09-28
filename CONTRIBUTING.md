@@ -216,6 +216,13 @@ Issues are perfect for:
 
 ## Review Process
 
+Every pull request should include a **Review preview** section with a public
+Netlify link, the previewed commit, and the pages to review. A maintainer builds,
+publishes and verifies the preview before inviting collaborators to review, and
+refreshes it after changes. Contributors using GitHub's web editor can leave the
+preview pending for a maintainer. Follow the
+[shared review preview workflow](docs/entrypoints.md#shared-review-previews).
+
 1. **Automated Checks**: All pull requests are automatically checked for basic issues
 2. **Community Review**: Maintainers and community members review changes
 3. **Feedback**: We may request changes or ask questions
