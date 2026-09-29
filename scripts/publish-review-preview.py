@@ -28,6 +28,13 @@ MAX_FILE = 50 * 1024 * 1024
 MAX_FILES = 20000
 SHA = re.compile(r"[0-9a-f]{40}")
 SAFE_PATH = re.compile(r"[A-Za-z0-9_./+ @()-]+")
+# Exact inert marker files produced by the existing workshop build. No other
+# hidden paths are accepted, and these bytes must match the reviewed values.
+STATIC_MARKERS = {
+    "files/fraser-coho-workshop/checkpoints/" + checkpoint + "/.metasalmon-package":
+        b"metasalmon-owned\n"
+    for checkpoint in ("draft-sdp", "reference-sdp", "seeded-sdp")
+}
 
 
 def require(condition, message):
@@ -159,6 +166,13 @@ def prepare_site(artifact_bytes, receipt):
             continue  # Legacy Drop configuration is never interpreted.
         require(name.startswith("public/"), "File outside public site")
         path = name[len("public/"):]
+        if path == ".nojekyll":
+            require(contents == b"", "Unexpected Jekyll marker content")
+            continue  # GitHub Pages marker has no purpose on Netlify.
+        if path in STATIC_MARKERS:
+            require(contents == STATIC_MARKERS[path], "Unexpected teaching marker content")
+            files[path] = STATIC_MARKERS[path]
+            continue
         parts = path.casefold().split("/")
         require(not any(p.startswith(".") for p in parts), "Hidden file in site")
         require(not any(p in {"netlify.toml", "_redirects", "_headers", "_worker.js"}
