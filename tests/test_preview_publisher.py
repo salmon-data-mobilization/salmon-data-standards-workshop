@@ -100,6 +100,24 @@ class ArchiveBoundary(unittest.TestCase):
         with self.assertRaises(ValueError):
             p.prepare_site(artifact([("public/a.html", b"ok")]), {})
 
+    def test_known_workshop_markers_are_exact_inert_bytes(self):
+        entries = [("public/index.html", b"ok"), ("public/.nojekyll", b"")]
+        entries += [("public/" + path, value) for path, value in p.STATIC_MARKERS.items()]
+        files = p.prepare_site(artifact(entries), {})
+        self.assertNotIn(".nojekyll", files)
+        for path, value in p.STATIC_MARKERS.items():
+            self.assertEqual(files[path], value)
+
+    def test_marker_exceptions_reject_changed_bytes_or_other_paths(self):
+        for name, value in [
+            ("public/.nojekyll", b"unexpected"),
+            ("public/files/fraser-coho-workshop/checkpoints/draft-sdp/.metasalmon-package", b"unexpected"),
+            ("public/files/other/.metasalmon-package", b"metasalmon-owned\n"),
+            ("public/subdir/.nojekyll", b""),
+        ]:
+            with self.subTest(name=name), self.assertRaises(ValueError):
+                p.prepare_site(artifact([("public/index.html", b"ok"), (name, value)]), {})
+
 
 class ProvenanceBoundary(unittest.TestCase):
     def setUp(self):
