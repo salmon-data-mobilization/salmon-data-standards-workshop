@@ -1,0 +1,73 @@
+name: Workshop preview build
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review]
+
+# No environment, publishing credentials, write token or self-hosted runner.
+permissions:
+  contents: read
+
+concurrency:
+  group: workshop-preview-build-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    if: ${{ !github.event.pull_request.draft }}
+    runs-on: ubuntu-22.04
+    timeout-minutes: 45
+    env:
+      RENV_PATHS_ROOT: ${{ runner.temp }}/workshop-renv
+    steps:
+      - name: Check out the precise PR revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+
+      - name: Set up R
+        uses: r-lib/actions/setup-r@f9a764fea8d5c63df6ef9a5c7795bf7deb5d7e05 # v2
+        with:
+          r-version: '4.4.2'
+          use-public-rspm: true
+
+      - name: Set up Pandoc
+        uses: r-lib/actions/setup-pandoc@f9a764fea8d5c63df6ef9a5c7795bf7deb5d7e05 # v2
+
+      # Reuse the existing project's lesson environment. These caches are used
+      # only in the untrusted build; the publisher never restores them.
+      - name: Set up lesson engine
+        uses: carpentries/actions/setup-sandpaper@36232c3f437b73625c69e541ce53bfb511ba8929
+        with:
+          cache-version: workshop-preview-v1
+
+      - name: Set up lesson dependencies
+        uses: carpentries/actions/setup-lesson-deps@36232c3f437b73625c69e541ce53bfb511ba8929
+        with:
+          cache-version: workshop-preview-v1
+
+      - name: Check semantic teaching artifacts
+        run: |
+          python3 -m venv "$RUNNER_TEMP/semantic-checks"
+          "$RUNNER_TEMP/semantic-checks/bin/pip" install -r episodes/files/fraser-coho-workshop/semantic-lab/scripts/requirements.txt
+          "$RUNNER_TEMP/semantic-checks/bin/python" scripts/check-semantic-lab.py
+
+      - name: Build the full shared preview
+        env:
+          PREVIEW_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          # Explicit --ref tolerates setup-generated tracked changes; the helper
+          # builds a fresh clone of the selected committed source.
+          python3 scripts/prepare-review-preview.py --ref "$PREVIEW_HEAD_SHA" --output "$RUNNER_TEMP/review-preview"
+          cp "$RUNNER_TEMP/review-preview/workshop-preview-${PREVIEW_HEAD_SHA:0:12}.zip" "$RUNNER_TEMP/site.zip"
+
+      - name: Upload only the preview bundle
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: workshop-preview-${{ github.event.pull_request.head.sha }}
+          path: ${{ runner.temp }}/site.zip
+          if-no-files-found: error
+          retention-days: 3
+          compression-level: 0

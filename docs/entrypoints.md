@@ -111,9 +111,20 @@ After changing navigation styling, run the deployment workflow with `reset = tru
 
 For every new or updated PR (also called an MR), publish a shared preview before
 inviting collaborators to review. This is a required maintainer publishing step;
-GitHub does not currently redeploy these previews automatically. The PR template
-keeps the link, previewed commit and review targets together. GitHub Pages remains
-the merged lesson; Netlify hosts the review copies.
+The automatic workflows in this PR require the one-time setup in
+[Automated shared review previews](automated-review-previews.md), followed by a
+successful live trial before they can be considered enabled. Once enabled, each
+successful current PR build publishes a Netlify draft and adds a
+**Workshop preview / Netlify** link to the PR checks. GitHub Pages remains the
+merged lesson; Netlify hosts review copies. Verify the preview receipt and
+inspect affected pages before inviting review.
+
+### Optional local preparation for reviewed code
+
+The following local route executes Python and R from the selected revision with
+the builder's own permissions. A temporary clone is not a sandbox. Use this
+route only for code you have reviewed and trust; prefer the isolated GitHub
+build for automatic previews.
 
 1. Commit the intended source changes. Run the helper from the repository root:
 
@@ -172,3 +183,4 @@ obtain Brett's approval before pushing or creating/updating a PR. Brett can then
 tag collaborators himself; review requests, replies and mentions by an agent
 need separate explicit approval. This workflow does not grant posting or
 credential-management permissions.
+
