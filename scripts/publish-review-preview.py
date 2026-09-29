@@ -37,9 +37,20 @@ STATIC_MARKERS = {
 }
 
 
+class PreviewValidationError(ValueError):
+    """A fixed diagnostic written by this trusted publisher, never remote data."""
+
+
 def require(condition, message):
     if not condition:
-        raise ValueError(message)
+        raise PreviewValidationError(message)
+
+
+def failure_message(error):
+    # Only require()'s fixed messages are safe to expose. Other exceptions can
+    # contain API response bodies, credentials, signed URLs or archive contents.
+    detail = str(error) if isinstance(error, PreviewValidationError) else type(error).__name__
+    return "Preview publication stopped: " + detail + ". No success status was posted."
 
 
 class NoRedirect(HTTPRedirectHandler):
@@ -191,11 +202,13 @@ def prepare_site(artifact_bytes, receipt):
 def deploy_static(netlify, site_id, site_name, files, title):
     require(str(uuid.UUID(site_id)) == site_id, "Site ID must be a UUID")
     require(bool(re.fullmatch(r"[a-z0-9][a-z0-9-]{0,62}", site_name)), "Invalid site name")
+    print("Validating the configured Netlify preview site", flush=True)
     site = netlify.call("/sites/" + site_id)
     require(site["id"] == site_id and site["name"] == site_name, "Preview site mismatch")
     hashes = {"/" + path: hashlib.sha1(data).hexdigest() for path, data in files.items()}
     by_hash = {digest: path.lstrip("/") for path, digest in hashes.items()}
     # Explicit JSON draft flag avoids ambiguity around ZIP query parameters.
+    print("Creating a static draft deploy", flush=True)
     deploy = netlify.call("/sites/" + site_id + "/deploys?title=" + quote(title, safe=""), "POST", payload={
         "files": hashes, "draft": True, "async": False,
         "functions": {},
@@ -207,11 +220,13 @@ def deploy_static(netlify, site_id, site_name, files, title):
     require(not any(deploy.get(k) for k in
                     ("required_functions", "required_edge_functions", "required_server")),
             "Unexpected executable deployment")
+    print("Uploading the requested static files", flush=True)
     for digest in deploy.get("required", []):
         require(digest in by_hash, "Unexpected requested file digest")
         path = by_hash[digest]
         netlify.call("/deploys/" + deploy_id + "/files/" + quote(path, safe="/"),
                      "PUT", raw=files[path])
+    print("Waiting for the draft deploy to become ready", flush=True)
     deadline = time.monotonic() + 480
     while deploy.get("state") != "ready":
         require(deploy.get("state") != "error", "Netlify deploy failed")
@@ -304,6 +319,5 @@ if __name__ == "__main__":
         main()
     except Exception as error:
         # No traceback: third-party response text/URLs might contain secrets.
-        print("Preview publication stopped (" + type(error).__name__ +
-              "). No success status was posted.", file=sys.stderr)
+        print(failure_message(error), file=sys.stderr)
         sys.exit(1)

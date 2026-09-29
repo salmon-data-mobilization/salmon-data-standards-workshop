@@ -32,6 +32,23 @@ def artifact(entries):
     return archive([("site.zip", archive(entries))])
 
 
+class SafeDiagnostics(unittest.TestCase):
+    def test_validation_failure_explains_the_failed_check(self):
+        try:
+            p.require(False, "Preview site mismatch")
+        except p.PreviewValidationError as error:
+            self.assertIn("Preview site mismatch", p.failure_message(error))
+        else:
+            self.fail("Expected validation failure")
+
+    def test_other_exceptions_do_not_expose_remote_data(self):
+        for kind in (ValueError, RuntimeError, KeyError):
+            with self.subTest(kind=kind):
+                message = p.failure_message(kind("secret-token-or-signed-url"))
+                self.assertNotIn("secret-token-or-signed-url", message)
+                self.assertIn(kind.__name__, message)
+
+
 class ArchiveBoundary(unittest.TestCase):
     def test_regular_site_and_teaching_code_are_data(self):
         code = b'raise RuntimeError("must never execute")'
