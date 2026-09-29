@@ -18,6 +18,10 @@ jobs:
     if: ${{ !github.event.pull_request.draft }}
     runs-on: ubuntu-22.04
     timeout-minutes: 45
+    env:
+      # remotes/renv need public GitHub downloads. This is only the ephemeral
+      # read-only job token; the Netlify credential stays in the publisher.
+      GITHUB_PAT: ${{ github.token }}
     steps:
       - name: Configure temporary R package cache
         run: printf 'RENV_PATHS_ROOT=%s/workshop-renv\n' "$RUNNER_TEMP" >> "$GITHUB_ENV"
