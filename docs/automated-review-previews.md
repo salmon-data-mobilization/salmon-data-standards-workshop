@@ -22,9 +22,16 @@ These workflows require setup before the first live preview:
    separate site, and verify the live site's deployment did not change. Check
    a fork PR and a superseded build before relying on routine automation.
 
-Offline validation initially passed 20 security-boundary tests. That does not
+Offline validation passed 22 security-boundary tests, including the exact inert
+marker files present in a real workshop build. That does not
 substitute for this live trial. The workflow pins its top-level Actions; the
 existing R setup and upstream composite dependencies are not fully locked.
+
+The configured Netlify personal token has no expiration. The GitHub environment's
+`main` restriction controls which GitHub refs can receive that credential; it does
+not narrow the token's Netlify account permissions. Revoke the token in Netlify
+when this automation is retired or the credential needs replacement, then update
+only the environment secret when configuring its replacement.
 
 ## Routine operation
 
