@@ -60,6 +60,7 @@ The SDO conventions, module/bridge guide, metamodel view and term-request templa
 | `scripts/check-semantic-lab.py` | Orchestrate supplied reference vocabulary/model/bridge checks. No learner review is performed or claimed. |
 | `scripts/build-workshop-kit.py` | Generate HTML reading companions (including nested Day 2 pages), inventory all distributed bytes and assemble the downloadable kit. |
 | `scripts/prepare-site.R` | Extend the installed Varnish head template with shared navigation styling before local builds and deployment. |
+| `scripts/prepare-review-preview.py` | Build a committed revision in a disposable clone, check the rendered site, and package it for a shared Netlify review preview. |
 | `scripts/verify-test-record.py` | Verify the test catalog record through anonymous, read-only requests; it does not upload or change access. |
 
 Read each script's inputs and options before running it. Keep its technical results separate from pending domain review and the actual test publication receipt.
@@ -105,3 +106,81 @@ The consistency script checks the lesson/kit contract; it does not replace runni
 `.github/workflows/sandpaper-main.yaml` builds and deploys on a push to `main` or `master`, or a manual workflow run. It provisions R 4.4.2, Pandoc, and the lesson dependencies, then runs `sandpaper:::ci_deploy(reset = reset)`. A successful local build is evidence about the local toolchain; inspect the workflow outcome before claiming the published site is current.
 
 After changing navigation styling, run the deployment workflow with `reset = true` to refresh Sandpaper's cached aggregate pages as well. The local preparation script invalidates the two instructor-notes HTML files; CI checks out its cached site later, so it needs the workflow reset. Retire this extra reset when Sandpaper tracks local template changes for every page.
+
+## Shared review previews
+
+For every new or updated PR (also called an MR), publish a shared preview before
+inviting collaborators to review. This is a required maintainer publishing step;
+The automatic workflows in this PR require the one-time setup in
+[Automated shared review previews](automated-review-previews.md), followed by a
+successful live trial before they can be considered enabled. Once enabled, each
+successful current PR build publishes a Netlify draft and adds a
+**Workshop preview / Netlify** link to the PR checks. GitHub Pages remains the
+merged lesson; Netlify hosts review copies. Verify the preview receipt and
+inspect affected pages before inviting review.
+
+### Optional local preparation for reviewed code
+
+The following local route executes Python and R from the selected revision with
+the builder's own permissions. A temporary clone is not a sandbox. Use this
+route only for code you have reviewed and trust; prefer the isolated GitHub
+build for automatic previews.
+
+1. Commit the intended source changes. Run the helper from the repository root:
+
+   ```bash
+   python3 scripts/prepare-review-preview.py --ref HEAD
+   ```
+
+   It needs Python 3, Git, R, Pandoc and the Sandpaper/Varnish lesson tools. It
+   builds only the named commit in a disposable normal clone, so it also works
+   when invoked from a Git worktree. The output directory contains the build
+   log, checked site, deployment ZIP and checksum manifest. Untracked files are
+   excluded. Inspect any Sandpaper notes in the log.
+
+   The default uses the lesson's renv profile. If that profile cannot be restored,
+   `--installed-packages` uses the installed R libraries and records that choice
+   and tool versions in the receipt; disclose this in the PR's validation notes.
+   A rendered preview does not prove the classroom code ran successfully.
+
+2. Upload the generated ZIP to a dedicated preview project in Netlify. Use
+   **Add new project / Deploy manually** for the first upload and name it
+   `salmon-workshop-pr<N>` once the PR number is known. For updates, use **choose
+   a file** in that same project's overview. Do not upload to another PR's
+   project. The ZIP supplies `netlify.toml` because Netlify otherwise mistakes
+   Sandpaper's rendered `config.yaml` for a Hugo source project. Only `public/`
+   is served; the source clone, build log and local manifest stay local.
+
+3. Wait for a successful deploy. Open its public URL without Netlify credentials,
+   check the affected pages and diagrams, and test the workshop ZIP download.
+   Confirm `<preview-url>/_preview.json` reports the intended full commit hash.
+   Keep the deployment permalink from Netlify's deploy details as a fixed link
+   to the reviewed snapshot; the project URL shows its latest upload. Netlify's
+   retention policy can remove older, superseded deploys.
+
+4. Add or refresh **Review preview** near the top of the PR description, using
+   the template below. If a newer commit has not yet been deployed, mark the
+   preview stale. Do not present an older snapshot as the current PR. Keep a
+   failed build pending, with its blocker, until it can be published and checked.
+
+   ```markdown
+   ## Review preview
+
+   - Shared preview: [Open the workshop](https://salmon-workshop-pr<N>.netlify.app/)
+   - Snapshot: [Open this deployment](<deployment-permalink>)
+   - Previewed commit: `<full-commit-hash>`
+   - Pages to review: <direct links to changed chapters or instructor pages>
+   ```
+
+PR #7's initial preview is at <https://salmon-workshop-pr7.netlify.app/> for commit
+`e2671169ea355518942219f10b2413337bdcf223`. That initial manual bundle predates
+`_preview.json`; its commit was verified during publication. New bundles include
+the machine-readable receipt.
+
+For agent-assisted publishing, prepare the preview and the exact PR text before
+requesting permission for GitHub writes. Show the complete proposed text and
+obtain Brett's approval before pushing or creating/updating a PR. Brett can then
+tag collaborators himself; review requests, replies and mentions by an agent
+need separate explicit approval. This workflow does not grant posting or
+credential-management permissions.
+
