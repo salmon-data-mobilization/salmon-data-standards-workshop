@@ -18,9 +18,10 @@ jobs:
     if: ${{ !github.event.pull_request.draft }}
     runs-on: ubuntu-22.04
     timeout-minutes: 45
-    env:
-      RENV_PATHS_ROOT: ${{ runner.temp }}/workshop-renv
     steps:
+      - name: Configure temporary R package cache
+        run: printf 'RENV_PATHS_ROOT=%s/workshop-renv\n' "$RUNNER_TEMP" >> "$GITHUB_ENV"
+
       - name: Check out the precise PR revision
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
