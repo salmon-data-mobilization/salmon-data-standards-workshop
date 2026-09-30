@@ -364,7 +364,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1></h1>
-        <p>Last updated on 2026-09-29 |
+        <p>Last updated on 2026-09-30 |
 
         <a href="https://github.com/salmon-data-mobilization/salmon-data-standards-workshop/edit/main/docs/automated-review-previews.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -405,10 +405,17 @@ pages, verify the receipt matches the PR head and the deploy is a draft
 on the separate site, and verify the live site’s deployment did not
 change. Check a fork PR and a superseded build before relying on routine
 automation.</li>
-</ol><p>Offline validation initially passed 20 security-boundary tests. That
-does not substitute for this live trial. The workflow pins its top-level
-Actions; the existing R setup and upstream composite dependencies are
-not fully locked.</p>
+</ol><p>Offline validation passed 28 security-boundary tests, including the
+exact inert marker files present in a real workshop build. That does not
+substitute for this live trial. The workflow pins its top-level Actions;
+the existing R setup and upstream composite dependencies are not fully
+locked.</p>
+<p>The configured Netlify personal token has no expiration. The GitHub
+environment’s <code>main</code> restriction controls which GitHub refs
+can receive that credential; it does not narrow the token’s Netlify
+account permissions. Revoke the token in Netlify when this automation is
+retired or the credential needs replacement, then update only the
+environment secret when configuring its replacement.</p>
 </div>
 <div class="section level2">
 <h2 id="routine-operation">Routine operation<a class="anchor" aria-label="anchor" href="#routine-operation"></a></h2>
@@ -425,6 +432,11 @@ secret plus <code>NETLIFY_SITE_ID</code> and
 <code>NETLIFY_SITE_NAME</code> variables. Never move the token into the
 build workflow or repository-wide secrets. Use a dedicated preview site
 and protect <code>main</code>.</p>
+<p>The publisher requests an explicit draft. If Netlify omits the
+response’s draft flag, it requires an explicit manual
+<code>deploy-preview</code> context instead. Production, published,
+ambiguous or mismatched responses stop publication; the final check also
+confirms that the preview is not the site’s published deployment.</p>
 <p>After publication, open <strong>Workshop preview / Netlify</strong>
 in the PR checks or the link in the publishing workflow’s summary. The
 URL is unique to that deploy; new commits produce new links. Check
@@ -439,10 +451,12 @@ separate live workshop is not the deploy target.</p>
 <p>For a failed publish, inspect the failed Actions step and check that
 the PR is still open at the same commit, the build artifact is present
 and unexpired, the workflow exists on <code>main</code>, and the
-environment/site values are correct. The publisher deliberately avoids
-logging API response bodies and signed URLs. If the artifact exceeds the
-limits or contains a prohibited filename, review the actual output
-before changing the validator; do not bypass it to make CI green.</p>
+environment/site values are correct. The publisher reports the failed
+validation check and the last publishing stage. These messages come from
+trusted code; API response bodies, credentials and signed URLs are not
+logged. If the artifact exceeds the limits or contains a prohibited
+filename, review the actual output before changing the validator; do not
+bypass it to make CI green.</p>
 <p>Local preparation via <code>scripts/prepare-review-preview.py</code>
 remains optional for reviewed, trusted revisions. Its disposable clone
 prevents stale-file mixing; it does not isolate code from that machine’s
@@ -507,7 +521,7 @@ access control requires separate Netlify setup.</p>
   "url": "https://salmon-data-mobilization.github.io/salmon-data-standards-workshop/instructor/automated-review-previews.html",
   "identifier": "https://salmon-data-mobilization.github.io/salmon-data-standards-workshop/instructor/automated-review-previews.html",
   "dateCreated": "2025-01-22",
-  "dateModified": "2026-09-29",
+  "dateModified": "2026-09-30",
   "datePublished": "2026-09-30"
 }
 
