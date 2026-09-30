@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh pinned teaching sources and render the worked example figures.
+"""Refresh pinned teaching sources and render the lesson's figures.
 
 Run from the lesson repository. Source data is copied from the released R
 package, never from mutable generated checkpoints. No inference or deposit.
@@ -283,6 +283,207 @@ def render_measurement_sketch():
     (folder / "measurement-sketch-working.mmd").write_text("\n".join(mermaid) + "\n")
 
 
+def render_outcomes_overview(figures):
+    """Export Chapter 1's picture of the three intended outcomes.
+
+    One high-level cycle, deliberately not a chapter-by-chapter flow: a package
+    reuses shared terms and is published, and local meanings are stewarded,
+    bridged and proposed back to the shared ontology. Badge numbers match the
+    chapter's outcome list; that list and its day table are the text version.
+    """
+    parts = [
+        '<svg xmlns="http://www.w3.org/2000/svg" width="760" height="476" '
+        'viewBox="0 0 760 476" role="img" aria-labelledby="title desc">',
+        '<title id="title">The three intended outcomes in the bigger picture</title>',
+        '<desc id="desc">A Salmon Data Package reuses terms from shared ontologies and '
+        'vocabularies (outcome 2, Day 1) and publishes its metadata to public catalogs and '
+        'databases (outcome 1, Day 1). Its local meanings go into an organization\'s own '
+        'vocabulary and ontology (Day 2), which bridges local terms to shared meanings '
+        '(outcome 3, Day 2) and proposes new shared terms (outcome 2, Day 2) that later '
+        'packages can reuse.</desc>',
+        '<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" '
+        'markerWidth="6" markerHeight="6" orient="auto-start-reverse">'
+        '<path d="M 0 0 L 10 5 L 0 10 z" fill="#334755"/></marker></defs>',
+        '<rect width="760" height="476" rx="8" fill="#ffffff"/>',
+    ]
+
+    def text(x, y, value, size=17, bold=False, anchor="start", fill="#172b3a"):
+        parts.append(f'<text x="{x}" y="{y}" font-family="sans-serif" font-size="{size}" '
+                     f'font-weight="{"bold" if bold else "normal"}" text-anchor="{anchor}" '
+                     f'fill="{fill}">{html.escape(value)}</text>')
+
+    def box(x, y, width, height, lines):
+        parts.append(f'<rect x="{x}" y="{y}" width="{width}" height="{height}" rx="7" '
+                     f'fill="#f4f5f6" stroke="#687582"/>')
+        first = y + (height - 22 * (len(lines) - 1)) / 2 + 6
+        for i, line in enumerate(lines):
+            text(x + width / 2, first + i * 22, line, size=18 if i == 0 else 16,
+                 bold=i == 0, anchor="middle")
+
+    def arrow(path):
+        parts.append(f'<path d="{path}" fill="none" stroke="#334755" stroke-width="2" '
+                     f'marker-end="url(#arrow)"/>')
+
+    def badge(x, y, number):
+        parts.append(f'<circle cx="{x}" cy="{y}" r="11" fill="#334755"/>')
+        text(x, y + 5, number, size=14, bold=True, anchor="middle", fill="#ffffff")
+
+    def day(x, y, value, anchor="start"):
+        text(x, y, value, size=15, anchor=anchor, fill="#4a5a66")
+
+    text(24, 34, "Three outcomes in the bigger picture", size=22, bold=True)
+    box(250, 60, 260, 72, ["Shared ontologies", "and vocabularies"])
+    box(20, 212, 260, 94, ["Salmon Data Package", "data + metadata", "using standard terms"])
+    box(480, 212, 260, 94, ["Local vocabulary", "and ontology", "your organization's terms"])
+    box(20, 384, 260, 72, ["Public catalogs", "and databases"])
+
+    arrow("M 250 96 H 150 V 211")
+    badge(174, 150, "2")
+    text(192, 156, "reuse terms", size=16)
+    day(192, 178, "Day 1")
+    arrow("M 280 259 H 479")
+    text(380, 249, "local meanings", size=16, anchor="middle")
+    day(380, 281, "Day 2", anchor="middle")
+    arrow("M 610 211 V 96 H 511")
+    badge(412, 150, "3")
+    text(430, 156, "bridge local terms", size=16)
+    badge(412, 180, "2")
+    text(430, 186, "propose new terms", size=16)
+    day(430, 206, "Day 2")
+    arrow("M 150 306 V 383")
+    badge(174, 336, "1")
+    text(192, 342, "publish metadata", size=16)
+    day(192, 364, "Day 1")
+
+    for y, number, outcome in [
+        (402, "1", "Reusable data publication"),
+        (428, "2", "Contribution to shared terminology"),
+        (454, "3", "Local stewardship connected to shared meanings"),
+    ]:
+        badge(344, y, number)
+        text(362, y + 6, outcome, size=15)
+    parts.append("</svg>")
+    (figures / "outcomes-overview.svg").write_text("\n".join(parts) + "\n")
+
+    mermaid = '''flowchart LR
+  shared["Shared ontologies and vocabularies"]
+  package["Salmon Data Package: data + metadata using standard terms"]
+  catalogs["Public catalogs and databases"]
+  local["Local vocabulary and ontology: your organization's terms"]
+  shared -->|"2: reuse terms, Day 1"| package
+  package -->|"1: publish metadata, Day 1"| catalogs
+  package -->|"local meanings, Day 2"| local
+  local -->|"3: bridge local terms, Day 2"| shared
+  local -->|"2: propose new terms, Day 2"| shared
+'''
+    (figures / "outcomes-overview.mmd").write_text(mermaid)
+
+
+def render_drawing_convention(figures):
+    """Export Chapter 2's generic drawing skeleton and its editable graph.
+
+    It shows the drawing marks and where each part of one variable goes. It
+    holds no dataset values or worked interpretation on purpose: the worked
+    sketch is the chapter's collapsed answer key, opened after an attempt.
+    """
+    parts = [
+        '<svg xmlns="http://www.w3.org/2000/svg" width="760" height="632" '
+        'viewBox="0 0 760 632" role="img" aria-labelledby="title desc">',
+        '<title id="title">Drawing convention: a skeleton for one variable</title>',
+        '<desc id="desc">A template with no dataset values. A variable box holds your label '
+        'and the source field name. Solid arrows labelled concerns, represents and has '
+        'constraint point to entity, property and constraint boxes, which ask what the '
+        'variable is about, what is measured and what narrows it. A dashed arrow labelled '
+        'has constraint? points to a dashed question box for a possible constraint that '
+        'needs evidence. Below, an activity box applies the variable, uses a method and '
+        'generates a result: one example value and its unit. A legend explains solid arrows, '
+        'dashed arrows and boxes.</desc>',
+        '<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" '
+        'markerWidth="6" markerHeight="6" orient="auto-start-reverse">'
+        '<path d="M 0 0 L 10 5 L 0 10 z" fill="#334755"/></marker></defs>',
+        '<rect width="760" height="632" rx="8" fill="#ffffff"/>',
+    ]
+
+    def text(x, y, value, size=16, bold=False, italic=False, anchor="start"):
+        style = ' font-style="italic"' if italic else ""
+        parts.append(f'<text x="{x}" y="{y}" font-family="sans-serif" font-size="{size}" '
+                     f'font-weight="{"bold" if bold else "normal"}"{style} '
+                     f'text-anchor="{anchor}" fill="#172b3a">{html.escape(value)}</text>')
+
+    def box(x, y, width, height, role, prompts, question=False):
+        # Prompts are italic placeholders: a learner writes their own label there.
+        dash = ' stroke-dasharray="6 4"' if question else ""
+        parts.append(f'<rect x="{x}" y="{y}" width="{width}" height="{height}" rx="7" '
+                     f'fill="#f4f5f6" stroke="#687582"{dash}/>')
+        first = y + (height - 22 * len(prompts)) / 2 + 6
+        text(x + width / 2, first, role, bold=True, anchor="middle")
+        for i, prompt in enumerate(prompts, start=1):
+            text(x + width / 2, first + i * 22, prompt, size=15, italic=True, anchor="middle")
+
+    def arrow(path, question=False):
+        dash = ' stroke-dasharray="6 4"' if question else ""
+        parts.append(f'<path d="{path}" fill="none" stroke="#334755" stroke-width="2"'
+                     f'{dash} marker-end="url(#arrow)"/>')
+
+    text(24, 34, "Drawing convention: one variable", size=22, bold=True)
+    text(24, 60, "A template, not an answer: replace each question with your own label.")
+    box(20, 84, 165, 80, "ENTITY", ["What is it about?"])
+    box(205, 84, 165, 80, "PROPERTY", ["What is measured?"])
+    box(390, 84, 165, 80, "CONSTRAINT", ["What narrows it?"])
+    box(575, 84, 165, 80, "QUESTION", ["Constraint?", "Evidence needed"], question=True)
+    box(20, 236, 720, 84, "VARIABLE", ["Your label for the column", "Source field name"])
+    for x, label, question in [(103, "concerns", False), (288, "represents", False),
+                               (473, "has constraint", False), (658, "has constraint?", True)]:
+        arrow(f"M {x} 235 V 165", question=question)
+        text(x - 8, 206, label, anchor="end")
+
+    box(20, 392, 170, 86, "METHOD", ["Which procedure?"])
+    box(290, 392, 180, 86, "ACTIVITY", ["How was the", "value obtained?"])
+    box(570, 392, 170, 86, "RESULT", ["One example value", "Unit?"])
+    arrow("M 380 391 V 321")
+    text(390, 362, "applies variable")
+    arrow("M 289 435 H 191")
+    text(240, 410, "uses", anchor="middle")
+    text(240, 428, "method", anchor="middle")
+    arrow("M 471 435 H 569")
+    text(520, 410, "generates", anchor="middle")
+    text(520, 428, "result", anchor="middle")
+
+    arrow("M 24 522 H 79")
+    text(94, 528, "Solid arrow + verb phrase: a working statement you can read as a sentence.",
+         size=15)
+    arrow("M 24 556 H 79", question=True)
+    text(94, 562, "Dashed arrow + question mark: a relationship that still needs evidence.",
+         size=15)
+    parts.append('<rect x="24" y="578" width="55" height="30" rx="5" fill="#f4f5f6" '
+                 'stroke="#687582"/>')
+    text(94, 598, "Box: one idea, with its role, your label and a source field or example.",
+         size=15)
+    parts.append("</svg>")
+    (figures / "drawing-convention.svg").write_text("\n".join(parts) + "\n")
+
+    mermaid = '''flowchart TB
+  variable["VARIABLE<br/>Your label for the column<br/>Source field name"]
+  entity["ENTITY<br/>What is it about?"]
+  property["PROPERTY<br/>What is measured?"]
+  constraint["CONSTRAINT<br/>What narrows it?"]
+  question["QUESTION<br/>Constraint? Evidence needed"]
+  activity["ACTIVITY<br/>How was the value obtained?"]
+  method["METHOD<br/>Which procedure?"]
+  result["RESULT<br/>One example value<br/>Unit?"]
+  variable -->|concerns| entity
+  variable -->|represents| property
+  variable -->|has constraint| constraint
+  variable -.->|has constraint?| question
+  activity -->|applies variable| variable
+  activity -->|uses method| method
+  activity -->|generates result| result
+  classDef open stroke-dasharray: 6 4
+  class question open
+'''
+    (figures / "drawing-convention.mmd").write_text(mermaid)
+
+
 def main():
     destinations = {
         "inst/extdata/nuseds-fraser-coho-2023-2024.csv": "raw_data/nuseds-fraser-coho-2023-2024.csv",
@@ -308,8 +509,10 @@ def main():
     figures = ROOT / "episodes/fig"
     figures.mkdir(exist_ok=True)
     render_record_preview(figures)
+    render_outcomes_overview(figures)
+    render_drawing_convention(figures)
     render_measurement_sketch()
-    print("Pinned source files and worked example figures prepared.")
+    print("Pinned source files and lesson figures prepared.")
 
 
 if __name__ == "__main__":

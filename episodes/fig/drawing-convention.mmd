@@ -1,0 +1,18 @@
+flowchart TB
+  variable["VARIABLE<br/>Your label for the column<br/>Source field name"]
+  entity["ENTITY<br/>What is it about?"]
+  property["PROPERTY<br/>What is measured?"]
+  constraint["CONSTRAINT<br/>What narrows it?"]
+  question["QUESTION<br/>Constraint? Evidence needed"]
+  activity["ACTIVITY<br/>How was the value obtained?"]
+  method["METHOD<br/>Which procedure?"]
+  result["RESULT<br/>One example value<br/>Unit?"]
+  variable -->|concerns| entity
+  variable -->|represents| property
+  variable -->|has constraint| constraint
+  variable -.->|has constraint?| question
+  activity -->|applies variable| variable
+  activity -->|uses method| method
+  activity -->|generates result| result
+  classDef open stroke-dasharray: 6 4
+  class question open
