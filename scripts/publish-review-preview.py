@@ -199,6 +199,26 @@ def prepare_site(artifact_bytes, receipt):
     return files
 
 
+def validate_preview_deploy(deploy, site_id, deploy_id):
+    require(deploy.get("id") == deploy_id and deploy.get("site_id") == site_id,
+            "Netlify returned a different deploy or site")
+    # Netlify accepts draft=true in the request, but its response may omit the
+    # draft property. A manual deploy-preview is the equivalent server-side
+    # non-production signal. Never treat missing metadata alone as a draft.
+    if "draft" in deploy:
+        require(deploy["draft"] is True, "Netlify explicitly returned a non-draft deploy")
+    else:
+        require(deploy.get("context") == "deploy-preview" and
+                deploy.get("manual_deploy") is True,
+                "Netlify did not confirm a manual preview deploy")
+        print("Netlify confirmed a manual deploy-preview; draft field omitted", flush=True)
+    require(deploy.get("context") != "production" and not deploy.get("published_at"),
+            "Netlify returned a production or published deploy")
+    require(not any(deploy.get(k) for k in
+                    ("required_functions", "required_edge_functions", "required_server")),
+            "Unexpected executable deployment")
+
+
 def deploy_static(netlify, site_id, site_name, files, title):
     require(str(uuid.UUID(site_id)) == site_id, "Site ID must be a UUID")
     require(bool(re.fullmatch(r"[a-z0-9][a-z0-9-]{0,62}", site_name)), "Invalid site name")
@@ -215,11 +235,7 @@ def deploy_static(netlify, site_id, site_name, files, title):
     })
     deploy_id = deploy["id"]
     require(bool(re.fullmatch(r"[a-zA-Z0-9-]{1,80}", deploy_id)), "Invalid deploy ID")
-    require(deploy.get("site_id") == site_id and deploy.get("draft") is True,
-            "Netlify did not create a draft on the expected site")
-    require(not any(deploy.get(k) for k in
-                    ("required_functions", "required_edge_functions", "required_server")),
-            "Unexpected executable deployment")
+    validate_preview_deploy(deploy, site_id, deploy_id)
     print("Uploading the requested static files", flush=True)
     for digest in deploy.get("required", []):
         require(digest in by_hash, "Unexpected requested file digest")
@@ -233,8 +249,9 @@ def deploy_static(netlify, site_id, site_name, files, title):
         require(time.monotonic() < deadline, "Netlify deploy timed out")
         time.sleep(3)
         deploy = netlify.call("/deploys/" + deploy_id)
-    require(deploy.get("site_id") == site_id and deploy.get("draft") is True,
-            "Unexpected final deploy state")
+        validate_preview_deploy(deploy, site_id, deploy_id)
+    published = netlify.call("/sites/" + site_id).get("published_deploy") or {}
+    require(published.get("id") != deploy_id, "Preview replaced the published deploy")
     url = "https://" + deploy_id + "--" + site_name + ".netlify.app"
     require(deploy.get("deploy_ssl_url", "").rstrip("/") == url,
             "Unexpected deploy URL")

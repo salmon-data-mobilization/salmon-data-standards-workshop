@@ -229,6 +229,62 @@ class DeploymentBoundary(unittest.TestCase):
             p.deploy_static(fake, self.SITE_ID, self.SITE_NAME, {"index.html": b"hello"}, "PR 8")
         self.assertFalse(any(c[1] == "POST" for c in fake.calls))
 
+    def test_manual_preview_without_draft_response_field(self):
+        fake = self.FakeNetlify(self)
+        original_call = fake.call
+
+        def missing_draft(*args, **kwargs):
+            result = original_call(*args, **kwargs)
+            if "draft" in result:
+                del result["draft"]
+                result.update(context="deploy-preview", manual_deploy=True)
+            return result
+
+        fake.call = missing_draft
+        with patch.object(p.time, "sleep"):
+            url = p.deploy_static(fake, self.SITE_ID, self.SITE_NAME,
+                                  {"index.html": b"hello"}, "PR 11")
+        self.assertTrue(fake.payload["draft"])
+        self.assertEqual(url, "https://deploy123--workshop-preview-test.netlify.app")
+
+    def test_missing_draft_does_not_accept_ambiguous_or_published_deploy(self):
+        preview = {"id": "deploy123", "site_id": self.SITE_ID,
+                   "context": "deploy-preview", "manual_deploy": True}
+        cases = [
+            {"context": "production"}, {"context": "branch-deploy"},
+            {"context": None}, {"manual_deploy": False}, {"manual_deploy": None},
+            {"draft": False}, {"draft": None}, {"draft": "true"},
+            {"published_at": "2026-09-30T00:00:00Z"},
+            {"site_id": "another-site"}, {"id": "another-deploy"},
+            {"required_functions": ["function-sha"]},
+            {"required_edge_functions": ["edge-sha"]},
+            {"required_server": ["server-sha"]},
+        ]
+        for changed in cases:
+            with self.subTest(changed=changed), self.assertRaises(ValueError):
+                p.validate_preview_deploy({**preview, **changed}, self.SITE_ID, "deploy123")
+
+    def test_draft_flag_does_not_override_production_context(self):
+        with self.assertRaises(ValueError):
+            p.validate_preview_deploy({"id": "deploy123", "site_id": self.SITE_ID,
+                                       "draft": True, "context": "production"},
+                                      self.SITE_ID, "deploy123")
+
+    def test_preview_cannot_be_the_published_site_deploy(self):
+        fake = self.FakeNetlify(self)
+        original_call = fake.call
+
+        def became_published(*args, **kwargs):
+            result = original_call(*args, **kwargs)
+            if args[0] == "/sites/" + self.SITE_ID:
+                result["published_deploy"] = {"id": "deploy123"}
+            return result
+
+        fake.call = became_published
+        with patch.object(p.time, "sleep"), self.assertRaises(ValueError):
+            p.deploy_static(fake, self.SITE_ID, self.SITE_NAME,
+                            {"index.html": b"hello"}, "PR 11")
+
     def test_authenticated_redirects_are_never_automatically_followed(self):
         self.assertIsNone(p.NoRedirect().redirect_request(None, None, 302, "", {}, "https://other/"))
 
