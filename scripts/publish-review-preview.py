@@ -28,11 +28,29 @@ MAX_FILE = 50 * 1024 * 1024
 MAX_FILES = 20000
 SHA = re.compile(r"[0-9a-f]{40}")
 SAFE_PATH = re.compile(r"[A-Za-z0-9_./+ @()-]+")
+# Exact inert marker files produced by the existing workshop build. No other
+# hidden paths are accepted, and these bytes must match the reviewed values.
+STATIC_MARKERS = {
+    "files/fraser-coho-workshop/checkpoints/" + checkpoint + "/.metasalmon-package":
+        b"metasalmon-owned\n"
+    for checkpoint in ("draft-sdp", "reference-sdp", "seeded-sdp")
+}
+
+
+class PreviewValidationError(ValueError):
+    """A fixed diagnostic written by this trusted publisher, never remote data."""
 
 
 def require(condition, message):
     if not condition:
-        raise ValueError(message)
+        raise PreviewValidationError(message)
+
+
+def failure_message(error):
+    # Only require()'s fixed messages are safe to expose. Other exceptions can
+    # contain API response bodies, credentials, signed URLs or archive contents.
+    detail = str(error) if isinstance(error, PreviewValidationError) else type(error).__name__
+    return "Preview publication stopped: " + detail + ". No success status was posted."
 
 
 class NoRedirect(HTTPRedirectHandler):
@@ -159,6 +177,13 @@ def prepare_site(artifact_bytes, receipt):
             continue  # Legacy Drop configuration is never interpreted.
         require(name.startswith("public/"), "File outside public site")
         path = name[len("public/"):]
+        if path == ".nojekyll":
+            require(contents == b"", "Unexpected Jekyll marker content")
+            continue  # GitHub Pages marker has no purpose on Netlify.
+        if path in STATIC_MARKERS:
+            require(contents == STATIC_MARKERS[path], "Unexpected teaching marker content")
+            files[path] = STATIC_MARKERS[path]
+            continue
         parts = path.casefold().split("/")
         require(not any(p.startswith(".") for p in parts), "Hidden file in site")
         require(not any(p in {"netlify.toml", "_redirects", "_headers", "_worker.js"}
@@ -174,38 +199,59 @@ def prepare_site(artifact_bytes, receipt):
     return files
 
 
+def validate_preview_deploy(deploy, site_id, deploy_id):
+    require(deploy.get("id") == deploy_id and deploy.get("site_id") == site_id,
+            "Netlify returned a different deploy or site")
+    # Netlify accepts draft=true in the request, but its response may omit the
+    # draft property. A manual deploy-preview is the equivalent server-side
+    # non-production signal. Never treat missing metadata alone as a draft.
+    if "draft" in deploy:
+        require(deploy["draft"] is True, "Netlify explicitly returned a non-draft deploy")
+    else:
+        require(deploy.get("context") == "deploy-preview" and
+                deploy.get("manual_deploy") is True,
+                "Netlify did not confirm a manual preview deploy")
+        print("Netlify confirmed a manual deploy-preview; draft field omitted", flush=True)
+    require(deploy.get("context") != "production" and not deploy.get("published_at"),
+            "Netlify returned a production or published deploy")
+    require(not any(deploy.get(k) for k in
+                    ("required_functions", "required_edge_functions", "required_server")),
+            "Unexpected executable deployment")
+
+
 def deploy_static(netlify, site_id, site_name, files, title):
     require(str(uuid.UUID(site_id)) == site_id, "Site ID must be a UUID")
     require(bool(re.fullmatch(r"[a-z0-9][a-z0-9-]{0,62}", site_name)), "Invalid site name")
+    print("Validating the configured Netlify preview site", flush=True)
     site = netlify.call("/sites/" + site_id)
     require(site["id"] == site_id and site["name"] == site_name, "Preview site mismatch")
     hashes = {"/" + path: hashlib.sha1(data).hexdigest() for path, data in files.items()}
     by_hash = {digest: path.lstrip("/") for path, digest in hashes.items()}
     # Explicit JSON draft flag avoids ambiguity around ZIP query parameters.
+    print("Creating a static draft deploy", flush=True)
     deploy = netlify.call("/sites/" + site_id + "/deploys?title=" + quote(title, safe=""), "POST", payload={
         "files": hashes, "draft": True, "async": False,
         "functions": {},
     })
     deploy_id = deploy["id"]
     require(bool(re.fullmatch(r"[a-zA-Z0-9-]{1,80}", deploy_id)), "Invalid deploy ID")
-    require(deploy.get("site_id") == site_id and deploy.get("draft") is True,
-            "Netlify did not create a draft on the expected site")
-    require(not any(deploy.get(k) for k in
-                    ("required_functions", "required_edge_functions", "required_server")),
-            "Unexpected executable deployment")
+    validate_preview_deploy(deploy, site_id, deploy_id)
+    print("Uploading the requested static files", flush=True)
     for digest in deploy.get("required", []):
         require(digest in by_hash, "Unexpected requested file digest")
         path = by_hash[digest]
         netlify.call("/deploys/" + deploy_id + "/files/" + quote(path, safe="/"),
                      "PUT", raw=files[path])
+    print("Waiting for the draft deploy to become ready", flush=True)
     deadline = time.monotonic() + 480
     while deploy.get("state") != "ready":
         require(deploy.get("state") != "error", "Netlify deploy failed")
         require(time.monotonic() < deadline, "Netlify deploy timed out")
         time.sleep(3)
         deploy = netlify.call("/deploys/" + deploy_id)
-    require(deploy.get("site_id") == site_id and deploy.get("draft") is True,
-            "Unexpected final deploy state")
+        validate_preview_deploy(deploy, site_id, deploy_id)
+    published = netlify.call("/sites/" + site_id).get("published_deploy") or {}
+    require(published.get("id") != deploy_id, "Preview replaced the published deploy")
     url = "https://" + deploy_id + "--" + site_name + ".netlify.app"
     require(deploy.get("deploy_ssl_url", "").rstrip("/") == url,
             "Unexpected deploy URL")
@@ -290,6 +336,5 @@ if __name__ == "__main__":
         main()
     except Exception as error:
         # No traceback: third-party response text/URLs might contain secrets.
-        print("Preview publication stopped (" + type(error).__name__ +
-              "). No success status was posted.", file=sys.stderr)
+        print(failure_message(error), file=sys.stderr)
         sys.exit(1)

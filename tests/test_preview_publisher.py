@@ -32,6 +32,23 @@ def artifact(entries):
     return archive([("site.zip", archive(entries))])
 
 
+class SafeDiagnostics(unittest.TestCase):
+    def test_validation_failure_explains_the_failed_check(self):
+        try:
+            p.require(False, "Preview site mismatch")
+        except p.PreviewValidationError as error:
+            self.assertIn("Preview site mismatch", p.failure_message(error))
+        else:
+            self.fail("Expected validation failure")
+
+    def test_other_exceptions_do_not_expose_remote_data(self):
+        for kind in (ValueError, RuntimeError, KeyError):
+            with self.subTest(kind=kind):
+                message = p.failure_message(kind("secret-token-or-signed-url"))
+                self.assertNotIn("secret-token-or-signed-url", message)
+                self.assertIn(kind.__name__, message)
+
+
 class ArchiveBoundary(unittest.TestCase):
     def test_regular_site_and_teaching_code_are_data(self):
         code = b'raise RuntimeError("must never execute")'
@@ -99,6 +116,24 @@ class ArchiveBoundary(unittest.TestCase):
     def test_missing_index(self):
         with self.assertRaises(ValueError):
             p.prepare_site(artifact([("public/a.html", b"ok")]), {})
+
+    def test_known_workshop_markers_are_exact_inert_bytes(self):
+        entries = [("public/index.html", b"ok"), ("public/.nojekyll", b"")]
+        entries += [("public/" + path, value) for path, value in p.STATIC_MARKERS.items()]
+        files = p.prepare_site(artifact(entries), {})
+        self.assertNotIn(".nojekyll", files)
+        for path, value in p.STATIC_MARKERS.items():
+            self.assertEqual(files[path], value)
+
+    def test_marker_exceptions_reject_changed_bytes_or_other_paths(self):
+        for name, value in [
+            ("public/.nojekyll", b"unexpected"),
+            ("public/files/fraser-coho-workshop/checkpoints/draft-sdp/.metasalmon-package", b"unexpected"),
+            ("public/files/other/.metasalmon-package", b"metasalmon-owned\n"),
+            ("public/subdir/.nojekyll", b""),
+        ]:
+            with self.subTest(name=name), self.assertRaises(ValueError):
+                p.prepare_site(artifact([("public/index.html", b"ok"), (name, value)]), {})
 
 
 class ProvenanceBoundary(unittest.TestCase):
@@ -193,6 +228,62 @@ class DeploymentBoundary(unittest.TestCase):
         with self.assertRaises(ValueError):
             p.deploy_static(fake, self.SITE_ID, self.SITE_NAME, {"index.html": b"hello"}, "PR 8")
         self.assertFalse(any(c[1] == "POST" for c in fake.calls))
+
+    def test_manual_preview_without_draft_response_field(self):
+        fake = self.FakeNetlify(self)
+        original_call = fake.call
+
+        def missing_draft(*args, **kwargs):
+            result = original_call(*args, **kwargs)
+            if "draft" in result:
+                del result["draft"]
+                result.update(context="deploy-preview", manual_deploy=True)
+            return result
+
+        fake.call = missing_draft
+        with patch.object(p.time, "sleep"):
+            url = p.deploy_static(fake, self.SITE_ID, self.SITE_NAME,
+                                  {"index.html": b"hello"}, "PR 11")
+        self.assertTrue(fake.payload["draft"])
+        self.assertEqual(url, "https://deploy123--workshop-preview-test.netlify.app")
+
+    def test_missing_draft_does_not_accept_ambiguous_or_published_deploy(self):
+        preview = {"id": "deploy123", "site_id": self.SITE_ID,
+                   "context": "deploy-preview", "manual_deploy": True}
+        cases = [
+            {"context": "production"}, {"context": "branch-deploy"},
+            {"context": None}, {"manual_deploy": False}, {"manual_deploy": None},
+            {"draft": False}, {"draft": None}, {"draft": "true"},
+            {"published_at": "2026-09-30T00:00:00Z"},
+            {"site_id": "another-site"}, {"id": "another-deploy"},
+            {"required_functions": ["function-sha"]},
+            {"required_edge_functions": ["edge-sha"]},
+            {"required_server": ["server-sha"]},
+        ]
+        for changed in cases:
+            with self.subTest(changed=changed), self.assertRaises(ValueError):
+                p.validate_preview_deploy({**preview, **changed}, self.SITE_ID, "deploy123")
+
+    def test_draft_flag_does_not_override_production_context(self):
+        with self.assertRaises(ValueError):
+            p.validate_preview_deploy({"id": "deploy123", "site_id": self.SITE_ID,
+                                       "draft": True, "context": "production"},
+                                      self.SITE_ID, "deploy123")
+
+    def test_preview_cannot_be_the_published_site_deploy(self):
+        fake = self.FakeNetlify(self)
+        original_call = fake.call
+
+        def became_published(*args, **kwargs):
+            result = original_call(*args, **kwargs)
+            if args[0] == "/sites/" + self.SITE_ID:
+                result["published_deploy"] = {"id": "deploy123"}
+            return result
+
+        fake.call = became_published
+        with patch.object(p.time, "sleep"), self.assertRaises(ValueError):
+            p.deploy_static(fake, self.SITE_ID, self.SITE_NAME,
+                            {"index.html": b"hello"}, "PR 11")
 
     def test_authenticated_redirects_are_never_automatically_followed(self):
         self.assertIsNone(p.NoRedirect().redirect_request(None, None, 302, "", {}, "https://other/"))
