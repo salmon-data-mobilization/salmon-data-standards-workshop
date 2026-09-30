@@ -22,7 +22,7 @@ These workflows require setup before the first live preview:
    separate site, and verify the live site's deployment did not change. Check
    a fork PR and a superseded build before relying on routine automation.
 
-Offline validation passed 22 security-boundary tests, including the exact inert
+Offline validation passed 28 security-boundary tests, including the exact inert
 marker files present in a real workshop build. That does not
 substitute for this live trial. The workflow pins its top-level Actions; the
 existing R setup and upstream composite dependencies are not fully locked.
@@ -45,6 +45,11 @@ Its environment, `workshop-preview-publisher`, must allow only `main` and must
 hold the `NETLIFY_AUTH_TOKEN` secret plus `NETLIFY_SITE_ID` and
 `NETLIFY_SITE_NAME` variables. Never move the token into the build workflow or
 repository-wide secrets. Use a dedicated preview site and protect `main`.
+
+The publisher requests an explicit draft. If Netlify omits the response's draft
+flag, it requires an explicit manual `deploy-preview` context instead. Production,
+published, ambiguous or mismatched responses stop publication; the final check
+also confirms that the preview is not the site's published deployment.
 
 After publication, open **Workshop preview / Netlify** in the PR checks or the
 link in the publishing workflow's summary. The URL is unique to that deploy;
