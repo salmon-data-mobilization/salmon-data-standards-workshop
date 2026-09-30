@@ -60,7 +60,9 @@ it as the current preview. The separate live workshop is not the deploy target.
 For a failed publish, inspect the failed Actions step and check that the PR is
 still open at the same commit, the build artifact is present and unexpired, the
 workflow exists on `main`, and the environment/site values are correct. The
-publisher deliberately avoids logging API response bodies and signed URLs.
+publisher reports the failed validation check and the last publishing stage.
+These messages come from trusted code; API response bodies, credentials and
+signed URLs are not logged.
 If the artifact exceeds the limits or contains a prohibited filename, review the
 actual output before changing the validator; do not bypass it to make CI green.
 
