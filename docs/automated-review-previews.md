@@ -22,9 +22,16 @@ These workflows require setup before the first live preview:
    separate site, and verify the live site's deployment did not change. Check
    a fork PR and a superseded build before relying on routine automation.
 
-Offline validation initially passed 20 security-boundary tests. That does not
+Offline validation passed 28 security-boundary tests, including the exact inert
+marker files present in a real workshop build. That does not
 substitute for this live trial. The workflow pins its top-level Actions; the
 existing R setup and upstream composite dependencies are not fully locked.
+
+The configured Netlify personal token has no expiration. The GitHub environment's
+`main` restriction controls which GitHub refs can receive that credential; it does
+not narrow the token's Netlify account permissions. Revoke the token in Netlify
+when this automation is retired or the credential needs replacement, then update
+only the environment secret when configuring its replacement.
 
 ## Routine operation
 
@@ -38,6 +45,11 @@ Its environment, `workshop-preview-publisher`, must allow only `main` and must
 hold the `NETLIFY_AUTH_TOKEN` secret plus `NETLIFY_SITE_ID` and
 `NETLIFY_SITE_NAME` variables. Never move the token into the build workflow or
 repository-wide secrets. Use a dedicated preview site and protect `main`.
+
+The publisher requests an explicit draft. If Netlify omits the response's draft
+flag, it requires an explicit manual `deploy-preview` context instead. Production,
+published, ambiguous or mismatched responses stop publication; the final check
+also confirms that the preview is not the site's published deployment.
 
 After publication, open **Workshop preview / Netlify** in the PR checks or the
 link in the publishing workflow's summary. The URL is unique to that deploy;
@@ -53,7 +65,9 @@ it as the current preview. The separate live workshop is not the deploy target.
 For a failed publish, inspect the failed Actions step and check that the PR is
 still open at the same commit, the build artifact is present and unexpired, the
 workflow exists on `main`, and the environment/site values are correct. The
-publisher deliberately avoids logging API response bodies and signed URLs.
+publisher reports the failed validation check and the last publishing stage.
+These messages come from trusted code; API response bodies, credentials and
+signed URLs are not logged.
 If the artifact exceeds the limits or contains a prohibited filename, review the
 actual output before changing the validator; do not bypass it to make CI green.
 
