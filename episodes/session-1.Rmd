@@ -6,7 +6,7 @@ exercises: 25
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- What changes between a source spreadsheet and a reusable published dataset?
+- What changes between a source spreadsheet and a reusable published dataset? TEST TEST
 - What will we make at each stage of the workshop?
 - Why do we describe the data ourselves before using packaging software or AI?
 
