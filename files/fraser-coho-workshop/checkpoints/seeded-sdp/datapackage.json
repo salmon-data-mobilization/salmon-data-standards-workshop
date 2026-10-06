@@ -1,0 +1,168 @@
+{
+  "profile": "https://salmon-data-mobilization.github.io/smn-data-pkg/profiles/salmon-data-package/v0.3/profile.json",
+  "name": "fraser-coho-workshop",
+  "id": "fraser-coho-workshop",
+  "title": "Workshop demonstration: NuSEDS Fraser Coho — KNB Test Node",
+  "description": "Teaching derivative of the Open Canada NuSEDS Fraser and BC Interior workbook: 173 Coho records from analysis years 2023-2024, retaining 14 source columns. Population-year pairs are not unique; retain waterbody and source record context. Working interpretations are pending scientific review by Bruno and Tom.",
+  "sdp": {
+    "specVersion": "sdp-0.3.0",
+    "profile": "https://salmon-data-mobilization.github.io/smn-data-pkg/profiles/salmon-data-package/v0.3/profile.json",
+    "rules": "https://salmon-data-mobilization.github.io/smn-data-pkg/schema/sdp.rules.yaml",
+    "metadata": {
+      "dataset": "metadata/dataset.csv",
+      "tables": "metadata/tables.csv",
+      "columnDictionary": "metadata/column_dictionary.csv",
+      "codes": "metadata/codes.csv"
+    }
+  },
+  "resources": [
+    {
+      "profile": "tabular-data-resource",
+      "name": "sdp_dataset",
+      "path": "metadata/dataset.csv",
+      "title": "SDP dataset metadata",
+      "description": "Dataset-level metadata.",
+      "schema": "https://salmon-data-mobilization.github.io/smn-data-pkg/schema/frictionless/metadata/dataset.schema.json"
+    },
+    {
+      "profile": "tabular-data-resource",
+      "name": "sdp_tables",
+      "path": "metadata/tables.csv",
+      "title": "SDP tables metadata",
+      "description": "Table-level metadata.",
+      "schema": "https://salmon-data-mobilization.github.io/smn-data-pkg/schema/frictionless/metadata/tables.schema.json"
+    },
+    {
+      "profile": "tabular-data-resource",
+      "name": "sdp_column_dictionary",
+      "path": "metadata/column_dictionary.csv",
+      "title": "SDP column dictionary metadata",
+      "description": "Column-level metadata.",
+      "schema": "https://salmon-data-mobilization.github.io/smn-data-pkg/schema/frictionless/metadata/column_dictionary.schema.json"
+    },
+    {
+      "profile": "tabular-data-resource",
+      "name": "sdp_codes",
+      "path": "metadata/codes.csv",
+      "title": "SDP codes metadata",
+      "description": "Controlled code list metadata.",
+      "schema": "https://salmon-data-mobilization.github.io/smn-data-pkg/schema/frictionless/metadata/codes.schema.json"
+    },
+    {
+      "name": "escapement",
+      "path": "data/escapement.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "POP_ID",
+            "title": "POP_ID",
+            "type": "string",
+            "description": "Identifier of the NuSEDS population referenced by this source record. It repeats across years and sometimes within one year.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "POPULATION",
+            "title": "POPULATION",
+            "type": "string",
+            "description": "Source population name. The official dictionary describes a legacy composite of stream name, subdistrict, species and run type; retain the full label without reparsing it into asserted facts."
+          },
+          {
+            "name": "AREA",
+            "title": "AREA",
+            "type": "string",
+            "description": "NuSEDS subdistrict code. The official dictionary says subdistricts can differ from statistical areas, especially in the Fraser; do not relabel this field PFMA."
+          },
+          {
+            "name": "WATERBODY",
+            "title": "WATERBODY",
+            "type": "string",
+            "description": "Source name of the waterbody or portion bounding the population as represented on the source estimate document (SEN). It need not be a unique waterbody identifier."
+          },
+          {
+            "name": "ANALYSIS_YR",
+            "title": "ANALYSIS_YR",
+            "type": "integer",
+            "description": "Year for which the estimate is reported. The official dictionary states that contributing surveys can continue into the next calendar year."
+          },
+          {
+            "name": "SPECIES",
+            "title": "SPECIES",
+            "type": "string",
+            "description": "Source species designation for the fish represented by the record; all values in this selected slice are Coho."
+          },
+          {
+            "name": "RUN_TYPE",
+            "title": "RUN_TYPE",
+            "type": "string",
+            "description": "Source run-type category. Preserve the supplied code or label; this slice contains 1, FALL and blanks."
+          },
+          {
+            "name": "NATURAL_ADULT_SPAWNERS",
+            "title": "NATURAL_ADULT_SPAWNERS",
+            "type": "number",
+            "description": "Reported estimate for mature spawners excluding jacks, under the source field NATURAL_ADULT_SPAWNERS. The official definition does not establish a natural-origin restriction; preserve that question rather than asserting it."
+          },
+          {
+            "name": "ESTIMATE_METHOD",
+            "title": "ESTIMATE_METHOD",
+            "type": "string",
+            "description": "Source label for the method used to derive the estimate. Interpret each label using its own definition; some entries in the official dictionary have no substantive definition."
+          },
+          {
+            "name": "ESTIMATE_CLASSIFICATION",
+            "title": "ESTIMATE_CLASSIFICATION",
+            "type": "string",
+            "description": "Source category describing the estimate and its accuracy/precision classification. NO SURVEY THIS YEAR means the stream was not inspected for that species that year according to the official dictionary."
+          },
+          {
+            "name": "ESTIMATE_STAGE",
+            "title": "ESTIMATE_STAGE",
+            "type": "string",
+            "description": "Source publication/readiness stage of the SEN estimate. All rows in this slice are FINAL; this source status does not approve our workshop interpretation or publication."
+          },
+          {
+            "name": "START_DTT",
+            "title": "START_DTT",
+            "type": "date",
+            "description": "Date stream inspections began for this season's estimate, following the official dictionary. The derivation converts source dates to ISO representation."
+          },
+          {
+            "name": "END_DTT",
+            "title": "END_DTT",
+            "type": "date",
+            "description": "Date stream inspections ended for this season's estimate, following the official dictionary. Keep separate from the estimate year."
+          },
+          {
+            "name": "WATERSHED_CDE",
+            "title": "WATERSHED_CDE",
+            "type": "string",
+            "description": "Source hierarchical provincial watershed code. Preserve the complete text, separators and zeroes; the official dictionary distinguishes this legacy code from FWA_Watershed_CDE."
+          }
+        ]
+      },
+      "title": "Escapement",
+      "description": "A NuSEDS source estimate record with population identifier, waterbody, analysis year and reported estimation context. POP_ID plus ANALYSIS_YR is not a unique record key."
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Fisheries and Oceans Canada (source data)",
+      "role": "creator"
+    },
+    {
+      "title": "Brett Johnson",
+      "role": "contact",
+      "email": "brett.johnson@dfo-mpo.gc.ca"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "OGL-Canada-2.0",
+      "title": "Open Government Licence - Canada",
+      "path": "https://open.canada.ca/en/open-government-licence-canada"
+    }
+  ]
+}

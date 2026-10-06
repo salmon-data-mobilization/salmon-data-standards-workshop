@@ -1,0 +1,63 @@
+{
+  "status": "draft teaching artifacts; scientific and stewardship approval pending",
+  "authored_by": "Codex workshop-authoring assistant",
+  "authored_at_utc": "2026-09-09T02:10:59Z",
+  "dataset_id": "fraser-coho-workshop",
+  "table_id": "escapement",
+  "source_rows": 173,
+  "source_columns": 14,
+  "teaching_namespace": "https://example.org/fraser-coho-workshop/terms/",
+  "selected_source_column": "ESTIMATE_METHOD",
+  "selected_code_values": [
+    "Area Under the Curve",
+    "Combined Methods",
+    "Fixed Site Census",
+    "Resistivity Counter"
+  ],
+  "official_dictionary_retrieved_at_utc": "2026-09-08T16:50:39.167837+00:00",
+  "temporal_caveat": "Current dictionary may postdate the 2025 workbook used to derive the source slice.",
+  "evidence": [
+    {
+      "path": "raw_data/nuseds-fraser-coho-2023-2024.csv",
+      "sha256": "ae7cd8f9f4facee1b1c8a75b2f9ead046e3eca0d3545cec7ef223c0f816d47b1"
+    },
+    {
+      "path": "raw_data/official-nuseds-dictionary.csv",
+      "sha256": "195a164956d6c748f70856111d48ba9ca6c7d6ae2080736411b89c975bda08f0"
+    },
+    {
+      "path": "raw_data/official-dictionary-source.json",
+      "sha256": "393da6de4caacb101764796f42186f8fcf6a77f44be60b0ca0aa18705b1f39d7"
+    },
+    {
+      "path": "reference/code-definitions-working.csv",
+      "sha256": "3dbb824fedbf73e100dd81858a358d7570a2ba45991a1c77821b92eef08479c0"
+    }
+  ],
+  "ontology": {
+    "repository": "https://github.com/salmon-data-mobilization/salmon-domain-ontology",
+    "commit": "d45f8f7cc857d92af8bbe54a7c89b2a4a14784b2",
+    "files": [
+      "CONVENTIONS.md",
+      "ontology/views/README.md",
+      "ontology/modules/02-observation-measurement.ttl"
+    ]
+  },
+  "standards": [
+    {
+      "url": "https://www.w3.org/TR/2009/REC-skos-reference-20090818/",
+      "status": "W3C Recommendation 2009-08-18",
+      "checked_date_utc": "2026-09-09"
+    },
+    {
+      "url": "https://www.w3.org/TR/2009/NOTE-skos-primer-20090818/",
+      "status": "W3C Working Group Note 2009-08-18",
+      "checked_date_utc": "2026-09-09"
+    },
+    {
+      "url": "https://www.w3.org/TR/2012/REC-owl2-overview-20121211/",
+      "status": "W3C Recommendation 2012-12-11",
+      "checked_date_utc": "2026-09-09"
+    }
+  ]
+}

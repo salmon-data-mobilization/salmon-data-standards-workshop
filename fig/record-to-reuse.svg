@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="856" viewBox="0 0 760 856" role="img" aria-labelledby="title desc">
+<title id="title">One estimate: from source relationships to reusable data and terms</title>
+<desc id="desc">The first source record refers to a population, names a waterbody and reports an estimate. Write and decompose its dictionary, then peer review it before building the package or evaluating term and AI suggestions. Day 1 previews catalog publication. Day 2 prepares local vocabulary or ontology drafts and shared term requests. Following steward review and release, term identifiers can be linked in a later version of the metadata. The source meaning of natural remains a question.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#334755"/></marker></defs>
+<rect width="760" height="856" rx="8" fill="#ffffff"/>
+<text x="24" y="32" font-family="sans-serif" font-size="22" font-weight="bold" text-anchor="start" fill="#172b3a">1. Draw the source relationships</text>
+<rect x="264" y="54" width="232" height="48" rx="7" fill="#f4f5f6" stroke="#687582"/>
+<text x="380" y="84" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#172b3a">First source record</text>
+<path d="M 286 102 V 132 H 129 V 163" fill="none" stroke="#334755" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 380 102 V 163" fill="none" stroke="#334755" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 474 102 V 132 H 629 V 163" fill="none" stroke="#334755" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="179" y="125" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="start" fill="#172b3a">refers to</text>
+<text x="389" y="142" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="start" fill="#172b3a">names</text>
+<text x="527" y="125" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="start" fill="#172b3a">reports</text>
+<rect x="20" y="164" width="218" height="62" rx="7" fill="#f4f5f6" stroke="#687582"/>
+<text x="129" y="189" font-family="sans-serif" font-size="17" font-weight="bold" text-anchor="middle" fill="#172b3a">Source population</text>
+<text x="129" y="213" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="middle" fill="#172b3a">POP_ID 46200</text>
+<rect x="270" y="164" width="218" height="62" rx="7" fill="#f4f5f6" stroke="#687582"/>
+<text x="379" y="189" font-family="sans-serif" font-size="17" font-weight="bold" text-anchor="middle" fill="#172b3a">Waterbody</text>
+<text x="379" y="213" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="middle" fill="#172b3a">BONAPARTE RIVER</text>
+<rect x="520" y="164" width="218" height="62" rx="7" fill="#f4f5f6" stroke="#687582"/>
+<text x="629" y="189" font-family="sans-serif" font-size="17" font-weight="bold" text-anchor="middle" fill="#172b3a">Reported estimate</text>
+<text x="629" y="213" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="middle" fill="#172b3a">758</text>
+<text x="380" y="252" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="middle" fill="#172b3a">Year: 2023 · Species: Coho · Source method: Resistivity Counter</text>
+<path d="M 380 270 V 293" fill="none" stroke="#334755" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="20" y="296" width="720" height="114" rx="7" fill="#f4f5f6" stroke="#687582"/>
+<text x="40" y="324" font-family="sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#172b3a">2. Write the dictionary and decompose the meaning</text>
+<text x="40" y="351" font-family="sans-serif" font-size="18" font-weight="normal" text-anchor="start" fill="#172b3a">NATURAL_ADULT_SPAWNERS: reported adult-spawner estimate</text>
+<text x="40" y="377" font-family="sans-serif" font-size="18" font-weight="normal" text-anchor="start" fill="#172b3a">Entity: source population · Property: abundance · Result: 758</text>
+<text x="40" y="399" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="start" fill="#172b3a">Open question: what does “natural” mean in this source?</text>
+<path d="M 380 411 V 435" fill="none" stroke="#334755" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="20" y="438" width="720" height="58" rx="7" fill="#e2f0eb" stroke="#687582"/>
+<text x="40" y="463" font-family="sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#172b3a">3. Peer-review the graph and dictionary</text>
+<text x="40" y="486" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="start" fill="#172b3a">Revise the explanation; keep evidence and unanswered questions.</text>
+<path d="M 380 497 V 521" fill="none" stroke="#334755" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="20" y="524" width="720" height="82" rx="7" fill="#f4f5f6" stroke="#687582"/>
+<text x="40" y="551" font-family="sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#172b3a">4. Build the package; review term and AI suggestions</text>
+<text x="40" y="578" font-family="sans-serif" font-size="18" font-weight="normal" text-anchor="start" fill="#172b3a">Compare the abundance property with the existing smn:Abundance term.</text>
+<text x="40" y="599" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="start" fill="#172b3a">Keep the full variable definition, method context and questions.</text>
+<path d="M 200 607 V 633" fill="none" stroke="#334755" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 560 607 V 633" fill="none" stroke="#334755" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="20" y="636" width="350" height="132" rx="7" fill="#e2f0eb" stroke="#687582"/>
+<text x="38" y="664" font-family="sans-serif" font-size="19" font-weight="bold" text-anchor="start" fill="#172b3a">Day 1: Make data discoverable</text>
+<text x="38" y="694" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="start" fill="#172b3a">Validate package → export metadata</text>
+<text x="38" y="719" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="start" fill="#172b3a">→ KNB test publication preview</text>
+<text x="38" y="747" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="start" fill="#172b3a">Data + descriptions + term links</text>
+<rect x="390" y="636" width="350" height="132" rx="7" fill="#f4f5f6" stroke="#687582"/>
+<text x="408" y="664" font-family="sans-serif" font-size="19" font-weight="bold" text-anchor="start" fill="#172b3a">Day 2: Develop missing meanings</text>
+<text x="408" y="694" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="start" fill="#172b3a">Draft a local vocabulary or ontology,</text>
+<text x="408" y="719" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="start" fill="#172b3a">or prepare a shared-term request.</text>
+<text x="408" y="747" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="start" fill="#172b3a">Steward review → term publication</text>
+<path d="M 560 769 V 797 H 380 V 808" fill="none" stroke="#334755" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+<text x="380" y="836" font-family="sans-serif" font-size="18" font-weight="normal" text-anchor="middle" fill="#172b3a">Released term IRIs can be linked in later versions of the metadata.</text>
+</svg>

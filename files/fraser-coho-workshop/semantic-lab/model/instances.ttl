@@ -1,0 +1,48 @@
+# Two actual records illustrated; the complete 173 x 14 CSV is unchanged.
+# Row numbers are 1-based DATA positions, excluding the header, in this hashed file.
+@prefix ex: <https://example.org/fraser-coho-workshop/terms/> .
+@prefix row: <https://example.org/fraser-coho-workshop/instances/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+row:record-1 a ex:NuSEDSEstimateRecord ;
+    ex:sourceRowNumber 1 ;
+    ex:sourceFile "raw_data/nuseds-fraser-coho-2023-2024.csv" ;
+    ex:analysisYear "2023"^^xsd:gYear ;
+    ex:sourceMethodLabel "Resistivity Counter" ;
+    ex:concernsPopulationReference row:population-reference-46200 ;
+    ex:hasReportedResult row:result-1 .
+
+row:population-reference-46200
+    ex:sourcePopulationID "46200" ;
+    ex:sourcePopulationLabel "Bonaparte River (Lillooet) Coho" .
+
+# Range inference supplies the RecordedNumericResult type; it is not asserted here.
+row:result-1 ex:numericValue "758"^^xsd:decimal ;
+    ex:reportedUnderVariable row:adult-spawner-field .
+
+row:adult-spawner-field a ex:VariableDescription ;
+    ex:sourceField "NATURAL_ADULT_SPAWNERS" ;
+    dcterms:description "The source's adult-spawner estimate field. The current official dictionary describes mature salmon excluding jacks; natural-origin scope is unresolved."@en .
+
+row:record-2 a ex:NuSEDSEstimateRecord ;
+    ex:sourceRowNumber 2 ;
+    ex:sourceFile "raw_data/nuseds-fraser-coho-2023-2024.csv" ;
+    ex:analysisYear "2023"^^xsd:gYear ;
+    ex:sourceMethodLabel "Not Applicable" ;
+    ex:concernsPopulationReference row:population-reference-44965 .
+
+row:population-reference-44965
+    ex:sourcePopulationID "44965" ;
+    ex:sourcePopulationLabel "Clapperton Creek (Lillooet) Coho" .
+
+# The second row's adult-spawner cell is blank. No numeric-result node is made.
+# Missing triples are not an OWL assertion that a result cannot exist.
+
+row:method-description-auc a ex:NuSEDSMethodDescription ;
+    rdfs:label "Captured NuSEDS explanation of Area Under the Curve"@en ;
+    ex:sourceFile "raw_data/official-nuseds-dictionary.csv" ;
+    ex:sourceField "ESTIMATE_METHOD" ;
+    dcterms:source <https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv> ;
+    dcterms:description "A documentation item: the source dictionary's explanation of combining abundance point estimates using area under the abundance-time curve and survey life. It describes a method; it is not the method concept or an execution of it."@en .

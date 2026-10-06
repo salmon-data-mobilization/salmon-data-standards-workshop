@@ -1,0 +1,22 @@
+{
+  "observed_date": "2026-09-08",
+  "r_package": "metasalmon 0.5.0",
+  "python_package": "metasalmonpy 0.4.0",
+  "python_source_commit": "3b587e6be20d5feaf12c3640d48e449681271d23",
+  "input": "checkpoints/seeded-sdp/semantic_suggestions.csv",
+  "input_sha256": "b140f28be1e6d6bf4b4d1adac95351fccd4756ed386c8c232d3790a34fa4dc7a",
+  "candidate_rows": 2,
+  "rendered_previews": 2,
+  "compared_columns": [
+    "dataset_id",
+    "table_id",
+    "column_name",
+    "dictionary_role",
+    "placement_recommendation",
+    "request_scope",
+    "request_title"
+  ],
+  "r_python_compared_rows_agree": true,
+  "scope": "Candidate detection and text rendering from supplied evidence; not human review or ontology-gap confirmation",
+  "submission_performed": false
+}

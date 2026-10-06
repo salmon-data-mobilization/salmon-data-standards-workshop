@@ -1,0 +1,15 @@
+dataset_id,table_id,column_name,column_label,column_description,term_iri,property_iri,entity_iri,constraint_iri,statistical_modifier_iri,unit_label,unit_iri,term_type,value_type,column_role,required
+fraser-coho-2023-2024,escapement,POP_ID,Population ID,NuSEDS population identifier.,,,,,,,,,number,identifier,TRUE
+fraser-coho-2023-2024,escapement,POPULATION,Population name,Population name with local watershed context.,,,,,,,,,string,attribute,FALSE
+fraser-coho-2023-2024,escapement,AREA,PFMA area,Pacific Fishery Management Area code for the population.,,,,,,,,,string,attribute,FALSE
+fraser-coho-2023-2024,escapement,WATERBODY,Waterbody name,"Local stream, tributary, or river name used in the source workbook.",,,,,,,,,string,attribute,FALSE
+fraser-coho-2023-2024,escapement,ANALYSIS_YR,Analysis year,Analysis year associated with the escapement estimate.,,,,,,,,,number,temporal,TRUE
+fraser-coho-2023-2024,escapement,SPECIES,Species code,Species code from the NuSEDS source workbook (Coho in this slice).,,,,,,,,,string,attribute,TRUE
+fraser-coho-2023-2024,escapement,RUN_TYPE,Run timing,Run timing category from the NuSEDS source workbook.,,,,,,,,,string,attribute,FALSE
+fraser-coho-2023-2024,escapement,NATURAL_ADULT_SPAWNERS,Natural adult spawners,Estimated count of natural-origin adult spawners used for this official two-year Fraser coho slice.,https://w3id.org/gcdfo/salmon#SpawnerAbundance,https://w3id.org/smn/Abundance,https://w3id.org/smn/Population,,,Individual,https://qudt.org/vocab/unit/INDIV,owl_class,number,measurement,FALSE
+fraser-coho-2023-2024,escapement,ESTIMATE_METHOD,Estimate method,Analytical method used to derive the estimate.,,,,,,,,,string,attribute,FALSE
+fraser-coho-2023-2024,escapement,ESTIMATE_CLASSIFICATION,Estimate classification,Classification assigned to the escapement estimate.,,,,,,,,,string,attribute,FALSE
+fraser-coho-2023-2024,escapement,ESTIMATE_STAGE,Estimate stage,Stage of estimate publication or readiness.,,,,,,,,,string,attribute,FALSE
+fraser-coho-2023-2024,escapement,START_DTT,Start date,Start date of the survey or observation window.,,,,,,,,,date,temporal,FALSE
+fraser-coho-2023-2024,escapement,END_DTT,End date,End date of the survey or observation window.,,,,,,,,,date,temporal,FALSE
+fraser-coho-2023-2024,escapement,WATERSHED_CDE,Watershed code,Watershed code associated with the population or observation area.,,,,,,,,,string,attribute,FALSE

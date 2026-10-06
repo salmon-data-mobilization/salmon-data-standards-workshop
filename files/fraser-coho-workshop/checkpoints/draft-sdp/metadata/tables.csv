@@ -1,0 +1,2 @@
+dataset_id,table_id,file_name,table_label,description,observation_unit,observation_unit_iri,primary_key,protocol_iri,protocol_citation,method_iri
+fraser-coho-workshop,escapement,data/escapement.csv,Escapement,"A NuSEDS source estimate record with population identifier, waterbody, analysis year and reported estimation context. POP_ID plus ANALYSIS_YR is not a unique record key.",Population described within source location and analysis-year context; multiple records can describe a population-year pair.,,,,,

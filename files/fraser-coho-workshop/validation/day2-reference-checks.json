@@ -1,0 +1,319 @@
+{
+  "status": "pass",
+  "observed_at": "2026-09-09T02:39:44.004797+00:00",
+  "scope": "Maintainer inspection of distributed Day 2 drafts; not learner completion, scientific approval, a full OWL DL check, or a release authorization.",
+  "vocabulary": {
+    "status": "pass",
+    "scope": "bounded vocabulary structure and source bindings",
+    "concepts": 4,
+    "definitions": 3,
+    "explicit_definition_gaps": 1,
+    "source_rows": 173,
+    "triples": 38,
+    "scientific_approval": "not assessed",
+    "stewardship_adoption": "not assessed"
+  },
+  "model_and_bridge": {
+    "status": "passed-reference-regression-checks",
+    "human_review": "pending; not performed or simulated",
+    "model": {
+      "dependencies": {
+        "rdflib": "7.1.4",
+        "owlrl": "7.1.4",
+        "pyshacl": "0.30.1"
+      },
+      "preparation_context": "not completed or claimed: technical inspection of shipped reference files only",
+      "scope": "Reference artifact regression check; does not satisfy the learner preparation requirement, establish full OWL DL validity, or approve domain meaning.",
+      "network_requests": 0,
+      "status": "passed-bounded-teaching-checks",
+      "source_sha256": "ae7cd8f9f4facee1b1c8a75b2f9ead046e3eca0d3545cec7ef223c0f816d47b1",
+      "source_shape": [
+        173,
+        14
+      ],
+      "checks": [
+        {
+          "check": "row 1 position and source identity",
+          "passed": true
+        },
+        {
+          "check": "row 2 position and source identity",
+          "passed": true
+        },
+        {
+          "check": "reported numeric value remains 758",
+          "passed": true
+        },
+        {
+          "check": "subclass entails source-record type",
+          "passed": true
+        },
+        {
+          "check": "range entails result type",
+          "passed": true
+        },
+        {
+          "check": "domain restores record type when its explicit type is removed",
+          "passed": true
+        },
+        {
+          "check": "blank estimate creates neither result node nor zero",
+          "passed": true
+        },
+        {
+          "check": "reverse subclass is not in the selected closure",
+          "passed": true
+        },
+        {
+          "check": "source population reference is not inferred to be a biological population",
+          "passed": true
+        },
+        {
+          "check": "reference records conform to the local teaching shapes",
+          "passed": true
+        },
+        {
+          "check": "removing an explicit year fails the SHACL minCount requirement",
+          "passed": true
+        },
+        {
+          "check": "OWL still infers the record type without the required explicit year",
+          "passed": true
+        },
+        {
+          "check": "a mistaken edge infers an extra record type rather than rejecting the edge",
+          "passed": true
+        },
+        {
+          "check": "SHACL detects missing record fields on the mistakenly typed reference",
+          "passed": true
+        },
+        {
+          "check": "the targeted class/concept collision check rejects a deliberate collision",
+          "passed": true
+        }
+      ],
+      "interpretation": "Absence checks concern this selected rule closure. They are not general proofs of non-entailment or proof that missing source facts are false.",
+      "files": [
+        {
+          "path": "semantic-lab/model/model.ttl",
+          "sha256": "04f0f66ec83d2ea5b226ded0ea34cff26d28b0dd892ee188fc25f3a232ac5caa"
+        },
+        {
+          "path": "semantic-lab/model/instances.ttl",
+          "sha256": "0ff9a2875079209b4a1407c170b43d8d93333f215e316c67d011a6018471d0df"
+        },
+        {
+          "path": "semantic-lab/model/record-shapes.ttl",
+          "sha256": "e675970505abb01f498684d8771bd30a7bb7d600f1d42195ea5e9a7594976035"
+        },
+        {
+          "path": "semantic-lab/vocabulary/estimate-methods.ttl",
+          "sha256": "8ab01bba564a6dea4b5cc547f078c01a06c1877d4d94c8eeb32fcc36421fd75c"
+        }
+      ]
+    },
+    "bridge": {
+      "dependencies": {
+        "rdflib": "7.1.4",
+        "owlrl": "7.1.4",
+        "pyshacl": "0.30.1"
+      },
+      "preparation_context": "not completed or claimed: technical inspection of shipped reference files only",
+      "scope": "Reference artifact regression check; does not satisfy the learner preparation requirement, establish full OWL DL validity, or approve domain meaning.",
+      "network_requests": 0,
+      "status": "passed-bounded-teaching-checks",
+      "source_sha256": "ae7cd8f9f4facee1b1c8a75b2f9ead046e3eca0d3545cec7ef223c0f816d47b1",
+      "source_shape": [
+        173,
+        14
+      ],
+      "shared_anchor_commit": "d45f8f7cc857d92af8bbe54a7c89b2a4a14784b2",
+      "asserted_mapping_count": 2,
+      "human_mapping_approval": "not established",
+      "checks": [
+        {
+          "check": "AUC mapping example traces to actual row 5",
+          "passed": true
+        },
+        {
+          "check": "shared enumeration anchor is a concept, not an OWL class",
+          "passed": true
+        },
+        {
+          "check": "shared documentation anchor is an OWL class",
+          "passed": true
+        },
+        {
+          "check": "relatedMatch has a reverse relatedMatch",
+          "passed": true
+        },
+        {
+          "check": "relatedMatch does not create sameAs between the two concepts",
+          "passed": true
+        },
+        {
+          "check": "local method document gains the shared documentation class",
+          "passed": true
+        },
+        {
+          "check": "reverse subclass and equivalentClass are absent from the selected closure",
+          "passed": true
+        },
+        {
+          "check": "record/result and population-reference/organism conflations remain absent",
+          "passed": true
+        },
+        {
+          "check": "counterfactual broadMatch yields inverse narrowMatch, not reverse broadMatch",
+          "passed": true
+        },
+        {
+          "check": "adding an unreviewed stronger alternative fails the per-pair policy",
+          "passed": true
+        }
+      ],
+      "files": [
+        {
+          "path": "semantic-lab/model/model.ttl",
+          "sha256": "04f0f66ec83d2ea5b226ded0ea34cff26d28b0dd892ee188fc25f3a232ac5caa"
+        },
+        {
+          "path": "semantic-lab/model/instances.ttl",
+          "sha256": "0ff9a2875079209b4a1407c170b43d8d93333f215e316c67d011a6018471d0df"
+        },
+        {
+          "path": "semantic-lab/vocabulary/estimate-methods.ttl",
+          "sha256": "8ab01bba564a6dea4b5cc547f078c01a06c1877d4d94c8eeb32fcc36421fd75c"
+        },
+        {
+          "path": "semantic-lab/bridge/shared-anchors.ttl",
+          "sha256": "d5e24e26667dc8d062a4c7a1f8db7b9f97370eb90a727c7f4974c20d25e11bd3"
+        },
+        {
+          "path": "semantic-lab/bridge/skos-rules-excerpt.ttl",
+          "sha256": "3884151968d36f0655b925fd4b3988f59fd6c7180b74fa46423528f42bafe02a"
+        },
+        {
+          "path": "semantic-lab/bridge/bridge.ttl",
+          "sha256": "3e905914c1503f4caa40dfb08238af67643c7b9e33bca5832514830899b03264"
+        }
+      ],
+      "interpretation": "Selected rule consequences and policy checks only. The draft triples take effect when loaded; their annotations do not disable reasoning. No full DL classification or SSSOM validation was run."
+    }
+  },
+  "checked_files": [
+    {
+      "path": "semantic-lab/bridge/bridge.ttl",
+      "sha256": "3e905914c1503f4caa40dfb08238af67643c7b9e33bca5832514830899b03264"
+    },
+    {
+      "path": "semantic-lab/bridge/mapping-decisions-working.csv",
+      "sha256": "ba581f4abcffb1a9b3780982b7b9c37120ce984249220894edb2038c516181d0"
+    },
+    {
+      "path": "semantic-lab/bridge/shared-anchor-sources.json",
+      "sha256": "26b62b743d7050f0c2af30785e885e8e0d9af100e2b1e078b4d0c43e4386725d"
+    },
+    {
+      "path": "semantic-lab/bridge/shared-anchors.ttl",
+      "sha256": "d5e24e26667dc8d062a4c7a1f8db7b9f97370eb90a727c7f4974c20d25e11bd3"
+    },
+    {
+      "path": "semantic-lab/bridge/skos-rules-excerpt.ttl",
+      "sha256": "3884151968d36f0655b925fd4b3988f59fd6c7180b74fa46423528f42bafe02a"
+    },
+    {
+      "path": "semantic-lab/contributions/preview-receipt.json",
+      "sha256": "b1270c0aacad7e2e5ac25305d79ed08aaf4e2fa12955e12d4c9ac28e2e3495de"
+    },
+    {
+      "path": "semantic-lab/contributions/preview-term-requests.R",
+      "sha256": "3793f26c441c6502b224b980195f4c5fbc675f3e4c689bd881980f2b3637137b"
+    },
+    {
+      "path": "semantic-lab/contributions/preview-term-requests.py",
+      "sha256": "16bb0c7ef69fdc9dcbe977ed6bb9b479f2b5cbce6ada2177c5904fa781325cb7"
+    },
+    {
+      "path": "semantic-lab/contributions/recorded-gap-preview.csv",
+      "sha256": "33089766666d2c4456c5b9e44ced776cff804664a64839456f9f3907c0ce3468"
+    },
+    {
+      "path": "semantic-lab/model/instances.ttl",
+      "sha256": "0ff9a2875079209b4a1407c170b43d8d93333f215e316c67d011a6018471d0df"
+    },
+    {
+      "path": "semantic-lab/model/model.ttl",
+      "sha256": "04f0f66ec83d2ea5b226ded0ea34cff26d28b0dd892ee188fc25f3a232ac5caa"
+    },
+    {
+      "path": "semantic-lab/model/record-shapes.ttl",
+      "sha256": "e675970505abb01f498684d8771bd30a7bb7d600f1d42195ea5e9a7594976035"
+    },
+    {
+      "path": "semantic-lab/model/source-trace.json",
+      "sha256": "1a3db3fa7b8b7d9c47938c7984d7e6f725005d8acf5b987a4feca90af9426be7"
+    },
+    {
+      "path": "semantic-lab/model/technical-checks.json",
+      "sha256": "f0b130a8504acc64406e087700c1cc1b45c68b992a6bc07e058f126cc384f21a"
+    },
+    {
+      "path": "semantic-lab/scripts/check_bridge.py",
+      "sha256": "951f96abe2c12c97060b3c9f8082379d38685a5efdb0dfb81267df2973507c2d"
+    },
+    {
+      "path": "semantic-lab/scripts/check_model.py",
+      "sha256": "b760df44dbdc802f9f9feea602b96742f5f27c07cc25c7c84021d69f301b8a74"
+    },
+    {
+      "path": "semantic-lab/scripts/check_reference.py",
+      "sha256": "c4124ec784d1cadc7b5d321b1eb9212e5fa565ba1d4fb04ec345906f67e55e9b"
+    },
+    {
+      "path": "semantic-lab/scripts/lab_common.py",
+      "sha256": "4d2cccfad8c545695112bc3762e90146264eabb614d0f32ffb03986c41162f41"
+    },
+    {
+      "path": "semantic-lab/scripts/requirements.txt",
+      "sha256": "0b59f9b95c08d8c1614d763cb270a7977b087a0fd4c2b06e40c23ccf1ea662e7"
+    },
+    {
+      "path": "semantic-lab/vocabulary/check_vocabulary.py",
+      "sha256": "132a16bcd419969de8d0c652be34fb95f526de2db9a9f2a4fa77ac85afc46cba"
+    },
+    {
+      "path": "semantic-lab/vocabulary/concepts-working.csv",
+      "sha256": "462b0b6e190209fe965d727367f02522ba4febb02575caa3aab939dcf235471b"
+    },
+    {
+      "path": "semantic-lab/vocabulary/estimate-methods.ttl",
+      "sha256": "8ab01bba564a6dea4b5cc547f078c01a06c1877d4d94c8eeb32fcc36421fd75c"
+    },
+    {
+      "path": "semantic-lab/vocabulary/provenance.json",
+      "sha256": "408b6bb00dd2c0dd104986f683a4bd2d2bb14addfcca8206dc01cedf9b15b89f"
+    },
+    {
+      "path": "semantic-lab/vocabulary/routing-decisions-working.csv",
+      "sha256": "b6d85f27bfef2b54cbfd9a1dc461aa822c9e570429a334fd5d8d3625b9365df4"
+    },
+    {
+      "path": "semantic-lab/worksheets/bridge-decisions.csv",
+      "sha256": "ba581f4abcffb1a9b3780982b7b9c37120ce984249220894edb2038c516181d0"
+    },
+    {
+      "path": "semantic-lab/worksheets/model-statements.csv",
+      "sha256": "2963a67269eedff06c4a32e96c4b0e9bc123b66edb495dafc577b17409ebf983"
+    },
+    {
+      "path": "semantic-lab/worksheets/routing-decisions.csv",
+      "sha256": "daf5486e673997cc7d126f16b658ba5dc584409e97f827346c4c6d2a9e0cb043"
+    },
+    {
+      "path": "semantic-lab/worksheets/vocabulary-concepts.csv",
+      "sha256": "101b0749b2fe8733a27910b72a78a0f2ab068e10e8547c80e44fc52b63fd54da"
+    }
+  ]
+}

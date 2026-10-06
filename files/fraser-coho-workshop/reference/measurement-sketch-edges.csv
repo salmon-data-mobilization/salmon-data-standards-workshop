@@ -1,0 +1,8 @@
+subject_id,relationship,object_id,source_fields,evidence,status,question
+N6,concerns,N2,POP_ID; NATURAL_ADULT_SPAWNERS,Source record and working variable decomposition,working interpretation,Confirm the estimation extent.
+N6,represents property,N7,NATURAL_ADULT_SPAWNERS,https://github.com/salmon-data-mobilization/salmon-domain-ontology/blob/d45f8f7cc857d92af8bbe54a7c89b2a4a14784b2/ontology/modules/02-observation-measurement.ttl,working interpretation,Review the property definition against the complete variable.
+N6,has scope,N13,NATURAL_ADULT_SPAWNERS,Official NuSEDS dictionary retrieved 2026-09-08; may postdate the 2025 workbook,working interpretation,Check the definition against the source workbook's documentation.
+N6,has constraint?,Q1,NATURAL_ADULT_SPAWNERS,Starter and official dictionary wording differ,question,Natural-origin applicability is unresolved; this is not an asserted constraint.
+N8,applies variable,N6,NATURAL_ADULT_SPAWNERS,https://github.com/salmon-data-mobilization/salmon-domain-ontology/blob/d45f8f7cc857d92af8bbe54a7c89b2a4a14784b2/ontology/views/README.md,working interpretation,Confirm the relationship between source records and observation/estimation activities.
+N8,uses source method,N11,ESTIMATE_METHOD,First source record,working interpretation,The label alone does not define the full procedure.
+N8,generates result,N9,NATURAL_ADULT_SPAWNERS,Source result and metamodel activity/result distinction,working interpretation,Confirm which activities contributed to the result.

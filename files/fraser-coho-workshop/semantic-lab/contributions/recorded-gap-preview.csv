@@ -1,0 +1,3 @@
+dataset_id,table_id,column_name,dictionary_role,placement_recommendation,request_scope,request_title
+fraser-coho-workshop,escapement,NATURAL_ADULT_SPAWNERS,property,smn,smn,Request new shared SMN term: NATURAL_ADULT_SPAWNERS
+fraser-coho-workshop,escapement,NATURAL_ADULT_SPAWNERS,variable,smn,smn,Request new shared SMN term: NATURAL_ADULT_SPAWNERS

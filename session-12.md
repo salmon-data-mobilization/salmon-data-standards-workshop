@@ -1,0 +1,161 @@
+---
+title: "Draft a Term Request and Follow Its Stewardship"
+teaching: 25
+exercises: 35
+---
+
+:::::::::::::::::::::::::::::::::::::: questions
+
+- When is a source clarification more useful than a new term?
+- Who can decide a term's meaning, representation, and publication?
+- How does a draft request become a reviewed, released term that a dataset can reuse?
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+- Turn one unresolved Fraser Coho interpretation into a specific, source-backed request.
+- Distinguish local vocabulary work, shared-term proposals, and mapping review.
+- Inspect a software-generated request without treating it as evidence that a term is absent.
+- Record the next steward, required evidence, and release/reuse checks without posting an issue.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## The problem: an unresolved label needs a useful next action
+
+Continue with the unchanged **173-row, 14-column NuSEDS Fraser Coho 2023–2024 source**, dataset ID `fraser-coho-workshop`, table ID `escapement`. Bring your actual Chapter 2 graph, Chapter 3 dictionary and peer review, and the decisions from the Day 2 mapping and local-model exercises. A supplied reference answer cannot replace your human checkpoint.
+
+You now have more choices than accepting the nearest label. You can reuse an existing term, clarify a source definition, improve an existing vocabulary entry, keep a local concept, propose a mapping, or request a new shared term. Success in this chapter is a reviewable draft and a defensible next step. It does not require a new term or a submitted issue.
+
+Use the [request worksheet](files/fraser-coho-workshop/semantic-lab/worksheets/term-request.md) in the kit. Read the [filled source-clarification example](files/fraser-coho-workshop/semantic-lab/contributions/source-clarification-example.md) after choosing your own unresolved question.
+
+## Choose the request before choosing a repository
+
+| What the evidence shows | Suitable request or outcome |
+| --- | --- |
+| A documented shared term already fits | Reuse it; retain the version and mapping rationale. |
+| A source label is insufficiently defined | Ask for the source meaning or procedure documentation. |
+| An existing term needs wording or scope clarification | Propose a definition update, with its current IRI and compatibility concern. |
+| A concept serves one project or program | Keep a local draft vocabulary or model and its maintenance responsibility explicit. |
+| A supported meaning needs a cross-vocabulary connection | Propose a mapping with predicate, evidence, and unresolved scope differences. |
+| A search and source review identify a reusable missing concept | Draft a new-term request, including the search boundary and expected reuse. |
+
+Ownership and representation are separate choices. **SKOS** organizes concepts and code lists; **OWL** expresses formal classes and properties. Either can be maintained locally. Shared `smn:` terms require stable cross-organization meaning; `gcdfo:` holds DFO-specific or intentionally profile-scoped meaning. A DFO source document alone does not decide where a concept belongs. A bridge connects meanings but does not transfer their ownership.
+
+Use your decomposition to identify which part of a compound variable needs a term: its property, entity, unit, constraints or statistical modifier. Include the method as supporting context in the request. In SDP v0.3, a row-varying method belongs with its code metadata; `method_iri` is not a column-dictionary field.
+
+## Inspect existing definitions and record the search boundary
+
+For `ESTIMATE_METHOD = Resistivity Counter`, the official NuSEDS dictionary supplies `N/A` rather than an operational definition. The existing DFO concept [`FixedSiteCensusElectronic`](https://w3id.org/gcdfo/salmon#FixedSiteCensusElectronic) describes several counting technologies and additional procedure context. Its legacy-label note is useful evidence to investigate, not proof that these four source records meet the entire definition.
+
+The filled example therefore asks for **source clarification and mapping review**. It does not claim that a new shared term is missing. Compare the raw label, the official dictionary, your graph's method relationship, and the candidate's complete definition. Preserve the distinction between an instrument label and a procedure, and between source evidence and proposed interpretation.
+
+For your own draft, record which vocabularies and versions you inspected, the date, search strings, candidate IRIs, and why each candidate fits or does not fit. An empty search result means that search found nothing; it does not establish universal absence. A human rejection made after candidate retrieval may also be missing from the saved suggestion file.
+
+## Preview candidate requests without submitting them
+
+The kit includes read-only input previews for R **0.5.0** and Python **0.4.0**. They read the supplied `checkpoints/seeded-sdp/semantic_suggestions.csv`, call `detect_semantic_term_gaps()`, and render text with `render_ontology_term_request()`. The scripts first check the completed Day 1 preparation, then write only to a new preview folder. They do not search the web, call AI, or post issues.
+
+::::::::::::::::::::::::::::::::::::: group-tab
+
+### R
+
+Run from the extracted `fraser-coho-workshop/` project root:
+
+
+``` r
+source("semantic-lab/contributions/preview-term-requests.R")
+```
+
+The key calls are:
+
+
+``` r
+gaps <- metasalmon::detect_semantic_term_gaps(suggestions = suggestions)
+previews <- metasalmon::render_ontology_term_request(
+  gaps, scope = "auto", ask = FALSE,
+  profile_name = "fraser-coho-workshop-draft"
+)
+```
+
+`scope = "auto"` preserves the software's proposed routing for inspection. It does not make a stewardship decision. Read the local files under `output/term-request-preview-r/`.
+
+### Python
+
+Run from the same project root using the pinned Python environment:
+
+```bash
+python semantic-lab/contributions/preview-term-requests.py
+```
+
+The key calls are:
+
+```python
+gaps = ms.detect_semantic_term_gaps(suggestions=suggestions)
+previews = ms.render_ontology_term_request(
+    gaps, scope="auto", ask=False,
+    profile_name="fraser-coho-workshop-draft"
+)
+```
+
+These two functions are available in metasalmonpy 0.4.0, despite its separate native-review and metadata-setter gaps. Inspect `output/term-request-preview-python/`.
+
+### Spreadsheet
+
+Open `semantic-lab/contributions/recorded-gap-preview.csv` and `recorded-preview-notes.md` in the kit, or inspect a partner's new preview folder. Compare `dictionary_role`, the proposed route, and the generated title against your own unresolved-question log. Write the actual request in the Markdown worksheet; no package execution is required in this lane.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+The supplied evidence produces two candidate rows in the checked versions: the **property** and **variable** roles for `NATURAL_ADULT_SPAWNERS`. Both generated titles say “Request new shared SMN term: NATURAL_ADULT_SPAWNERS”. That title is not a conclusion you should adopt. For example, `smn:Abundance` already supplies a reusable characteristic to inspect, while the complete source variable raises other scope questions. A renderer can make a search limitation look like a confident new-term request; revise the draft using your evidence.
+
+The recorded preview shows what the software proposed. Evaluate each candidate against the source definitions and your search evidence. If a later run returns different candidates, retain its output and investigate what changed.
+
+## Write the request a steward can evaluate
+
+The worksheet asks for the problem, source row/column context, current interpretation, search evidence, proposed action, and unresolved questions. It also distinguishes the desired vocabulary owner from the technical representation and any mapping predicate. Include a real peer's feedback when it occurs; leave reviewer and approval fields pending until then.
+
+For a shared proposal, use the current [SMN request templates](https://github.com/salmon-data-mobilization/salmon-domain-ontology/issues/new/choose). For a DFO-specific question, follow [DFO CONTRIBUTING](https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/CONTRIBUTING.md), which also supports boundary questions and definition updates. Check the destination's current guidance before submission; the local worksheet prepares the evidence but does not replace the repository's form.
+
+A useful request explains why a nearby term does not fit, not merely that the preferred label was absent. Name the expected consequence of the requested change: a clearer definition, a local code interpretation, a reviewed mapping, or a new reusable concept. If a mapping is proposed, state what evidence supports its strength. For `owl:equivalentClass`, test the logical consequences as you did in Chapter 11 and explain why they fit the intended meaning.
+
+## Follow a proposal through review, release and reuse
+
+| Stage | Evidence to retain | Responsible decision |
+| --- | --- | --- |
+| Capture | Source label, dataset context, uncertainty, and observed need | Contributor identifies the question. |
+| Clarify and search | Definitions, source versions, candidate terms, and search limits | Source/domain reviewers clarify meaning. |
+| Route and discuss | Proposed owner, representation, reuse case, and alternatives | Relevant stewards decide scope and destination. |
+| Review a concrete change | Definition, mappings/axioms, compatibility effects, and technical checks | Domain and technical reviewers assess the proposal. |
+| Accept, revise, defer, or decline | Actual decision with rationale and reviewer record | Maintainers follow their repository's governance. |
+| Release and document | Released IRI, version, change notes, and accessible definition | Maintainers publish through their normal process. |
+| Reuse and maintain | Updated local mapping, package checks, and later change notices | Dataset maintainers verify the released meaning in context. |
+
+This is a teaching checklist, not a replacement governance policy. Repository labels and decisions may differ. A merged change, a released term, a scientifically adequate definition, and a correct dataset mapping are separate claims. A declined or deferred request can still improve the local definition and preserve a useful explanation.
+
+Finish the workshop with **a saved draft**, a proposed destination and a next step. The lifecycle above shows how that draft could become a maintained term and then return to your dataset's metadata.
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Activity: hand over one reviewable request
+
+Use 35 minutes:
+
+1. **5 minutes:** choose a real unresolved question from your graph, dictionary, code review, or mapping exercise. Select clarification, update, local retention, mapping, or new-term request.
+2. **10 minutes:** inspect relevant source definitions and existing candidates; fill the search-evidence table and state its limits.
+3. **10 minutes:** complete `semantic-lab/worksheets/term-request.md`, naming the proposed owner, representation, evidence, and requested action.
+4. **5 minutes:** exchange drafts with a peer. Ask whether the request distinguishes source fact from inference and whether a new term is actually warranted. Record the actual feedback.
+5. **5 minutes:** revise and name one next step and its responsible role. Mark the draft unsubmitted and approval pending.
+
+Finish with one saved request or source question, one recorded review decision or unresolved objection, and a next action another person can follow. A source-clarification request is as valid an outcome as a supported new-term proposal.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: keypoints
+
+- Search results and generated request titles are evidence to review, not proof that a shared term is missing.
+- Ownership, representation, mapping strength, and approval answer different questions.
+- Useful contributions preserve source context, alternatives, uncertainty, and compatibility effects.
+- Stewardship continues through decision, release, contextual reuse, and later revision.
+- The workshop produces a contribution draft with evidence and a concrete next step.
+
+::::::::::::::::::::::::::::::::::::::::::::::::

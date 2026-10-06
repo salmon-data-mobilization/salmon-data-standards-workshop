@@ -1,0 +1,8 @@
+decision_id,source_field,source_value_or_component,intended_use,supported_meaning,candidate_existing_iri,route,representation,reason,evidence,authority_or_steward_question,next_action,reviewer,review_date,status
+R01,NATURAL_ADULT_SPAWNERS,abundance property,Describe the reusable measured characteristic,,,,,,,,,,,draft; learner decision pending
+R02,ESTIMATE_METHOD,Area Under the Curve,Explain a source code to another data user,,,,,,,,,,,draft; learner decision pending
+R03,ESTIMATE_CLASSIFICATION,NO SURVEY THIS YEAR,Explain estimate classification,,,,,,,,,,,draft; learner decision pending
+R04,POP_ID; ANALYSIS_YR,proposed unique pair,Check whether records can be identified by two columns,,,,,,,,,,,draft; learner decision pending
+R05,NATURAL_ADULT_SPAWNERS,natural-origin restriction,Specify which fish the estimate concerns,,,,,,,,,,,draft; learner decision pending
+R06,START_DTT; END_DTT,date representation,Validate the representation of inspection dates,,,,,,,,,,,draft; learner decision pending
+R07,NATURAL_ADULT_SPAWNERS; ESTIMATE_METHOD,activity has result; activity uses procedure,State relationships needed for integration,,,,,,,,,,,draft; learner decision pending

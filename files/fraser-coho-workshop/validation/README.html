@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">README</h1>
+</header>
+<h1 id="validation-and-delivery-status">Validation and delivery
+status</h1>
+<p>Observed on 2026-09-08. The workshop is an implemented teaching
+draft; the full scientific/publication acceptance criteria are
+<strong>not all complete</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Observed outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fixed source and package checkpoints</td>
+<td>All retain 173 rows, 14 columns, 164 population–year pairs and the
+original CSV bytes.</td>
+</tr>
+<tr>
+<td>Human artifacts</td>
+<td>Complete working graph/dictionary/decomposition examples and blank
+learner review forms supplied. Bruno and Tom's scientific review is
+pending.</td>
+</tr>
+<tr>
+<td>R learner build and review validation</td>
+<td>Passed using metasalmon v0.5.0, exact tag
+<code>af84689df5d6365c1abaa49f8cd9012cbe8494c5</code>, R 4.5.2.</td>
+</tr>
+<tr>
+<td>Python learner build and review validation</td>
+<td>Passed using exact metasalmonpy v0.4.0 tagged source, Python 3.14
+and pandas 3.0.5.</td>
+</tr>
+<tr>
+<td>Preparation and overwrite guards</td>
+<td>Passed isolated negative/positive checks in both lanes; mechanical
+fixtures did not claim human approval.</td>
+</tr>
+<tr>
+<td>Optional AI script behavior</td>
+<td>Offline mocks verified fixed free routing, eight-attempt maximum,
+counted failures and explicit unsuccessful status.</td>
+</tr>
+<tr>
+<td>Reference strict MetaSalmon/EML/test preview</td>
+<td>R strict checks and EML 2.2.0 validation passed; expanded TEST
+dry-run artifacts included. See <code>reference-validation.json</code>
+for final lane export results.</td>
+</tr>
+<tr>
+<td>Independent SDP specification validator</td>
+<td><strong>Blocked</strong> by its known exact-comparison mismatch over
+semantic properties in descriptor fields. The semantic annotations
+remain intact; no validator bypass is shipped.</td>
+</tr>
+<tr>
+<td>Required AI comparison without credentials</td>
+<td>Available using an actual, identified Codex authoring-assistant
+recording and blank human decision worksheet. It is not native
+OpenRouter output.</td>
+</tr>
+<tr>
+<td>Site and navigation</td>
+<td>Sandpaper 0.20.2 rendering passed locally; lesson links, glossary
+anchors, diagrams, downloads and R/Python/Spreadsheet tabs were checked.
+Varnish 1.1.1 has missing incubator favicon assets and a narrow-header
+layout limitation; these are reported separately from lesson-content
+checks.</td>
+</tr>
+<tr>
+<td>Live OpenRouter/free rehearsal</td>
+<td><strong>Blocked:</strong> one HTTP 401 request, no response, no
+retries. Successful free inference and its request consumption remain
+unverified.</td>
+</tr>
+<tr>
+<td>Public KNB test endpoint</td>
+<td><strong>Not created or verified.</strong> Only a dry-run plan
+exists; test credentials and remaining review/validation work are
+needed.</td>
+</tr>
+<tr>
+<td>Production publication / DOI</td>
+<td>Neither performed nor included in the execution.</td>
+</tr>
+</tbody>
+</table>
+<p><code>lane-smoke.json</code> records the 28 isolated checks, expected
+refusals, versions and script hashes. It is evidence about those
+executions, not a claim that all operating systems, provider responses
+or scientific interpretations were tested.</p>
+<p>Two unposted upstream issue drafts preserve observed defects without
+altering package APIs or schemas:</p>
+<ul>
+<li><code>upstream-validator-issue.md</code>: canonical descriptor
+semantic fields rejected by the independent validator's comparison.</li>
+<li><code>unseeded-code-iri-issue.md</code>: the pinned unseeded build
+can prefill code IRIs; the workshop helper clears those assignments
+before the review exercise.</li>
+</ul>
+<p>The workshop's distribution check does not replace strict SDP
+validation:</p>
+<pre class="text"><code>python3 scripts/build-workshop-kit.py
+python3 scripts/check-workshop.py
+python3 scripts/check-workshop.py --site site/docs</code></pre>
+<p>These commands run from the workshop repository, where
+<code>scripts/</code> contains maintainer utilities. Learner scripts run
+from the extracted kit instead. Use the independent specification
+validator command in its issue draft and retain its actual failure until
+an upstream fix is validated.</p>
+<p>Before delivery, obtain the scientific review through Brett, resolve
+that validator defect, rehearse the free provider with working access
+and verify the separate public Test Node record anonymously. Then update
+status from the actual evidence. There is no fixed September completion
+deadline.</p>
+<h2 id="day-2-reference-checks">Day 2 reference checks</h2>
+<p><code>day2-reference-checks.json</code> records the local technical
+inspection of the distributed vocabulary, model and bridge. The
+maintainer command is <code>python scripts/check-semantic-lab.py</code>
+from the lesson repository, using the pinned dependencies in the kit's
+<code>semantic-lab/scripts/requirements.txt</code>. The result records
+checked input hashes. Re-run it after changing these artifacts,
+regenerate the receipt, then rebuild the kit inventory and ZIP.</p>
+<p>The vocabulary check covers the fixed four-concept teaching selection
+and its source bindings. Model and bridge checks cover selected OWL RL
+consequences, actual SHACL conditions, and explicit error examples. This
+is not complete OWL DL verification, a new general-purpose ontology
+validator, or independent scientific approval. No learner review is
+simulated by the reference command; learner commands separately require
+their actual Day 1 preparation.</p>
+<p>The Chapter 12 preview receipt is under
+<code>semantic-lab/contributions/</code>. It records the actual pinned
+R/Python candidate rendering, not a confirmed ontology gap or submitted
+request. Day 2 does not depend on a live catalog or AI service and does
+not close the outstanding Day 1 publication and review conditions
+above.</p>
+<p>On 2026-09-08, a disposable, explicitly automated mechanical fixture
+also exercised the learner vocabulary CLI and both contribution preview
+CLIs after their preparation gate. The vocabulary passed with four
+concepts, three definitions and one explicit definition gap. R 4.5.2 /
+metasalmon 0.5.0 and Python 3.14.3 / metasalmonpy 0.4.0 each rendered
+two candidate rows and two local request previews. Both refused a second
+run into existing output without changing its bytes; the source and
+reference artifacts stayed unchanged. This fixture was not distributed
+and does not represent a human peer review. The supplied learner
+worksheets remain uncompleted.</p>
+</body>
+</html>
