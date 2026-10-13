@@ -121,7 +121,7 @@ Once you have drawn one variable, you have a basis for reviewing automated sugge
 
 Open this after your own attempt. It is a simplified view of the metamodel applied to the first record: a draft working interpretation, not a reviewed answer. Follow one arrow at a time; your drawing can use different words or positions.
 
-![Worked measurement sketch: the variable concerns a source population, represents abundance and has adult scope. Natural origin is an open question. An estimation activity applies the variable, uses the source method label and generates a reported result.](files/fraser-coho-workshop/reference/measurement-sketch-working.svg)
+![Worked measurement sketch: the variable concerns a source population, represents abundance and has adult scope. Natural origin is an open question. An estimation activity applies the variable, uses the source method label and generates a reported result.](files/fraser-coho-workshop/reference/measurement-sketch-working.svg){alt="Worked measurement sketch: the variable concerns a source population, represents abundance and has adult scope. Natural origin is an open question. An estimation activity applies the variable, uses the source method label and generates a reported result."}
 
 The drawing reads as these statements:
 

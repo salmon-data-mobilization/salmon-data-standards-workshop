@@ -99,7 +99,7 @@ One compound name is enough to motivate the next chapters: `NATURAL_ADULT_SPAWNE
 
 Take the first row's estimate of `758`. Here is a preview of how we can turn that value and its context into descriptions other people can use, while keeping the source's unanswered questions visible.
 
-![Worked preview: draw the first record's population, waterbody and result relationships; write and decompose its dictionary; peer review; build the package and review terms and AI suggestions. Day 1 previews catalog publication. Day 2 develops vocabulary, ontology and term-request drafts; released term identifiers can later link back to the metadata.](fig/record-to-reuse.svg)
+![Worked preview: draw the first record's population, waterbody and result relationships; write and decompose its dictionary; peer review; build the package and review terms and AI suggestions. Day 1 previews catalog publication. Day 2 develops vocabulary, ontology and term-request drafts; released term identifiers can later link back to the metadata.](fig/record-to-reuse.svg){alt="Worked preview: draw the first record's population, waterbody and result relationships; write and decompose its dictionary; peer review; build the package and review terms and AI suggestions. Day 1 previews catalog publication. Day 2 develops vocabulary, ontology and term-request drafts; released term identifiers can later link back to the metadata."}
 
 The same example in words:
 
