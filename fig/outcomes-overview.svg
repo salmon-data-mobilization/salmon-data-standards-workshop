@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="476" viewBox="0 0 760 476" role="img" aria-labelledby="title desc">
+<title id="title">The three intended outcomes in the bigger picture</title>
+<desc id="desc">A Salmon Data Package reuses terms from shared ontologies and vocabularies (outcome 2, Day 1) and publishes its metadata to public catalogs and databases (outcome 1, Day 1). Its local meanings go into an organization's own vocabulary and ontology (Day 2), which bridges local terms to shared meanings (outcome 3, Day 2) and proposes new shared terms (outcome 2, Day 2) that later packages can reuse.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#334755"/></marker></defs>
+<rect width="760" height="476" rx="8" fill="#ffffff"/>
+<text x="24" y="34" font-family="sans-serif" font-size="22" font-weight="bold" text-anchor="start" fill="#172b3a">Three outcomes in the bigger picture</text>
+<rect x="250" y="60" width="260" height="72" rx="7" fill="#f4f5f6" stroke="#687582"/>
+<text x="380.0" y="91.0" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#172b3a">Shared ontologies</text>
+<text x="380.0" y="113.0" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="middle" fill="#172b3a">and vocabularies</text>
+<rect x="20" y="212" width="260" height="94" rx="7" fill="#f4f5f6" stroke="#687582"/>
+<text x="150.0" y="243.0" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#172b3a">Salmon Data Package</text>
+<text x="150.0" y="265.0" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="middle" fill="#172b3a">data + metadata</text>
+<text x="150.0" y="287.0" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="middle" fill="#172b3a">using standard terms</text>
+<rect x="480" y="212" width="260" height="94" rx="7" fill="#f4f5f6" stroke="#687582"/>
+<text x="610.0" y="243.0" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#172b3a">Local vocabulary</text>
+<text x="610.0" y="265.0" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="middle" fill="#172b3a">and ontology</text>
+<text x="610.0" y="287.0" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="middle" fill="#172b3a">your organization&#x27;s terms</text>
+<rect x="20" y="384" width="260" height="72" rx="7" fill="#f4f5f6" stroke="#687582"/>
+<text x="150.0" y="415.0" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#172b3a">Public catalogs</text>
+<text x="150.0" y="437.0" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="middle" fill="#172b3a">and databases</text>
+<path d="M 250 96 H 150 V 211" fill="none" stroke="#334755" stroke-width="2" marker-end="url(#arrow)"/>
+<circle cx="174" cy="150" r="11" fill="#334755"/>
+<text x="174" y="155" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#ffffff">2</text>
+<text x="192" y="156" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="start" fill="#172b3a">reuse terms</text>
+<text x="192" y="178" font-family="sans-serif" font-size="15" font-weight="normal" text-anchor="start" fill="#4a5a66">Day 1</text>
+<path d="M 280 259 H 479" fill="none" stroke="#334755" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="380" y="249" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="middle" fill="#172b3a">local meanings</text>
+<text x="380" y="281" font-family="sans-serif" font-size="15" font-weight="normal" text-anchor="middle" fill="#4a5a66">Day 2</text>
+<path d="M 610 211 V 96 H 511" fill="none" stroke="#334755" stroke-width="2" marker-end="url(#arrow)"/>
+<circle cx="412" cy="150" r="11" fill="#334755"/>
+<text x="412" y="155" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#ffffff">3</text>
+<text x="430" y="156" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="start" fill="#172b3a">bridge local terms</text>
+<circle cx="412" cy="180" r="11" fill="#334755"/>
+<text x="412" y="185" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#ffffff">2</text>
+<text x="430" y="186" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="start" fill="#172b3a">propose new terms</text>
+<text x="430" y="206" font-family="sans-serif" font-size="15" font-weight="normal" text-anchor="start" fill="#4a5a66">Day 2</text>
+<path d="M 150 306 V 383" fill="none" stroke="#334755" stroke-width="2" marker-end="url(#arrow)"/>
+<circle cx="174" cy="336" r="11" fill="#334755"/>
+<text x="174" y="341" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#ffffff">1</text>
+<text x="192" y="342" font-family="sans-serif" font-size="16" font-weight="normal" text-anchor="start" fill="#172b3a">publish metadata</text>
+<text x="192" y="364" font-family="sans-serif" font-size="15" font-weight="normal" text-anchor="start" fill="#4a5a66">Day 1</text>
+<circle cx="344" cy="402" r="11" fill="#334755"/>
+<text x="344" y="407" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#ffffff">1</text>
+<text x="362" y="408" font-family="sans-serif" font-size="15" font-weight="normal" text-anchor="start" fill="#172b3a">Reusable data publication</text>
+<circle cx="344" cy="428" r="11" fill="#334755"/>
+<text x="344" y="433" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#ffffff">2</text>
+<text x="362" y="434" font-family="sans-serif" font-size="15" font-weight="normal" text-anchor="start" fill="#172b3a">Contribution to shared terminology</text>
+<circle cx="344" cy="454" r="11" fill="#334755"/>
+<text x="344" y="459" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#ffffff">3</text>
+<text x="362" y="460" font-family="sans-serif" font-size="15" font-weight="normal" text-anchor="start" fill="#172b3a">Local stewardship connected to shared meanings</text>
+</svg>

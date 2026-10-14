@@ -410,7 +410,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>See the Whole Journey: From NuSEDS to Reusable Data</h1>
-        <p>Last updated on 2026-09-22 |
+        <p>Last updated on 2026-10-14 |
 
         <a href="https://github.com/salmon-data-mobilization/salmon-data-standards-workshop/edit/main/episodes/session-1.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -457,20 +457,41 @@ metasalmon and AI.</li>
 </div>
 </div>
 <section><h2 class="section-heading" id="two-days-three-connected-outcomes">Two days, three connected outcomes<a class="anchor" aria-label="anchor" href="#two-days-three-connected-outcomes"></a></h2>
-<hr class="half-width"><p>This workshop supports <strong>reusable data publication</strong>,
-<strong>contributions to shared terminology</strong>, and <strong>local
-vocabulary or ontology stewardship connected to shared
-meanings</strong>. Day 1 is a six-hour beginner route through
-publication; Day 2 adds six hours of semantic authoring and contribution
-work.</p>
-<p>The same graph and dictionary support all three outcomes. On Day 1
-they make source meanings reviewable before software. On Day 2 we use
-them to decide which terms already exist, create small draft resources
-where useful, and connect local meanings to the Salmon Domain Ontology
-without erasing their differences. A catalog record helps people find
-the dataset; explicit concepts and relationships help them compare and
-interpret its meanings.</p>
-<p>The <a href="advanced.html">Day 2 guide</a> introduces a <a href="glossary.html#skos">SKOS</a> controlled vocabulary, a small <a href="glossary.html#owl">OWL</a> model, a <a href="glossary.html#bridge">bridge</a>, and a <a href="glossary.html#term-request">term-request</a> or clarification
+<hr class="half-width"><p>This workshop supports the following intended outcomes:</p>
+<ol style="list-style-type: decimal"><li>
+<strong>Reusable data publication.</strong> Publish a <a href="glossary.html#metadata">metadata</a> file that public catalogs and
+databases can read, so other people can find, understand and reuse your
+data.</li>
+<li>
+<strong>Contribution to shared terminology.</strong> Describe your
+data with terms from a shared <a href="glossary.html#controlled-vocabulary">controlled vocabulary</a>,
+and propose a new term when none fits.</li>
+<li>
+<strong>Local vocabulary and ontology stewardship connected to
+shared meanings.</strong> Maintain your organization’s own vocabulary or
+<a href="glossary.html#ontology">ontology</a>, and link local terms to
+the shared meanings they match or relate to.</li>
+</ol><table class="table"><colgroup><col width="33%"><col width="33%"><col width="33%"></colgroup><thead><tr><th>Outcome</th>
+<th>Day 1</th>
+<th>Day 2</th>
+</tr></thead><tbody><tr><td>1. Reusable data publication</td>
+<td>Build a package and export its catalog metadata</td>
+<td>—</td>
+</tr><tr><td>2. Contribution to shared terminology</td>
+<td>Reuse published terms</td>
+<td>Propose and steward terms</td>
+</tr><tr><td>3. Local stewardship connected to shared meanings</td>
+<td>—</td>
+<td>Build a vocabulary and model; bridge local terms to shared ones</td>
+</tr></tbody></table><p><strong>Day 1</strong> is for the biologist who wants to reuse
+standardized terms and publish data in a <a href="glossary.html#fair">FAIR</a> way: create a <a href="glossary.html#salmon-data-package">Salmon Data Package</a>, reuse
+published terms and practise publishing it to a test catalog. On
+<strong>Day 2</strong>, you build and steward a small vocabulary and <a href="glossary.html#owl">OWL</a> model and <a href="glossary.html#bridge">bridge</a> local terms to the Salmon Domain
+Ontology. It suits people setting up data stewardship for an
+organization.</p>
+<figure><img src="../fig/outcomes-overview.svg" alt="The three outcomes in the bigger picture. A Salmon Data Package reuses terms from shared ontologies and vocabularies (outcome 2, Day 1) and publishes its metadata to public catalogs and databases (outcome 1, Day 1). Its local meanings go into an organization's own vocabulary and ontology (Day 2), which bridges local terms to shared meanings (outcome 3, Day 2) and proposes new shared terms (outcome 2, Day 2) that later packages can reuse." class="figure mx-auto d-block"><div class="figcaption">How the three outcomes connect.</div>
+</figure><p>The same hand-drawn graph and dictionary support all three outcomes.
+The <a href="advanced.html">Day 2 guide</a> introduces a <a href="glossary.html#skos">SKOS</a> controlled vocabulary, a small <a href="glossary.html#owl">OWL</a> model, a <a href="glossary.html#bridge">bridge</a>, and a <a href="glossary.html#term-request">term-request</a> or clarification
 draft. These examples are in the <code>semantic-lab/</code> folder
 inside the extracted workshop ZIP. The <a href="index.html#download-and-open-the-workshop-kit">setup
 instructions</a> explain how to download and open it. We will work with
@@ -611,7 +632,7 @@ definition.</p>
 of how we can turn that value and its context into descriptions other
 people can use, while keeping the source’s unanswered questions
 visible.</p>
-<figure><img src="../fig/record-to-reuse.svg" alt="Worked preview: draw the first record’s population, waterbody and result relationships; write and decompose its dictionary; peer review; build the package and review terms and AI suggestions. Day 1 previews catalog publication. Day 2 develops vocabulary, ontology and term-request drafts; released term identifiers can later link back to the metadata." class="figure mx-auto d-block"><div class="figcaption">Worked preview: draw the first record’s
+<figure><img src="../fig/record-to-reuse.svg" alt="Worked preview: draw the first record's population, waterbody and result relationships; write and decompose its dictionary; peer review; build the package and review terms and AI suggestions. Day 1 previews catalog publication. Day 2 develops vocabulary, ontology and term-request drafts; released term identifiers can later link back to the metadata." class="figure mx-auto d-block"><div class="figcaption">Worked preview: draw the first record’s
 population, waterbody and result relationships; write and decompose its
 dictionary; peer review; build the package and review terms and AI
 suggestions. Day 1 previews catalog publication. Day 2 develops
@@ -711,6 +732,9 @@ need to answer them.</p>
 <div class="callout-content">
 <ul><li>The same 173-row, 14-column Fraser Coho slice carries every
 chapter.</li>
+<li>The workshop supports three intended outcomes: reusable data
+publication on Day 1, shared terminology on both days, and local
+stewardship connected to shared meanings on Day 2.</li>
 <li>A reusable dataset needs understandable values, context,
 relationships, sources and access conditions.</li>
 <li>The dataset has 164 distinct population–year pairs; that pair does
@@ -783,8 +807,8 @@ assess whether those data suit their question.</li>
   "url": "https://salmon-data-mobilization.github.io/salmon-data-standards-workshop/instructor/session-1.html",
   "identifier": "https://salmon-data-mobilization.github.io/salmon-data-standards-workshop/instructor/session-1.html",
   "dateCreated": "2025-01-22",
-  "dateModified": "2026-09-22",
-  "datePublished": "2026-10-13"
+  "dateModified": "2026-10-14",
+  "datePublished": "2026-10-14"
 }
 
   </script><script>

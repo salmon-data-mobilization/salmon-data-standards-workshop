@@ -239,9 +239,10 @@
       <div class="accordion-body">
         <ul><li><a href="#start-with-three-columns">Start with three columns</a></li>
 <li><a href="#use-a-small-drawing-convention">Use a small drawing convention</a></li>
-<li><a href="#build-the-sketch-one-question-at-a-time">Build the sketch one question at a time</a></li>
-<li><a href="#worked-drawing-a-small-model-with-questions">Worked drawing: a small model with questions</a></li>
+<li><a href="#draw-one-key-variable-first">Draw one key variable first</a></li>
+<li><a href="#then-add-how-the-value-was-obtained">Then add how the value was obtained</a></li>
 <li><a href="#add-enough-context-to-explain-the-record">Add enough context to explain the record</a></li>
+<li><a href="#reuse-the-drawing">Reuse the drawing</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -410,7 +411,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Draw the Dataset Before Using Tools</h1>
-        <p>Last updated on 2026-09-22 |
+        <p>Last updated on 2026-10-14 |
 
         <a href="https://github.com/salmon-data-mobilization/salmon-data-standards-workshop/edit/main/episodes/session-2.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -435,6 +436,7 @@ implicit?</li>
 estimate calculated?</li>
 <li>How can a drawing distinguish supported relationships from open
 questions?</li>
+<li>How does one drawn variable help us judge a tool’s suggestions?</li>
 </ul></div>
 </div>
 </div>
@@ -442,15 +444,15 @@ questions?</li>
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Sketch one <code>NATURAL_ADULT_SPAWNERS</code> example using
-<code>POP_ID</code> and <code>ESTIMATE_METHOD</code> as starting
-context.</li>
-<li>Identify the population, possible constraints, and separate
-questions about field observations and estimate calculation.</li>
+<ul><li>Draw one key variable, <code>NATURAL_ADULT_SPAWNERS</code>, as its
+property, entity and constraints, using <code>POP_ID</code> and
+<code>ESTIMATE_METHOD</code> as starting context.</li>
+<li>Separate questions about field observations from questions about
+estimate calculation.</li>
 <li>Use named nodes and verb-labelled arrows to explain a working
 interpretation or ask a precise question.</li>
-<li>Save the drawing and its node/edge notes for the dictionary exercise
-in Chapter 3.</li>
+<li>Save the drawing and its node/edge notes for Chapter 3, and reuse it
+to check suggestions for other variables.</li>
 </ul></div>
 </div>
 </div>
@@ -504,39 +506,50 @@ graph tutorial</a>; paper and other drawing tools work equally well.</p>
 arrows and question marks carry the meaning. The dashed-line convention
 is our workshop shorthand for uncertainty; it is not an OWL
 assertion.</p>
-<p>Add a short evidence note beside a relationship or in the <a href="files/fraser-coho-workshop/worksheets/dataset-nodes.csv">node</a>
+<p>If a blank page is hard to start, copy this skeleton. It shows the
+marks and where each part of one variable goes. It is a template, not
+the answer: replace each question with your own label and evidence.</p>
+<figure><img src="fig/drawing-convention.svg" alt="Drawing skeleton with no dataset values. A variable box holds your label and the source field name. Solid arrows labelled concerns, represents and has constraint point to entity, property and constraint boxes, which ask what the variable is about, what is measured and what narrows it. A dashed arrow labelled has constraint? points to a dashed question box for a possible constraint that needs evidence. Below, an activity box applies the variable, uses a method and generates a result: one example value and its unit." class="figure mx-auto d-block"><div class="figcaption">A skeleton for drawing one variable.</div>
+</figure><p>Add a short evidence note beside a relationship or in the <a href="files/fraser-coho-workshop/worksheets/dataset-nodes.csv">node</a>
 and <a href="files/fraser-coho-workshop/worksheets/dataset-edges.csv">edge</a>
 worksheets. Use “observed in file”, “working interpretation” or
 “question”. Keep local drawing IDs such as <code>N2</code> separate from
 source identifiers such as <code>46200</code>. In yEd, the <a href="https://yed.yworks.com/support/manual/properties.html" class="external-link">description
 and URL properties</a> can hold supporting notes and source links.</p>
-</section><section><h2 class="section-heading" id="build-the-sketch-one-question-at-a-time">Build the sketch one question at a time<a class="anchor" aria-label="anchor" href="#build-the-sketch-one-question-at-a-time"></a></h2>
-<hr class="half-width"><p>Write <strong>adult-spawner estimate</strong> and the source field
-<code>NATURAL_ADULT_SPAWNERS</code> in a central box. Keep the
-three-cell record beside it as evidence. The central box describes the
-<a href="glossary.html#variable">variable</a>; <code>758</code> is one
-reported <a href="glossary.html#result">result</a>.</p>
-<p>Add three branches:</p>
+</section><section><h2 class="section-heading" id="draw-one-key-variable-first">Draw one key variable first<a class="anchor" aria-label="anchor" href="#draw-one-key-variable-first"></a></h2>
+<hr class="half-width"><p>Start with one variable, <code>NATURAL_ADULT_SPAWNERS</code>. Write
+<strong>adult-spawner estimate</strong> and the source field name in a
+central box, and keep the three-cell record beside it as evidence. The
+central box describes the <a href="glossary.html#variable">variable</a>;
+<code>758</code> is one reported <a href="glossary.html#result">result</a>.</p>
+<p>Ask the variable three questions, one branch each:</p>
 <ol style="list-style-type: decimal"><li>
+<strong>What is measured?</strong> The characteristic of interest is
+<strong>abundance</strong>: how much of the population or group is
+represented. Add it as a <a href="glossary.html#property">property</a>
+node with a “represents” arrow.</li>
+<li>
 <strong>What is it about?</strong> Add a population node and a
 “concerns” arrow. <code>POP_ID = 46200</code> identifies the source
 population. Ask what population or group of fish that identifier covers.
-This is the <a href="glossary.html#entity">entity</a> question.</li>
+This is the <a href="glossary.html#entity">entity</a> question. The
+entity could be a population or a Conservation Unit, but this table
+identifies populations and has no CU field; linking a population to a CU
+would need another source.</li>
 <li>
-<strong>Which fish are included?</strong> Add scope or <a href="glossary.html#constraint">constraint</a> notes. The current
-official dictionary describes mature salmon excluding jacks. What does
-“natural” add? Put uncertain interpretations on dashed arrows with a
-question mark.</li>
-<li>
-<strong>How was the value obtained?</strong> Add an
-observation/estimation activity and connect it to the source <a href="glossary.html#method">method</a> label. Ask separately how
+<strong>What narrows it?</strong> Add <a href="glossary.html#constraint">constraint</a> nodes with “has
+constraint” arrows. The current official dictionary describes mature
+salmon excluding jacks, so <em>adult</em> and <em>jacks excluded</em>
+have support in that definition. The field name also says “natural”, but
+the definition does not establish natural origin. Put natural origin on
+a dashed arrow with a question mark.</li>
+</ol></section><section><h2 class="section-heading" id="then-add-how-the-value-was-obtained">Then add how the value was obtained<a class="anchor" aria-label="anchor" href="#then-add-how-the-value-was-obtained"></a></h2>
+<hr class="half-width"><p>Add an observation/estimation activity and connect it to the source
+<a href="glossary.html#method">method</a> label. Ask separately how
 observations were collected and how they became an estimate. Connect the
-activity to the reported result <code>758</code>.</li>
-</ol><p>The characteristic of interest is <strong>abundance</strong>: how
-much of the population or group is represented. Add it as a <a href="glossary.html#property">property</a> node connected to the
-variable. Keep any unit claim beside the result; the starter dictionary
-supplies “Individual”, whose applicability still needs checking across
-estimate types.</p>
+activity to the reported result <code>758</code>. Keep any unit claim
+beside the result; the starter dictionary supplies “Individual”, whose
+applicability still needs checking across estimate types.</p>
 <p>This introduces the decomposition approach used by <a href="https://www.rd-alliance.org/system/files/InteroperAble%20Descriptions%20of%20Observable%20Property%20Terminologies%20%28I-ADOPT%29%20WG%20-%20output%20and%20recommendations_0.pdf" class="external-link">I-ADOPT</a>:
 describe a variable through its property, entity and constraints. The
 Salmon Domain Ontology’s <a href="https://github.com/salmon-data-mobilization/salmon-domain-ontology/blob/main/ontology/views/README.md" class="external-link">metamodel
@@ -571,10 +584,76 @@ may postdate the 2025 source workbook. An unanswered method question is
 a useful part of the drawing. One source record may summarize several
 visits or calculations.</p>
 </div>
-</section><section><h2 class="section-heading" id="worked-drawing-a-small-model-with-questions">Worked drawing: a small model with questions<a class="anchor" aria-label="anchor" href="#worked-drawing-a-small-model-with-questions"></a></h2>
-<hr class="half-width"><p>This is a simplified view of the metamodel applied to the first
-record. Follow one arrow at a time; your own drawing can use different
-words or positions.</p>
+</section><section><h2 class="section-heading" id="add-enough-context-to-explain-the-record">Add enough context to explain the record<a class="anchor" aria-label="anchor" href="#add-enough-context-to-explain-the-record"></a></h2>
+<hr class="half-width"><p>Return to the first record’s <code>WATERBODY</code>,
+<code>ANALYSIS_YR</code> and <code>SPECIES</code> values. Attach the
+named place, estimate year and species to the source-record context. A
+year or place that varies by row is different from a fixed constraint on
+the whole variable.</p>
+<p><a href="glossary.html#row-grain">Row grain</a> describes what a
+record represents. This source has <strong>173 rows and 164 distinct
+population–year pairs</strong>, so that pair does not uniquely identify
+a record. For example, population <code>46170</code> has two 2023
+records naming <code>NICOLA RIVER (DAM)</code> and
+<code>NICOLA RIVER (DOT)</code>. Keep the records separate and ask which
+additional context distinguishes them.</p>
+</section><section><h2 class="section-heading" id="reuse-the-drawing">Reuse the drawing<a class="anchor" aria-label="anchor" href="#reuse-the-drawing"></a></h2>
+<hr class="half-width"><p>Once you have drawn one variable, you have a basis for reviewing
+automated suggestions for other variables. In Chapter 5, compare each
+suggested entity, property or constraint with your drawing before
+accepting it; for any other variable, ask the same three questions
+first. If you bring your own data to the solo hour after the group
+walkthrough, draw individual variables from it the same way. Use each
+drawing to check whether you trust the tool’s suggestions for that
+column.</p>
+<div id="activity-draw-explain-and-revise" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="activity-draw-explain-and-revise" class="callout-inner">
+<h3 class="callout-title">Activity: draw, explain and revise</h3>
+<div class="callout-content">
+<ol style="list-style-type: decimal"><li>
+<strong>Draw one variable for 10 minutes.</strong> Start with the
+three-cell example. Put the variable in the centre and add its property,
+entity and constraints. Use a dashed arrow for any constraint the
+sources do not establish.</li>
+<li>
+<strong>Add how the value was obtained for 5 minutes.</strong> Add
+the activity, the source method label and the result <code>758</code>.
+Include at least one specific unanswered question.</li>
+<li>
+<strong>Explain for 10 minutes.</strong> Your partner reads each
+arrow as a sentence. Then open the answer key below, compare it with
+your sketch and identify which method or constraint claims need more
+evidence.</li>
+<li>
+<strong>Revise for 10 minutes.</strong> Clarify the arrows, add the
+row’s place/year/species context, and enter your nodes and edges in the
+worksheets. Save the editable drawing or paper capture with them.</li>
+</ol><p><strong>Ready for Chapter 3:</strong> the three starting fields can
+be traced through your sketch; every arrow is labelled; example values
+and concepts are distinguishable; and open questions have a source or
+next step to investigate. Chapter 3 uses this drawing to describe the
+six focus fields and review the remaining eight fields before the
+package build.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">
+  Answer key: one worked drawing
+  </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p>Open this after your own attempt. It is a simplified view of the
+metamodel applied to the first record: a draft working interpretation,
+not a reviewed answer. Follow one arrow at a time; your drawing can use
+different words or positions.</p>
 <figure><img src="files/fraser-coho-workshop/reference/measurement-sketch-working.svg" alt="Worked measurement sketch: the variable concerns a source population, represents abundance and has adult scope. Natural origin is an open question. An estimation activity applies the variable, uses the source method label and generates a reported result." class="figure mx-auto d-block"><div class="figcaption">Worked measurement sketch: the variable concerns
 a source population, represents abundance and has adult scope. Natural
 origin is an open question. An estimation activity applies the variable,
@@ -582,7 +661,8 @@ uses the source method label and generates a reported result.</div>
 </figure><p>The drawing reads as these statements:</p>
 <ul><li>The adult-spawner <strong>variable</strong> concerns a source
 <strong>population</strong>, represents <strong>abundance</strong>, and
-has a working adult scope excluding jacks.</li>
+has a working adult scope excluding jacks: the constraints drawn from
+the current official definition.</li>
 <li>An observation or estimation <strong>activity</strong> applies that
 variable, uses a <strong>method</strong>, and generates a
 <strong>result</strong>. The source labels the method
@@ -603,52 +683,10 @@ enough for your sketch; choosing term identifiers comes in Chapter
 node table</a>, <a href="files/fraser-coho-workshop/reference/measurement-sketch-edges.csv">edge
 table</a>, and <a href="files/fraser-coho-workshop/reference/measurement-sketch-working.mmd">editable
 diagram source</a> show the labels, evidence and questions behind this
-example.</p>
-</section><section><h2 class="section-heading" id="add-enough-context-to-explain-the-record">Add enough context to explain the record<a class="anchor" aria-label="anchor" href="#add-enough-context-to-explain-the-record"></a></h2>
-<hr class="half-width"><p>Return to the first record’s <code>WATERBODY</code>,
-<code>ANALYSIS_YR</code> and <code>SPECIES</code> values. Attach the
-named place, estimate year and species to the source-record context. A
-year or place that varies by row is different from a fixed constraint on
-the whole variable.</p>
-<p><a href="glossary.html#row-grain">Row grain</a> describes what a
-record represents. This source has <strong>173 rows and 164 distinct
-population–year pairs</strong>, so that pair does not uniquely identify
-a record. For example, population <code>46170</code> has two 2023
-records naming <code>NICOLA RIVER (DAM)</code> and
-<code>NICOLA RIVER (DOT)</code>. Keep the records separate and ask which
-additional context distinguishes them.</p>
-<p>The <a href="files/fraser-coho-workshop/reference/dataset-graph-working.svg">expanded
-working graph</a> and its <a href="files/fraser-coho-workshop/reference/dataset-graph-working.html">notes</a>
-provide further practice with location, time and source-record
-relationships. The table contains no Conservation Unit crosswalk; adding
-a population-to-CU relationship would need another source.</p>
-<div id="activity-draw-explain-and-revise" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
+example. For the context step, compare your additions with the <a href="files/fraser-coho-workshop/reference/dataset-graph-working.svg">expanded
+working graph</a> and its <a href="files/fraser-coho-workshop/reference/dataset-graph-working.html">notes</a>,
+which cover location, time and source-record relationships.</p>
 </div>
-<span class="callout-header">Challenge</span>
-<div id="activity-draw-explain-and-revise" class="callout-inner">
-<h3 class="callout-title">Activity: draw, explain and revise</h3>
-<div class="callout-content">
-<ol style="list-style-type: decimal"><li>
-<strong>Draw for 15 minutes.</strong> Start with the three-cell
-example. Add the population, scope and method branches, a property, an
-activity and its result. Include at least one specific unanswered
-question.</li>
-<li>
-<strong>Explain for 10 minutes.</strong> Your partner reads each
-arrow as a sentence. Compare the sketch with the worked drawing and
-identify which method or constraint claims need more evidence.</li>
-<li>
-<strong>Revise for 10 minutes.</strong> Clarify the arrows, add the
-row’s place/year/species context, and enter your nodes and edges in the
-worksheets. Save the editable drawing or paper capture with them.</li>
-</ol><p><strong>Ready for Chapter 3:</strong> the three starting fields can
-be traced through your sketch; every arrow is labelled; example values
-and concepts are distinguishable; and open questions have a source or
-next step to investigate. Chapter 3 uses this drawing to describe the
-six focus fields and review the remaining eight fields before the
-package build.</p>
 </div>
 </div>
 </div>
@@ -659,7 +697,7 @@ package build.</p>
 <span class="callout-header">Key Points</span>
 <div class="callout-inner">
 <div class="callout-content">
-<ul><li>Start with one estimate and a few source fields, then add the
+<ul><li>Start with one key variable and a few source fields, then add the
 relationships needed to interpret it.</li>
 <li>Entity, property and constraints describe the variable; the
 activity, method and result describe how a value was produced.</li>
@@ -667,6 +705,8 @@ activity, method and result describe how a value was produced.</li>
 different questions.</li>
 <li>Dashed arrows and precise questions make missing evidence
 visible.</li>
+<li>One drawn variable is a basis for checking a tool’s suggestions for
+other variables, including your own data’s.</li>
 <li>A saved sketch and node/edge notes give the dictionary exercise a
 clear starting point.</li>
 </ul></div>
@@ -732,8 +772,8 @@ clear starting point.</li>
   "url": "https://salmon-data-mobilization.github.io/salmon-data-standards-workshop/session-2.html",
   "identifier": "https://salmon-data-mobilization.github.io/salmon-data-standards-workshop/session-2.html",
   "dateCreated": "2025-01-22",
-  "dateModified": "2026-09-22",
-  "datePublished": "2026-10-13"
+  "dateModified": "2026-10-14",
+  "datePublished": "2026-10-14"
 }
 
   </script><script>
