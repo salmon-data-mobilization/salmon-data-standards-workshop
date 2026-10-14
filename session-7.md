@@ -86,7 +86,7 @@ The reference passes the pinned MetaSalmon strict package check and EML validati
 
 [EML](glossary.html#eml), Ecological Metadata Language, expresses discovery and data-description metadata in a standard XML structure. It is a downstream representation of the package, not a replacement for the human preparation or canonical SDP metadata.
 
-The exporter needs facts that cannot be recovered from column names alone: structured parties, rights, methods, measurement scales, missing-value meanings, and source context. The reviewed `metadata/eml-mapping.yml` sidecar supplies such facts. This is where details deferred from Chapter 1—numeric versus nominal domains, date domains, and EML field requirements—become useful.
+The exporter needs facts that cannot be recovered from column names alone: structured parties, rights, methods, measurement scales, missing-value meanings, and source context. The reviewed `metadata/eml-mapping.yml` sidecar supplies such facts. This is where details such as numeric versus nominal domains, date domains, and EML field requirements become useful.
 
 Inspect `metadata/eml-mapping.yml` and any supplied `publication/test/eml.xml` in the reference checkpoint. Trace one source-column definition into the EML attribute description. Then find the source citation, teaching-record label, and test-environment URLs. Use the canonical [SDP-to-EML workflow][metasalmon-eml-workflow] and [mapping template][metasalmon-eml-mapping] for the full requirements.
 
