@@ -23,9 +23,15 @@ exercises: 15
 
 ## I've got data. Why is reuse still so hard? {#framing-the-challenge}
 
-You have a biological question, some promising files and a deadline. Before you can analyse anything, you need to find the right columns, connect them to the methods and work out what can be compared. The answers may be scattered across papers, appendices and emails. New questions appear when you combine the tables.
+### A typical research project: reuse data to answer a question
+
+You start with a biological question, some promising files from other studies and a deadline. Before you can analyse anything, you need to find the right columns, connect them to the methods and work out what can be compared. The answers may be scattered across papers, appendices and emails. New questions appear when you combine the tables.
+
+### Publish what the next researcher will need
 
 Later, you may be the person asked to publish the data behind a paper or make them [FAIR](glossary.html#fair). Reconstructing those explanations at the end takes more work, and the next user may still need to email you. Capturing the answers as you go can help both of you.
+
+### Our example: annual spawner abundance by CU
 
 Our example question is to **assemble the best available annual estimates of salmon spawner abundance by Conservation Unit (CU)** across several regions. A CU groups salmon populations for conservation and assessment. We want records for each CU and year, with differences in scope, method and uncertainty kept visible.
 
