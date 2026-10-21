@@ -59,13 +59,13 @@ The practical progression is a source value → documented local meaning → rep
 
 ## Standalone 55-minute overview
 
-Chapter 1 retains 30 teaching minutes and 25 exercise minutes. The comparison replaces the generic opening reuse scenario and detailed catalog tour. The three outcomes are a short list after the practical example; both existing overview illustrations remain linked for optional reading. The former values-versus-descriptions section and dense journey recap are removed.
+Chapter 1 has 40 teaching minutes and a 15-minute closing activity. The opening diagram introduces the reuse problem, then the real Yukon and Fraser fields make its comparison concrete. The earlier ten-minute field-selection discussion is replaced by this guided walkthrough. The three outcomes remain a short list after the practical example.
 
 | Elapsed time | Minutes | Focus |
 | --- | ---: | --- |
-| 0:00–0:05 | 5 teaching | State the CU–year question and show the Yukon and Fraser excerpts. |
-| 0:05–0:15 | 10 exercise | Pairs choose candidate fields and identify evidence they need. |
-| 0:15–0:25 | 10 teaching | Follow source definitions, compare the prepared descriptions and the two workflow routes, then introduce the Central Coast scale problem. |
+| 0:00–0:05 | 5 teaching | Connect the reuse and publication problem to the participants' work; state the CU–year question. |
+| 0:05–0:15 | 10 teaching | Extend both timelines with Next, then show the real Yukon/Fraser fields and the confidence-rating example. |
+| 0:15–0:25 | 10 teaching | Follow source definitions and the prepared descriptions, then introduce the Central Coast scale problem. |
 | 0:25–0:35 | 10 teaching | Switch explicitly to the Fraser Coho teaching slice; inspect its first records, blank and interpretation questions. |
 | 0:35–0:40 | 5 teaching | Connect the workflow to the three outcomes and the two days. |
 | 0:40–0:55 | 15 exercise | Pairs record what the next user would need, then share and recap. |
@@ -76,13 +76,17 @@ This is an awareness session, not completion of either day's hands-on outcomes. 
 
 Begin with the question about assembling the best available estimates by CU and year, with differences documented, before introducing the delivery schedule or the ontology vocabulary. Explain that the two excerpts concern different CUs: this is a candidate-field comparison, not a row join or a claim that the populations are interchangeable. The selected records are illustrative choices for this draft, pending Bruno and Tom's review.
 
+Bruno's three-source framing provides the thread through the diagram. In Phase 1, point to the Yukon reconstruction and Fraser assessment files. In Phase 2, identify `mean` and `SpnForAbd_Total` as candidates and retain their CU identities and differences. Phase 3 uses the actual `ConfidenceRating` definition to catch an invented misreading. Phase 4 shows why preserving those explanations benefits the next data user as well as the provider.
+
+Use Next to add each phase while keeping the earlier timeline visible. Each node expands in place; Play is optional and can be paused. The standalone diagram link provides more room for projection. The text version and static overview remain available if JavaScript is unavailable. The right-hand route is a proposed packaged version of the sources, not a claim that the source projects supplied these reviewed SDPs. Fewer displayed preparation tasks do not quantify elapsed-time savings.
+
 The Rapid Status repository has a dictionary and CU narratives. Use the published lookup to show how interpretation works. Keep an author's correspondence out of the story until the person who performed that exchange supplies and checks the account. Do not convert the meeting's anecdotal wrangling-time estimate into a measured benefit.
 
 The prepared comparison table is a teaching description, not an approved mapping or a canonical SDP dictionary. Explain the source of the descriptions and what remains to be confirmed. A shared abundance property does not resolve total versus wild scope, a relative index versus absolute abundance, year basis, CU identity, method or uncertainty. In particular, `ConfidenceRating` describes assessment status confidence, not an interval around an abundance estimate. The script demonstrates no universal metasalmon integration API.
 
 The Central Coast section introduces a real estimation pathway but does not supply a newly reviewed extract, crosswalk or expansion calculation. Link to the source report, then say explicitly that the practical exercises use a Fraser Coho slice. Keep those regional sources and their provenance distinct. If the group later selects a Central Coast extract, review its source and relationship evidence before adding actual rows.
 
-The intro source excerpts are outside the teaching kit in `episodes/files/intro-comparison/`. Their manifest records revisions, row selection and checksums; all source columns are retained. `scripts/prepare-intro-comparison.py` renders the diagram and checks the local excerpts offline. Its explicit `--refresh-sources` option retrieves only the pinned sources. Retain those source versions and original field names when discussing a different mapping.
+The intro source excerpts are outside the teaching kit in `episodes/files/intro-comparison/`. Their manifest records revisions, row selection and checksums; all source columns are retained. `episodes/files/workflow-explorer/` contains the interactive diagram. `scripts/prepare-intro-comparison.py` renders the optional static overview and checks the local excerpts offline. Its explicit `--refresh-sources` option retrieves only the pinned sources. Retain those source versions and original field names when discussing a different mapping.
 
 Use the three-record NuSEDS excerpt to make the next activity tangible. Keep the blank visible and have participants distinguish the population identifier, place, year and estimate. Learners draw their own graph, write and decompose the dictionary, and complete peer review in Chapters 2–3, before package creation in Chapter 4 and AI comparison in Chapter 5.
 
