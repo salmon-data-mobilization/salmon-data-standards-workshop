@@ -44,6 +44,13 @@
     #salmon-workflow-guided .nested-node { width: 88%; justify-self: center; padding: 10px 7px; overflow-wrap: anywhere; }
     #salmon-workflow-guided .nested-node strong { display: block; font-weight: 500; }
     #salmon-workflow-guided .nested-node span { display: block; margin-top: 5px; }
+    #salmon-workflow-guided .meaning-example { padding: 12px; border: 1px solid var(--border); border-radius: 6px; background: var(--background); }
+    #salmon-workflow-guided .meaning-records { display: flex; flex-wrap: wrap; gap: 12px; }
+    #salmon-workflow-guided .meaning-record { flex: 1 1 150px; min-width: 0; padding: 8px; border: 1px solid var(--border); overflow-wrap: anywhere; }
+    #salmon-workflow-guided .meaning-record strong { display: block; margin-bottom: 6px; }
+    #salmon-workflow-guided .meaning-record p { margin: 8px 0 0; }
+    #salmon-workflow-guided .meaning-example code { white-space: normal; overflow-wrap: anywhere; }
+    #salmon-workflow-guided .shared-meaning { margin-top: 16px; font-weight: 500; }
     #salmon-workflow-guided .verdict { display: flex; flex-direction: column; align-items: center; gap: 5px; margin: 12px auto 0; max-width: 310px; }
     #salmon-workflow-guided .verdict-label { font-weight: 500; }
     #salmon-workflow-guided .verdict .symbol { display: flex; font-size: 1.5rem; }

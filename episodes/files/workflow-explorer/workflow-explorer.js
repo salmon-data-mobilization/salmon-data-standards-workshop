@@ -27,9 +27,9 @@
       const lines = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
       lines.classList.add('lines');
       lines.setAttribute('aria-hidden', 'true');
-      board.append(lines, el('div', 'question', 'Assemble the best available annual spawner estimates by Conservation Unit.'));
+      board.append(lines, el('div', 'question', 'Assemble annual spawner-abundance estimates for each Conservation Unit (CU), a salmon population grouping, and year.'));
       const laneHeadings = el('div', 'lane-headings');
-      [['The usual route', 'Files and scattered explanations'], ['With reviewed Salmon Data Packages', 'Meanings and evidence travel with the data']].forEach(([title, note]) => {
+      [['The usual route', 'Files and scattered explanations'], ['With reviewed Salmon Data Packages', 'The same Yukon and Fraser data, with descriptions included']].forEach(([title, note]) => {
         const heading = el('div', 'lane-heading', title);
         heading.append(el('span', 'text-small', note));
         laneHeadings.append(heading);
@@ -46,7 +46,7 @@
       const evidenceLinks = el('div', 'source-links text-small');
       evidenceLinks.id = 'salmon-tour-sources';
       const siteRoot = root.dataset.siteRoot || '';
-      [['Yukon excerpt', 'files/intro-comparison/yukon-excerpt.csv'], ['Fraser excerpt', 'files/intro-comparison/fraser-excerpt.csv'], ['Compare the source evidence', 'session-1.html#the-archetypical-data-problem']].forEach(([label, href]) => {
+      [['Yukon excerpt', 'files/intro-comparison/yukon-excerpt.csv'], ['Fraser excerpt', 'files/intro-comparison/fraser-excerpt.csv'], ['Read the source comparison', 'session-1.html#the-archetypical-data-problem']].forEach(([label, href]) => {
         const link = el('a', '', label);
         link.href = siteRoot + href;
         evidenceLinks.append(link);
@@ -76,94 +76,92 @@
         {
           title: 'Find and understand the data',
           left: [
-            node('collect', 'Find and obtain the files', 'Downloads, access requests and different formats.', [
-              part('Find candidate datasets', 'Yukon and Fraser sources for annual abundance'),
-              part('Obtain files and permissions', 'A download may still leave missing context')
+            node('collect', 'Find the Yukon and Fraser files', 'Yukon mean; Fraser SpnForAbd_Total. Which values answer our question?', [
+              part('Yukon Chinook reconstruction', 'A model combines passage, genetic and harvest information to estimate abundance'),
+              part('Fraser Rapid Status Assessment', 'An assessment of conservation status with abundance fields among its outputs')
             ]),
-            node('documents', 'Search papers and appendices', 'Which methods describe these columns?', [
-              part('Read the methods'),
-              part('Match the prose to a column', 'Quantity, scope, year and uncertainty may remain unclear')
+            node('documents', 'Find the explanations for each column', 'Read the source dictionaries and methods.', [
+              part('Read a data dictionary', 'It explains each column’s meaning, units and possible values'),
+              part('Match methods to fields', 'Which fish, places, years and uncertainties do these estimates cover?')
             ]),
-            node('provider', 'Ask, wait and ask again', 'An unavailable author can leave an assumption unresolved.', [
-              part('Email the provider', 'A contact may have moved or retired'),
-              part('Clarify what the value represents'),
+            node('provider', 'Ask, wait and ask again', 'Missing explanations can leave an assumption unresolved.', [
+              part('Ask the provider about a gap', 'A contact may have moved or retired'),
+              part('Clarify the source’s meaning'),
               part('Return to the methods', 'A partial answer can raise another question')
             ])
           ],
           right: [
-            node('packages', 'Open reviewed data packages', 'Data, meanings, methods and source links together.', [
-              part('Salmon Data Package', 'A common structure for data and their descriptions'),
-              part('Salmon Domain Ontology', 'Maintained definitions to compare with the data'),
-              part('Starting with raw files?', 'Draw → dictionary → provider or peer review'),
-              part('Build the first package with metasalmon', 'Preserve that preparation for later users')
-            ])
-          ],
-          loop: ['provider', 'documents']
-        },
-        {
-          title: 'Check and combine the estimates',
-          left: [
-            node('reshape', 'Standardize each table', 'Reshape fields, identifiers, codes and units.', [
-              part('Write an import for each format'),
-              part('Resolve column and code meanings'),
-              part('Record transformations', 'A change in format must preserve the source values')
-            ]),
-            node('join-manual', 'Join, then revisit the meanings', 'New mismatches send you back to the evidence.', [
-              part('Find the abundance candidates', 'Yukon mean and Fraser SpnForAbd_Total'),
-              part('Check CU, year, scope and methods', 'These records concern different CUs; retain their identities'),
-              part('Return to the source for gaps', 'Shared labels alone do not establish comparability')
-            ])
-          ],
-          right: [
-            node('join-reviewed', 'Review fit and integrate', 'A common format and explicit meanings support repeatable code.', [
-              part('Locate the candidate fields', 'Descriptions identify Yukon mean and Fraser SpnForAbd_Total as candidates'),
-              part('Check fit for the research question', 'A person reviews scope, methods and uncertainty'),
-              part('Run explicit mappings and study code', 'metasalmon supports the packages; the analysis still needs its own code'),
-              part('Keep the CU-year records and their differences', 'Retain each source identity, method, scope and uncertainty')
+            node('packages', 'Open the same sources as reviewed packages', 'A Salmon Data Package keeps data and descriptions in a common file structure.', [
+              part('Keep original fields and values', 'Yukon mean and Fraser SpnForAbd_Total remain traceable to their sources'),
+              part('Read the included data dictionary', 'Column meanings, units and possible values travel with the table'),
+              part('Follow methods and source links', 'These descriptions are metadata: information needed to interpret and reuse data'),
+              part('Starting with raw files?', 'Draw the relationships, write the dictionary, and review it with a provider or peer')
             ])
           ]
         },
         {
-          title: 'Draw a conclusion the evidence supports',
+          title: 'Check and combine the estimates',
           left: [
-            node('claim-risk', 'Analyse with an unchecked interpretation', '“High confidence” is read as precise abundance.', [
+            node('reshape', 'Work out each table’s structure', 'Different column names, population identifiers and year fields.', [
+              part('Locate mean and SpnForAbd_Total'),
+              part('Identify the population and year', 'Yukon stock/year; Fraser CU_ID/Year'),
+              part('Record changes to format', 'Preserve the source values and the link back to each record')
+            ]),
+            node('join-manual', 'Combine, then revisit the meanings', 'Do both fields describe the abundance we need?', [
+              part('Check the included fish and places'),
+              part('Check methods and uncertainty'),
+              part('Return to the source for gaps', 'The two records concern different Conservation Units; retain both identities')
+            ])
+          ],
+          right: [
+            node('join-reviewed', 'Find shared meanings, then review fit', 'mean and SpnForAbd_Total → a shared abundance definition, with their differences retained.', [
+              part('Find candidate fields by the shared identifier', 'Different column names can refer to the same characteristic'),
+              part('Review fit for the research question', 'A person checks population, year, included fish, methods and uncertainty'),
+              part('Combine with explicit mappings', 'Study code uses recorded connections between source fields and meanings')
+            ])
+          ]
+        },
+        {
+          title: 'Keep the estimates and their limits visible',
+          left: [
+            node('claim-risk', 'Carry an unchecked interpretation into analysis', 'For example: reading “High confidence” as precise abundance.', [
               part('Fraser 2023: ConfidenceRating = High', 'The same record reports SpnForAbd_Total = 146371'),
               part('Assume it describes abundance precision'),
-              part('Make an unsupported precision claim', 'The field definition actually concerns assessment status')
+              part('Make an unsupported precision claim', 'The source definition actually concerns assessment status')
             ], {tone:'caution', label:'Potentially wrong assumption', note:'A plausible label can lead to an unsupported conclusion.'})
           ],
           right: [
-            node('claim-checked', 'Analyse with the meaning checked', 'Status confidence and abundance uncertainty stay distinct.', [
-              part('Read the Fraser field definition', 'ConfidenceRating describes the assessment status'),
-              part('Keep Yukon estimate uncertainty separate', 'Yukon lower and upper concern the reconstruction estimate; check their definition in the methods'),
-              part('Make the supported statement', 'This status rating does not establish abundance precision')
-            ], {tone:'checked', label:'Interpretation checked against evidence', note:'This mistaken inference is caught before the conclusion.'})
+            node('claim-checked', 'Keep the evidence with each estimate', 'Retain each CU, year, included fish, method and uncertainty.', [
+              part('Keep Yukon and Fraser identities distinct', 'The goal is a set of annual CU estimates with their differences documented'),
+              part('Check the Fraser confidence definition', 'ConfidenceRating describes assessment status; it does not establish abundance precision'),
+              part('Keep Yukon uncertainty separate', 'lower and upper concern the reconstruction estimate; their exact meaning comes from the methods')
+            ], {tone:'checked', label:'Interpretation checked against evidence', note:'The confidence mistake is caught; remaining questions stay visible.'})
           ]
         },
         {
           title: 'Publish once, help the next project',
           left: [
-            node('rebuild', 'Reconstruct metadata at the end', 'The paper is ready; the data publication still needs work.', [
+            node('rebuild', 'Reconstruct descriptions at the end', 'The paper is ready; the data publication still needs work.', [
               part('Find the source and processing history'),
-              part('Choose a metadata structure'),
-              part('Write descriptions and code meanings', 'Important answers may still be in old emails')
+              part('Choose a metadata structure', 'A consistent way to record descriptions of the data'),
+              part('Recover earlier decisions', 'Important answers may still be in old emails')
             ]),
             node('publish-late', 'Prepare and publish the data', 'Incomplete explanations leave work for the next team.', [
-              part('Review rights, credit and metadata'),
+              part('Review rights, credit and descriptions'),
               part('Deposit and release the dataset'),
               part('Answer the next user’s questions', 'The clarification work may be repeated')
             ])
           ],
           right: [
-            node('publish-ready', 'Validate, publish and pass it on', 'The reviewed explanation is already part of the package.', [
-              part('Review rights, credit and final metadata', 'Recognize the source providers and standardization work'),
-              part('Validate and upload with metasalmon', 'Prepare the package and EML for KNB'),
-              part('Release through the repository', 'KNB publication and DOI are a separate action'),
-              part('Reuse packages and maintained meanings', 'Keep source and derived data traceable'),
-              part('Contribute the missing meanings', 'Local vocabulary or model, an evidenced bridge, or a shared-term request')
+            node('publish-ready', 'Validate, publish and pass on the explanations', 'Source packages and the combined dataset preserve the work.', [
+              part('Build and check packages with metasalmon', 'This R software helps create, review and validate package files'),
+              part('Credit providers and package authors', 'Review rights and preserve the source and processing history'),
+              part('Prepare the catalog description and upload', 'KNB, the Knowledge Network for Biocomplexity, is a research-data catalog'),
+              part('Release through the catalog', 'Publication and a persistent citation identifier are separate from upload'),
+              part('Reuse packages and shared definitions', 'Later users can start with these reviewed explanations')
             ])
           ],
-          result: ['Next team: repeat the detective work', 'Next team: start with more of the work done']
+          result: ['Next team: repeat the detective work', 'Next team: reuse the records and their meanings']
         }
       ];
 
@@ -203,6 +201,34 @@
         }, 7000);
       }
 
+      function buildMeaningExample() {
+        const example = el('div', 'meaning-example');
+        example.append(el('h5', '', 'Two records, one shared characteristic'));
+        example.append(el('p', 'text-small', 'Teaching draft: proposed descriptions for review.'));
+        const records = el('div', 'meaning-records');
+        [
+          ['Yukon mean', '2009.4529003227', 'NorthernYukonR.andtribs. · 2023', 'Retain the reconstruction method and uncertainty; confirm the CU identifier and included fish.'],
+          ['Fraser SpnForAbd_Total', '146371', 'CK-03 · 2023', 'Retain total versus wild scope, estimation method and status confidence separately.']
+        ].forEach(([field, value, context, note]) => {
+          const record = el('div', 'meaning-record text-small');
+          record.append(el('strong', '', field), el('div', '', value), el('div', '', context), el('p', '', note));
+          records.append(record);
+        });
+        example.append(records);
+        const shared = el('p', 'shared-meaning');
+        shared.append(document.createTextNode('Both descriptions → property: '));
+        const term = el('a', '', 'Abundance');
+        term.href = 'https://github.com/salmon-data-mobilization/salmon-domain-ontology/blob/d45f8f7cc857d92af8bbe54a7c89b2a4a14784b2/ontology/modules/02-observation-measurement.ttl#L27-L33';
+        shared.append(term);
+        example.append(shared);
+        example.append(el('p', 'text-small', 'A property is the characteristic represented by an estimate. Each record keeps its own population, year, method and other context.'));
+        example.append(el('p', 'text-small', 'A controlled vocabulary supplies maintained terms and definitions. An ontology models concepts and their relationships in a form software can interpret. The Salmon Domain Ontology supplies this abundance term.'));
+        const identifier = el('p', 'text-small');
+        identifier.append(document.createTextNode('Its Internationalized Resource Identifier (IRI), a stable name for the concept, is '), el('code', '', 'https://w3id.org/smn/Abundance'), document.createTextNode('.'));
+        example.append(identifier);
+        return example;
+      }
+
       function buildNode(item, laneNumber) {
         const open = expanded.has(item.id);
         const container = el('div', 'node');
@@ -236,6 +262,7 @@
         const nested = el('div', 'nested');
         nested.id = 'guided-detail-' + item.id;
         nested.hidden = !open;
+        if (item.id === 'join-reviewed') nested.append(buildMeaningExample());
         item.detail.forEach(detail => {
           const itemNode = el('div', 'nested-node');
           itemNode.append(el('strong', '', detail.label));
@@ -275,13 +302,14 @@
           section.append(columns);
           stageRoot.append(section);
         });
-        const showEvidence = showFull || stageIndex >= 2;
+        const showEvidence = showFull || stageIndex >= 1;
         sources.hidden = !showEvidence;
         caption.hidden = !showEvidence;
         caption.textContent = showEvidence
-          ? 'The confidence example is a teaching counterfactual using real fields, not an error attributed to the source authors. Spacing does not measure time.'
+          ? 'The proposed package descriptions need review. A shared abundance term helps find candidate fields; it does not resolve every difference. Spacing does not measure time.'
           : '';
-        if (showFull || stageIndex === 3) caption.textContent += ' The workshop uses KNB test; the expanded publication steps illustrate a later production route.';
+        if (showFull || stageIndex >= 2) caption.textContent += ' The confidence mistake is an invented misreading of real fields, not an error attributed to the source authors.';
+        if (showFull || stageIndex === 3) caption.textContent += ' Workshop publication uses a test catalog; the expanded release steps describe a later production route.';
         animateNext = animate && !motion.matches;
         requestDraw();
       }
