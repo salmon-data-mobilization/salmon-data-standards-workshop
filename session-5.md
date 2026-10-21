@@ -1,0 +1,204 @@
+---
+title: "Map Meanings and Compare AI Suggestions"
+teaching: 30
+exercises: 40
+---
+
+:::::::::::::::::::::::::::::::::::::: questions
+
+- Does a suggested term express the meaning we established by hand?
+- How do we distinguish a complete variable from its components?
+- How can AI help us review without becoming the source of truth?
+- Where do we record an acceptance, rejection, or unresolved question?
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+- Compare suggested mappings with the human graph, dictionary, and source evidence.
+- Review one measurement variable and its components without inventing missing meaning.
+- Record a mapping decision and rationale that another reviewer can trace.
+- Compare saved AI outputs as a common activity, with optional free-only live assessment.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+## The problem: the same label can describe different things
+
+A [controlled vocabulary](glossary.html#controlled-vocabulary) gives a definition a reusable [IRI](glossary.html#iri). Linking to that identifier helps another system interpret our data. A convincing label alone does not establish that the definition fits.
+
+Keep your human graph, dictionary, decomposition, and `worksheets/peer-review.md` beside the package. They are the reference for this review. The same full **173-row, 14-column** source remains in `output/fraser-coho-workshop-sdp`, with dataset ID `fraser-coho-workshop` and table ID `escapement`.
+
+Begin with `NATURAL_ADULT_SPAWNERS`. The official NuSEDS dictionary describes mature salmon excluding jacks; it does not confirm that the values are restricted to natural-origin fish. The header does not settle that distinction. Do not turn it into a natural-origin constraint because an AI response or a nearby term suggests that reading. Return to `raw_data/official-nuseds-dictionary.csv` and the source notes, including the retrieval date, and retain the question if they do not resolve it. The current dictionary may postdate the workbook used to derive this teaching file.
+
+## Translate the human decomposition into mapping questions
+
+A [variable](glossary.html#variable) describes what is measured; a [result](glossary.html#result) is a recorded value. Keep the variable, observation context, and result distinct in your graph and dictionary.
+
+| Review question | SDP destination | Source of the answer |
+| --- | --- | --- |
+| What complete variable does this column represent? | `column_dictionary.csv`: `term_iri` | Your supported variable definition. |
+| What property is measured? | `property_iri` | The decomposed characteristic, separate from the whole variable. |
+| What entity is it about? | `entity_iri` | The object of interest established in the human model. |
+| What supported qualifier narrows the meaning? | `constraint_iri` | Evidence for that qualifier; leave unresolved if uncertain. |
+| In what unit is the result expressed? | `unit_iri` | The unit definition and applicability to these estimates. |
+| Does aggregation belong to the variable definition? | `statistical_modifier_iri` | Evidence for a total, mean, peak, or other modifier. |
+| What thing are these records about? | `tables.csv`: `observation_unit_iri` | The object of observation; describe record context and row meaning separately. |
+
+The [field reference](field-reference.html#column-fields) explains which fields are conditional. A numeric identifier such as `POP_ID` is not a measurement merely because its stored values contain digits. Do not use measurement decomposition slots as generic graph relationships for identifiers or names.
+
+Methods belong where they apply: a table-level procedure when constant, a protocol citation when supported, or a coded field when the method varies among rows. Chapter 6 examines `ESTIMATE_METHOD`.
+
+## Inspect saved candidates before deciding
+
+The kit's `checkpoints/seeded-sdp/` contains saved candidate evidence for the same source and IDs. Read its stage notes before use. Candidates are drafts, and their retrieval date and package version matter. A saved shortlist lets the group review the same evidence even if a live vocabulary service changes.
+
+Retrieval is separate from AI assessment. A retrieval score is a ranking signal, not a calibrated probability that the mapping is right. A single returned candidate can have rank 1 simply because no alternative was returned.
+
+::::::::::::::::::::::::::::::::::::: group-tab
+
+### R
+
+The R `metasalmon` v0.5.0 review queue reads saved suggestions. It does not search or contact an AI provider:
+
+
+``` r
+pkg_path <- file.path("output", "fraser-coho-workshop-sdp")
+candidate_path <- file.path("checkpoints", "seeded-sdp")
+
+review <- metasalmon::review_semantics(
+  candidate_path,
+  columns = "NATURAL_ADULT_SPAWNERS"
+)
+review
+```
+
+Read the printed definition, its source, the target slot, and any qualification. Check the linked source against your human description. The queue prints the applicable acceptance call; copy it only after your decision. Do not assume the same rank or candidate will appear in a later live search.
+
+Create `scripts/review_decisions.R` with the queue construction above and your actual decisions. For an acceptance, paste the call printed for the chosen candidate and write a preceding comment recording your reason and source. `accept_suggestion()` has no `reason` argument in this pinned release. A rejection can store its reason directly:
+
+
+``` r
+# Use this only if the constraint slot exists in the displayed queue and
+# your source review found its entire shortlist unsuitable.
+# Replace the placeholder with your own reason before running it.
+review <- metasalmon::reject_suggestion(
+  review,
+  column = "NATURAL_ADULT_SPAWNERS",
+  role = "constraint",
+  reason = "<record the specific unsupported assumption and source question>"
+)
+
+# Apply only the decisions recorded in review to the classroom draft.
+# This writes metadata and retained review evidence; it preserves the data CSV.
+metasalmon::apply_sdp_semantics(pkg_path, review)
+```
+
+A rejection clears that semantic slot. Leaving a decision open is also valid; record the remaining question. Run the decision script against the preserved candidate evidence when replaying this review, rather than rebuilding over the edited package.
+
+### Python
+
+The pinned `metasalmonpy` v0.4.0 has no native equivalents of R's `review_semantics()`, `accept_suggestion()`, `reject_suggestion()`, or `apply_sdp_semantics()`. Use the same saved candidate evidence and human decision process:
+
+```python
+from pathlib import Path
+import pandas as pd
+
+candidates = pd.read_csv(
+    Path("checkpoints") / "seeded-sdp" / "semantic_suggestions.csv",
+    dtype=str,
+    keep_default_na=False,
+)
+print(candidates.loc[
+    candidates["column_name"].eq("NATURAL_ADULT_SPAWNERS")
+].to_string(index=False))
+```
+
+For a supported decision, use `target_sdp_file`, `target_sdp_field`, the dataset/table/column keys, and any code value to identify the exact metadata cell. Record the selected IRI or rejection, reason, reviewer, and source in your review notes. A changed cell alone does not preserve the reasoning. Preserve the current package before metadata editing, and use the package writer or an R collaborator to keep the generated descriptor consistent with the CSVs.
+
+The saved candidate evidence supports the same mapping decisions in Python while native review helpers are unavailable in v0.4.0.
+
+### Spreadsheet
+
+Open `checkpoints/seeded-sdp/semantic_suggestions.csv` beside your working dictionary and the draft's metadata CSVs. Filter to `NATURAL_ADULT_SPAWNERS`, then inspect one candidate and its target field.
+
+Record the exact target, the candidate considered, your decision, the reason, your name, and the evidence in your review notes. Edit the draft's existing target field only when the decision is supported. Do not strip a `REVIEW:` prefix merely to make the cell look complete. An R or Python collaborator updates the descriptor and runs validation after your metadata edits.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+An empty queue is not a completed package. The queue contains returned suggestions; it does not prove that every necessary target was found, every definition was reviewed, or all publication facts are present.
+
+## Everyone compares the saved AI assessment
+
+[AI](glossary.html#ai) can point out missing context or propose a decomposition. The human artifacts come first so you can test those proposals against an independent interpretation instead of accepting fluent text as evidence.
+
+Open `ai/README.md` in the kit and use the recorded outputs it identifies. Read the input context, provider/model identity, run date, and success or failure status. These details let you trace each response to the information the model received.
+
+The common recording is `ai/recorded-assessment.md`, produced by the Codex authoring assistant and preserved as such. `ai/recorded-suggestions.csv` gives its individually numbered propositions, and `ai/comparison-worksheet.csv` leaves your human decisions blank. This is an actual authoring-assistant response, not a successful OpenRouter run or native `semantic_llm_assessments` output. Keep those origins distinct when comparing a later live result.
+
+Choose from the recorded propositions about natural origin (AI02), activity and result (AI04), year basis (AI05), method (AI07), missingness (AI08), and repeated population-year pairs (AI10). For the common comparison, each pair answers:
+
+1. Which parts agree with the human graph and dictionary, and on what evidence?
+2. Did the response confuse a variable with a result, an entity with an identifier, or a method with a property?
+3. Did it assign a meaning to “natural,” a blank, or `RUN_TYPE = 1` that the sources do not establish?
+4. Which suggestion would you retain, revise, reject, or leave unresolved?
+
+Record the model's suggestion separately from the final human decision. Agreement among models is not source confirmation.
+
+## Optional: run a free live assessment
+
+Recheck that your diagram, dictionary, decomposition, and peer review are complete before a live call. Read the prepared teaching payload and provider information in `ai/README.md` so you know which public source excerpts and context will be sent to the provider.
+
+The kit's optional scripts use the fixed **`openrouter/free` route** and do not fall back to a paid model. Free availability and rate limits can change. If no suitable free route is available or the request fails, use the saved comparison activity and keep the failure visible.
+
+::::::::::::::::::::::::::::::::::::: group-tab
+
+### R
+
+
+``` r
+# Follow ai/README.md for the explicit opt-in and runtime credential setup.
+# Read the script and prepared payload before choosing to send the request.
+source("scripts/review_ai.R")
+```
+
+Providing context alone does not trigger an AI request in metasalmon. Package-native LLM review requires `llm_assess = TRUE`. Running this optional comparison script enables that setting and sends the prepared request.
+
+### Python
+
+```bash
+# Follow ai/README.md for explicit opt-in and runtime credential setup.
+python scripts/review_ai.py
+```
+
+The script returns an assessment for you to compare with your graph, dictionary and source evidence before changing package metadata.
+
+### Spreadsheet
+
+The saved-output activity gives you the same comparison task without an API account. For an optional live demonstration, follow the facilitator's submitted payload and returned response, then make your own documented review decision. An account or API key is not a prerequisite for completing this chapter.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+Keep API keys out of worksheets, scripts, saved outputs, and screenshots. Review each suggestion against your source evidence before applying a metadata change.
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Activity: make one defensible mapping decision
+
+Use 20 minutes to compare the human decomposition with saved vocabulary candidates, and 20 minutes to compare the saved AI assessment and discuss it with a partner. A live call is an optional variation within that time.
+
+Produce a record containing the target column and role, proposed interpretation, evidence, candidate IRI when available, decision, reason, reviewer, and remaining question. Include one rejected or unresolved claim when the sources do not warrant it. Revisit the graph if the review exposes an unsupported relationship.
+
+The useful output is a justified decision, not a filled cell count.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: keypoints
+
+- The human model and source evidence are the basis for reviewing suggestions.
+- A complete variable, its components, observation context, and result are distinct.
+- Saved AI output is a common comparison activity; live AI remains optional and free-only.
+- Keep the candidate, human decision, and rationale together, including unresolved questions.
+
+::::::::::::::::::::::::::::::::::::::::::::::::

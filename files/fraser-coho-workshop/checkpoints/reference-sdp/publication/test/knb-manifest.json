@@ -1,0 +1,140 @@
+{
+  "schema_version": 3,
+  "status": "dry_run",
+  "environment": "STAGING",
+  "node_id": "urn:node:mnTestKNB",
+  "knb_environment": "test",
+  "public": true,
+  "replication_policy": {
+    "replication_allowed": false,
+    "number_replicas": 0,
+    "preferred_member_nodes": [],
+    "blocked_member_nodes": []
+  },
+  "expected_subject": "https://orcid.org/0000-0001-9317-0364",
+  "rights_authorization": {
+    "status": "confirmed",
+    "evidence": "Open Canada record c48669a3-045b-400d-b730-48aafe8c5ee6 identifies the source publisher as Fisheries and Oceans Canada and the licence as Open Government Licence - Canada. The licence permits redistribution with attribution. This teaching derivative makes no claim of DFO endorsement."
+  },
+  "package_id": "urn:uuid:78bade57-7f57-5cf8-8b6e-32db328b53b7",
+  "series_id": "urn:uuid:97afa29d-4f1a-5c8f-a674-88bdcd3be24a",
+  "representation": "expanded",
+  "revision_of": null,
+  "plan_sha256": "ffcd1a0f925fe854ab1db65263fef3f83a37d831180442a32b580b7b53958581",
+  "metadata_pid": "urn:uuid:78bade57-7f57-5cf8-8b6e-32db328b53b7",
+  "resource_map_pid": "urn:uuid:8b6e5766-4f21-5b18-9f5c-5dff5e777a8b",
+  "objects": [
+    {
+      "role": "data",
+      "path": "data/escapement.csv",
+      "pid": "urn:uuid:e60a951d-43c6-5a37-a2f0-80fae6a2fb40",
+      "format_id": "text/csv",
+      "media_type": "text/csv",
+      "size": 35427,
+      "sha256": "ae7cd8f9f4facee1b1c8a75b2f9ead046e3eca0d3545cec7ef223c0f816d47b1",
+      "obsoletes": null,
+      "state": "planned"
+    },
+    {
+      "role": "sdp_artifact",
+      "path": "datapackage.json",
+      "pid": "urn:uuid:7050756a-b8ea-566d-94bd-80f0987bb1ce",
+      "format_id": "application/json",
+      "media_type": "application/json",
+      "size": 8034,
+      "sha256": "35d707c4e068fe2d53159a2cde0bb34e2b7e820e17c3d814b5240858d4f2579d",
+      "obsoletes": null,
+      "state": "planned"
+    },
+    {
+      "role": "sdp_artifact",
+      "path": "metadata/codes.csv",
+      "pid": "urn:uuid:7d6575d1-cc18-5dbb-a51d-041caa16ee32",
+      "format_id": "text/csv",
+      "media_type": "text/csv",
+      "size": 19765,
+      "sha256": "c849dd8a3818777f6d5cb644e81f24618085433eb4bfd419acbeb1a712ce52b0",
+      "obsoletes": null,
+      "state": "planned"
+    },
+    {
+      "role": "sdp_artifact",
+      "path": "metadata/column_dictionary.csv",
+      "pid": "urn:uuid:bdd8d4b1-95c0-5ae8-bd2f-b363cac4b164",
+      "format_id": "text/csv",
+      "media_type": "text/csv",
+      "size": 3769,
+      "sha256": "489985e7f6220472b7fc6a691db8a0320d6a169ccf5af6eb4c93341ae3ab2e28",
+      "obsoletes": null,
+      "state": "planned"
+    },
+    {
+      "role": "sdp_artifact",
+      "path": "metadata/dataset.csv",
+      "pid": "urn:uuid:61961976-e009-5a73-ba1d-9d5280aac4d8",
+      "format_id": "text/csv",
+      "media_type": "text/csv",
+      "size": 1311,
+      "sha256": "7055466f34d86244f9dfe7814d0712e788924eb4c70a144b24f72be48ff3bd7c",
+      "obsoletes": null,
+      "state": "planned"
+    },
+    {
+      "role": "sdp_artifact",
+      "path": "metadata/semantic_vocabulary.csv",
+      "pid": "urn:uuid:7ca6de85-1693-5c6f-af21-a32a562f507b",
+      "format_id": "text/csv",
+      "media_type": "text/csv",
+      "size": 1812,
+      "sha256": "9a299598a72886f9437a5cabd7953d0846ffe45bcb77fd9bd4651694dc7c4a4c",
+      "obsoletes": null,
+      "state": "planned"
+    },
+    {
+      "role": "sdp_artifact",
+      "path": "metadata/tables.csv",
+      "pid": "urn:uuid:560c9279-0c24-5f0b-9cc5-951e72eda8fe",
+      "format_id": "text/csv",
+      "media_type": "text/csv",
+      "size": 542,
+      "sha256": "664bb211fe163737e1748d7026981b3357e4d3df0e3c685a8ca623a992ca21fc",
+      "obsoletes": null,
+      "state": "planned"
+    },
+    {
+      "role": "sdp_artifact",
+      "path": "reviewed_semantic_selections.csv",
+      "pid": "urn:uuid:c5385940-dd90-5a2e-a929-49a7b111bf3f",
+      "format_id": "text/csv",
+      "media_type": "text/csv",
+      "size": 1961,
+      "sha256": "4a04bad35597e8a310111f4502551e24afccb6f4b7cd0aab26cdb8e2847594ee",
+      "obsoletes": null,
+      "state": "planned"
+    },
+    {
+      "role": "metadata",
+      "path": "publication/test/eml.xml",
+      "pid": "urn:uuid:78bade57-7f57-5cf8-8b6e-32db328b53b7",
+      "format_id": "https://eml.ecoinformatics.org/eml-2.2.0",
+      "media_type": "application/xml",
+      "size": 47188,
+      "sha256": "c0741ad78f483539812c9a2b63b082120e1270a188d4065551f3add724be9d5a",
+      "obsoletes": null,
+      "state": "planned"
+    },
+    {
+      "role": "resource_map",
+      "path": "publication/test/resource-map.rdf",
+      "pid": "urn:uuid:8b6e5766-4f21-5b18-9f5c-5dff5e777a8b",
+      "format_id": "http://www.openarchives.org/ore/terms",
+      "media_type": "application/rdf+xml",
+      "size": 9561,
+      "sha256": "bd5f85bbe1b03b68a91bd4e69956523e5f811d80158f1019950d736131649d08",
+      "obsoletes": null,
+      "state": "planned"
+    }
+  ],
+  "catalog_verified": false,
+  "catalog_evidence": []
+}

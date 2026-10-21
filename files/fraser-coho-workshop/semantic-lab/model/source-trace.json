@@ -1,0 +1,110 @@
+{
+  "status": "fixed source trace; not a claim of scientific review",
+  "source_path": "raw_data/nuseds-fraser-coho-2023-2024.csv",
+  "sha256": "ae7cd8f9f4facee1b1c8a75b2f9ead046e3eca0d3545cec7ef223c0f816d47b1",
+  "row_count": 173,
+  "column_count": 14,
+  "columns": [
+    "POP_ID",
+    "POPULATION",
+    "AREA",
+    "WATERBODY",
+    "ANALYSIS_YR",
+    "SPECIES",
+    "RUN_TYPE",
+    "NATURAL_ADULT_SPAWNERS",
+    "ESTIMATE_METHOD",
+    "ESTIMATE_CLASSIFICATION",
+    "ESTIMATE_STAGE",
+    "START_DTT",
+    "END_DTT",
+    "WATERSHED_CDE"
+  ],
+  "row_number_rule": "1-based data row; excludes header; valid only with this file hash",
+  "model_row_numbers": [
+    1,
+    2
+  ],
+  "bridge_example_row_numbers": [
+    5,
+    39
+  ],
+  "selected_rows": [
+    {
+      "data_row_number": 1,
+      "values": {
+        "POP_ID": "46200",
+        "POPULATION": "Bonaparte River (Lillooet) Coho",
+        "AREA": "29F",
+        "WATERBODY": "BONAPARTE RIVER",
+        "ANALYSIS_YR": "2023",
+        "SPECIES": "Coho",
+        "RUN_TYPE": "1",
+        "NATURAL_ADULT_SPAWNERS": "758",
+        "ESTIMATE_METHOD": "Resistivity Counter",
+        "ESTIMATE_CLASSIFICATION": "TRUE ABUNDANCE (TYPE-1)",
+        "ESTIMATE_STAGE": "FINAL",
+        "START_DTT": "",
+        "END_DTT": "",
+        "WATERSHED_CDE": "120-506800-00000-00000-0000-0000-000-000-000-000-000-000"
+      }
+    },
+    {
+      "data_row_number": 2,
+      "values": {
+        "POP_ID": "44965",
+        "POPULATION": "Clapperton Creek (Lillooet) Coho",
+        "AREA": "29F",
+        "WATERBODY": "CLAPPERTON CREEK",
+        "ANALYSIS_YR": "2023",
+        "SPECIES": "Coho",
+        "RUN_TYPE": "1",
+        "NATURAL_ADULT_SPAWNERS": "",
+        "ESTIMATE_METHOD": "Not Applicable",
+        "ESTIMATE_CLASSIFICATION": "NO SURVEY THIS YEAR",
+        "ESTIMATE_STAGE": "FINAL",
+        "START_DTT": "",
+        "END_DTT": "",
+        "WATERSHED_CDE": "120-246600-46100-00000-0000-0000-000-000-000-000-000-000"
+      }
+    },
+    {
+      "data_row_number": 5,
+      "values": {
+        "POP_ID": "47213",
+        "POPULATION": "Gates River (Lillooet) Coho",
+        "AREA": "29F",
+        "WATERBODY": "GATES RIVER",
+        "ANALYSIS_YR": "2023",
+        "SPECIES": "Coho",
+        "RUN_TYPE": "1",
+        "NATURAL_ADULT_SPAWNERS": "3032",
+        "ESTIMATE_METHOD": "Area Under the Curve",
+        "ESTIMATE_CLASSIFICATION": "RELATIVE ABUNDANCE (TYPE-3)",
+        "ESTIMATE_STAGE": "FINAL",
+        "START_DTT": "2023-10-24",
+        "END_DTT": "2023-12-05",
+        "WATERSHED_CDE": "100-235900-99100-00000-0000-0000-000-000-000-000-000-000"
+      }
+    },
+    {
+      "data_row_number": 39,
+      "values": {
+        "POP_ID": "46652",
+        "POPULATION": "Dunn Creek (Clearwater) Coho",
+        "AREA": "29J",
+        "WATERBODY": "DUNN CREEK",
+        "ANALYSIS_YR": "2023",
+        "SPECIES": "Coho",
+        "RUN_TYPE": "1",
+        "NATURAL_ADULT_SPAWNERS": "1548",
+        "ESTIMATE_METHOD": "Fixed Site Census",
+        "ESTIMATE_CLASSIFICATION": "TRUE ABUNDANCE (TYPE-1)",
+        "ESTIMATE_STAGE": "FINAL",
+        "START_DTT": "2023-09-22",
+        "END_DTT": "2023-11-17",
+        "WATERSHED_CDE": "129-296400-08100-00000-0000-0000-000-000-000-000-000-000"
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+# Exact outgoing triples for six selected SDO subjects, observed at commit d45f8f7cc857d92af8bbe54a7c89b2a4a14784b2.
+# This excerpt is not the complete SDO or an import closure; no labels/definitions are rewritten.
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+<https://w3id.org/smn/Abundance> a owl:Class ;
+    rdfs:label "Abundance"@en ;
+    ns1:IAO_0000115 "A characteristic representing the quantity of salmon or other organisms associated with a defined entity, place, and time."@en ;
+    dcterms:source <http://qudt.org/vocab/quantitykind/Population> ;
+    rdfs:comment "Use units, statistical modifiers, measurement context, and procedures to distinguish absolute counts, relative indices, estimates, expansions, and other representations. Those qualifiers do not change the reusable characteristic into a compound OWL class."@en ;
+    rdfs:isDefinedBy <https://w3id.org/smn> ;
+    rdfs:subClassOf <https://w3id.org/smn/Characteristic> .
+
+<https://w3id.org/smn/EscapementEstimate> a owl:Class ;
+    rdfs:label "Escapement estimate"@en ;
+    ns1:IAO_0000115 "A measurement or estimate of escapement tied to a stock and a survey event."@en ;
+    ns1:IAO_0000119 "GC DFO Salmon Ontology release 0.0.2, term gcdfo:EscapementMeasurement."@en ;
+    dcterms:source <https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/c7a54251eb8f673052fed61f9ca2624e557249c7/docs/releases/0.0.2/gcdfo.ttl> ;
+    rdfs:comment "A datum (IAO measurement datum), not an activity: the corresponding survey activity is smn:EscapementSurveyEvent. Renamed from smn:EscapementMeasurement on 2026-08-13 (alignment pass, finding F6) because every other *Measurement class in this module is a subclass of the activity smn:Measurement, and this one is not — the name was the defect, inherited verbatim from gcdfo:EscapementMeasurement, whose hyponym family should be coordinated in the boundary pass."@en ;
+    rdfs:isDefinedBy <https://w3id.org/smn> ;
+    rdfs:subClassOf ns1:IAO_0000109 .
+
+<https://w3id.org/smn/MethodDocumentation> a owl:Class ;
+    rdfs:label "Method documentation"@en ;
+    ns1:IAO_0000115 "A documented method description linked to how a salmon metric or estimate was produced."@en ;
+    rdfs:isDefinedBy <https://w3id.org/smn> ;
+    rdfs:subClassOf ns1:IAO_0000030 .
+
+<https://w3id.org/smn/Population> a owl:Class ;
+    rdfs:label "Population"@en ;
+    ns1:IAO_0000115 "A group of organisms of the same species occupying a defined area that interbreed and share a gene pool. In salmon, populations are composed of one or more demes and form the biological basis for Conservation Units."@en ;
+    ns1:IAO_0000119 "GC DFO Salmon Ontology release 0.0.8, term smn:Population."@en ;
+    dcterms:source <https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/c7a54251eb8f673052fed61f9ca2624e557249c7/docs/releases/0.0.8/gcdfo.ttl> ;
+    rdfs:isDefinedBy <https://w3id.org/smn> ;
+    rdfs:subClassOf <http://rs.tdwg.org/dwc/terms/Organism> .
+
+<https://w3id.org/smn/EnumerationMethod> a skos:Concept,
+        sosa:Procedure ;
+    ns1:IAO_0000119 "GC DFO Salmon Ontology release 0.0.2, term gcdfo:EnumerationMethod."@en ;
+    dcterms:source <https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/c7a54251eb8f673052fed61f9ca2624e557249c7/docs/releases/0.0.2/gcdfo.ttl> ;
+    rdfs:isDefinedBy <https://w3id.org/smn> ;
+    skos:definition "A method used to enumerate or count salmon in the field."@en ;
+    skos:inScheme <https://w3id.org/smn/MethodScheme> ;
+    skos:prefLabel "Enumeration method"@en ;
+    skos:topConceptOf <https://w3id.org/smn/MethodScheme> .
+
+<https://w3id.org/smn/MethodScheme> a skos:ConceptScheme ;
+    rdfs:isDefinedBy <https://w3id.org/smn> ;
+    skos:definition "Controlled vocabulary of shared, policy-neutral salmon observation and measurement methods. Organization- or program-specific method taxonomies remain profile-scoped (CONVENTIONS section 11)."@en ;
+    skos:hasTopConcept <https://w3id.org/smn/EnumerationMethod>,
+        <https://w3id.org/smn/FishLengthMeasurementMethod> ;
+    skos:prefLabel "Method scheme"@en .

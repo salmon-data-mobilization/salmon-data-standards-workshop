@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 990 410" role="img" aria-labelledby="title desc">
+  <title id="title">Two actual NuSEDS records as objects and values</title>
+  <desc id="desc">Record 1 has reported result 1, whose decimal value is 758. It concerns population reference 46200. The result links to the adult-spawner variable description. Record 2 has a blank estimate, so no result is asserted. Classes and inference rules are in a separate model file.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#365867"/></marker></defs>
+  <rect width="990" height="410" fill="white"/>
+  <g font-family="Arial, sans-serif" fill="#243c47">
+    <text x="35" y="31" font-size="21" font-weight="bold">Objects in the source-record example</text>
+    <text x="35" y="56" font-size="14">Two illustrated rows from the unchanged 173 × 14 file. Class rules are in model.ttl.</text>
+    <g fill="#eef6f3" stroke="#4c7868" stroke-width="1.5">
+      <rect x="35" y="105" width="260" height="80" rx="6"/>
+      <rect x="365" y="105" width="260" height="80" rx="6"/>
+      <rect x="35" y="270" width="260" height="80" rx="6"/>
+      <rect x="365" y="270" width="260" height="80" rx="6"/>
+      <rect x="695" y="270" width="260" height="80" rx="6"/>
+    </g>
+    <rect x="695" y="105" width="260" height="80" rx="6" fill="#eaf3fb" stroke="#386b93" stroke-width="1.5"/>
+    <g text-anchor="middle" font-size="15">
+      <text x="165" y="132" font-weight="bold">record-1</text><text x="165" y="155">NuSEDS source record</text><text x="165" y="175" font-size="12">data row 1 · analysis year 2023</text>
+      <text x="495" y="137" font-weight="bold">result-1</text><text x="495" y="162">reported numeric result</text>
+      <text x="825" y="137" font-weight="bold">758</text><text x="825" y="162">decimal literal</text>
+      <text x="165" y="299" font-weight="bold" font-size="14">population-reference-46200</text><text x="165" y="324">source identifier and label</text>
+      <text x="495" y="299" font-weight="bold">adult-spawner-field</text><text x="495" y="324">source variable description</text>
+      <text x="825" y="295" font-weight="bold">record-2</text><text x="825" y="317">data row 2 · blank estimate</text><text x="825" y="338" font-size="13">no result asserted</text>
+    </g>
+    <g fill="none" stroke="#365867" stroke-width="1.6" marker-end="url(#arrow)">
+      <path d="M295 145H361"/><path d="M625 145H691"/><path d="M165 185V266"/><path d="M495 185V266"/>
+    </g>
+    <g text-anchor="middle" font-size="12">
+      <text x="330" y="93">hasReportedResult</text><text x="660" y="93">numericValue</text>
+      <rect x="65" y="217" width="200" height="20" fill="white"/><text x="165" y="232">concernsPopulationReference</text>
+      <rect x="411" y="217" width="168" height="20" fill="white"/><text x="495" y="232">reportedUnderVariable</text>
+    </g>
+    <text x="35" y="383" font-size="13">A population reference is not the population itself. A missing result is not an assertion of zero.</text>
+  </g>
+</svg>

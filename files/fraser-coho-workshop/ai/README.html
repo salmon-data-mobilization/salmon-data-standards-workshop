@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">README</h1>
+</header>
+<h1 id="offline-ai-evaluation-for-the-fraser-coho-workshop">Offline AI
+evaluation for the Fraser Coho workshop</h1>
+<p>This folder lets every attendee complete the required AI-comparison
+exercise without buying API credits or making a live inference request.
+Complete the human diagram, dictionary/decomposition and actual peer
+review first.</p>
+<h2 id="what-is-recorded">What is recorded</h2>
+<ul>
+<li><code>recorded-assessment.md</code>: an actual Codex
+workshop-authoring assistant assessment, with its authorship, timestamp,
+evidence and limits.</li>
+<li><code>recorded-suggestions.csv</code>: the assessment's candidate
+propositions and recommended accept/revise/reject dispositions. Rejected
+alternatives are explicitly labelled as such.</li>
+<li><code>comparison-worksheet.csv</code>: the learner's blank
+decision/reason record, including fields for evidence, revisions,
+reviewer and review date.</li>
+</ul>
+<p>These are workshop teaching artifacts. They are <strong>not native
+<code>semantic_llm_assessments</code> or
+<code>semantic_suggestions.csv</code> outputs</strong>, and should not
+be passed to package functions that expect those schemas. Do not relabel
+them as OpenRouter output, a successful package API run, or scientific
+approval.</p>
+<h2 id="complete-the-exercise-offline">Complete the exercise
+offline</h2>
+<ol type="1">
+<li>Keep your human graph and dictionary beside the unchanged source and
+saved official dictionary and
+<code>reference/metamodel-source-notes.md</code>. Use the original kit
+sources matching the recording.</li>
+<li>Read the recorded assessment and one proposition at a time. Its
+recommendation is advice to test, not a decision already made for
+you.</li>
+<li>Enter your own <code>human_decision</code> as accept, revise or
+reject. Give a reason, name the evidence you checked and describe any
+graph/dictionary revision. If evidence is missing, explain the
+unresolved issue instead of asserting a final mapping.</li>
+<li>Have a peer compare at least one agreement and one disagreement.
+Record the actual reviewer/date when that comparison occurs.</li>
+<li>Carry only your reviewed decisions into later mapping work. Keep
+rejected alternatives and open questions in the evidence trail.</li>
+</ol>
+<p>All 13 proposals can be read without network access. The focus set
+for a short comparison is AI02 (natural origin), AI04 (activity/result),
+AI05 (year basis), AI07 (method), AI08 (missingness) and AI10 (repeated
+records). AI01 and AI03 provide supported working interpretations to
+compare with the rejected alternatives.</p>
+<h2 id="live-inference-is-a-separate-optional-extension">Live inference
+is a separate optional extension</h2>
+<p>A live free-provider API attempt is recorded separately by the
+workshop scripts. A failed request is evidence of a failed request. This
+authoring-assistant recording supplies the required evaluation activity;
+it is not proof of live provider availability, native-package behavior
+or a response to a learner's later edits. Fresh inference must stay
+clearly labelled and pass its own setup and source-sharing checks.</p>
+<p>Read <a
+href="live-rehearsal-status.json">live-rehearsal-status.json</a> for the
+actual preparation-run outcome. An available account or key does not
+establish that a model response succeeded.</p>
+<p>For the optional live lane, create your own free OpenRouter
+account/key as described in the lesson Setup. Make the key available
+only to the current session through the <code>OPENROUTER_API_KEY</code>
+environment variable. Do not enter it into a kit file. From the project
+root, deliberately running <code>scripts/review_ai.R</code> in R or
+<code>python scripts/review_ai.py</code> opts into the package's
+<code>llm_assess</code> step. Inspect the four worksheet context files
+and the script first. It uses only <code>openrouter/free</code>, caps
+actual HTTP attempts at eight, and saves the submitted requests and
+returned evidence under a new <code>output/</code> directory. It never
+applies a response to package metadata or purchases credits.</p>
+<p>If the key or free route is unavailable, use the required offline
+comparison. Do not purchase credits or substitute a paid model to
+complete this exercise.</p>
+<p>No API credentials are included in these files. The local learner
+worksheet has blank human-review fields; completing it requires an
+actual human decision.</p>
+<h2 id="optional-openrouter-setup-and-rehearsal">Optional OpenRouter
+setup and rehearsal</h2>
+<p>Instructions checked on 2026-09-08 against the <a
+href="https://openrouter.ai/docs/guides/routing/routers/free-router">official
+free-router documentation</a>. Create a personal free account and API
+key at OpenRouter. No credit purchase is required by this workshop.
+Configure <code>OPENROUTER_API_KEY</code> in your session environment
+with your usual local credential tool. Do not save its value in the
+project, a command history, output file or screenshot.</p>
+<p>After the human checkpoint and Chapter 4 build, run either:</p>
+<pre class="text"><code>Rscript scripts/review_ai.R
+python scripts/review_ai.py</code></pre>
+<p>The scripts use the packages' existing OpenRouter provider
+configuration with the fixed model <code>openrouter/free</code>. They
+assess only the adult-spawner column using the source context and text
+node/edge tables. They never send the drawing image or claim the package
+can interpret it. The provider routes to an available free model; its
+returned <code>model</code> identifies the actual responder.</p>
+<p>The packages select context excerpts for the request; passing a file
+does not guarantee every line reaches the model. Inspect
+<code>requests.json</code> and the returned
+<code>llm_context_sources</code> to see which graph/dictionary passages
+were actually used. Missing relationship context is itself something to
+flag in your evaluation.</p>
+<p>A public request callback counts every actual HTTP attempt, including
+any package retry, up to eight requests. There are no automatic HTTP
+retries and no paid fallback. Each attempt retains a timestamp, request
+payload and status; only successful response bodies are retained. The
+output includes candidates, assessment rows and provenance in a new
+<code>output/ai-live-*</code> directory. Inspect all of these before
+changing metadata. Repeated errors, an exhausted quota or an unsuitable
+response are reasons to continue with the recorded activity.</p>
+<p><code>live-rehearsal-status.json</code> records the current measured
+attempt: one R request, HTTP 401, no successful model output and no
+retries. The configured credential was rejected, so successful-run
+request consumption remains unmeasured. Python was not sent another live
+request with the same rejected credential. Before delivery, rehearse
+both lanes with working personal free access and retain the actual
+request count, retries, routed model and success/failure status. Free
+availability and limits can change; recheck the official instructions
+then.</p>
+<h2 id="optional-local-ollama-extension">Optional local Ollama
+extension</h2>
+<p>The shared exercise still uses the recorded assessment. An
+experienced facilitator can separately test a downloaded local model
+using <a
+href="https://docs.ollama.com/api/openai-compatibility">Ollama's
+OpenAI-compatible endpoint</a>. In the packages this is the existing
+<code>openai_compatible</code> provider, not a new <code>ollama</code>
+provider. Use <code>llm_base_url = "http://localhost:11434/v1"</code>,
+the name of a model actually installed locally, and the non-secret
+placeholder key <code>ollama</code> required by the client
+configuration. Pass the same restricted dictionary and text context, and
+opt in explicitly with <code>llm_assess = TRUE</code> (Python:
+<code>True</code>).</p>
+<p>Do not modify the fixed free-only callback in
+<code>review_ai.R</code>/<code>.py</code> to do this; make a separate,
+clearly labelled local experiment. Confirm the endpoint is local and
+inspect its response format before using it in a class. This optional
+extension was not rehearsed here because no local Ollama service was
+available.</p>
+</body>
+</html>

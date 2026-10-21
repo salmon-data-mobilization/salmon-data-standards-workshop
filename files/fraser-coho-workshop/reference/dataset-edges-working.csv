@@ -1,0 +1,17 @@
+subject_id,relationship,object_id,source_fields,evidence,status,question
+N1,refers to,N2,POP_ID; POPULATION,Source CSV and official field definitions,working interpretation,Confirm source population grain.
+N1,names,N3,WATERBODY,Source CSV; official dictionary,observed in file,A named portion does not imply an exclusive ecological relationship.
+N1,carries species designation,N4,SPECIES,Source CSV,observed in file,
+N1,carries estimate year,N5,ANALYSIS_YR,Source CSV; official definition,observed in file,Do not replace with brood year.
+N1,may report,N9,NATURAL_ADULT_SPAWNERS,Source CSV:160 nonblank and 13 blank values,observed in file,Missing results remain missing.
+N1,summarizes activity (to confirm),N8,ESTIMATE_METHOD; START_DTT; END_DTT,Working source-record interpretation,question,One record may summarize several inspections or methods.
+N8,applies,N6,NATURAL_ADULT_SPAWNERS,Metamodel activity-variable pattern,working interpretation,Review exact observation/estimation grain.
+N8,can generate,N9,NATURAL_ADULT_SPAWNERS,Metamodel activity-result pattern,working interpretation,Do not invent unrecorded results for blank cells.
+N8,uses source method,N11,ESTIMATE_METHOD,Official estimate-method dictionary,working interpretation,Not every source method label has a full definition.
+N8,has inspection-window context,N12,START_DTT; END_DTT,Official inspection-date definitions,working interpretation,Missing dates do not establish absence of all survey activity.
+N6,concerns,N2,POP_ID; NATURAL_ADULT_SPAWNERS,Source context; working metamodel decomposition,working interpretation,Do records describe whole populations or limited portions?
+N6,represents characteristic,N7,NATURAL_ADULT_SPAWNERS,SDO abundance definition; source estimate field,working interpretation,Candidate semantic interpretation; not an accepted IRI.
+N6,has scope to review,N13,NATURAL_ADULT_SPAWNERS,Official and starter dictionary wording differ,question,Adults exclude jacks; natural-origin restriction remains unsupported.
+N9,is expressed in (working),N10,NATURAL_ADULT_SPAWNERS,Starter dictionary unit Individual,working interpretation,Confirm unit and meaning across estimate classifications.
+N9,has example value,N15,NATURAL_ADULT_SPAWNERS,First source record,observed in file,This example does not summarize all results.
+N16,identifies example of,N2,POP_ID,First source record; official Population ID definition,observed in file,Identifier denotes source population rather than source record.
