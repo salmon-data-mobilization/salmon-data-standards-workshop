@@ -1,0 +1,74 @@
+    /* Shared by Chapter 1 and the standalone review view. Varnish/Bootstrap
+       supplies the light/dark palette and the native controls. */
+    #salmon-workflow-guided {
+      --foreground: var(--bs-body-color);
+      --background: var(--bs-body-bg);
+      --border: var(--bs-border-color);
+      --muted: var(--bs-tertiary-bg, var(--bs-body-bg));
+      --muted-foreground: var(--bs-secondary-color, var(--bs-body-color));
+      --viz-series-1: var(--bs-link-color);
+      --green: var(--bs-success-text-emphasis, var(--bs-success));
+      --orange: var(--bs-warning-text-emphasis, var(--bs-warning));
+      color: var(--foreground);
+      margin: 1.5rem 0;
+    }
+    #salmon-workflow-guided .text-small { font-size: .875rem; }
+    #salmon-workflow-guided .workflow-heading { margin: 0 0 1rem; }
+    #salmon-workflow-guided figure { margin: 0; }
+    #salmon-workflow-guided .tour-controls { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+    #salmon-workflow-guided .tour-position { margin-bottom: 14px; font-weight: 500; }
+    #salmon-workflow-guided .canvas { position: relative; isolation: isolate; padding: 4px 24px 12px; }
+    #salmon-workflow-guided .canvas, #salmon-workflow-guided .question, #salmon-workflow-guided .node, #salmon-workflow-guided .nested, #salmon-workflow-guided .nested-node { box-sizing: border-box; }
+    #salmon-workflow-guided .lines { position: absolute; inset: 0; z-index: -1; pointer-events: none; overflow: visible; }
+    #salmon-workflow-guided .lines .usual-line { fill: none; stroke: var(--muted-foreground); stroke-width: 1.5; }
+    #salmon-workflow-guided .lines .package-line { fill: none; stroke: var(--viz-series-1); stroke-width: 1.5; }
+    #salmon-workflow-guided .lines .loop-line { fill: none; stroke: var(--orange); stroke-width: 1.5; }
+    #salmon-workflow-guided .lines .group-box { fill: color-mix(in srgb, var(--muted) 30%, transparent); stroke: var(--border); stroke-width: 1; }
+    #salmon-workflow-guided .lines .detail-box { fill: var(--background); stroke: var(--border); stroke-width: 1; }
+    #salmon-workflow-guided .question { max-width: 490px; margin: 0 auto 32px; padding: 8px; text-align: center; font-weight: 500; }
+    #salmon-workflow-guided .lane-headings, #salmon-workflow-guided .stage-columns { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 40px; }
+    #salmon-workflow-guided .lane-headings { margin-bottom: 22px; text-align: center; }
+    #salmon-workflow-guided .lane-heading { font-weight: 500; }
+    #salmon-workflow-guided .lane-heading span { display: block; margin-top: 4px; font-weight: 400; }
+    #salmon-workflow-guided .stage { margin-bottom: 28px; }
+    #salmon-workflow-guided .stage-header { display: flex; align-items: center; gap: 16px; margin: 20px 0 26px; }
+    #salmon-workflow-guided .stage-header hr { flex: 1 1 24px; min-width: 12px; }
+    #salmon-workflow-guided .stage-heading { text-align: center; min-width: 0; max-width: 560px; }
+    #salmon-workflow-guided .phase-number { display: block; font-weight: 500; margin-bottom: 4px; }
+    #salmon-workflow-guided .stage-title { font-weight: 500; margin: 0; }
+    #salmon-workflow-guided .lane { display: flex; flex-direction: column; justify-content: center; gap: 28px; min-width: 0; }
+    #salmon-workflow-guided .node { position: relative; padding: 12px 8px; text-align: center; min-width: 0; }
+    #salmon-workflow-guided .node .btn { white-space: normal; max-width: 100%; overflow-wrap: anywhere; }
+    #salmon-workflow-guided .node-caption { margin: 8px auto 0; max-width: 340px; overflow-wrap: anywhere; }
+    #salmon-workflow-guided .nested { display: grid; gap: 28px; padding: 24px 8px 8px; width: 100%; }
+    #salmon-workflow-guided .nested-node { width: 88%; justify-self: center; padding: 10px 7px; overflow-wrap: anywhere; }
+    #salmon-workflow-guided .nested-node strong { display: block; font-weight: 500; }
+    #salmon-workflow-guided .nested-node span { display: block; margin-top: 5px; }
+    #salmon-workflow-guided .meaning-example { padding: 12px; border: 1px solid var(--border); border-radius: 6px; background: var(--background); }
+    #salmon-workflow-guided .meaning-records { display: flex; flex-wrap: wrap; gap: 12px; }
+    #salmon-workflow-guided .meaning-record { flex: 1 1 150px; min-width: 0; padding: 8px; border: 1px solid var(--border); overflow-wrap: anywhere; }
+    #salmon-workflow-guided .meaning-record strong { display: block; margin-bottom: 6px; }
+    #salmon-workflow-guided .meaning-record p { margin: 8px 0 0; }
+    #salmon-workflow-guided .meaning-example code { white-space: normal; overflow-wrap: anywhere; }
+    #salmon-workflow-guided .shared-meaning { margin-top: 16px; font-weight: 500; }
+    #salmon-workflow-guided .verdict { display: flex; flex-direction: column; align-items: center; gap: 5px; margin: 12px auto 0; max-width: 310px; }
+    #salmon-workflow-guided .verdict-label { font-weight: 500; }
+    #salmon-workflow-guided .verdict .symbol { display: flex; font-size: 1.5rem; }
+    #salmon-workflow-guided .verdict[data-tone="caution"] .symbol { color: var(--orange); }
+    #salmon-workflow-guided .verdict[data-tone="checked"] .symbol { color: var(--green); }
+    #salmon-workflow-guided .reuse-result { text-align: center; margin-top: 14px; }
+    #salmon-workflow-guided .source-links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 12px; }
+    #salmon-workflow-guided figcaption { margin-top: 8px; }
+    #salmon-workflow-guided [hidden] { display: none !important; }
+    .workflow-text summary { cursor: pointer; }
+    @media print {
+      #salmon-workflow-guided { display: none; }
+      .workflow-text > * { display: block !important; }
+    }
+    @media (max-width: 500px) {
+      #salmon-workflow-guided .tour-controls { padding-right: 0; }
+      #salmon-workflow-guided .canvas { padding-left: 10px; padding-right: 10px; }
+      #salmon-workflow-guided .lane-headings, #salmon-workflow-guided .stage-columns { gap: 22px; }
+      #salmon-workflow-guided .node { padding-left: 3px; padding-right: 3px; }
+      #salmon-workflow-guided .nested { padding-left: 0; padding-right: 0; }
+    }

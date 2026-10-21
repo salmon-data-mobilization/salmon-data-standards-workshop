@@ -1,0 +1,40 @@
+Chapter 1 comparison excerpts
+
+These files support the introductory Yukon–Fraser comparison. They are
+separate from the Fraser Coho NuSEDS teaching kit and its SDP checkpoints.
+
+yukon-excerpt.csv retains all six source columns for stock
+NorthernYukonR.andtribs., years 2022 and 2023, from:
+https://github.com/Pacific-salmon-assess/Yukon-Chinook-CU-reconstructions/blob/3390d4f2a706e1923785aef24e96eba17a7002c0/data/generated/2025/esc-data.csv
+
+fraser-excerpt.csv retains all 37 source columns for CU_ID CK-03, years
+2022 and 2023, from:
+https://github.com/sos-program/Approved-WSP-Statuses/blob/05643cf7474e2c468e21e30edbf1da0ef9a060a8/OUTPUT/Retrospective_RapidStatus_Results_Approved.csv
+
+Selection preserves field names, parsed values and row order. The excerpts
+are serialized locally with LF line endings. source-manifest.json records
+the selection criteria and SHA-256 checksums of the full fetched sources
+and local excerpts, with links to each source repository's license. Retain
+the source attribution and consult those licenses when reusing the excerpts.
+
+These are different CUs. The records do not establish a common biological
+scope, interchangeable methods, a stock-to-CU crosswalk, or an approved
+semantic mapping. Chapter 1's prepared description table is a teaching
+preview and keeps the remaining questions visible. It is not canonical
+SDP metadata. Domain review and selection of the final examples remain open.
+
+Source context:
+Yukon reconstruction README and linked methods:
+https://github.com/Pacific-salmon-assess/Yukon-Chinook-CU-reconstructions/blob/3390d4f2a706e1923785aef24e96eba17a7002c0/README.md
+Rapid Status field dictionary and CU narratives:
+https://github.com/sos-program/Approved-WSP-Statuses/blob/05643cf7474e2c468e21e30edbf1da0ef9a060a8/OUTPUT/README.md
+
+The Central Coast NuSEDS pathway is a conceptual third-source illustration
+linked to English et al. (2018). No Central Coast extract or newly calculated
+CU estimate is supplied here. The hands-on exercises use the separate
+Fraser Coho NuSEDS slice declared in the workshop setup.
+
+Refresh only deliberately with:
+python3 scripts/prepare-intro-comparison.py --refresh-sources
+Check the local excerpts and render the editable SVG/Mermaid offline with:
+python3 scripts/prepare-intro-comparison.py

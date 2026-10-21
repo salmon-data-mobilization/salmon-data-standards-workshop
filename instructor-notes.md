@@ -4,9 +4,9 @@ title: Instructor Notes
 
 ## The teaching contract
 
-Use the same **173-row, 14-column NuSEDS Fraser Coho 2023–2024 dataset** for the whole workshop. The source is `nuseds-fraser-coho-2023-2024.csv`, the dataset ID is `fraser-coho-workshop`, and the table ID is `escapement`. The measurement is `NATURAL_ADULT_SPAWNERS`. Begin with human interpretation; introduce packaging software only after the graph, dictionary, and peer review.
+Use the same **173-row, 14-column NuSEDS Fraser Coho 2023–2024 dataset** for the hands-on chapters. Chapter 1 frames the reuse problem with separate Yukon and Fraser excerpts and a conceptual Central Coast illustration. The source is `nuseds-fraser-coho-2023-2024.csv`, the dataset ID is `fraser-coho-workshop`, and the table ID is `escapement`. The measurement is `NATURAL_ADULT_SPAWNERS`. Begin with human interpretation; introduce packaging software only after the graph, dictionary, and peer review.
 
-Show the three outcomes in Chapter 1: reusable data publication, shared-term contributions, and local semantic stewardship through vocabularies, ontologies, and bridges. Then return to the raw data. Participants should understand why definitions, context, and relationships matter before they encounter identifiers or automated suggestions. The kit supplies the dataset for everyone.
+After the Chapter 1 comparison, show the three outcomes: reusable data publication, shared-term contributions, and local semantic stewardship through vocabularies, ontologies, and bridges. Then return to the raw data. Participants should understand why definitions, context, and relationships matter before they encounter identifiers or automated suggestions. The kit supplies the dataset for everyone.
 
 The supplied reference package is a **technical draft pending Bruno and Tom's domain review**. Label it that way in handouts and demonstrations. Structural validation and a successful test upload are useful technical evidence; neither is an expert ruling about biological meanings.
 
@@ -27,7 +27,7 @@ Learners who bring their own data work with it in a separate solo hour after the
 
 | Elapsed time | Chapter | Minutes | Learner result |
 | --- | --- | ---: | --- |
-| 0:00–0:55 | 1. Overview and endpoint tour | 55 | Explain how source data, metadata, and the test record connect. |
+| 0:00–0:55 | 1. Comparison and workshop overview | 55 | Explain candidate field matches, context needed for reuse, and the connected data/term outcomes. |
 | 0:55–1:50 | 2. Human concept graph | 55 | Draw entities, properties, observations, results, units, and methods with named relationships. |
 | 1:50–2:55 | 3. Human dictionary and peer review | 65 | Define fields, decompose the measurement, and record review questions. |
 | 2:55–3:35 | 4. Build the SDP | 40 | Create or inspect the same-data draft and locate the metadata files. |
@@ -59,21 +59,38 @@ The practical progression is a source value → documented local meaning → rep
 
 ## Standalone 55-minute overview
 
-Use Chapter 1 without package creation or AI calls. Allocate 10 minutes to the three outcomes and raw/finished comparison, 10 to the six source columns and their interpretation problems, 15 to the human-preparation and Day 1 workflow, 10 to a preview of Day 2's vocabulary/model/bridge/request files, and 10 to the chapter's pair discussion and recap. This is an awareness session, not completion of either day's hands-on outcomes.
+Chapter 1 has 40 teaching minutes and a 15-minute closing activity. Introduce the research question and one real row from each source before opening the diagram. Both timelines then follow those same Yukon and Fraser records. The main payoff is the shared abundance meaning, with the confidence-rating mistake as a supporting example. Introduce unfamiliar terms through the problem each helps solve, using the chapter's inline explanations.
+
+| Elapsed time | Minutes | Focus |
+| --- | ---: | --- |
+| 0:00–0:05 | 5 teaching | Connect the reuse and publication problem to the participants' work; state the CU–year question. |
+| 0:05–0:15 | 10 teaching | Show the two 2023 source rows, then extend both timelines with Next; open Phase 2's shared-meaning example. |
+| 0:15–0:25 | 10 teaching | Follow the shared Abundance link, retained differences and confidence-rating example; introduce the Central Coast scale problem. |
+| 0:25–0:35 | 10 teaching | Switch explicitly to the Fraser Coho teaching slice; inspect its first records, blank and interpretation questions. |
+| 0:35–0:40 | 5 teaching | Connect the workflow to the three outcomes and the two days. |
+| 0:40–0:55 | 15 exercise | Pairs record what the next user would need, then share and recap. |
+
+This is an awareness session, not completion of either day's hands-on outcomes. It uses a prepared description example; no live integration, package creation or AI call is needed.
 
 ## Facilitate Chapter 1
 
-Begin with a reuse problem familiar to biologists: comparing spawner estimates across rivers or years when another team's definitions and methods are unclear. Invite participants to identify the context they would need before combining the values.
+Begin with the question about assembling the best available estimates by CU and year, with differences documented, before introducing the delivery schedule or the ontology vocabulary. Explain that the two excerpts concern different CUs: this is a candidate-field comparison, not a row join or a claim that the populations are interchangeable. The selected records are illustrative choices for this draft, pending Bruno and Tom's review.
 
-Open the [worked publication example](reference.html#teaching-record) beside the source CSV. Check the reference page for the actual catalog status before teaching. If the public test record is still unavailable, show the supplied local publication preview and explain that it is a preview. A draft, test upload, and production deposit have different outcomes; describe the one actually being shown.
+Bruno's three-source framing provides the thread through the diagram. Keep the two displayed 2023 records in view before starting the timeline. In Phase 1, point to the Yukon reconstruction and Fraser assessment files. In Phase 2, expand **Find shared meanings, then review fit**: the two records keep their original values and identities while both proposed descriptions link to the Salmon Domain Ontology's Abundance property. Explain property, controlled vocabulary, ontology and identifier at this point. The chapter repeats the essential comparison as a table so learners do not have to discover it by clicking. Phase 3 uses the actual `ConfidenceRating` definition to catch an invented misreading. Phase 4 shows why preserving those explanations benefits the next data user as well as the provider.
 
-Keep this chapter as a tour and discussion. Learners first draw their own diagram, write the dictionary and decomposition, and complete peer review in Chapters 2–3. Package creation begins in Chapter 4; AI comparison follows in Chapter 5.
+Use Next to add each phase while keeping the earlier timeline visible. Each node expands in place; Play is optional and can be paused. The standalone diagram link provides more room for projection. The text version and static overview remain available if JavaScript is unavailable. The right-hand route is a proposed packaged version of the sources, not a claim that the source projects supplied these reviewed SDPs. Fewer displayed preparation tasks do not quantify elapsed-time savings.
 
-Briefly preview the Day 2 files in `semantic-lab/` inside the extracted workshop ZIP, linking back to the [setup instructions](index.html#download-and-open-the-workshop-kit) for anyone who has not located it. Return to the source table after showing what the later vocabulary, model, bridge and contribution activities will produce.
+The Rapid Status repository has a dictionary and CU narratives. Use the published lookup to show how interpretation works. Keep an author's correspondence out of the story until the person who performed that exchange supplies and checks the account. Do not convert the meeting's anecdotal wrangling-time estimate into a measured benefit.
 
-Use the three-record excerpt to distinguish stored values from descriptions. Keep the blank estimate visible and invite participants to ask what they would need to compare the different methods. The full CSV and later exercises retain all 173 rows and 14 columns.
+The prepared comparison table is a teaching description, not an approved mapping or a canonical SDP dictionary. Explain the source of the descriptions and what remains to be confirmed. A shared abundance property does not resolve total versus wild scope, a relative index versus absolute abundance, year basis, CU identity, method or uncertainty. In particular, `ConfidenceRating` describes assessment status confidence, not an interval around an abundance estimate. The script demonstrates no universal metasalmon integration API.
 
-Walk through the first record using the worked flow. The abundance property illustrates reusing an existing term; the unresolved source-method definition illustrates why clarification may come before a new-term request. Show the two publication outcomes and the return path from a released term's IRI to a later metadata version. Day 1 reaches the catalog preview, while Day 2 prepares semantic drafts for later review and release.
+The Central Coast section introduces a real estimation pathway but does not supply a newly reviewed extract, crosswalk or expansion calculation. Explain NuSEDS and escapement when they first appear. Link to the source report, then say explicitly that the practical exercises use a Fraser Coho slice, separate from the Fraser Chinook assessment excerpt. Keep those regional sources and their provenance distinct. If the group later selects a Central Coast extract, review its source and relationship evidence before adding actual rows.
+
+The intro source excerpts are outside the teaching kit in `episodes/files/intro-comparison/`. Their manifest records revisions, row selection and checksums; all source columns are retained. `episodes/files/workflow-explorer/` contains the interactive diagram. `scripts/prepare-intro-comparison.py` renders the optional static overview and checks the local excerpts offline. Its explicit `--refresh-sources` option retrieves only the pinned sources. Retain those source versions and original field names when discussing a different mapping.
+
+Use the three-record NuSEDS excerpt to make the next activity tangible. Keep the blank visible and have participants distinguish the population identifier, place, year and estimate. Learners draw their own graph, write and decompose the dictionary, and complete peer review in Chapters 2–3, before package creation in Chapter 4 and AI comparison in Chapter 5.
+
+The [worked publication example](reference.html#teaching-record) remains available for the later workflow preview. Check its actual status before teaching. If the public test record is unavailable, show the supplied local preview and describe it as a preview. Use the short outcome list, optional outcome figure and `semantic-lab/` files to connect data publication to local stewardship, bridges and shared-term contributions, linking back to [setup](index.html#download-and-open-the-workshop-kit) as needed.
 
 ## Prepare the kit and endpoint tour
 
@@ -107,7 +124,7 @@ A fluent response, retrieval rank, or numerical score is not approval. Keep sour
 
 | After chapter | Check before continuing |
 | --- | --- |
-| 1 | Participants can name the shared dataset and distinguish a test record from production publication. |
+| 1 | Participants can name candidate comparison fields, an unresolved compatibility question, and the separate NuSEDS hands-on dataset. |
 | 2 | The graph names relationships and leaves unsupported claims as questions. |
 | 3 | The dictionary covers the fields, includes a measurement decomposition, and records peer-review feedback. |
 | 4 | Dataset/table IDs and 173×14 source values remain unchanged in the package. |
