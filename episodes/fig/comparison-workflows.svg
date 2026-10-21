@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="510" viewBox="0 0 760 510" role="img" aria-labelledby="title desc">
+<title id="title">Two routes to deciding whether data fit a question</title>
+<desc id="desc">With source files alone, interpretation moves back and forth between columns, documentation and authors. Source-backed descriptions and shared-term links can preserve that work in a reviewed package. Both routes still need a human decision about quantity, scope, scale, methods and uncertainty.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#334755"/></marker></defs>
+<rect width="760" height="510" rx="8" fill="#fff"/>
+<text x="24" y="34" font-family="sans-serif" font-size="22" font-weight="bold" text-anchor="start" fill="#172b3a">Starting with source files</text>
+<rect x="20" y="58" width="200" height="72" rx="7" fill="#f4f5f6" stroke="#687582"/>
+<text x="120.0" y="84" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="middle" fill="#172b3a">Find fields</text>
+<text x="120.0" y="107" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="middle" fill="#172b3a">in each file</text>
+<rect x="280" y="58" width="200" height="72" rx="7" fill="#f4f5f6" stroke="#687582"/>
+<text x="380.0" y="84" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="middle" fill="#172b3a">Read dictionaries</text>
+<text x="380.0" y="107" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="middle" fill="#172b3a">and methods</text>
+<rect x="540" y="58" width="200" height="72" rx="7" fill="#f4f5f6" stroke="#687582"/>
+<text x="640.0" y="84" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="middle" fill="#172b3a">Ask authors</text>
+<text x="640.0" y="107" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="middle" fill="#172b3a">about the gaps</text>
+<path d="M 220 94 H 280" fill="none" stroke="#334755" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 480 94 H 540" fill="none" stroke="#334755" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 640 131 V 153 H 120 V 131" fill="none" stroke="#334755" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="380" y="178" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="middle" fill="#172b3a">New evidence can send us back to the columns.</text>
+<text x="24" y="225" font-family="sans-serif" font-size="22" font-weight="bold" text-anchor="start" fill="#172b3a">Starting with a reviewed Salmon Data Package</text>
+<text x="24" y="250" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="start" fill="#172b3a">A provider has drawn, described and peer-reviewed the meanings.</text>
+<rect x="20" y="273" width="200" height="72" rx="7" fill="#e2f0eb" stroke="#687582"/>
+<text x="120.0" y="299" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="middle" fill="#172b3a">Read recorded</text>
+<text x="120.0" y="322" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="middle" fill="#172b3a">meanings + evidence</text>
+<rect x="280" y="273" width="200" height="72" rx="7" fill="#e2f0eb" stroke="#687582"/>
+<text x="380.0" y="299" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="middle" fill="#172b3a">Follow shared</text>
+<text x="380.0" y="322" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="middle" fill="#172b3a">definition links</text>
+<rect x="540" y="273" width="200" height="72" rx="7" fill="#e2f0eb" stroke="#687582"/>
+<text x="640.0" y="299" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="middle" fill="#172b3a">Check the differences</text>
+<text x="640.0" y="322" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="middle" fill="#172b3a">against our question</text>
+<path d="M 220 309 H 280" fill="none" stroke="#334755" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 480 309 H 540" fill="none" stroke="#334755" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="380" y="373" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="middle" fill="#172b3a">Definitions preserve interpretation; methods and scope still matter.</text>
+<path d="M 740 94 H 750 V 444 H 740" fill="none" stroke="#334755" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 640 346 V 400" fill="none" stroke="#334755" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="20" y="403" width="720" height="82" rx="7" fill="#f4f5f6" stroke="#687582"/>
+<text x="380.0" y="429" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="middle" fill="#172b3a">Human decision: which estimates fit this purpose?</text>
+<text x="380.0" y="452" font-family="sans-serif" font-size="17" font-weight="normal" text-anchor="middle" fill="#172b3a">Check quantity, CU, year, scope, scale, method and uncertainty.</text>
+</svg>

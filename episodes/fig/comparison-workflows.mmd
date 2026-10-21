@@ -1,0 +1,15 @@
+flowchart TB
+  subgraph source["Starting with source files"]
+    columns["Find fields in each file"] --> docs["Read dictionaries and methods"]
+    docs --> authors["Ask authors about the gaps"]
+    authors --> columns
+  end
+  preparation["Provider: draw, describe and peer-review the meanings"]
+  subgraph package["Starting with a reviewed Salmon Data Package"]
+    meanings["Read recorded meanings and evidence"] --> terms["Follow shared definition links"]
+    terms --> checks["Check differences against the question"]
+  end
+  preparation --> meanings
+  decision["Human decision: quantity, CU, year, scope, scale, method and uncertainty"]
+  source --> decision
+  checks --> decision

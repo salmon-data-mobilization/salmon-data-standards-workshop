@@ -1,87 +1,127 @@
 ---
-title: "See the Whole Journey: From NuSEDS to Reusable Data"
+title: "See the Whole Journey: From Source Files to Reusable Data"
 teaching: 30
 exercises: 25
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- What changes between a source spreadsheet and a reusable published dataset?
-- What will we make at each stage of the workshop?
-- Why do we describe the data ourselves before using packaging software or AI?
+- Which values from different salmon datasets answer the same biological question?
+- What do shared definitions tell us, and which differences still need judgement?
+- How can describing our own data make the next person's work easier?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Recognize the source table and the publication, shared-contribution, and local-stewardship outcomes for the same Fraser Coho example.
-- Name each stage's problem and output without needing to run the software.
-- Distinguish data values, descriptions of those values, and links to shared definitions.
-- Explain why the first working diagram and dictionary must precede metasalmon and AI.
+- Identify candidate spawner-abundance fields in two real sources and name evidence needed before using them together.
+- Distinguish a shared quantity from its population, scope, scale, method and uncertainty.
+- Explain how a Salmon Data Package, shared terminology and local stewardship support reuse.
+- Recognize the NuSEDS teaching dataset and the diagram, dictionary and peer-review work that precedes software.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Two days, three connected outcomes
-
-This workshop supports the following intended outcomes:
-
-1. **Reusable data publication.** Publish a [metadata](glossary.html#metadata) file that public catalogs and databases can read, so other people can find, understand and reuse your data.
-2. **Contribution to shared terminology.** Describe your data with terms from a shared [controlled vocabulary](glossary.html#controlled-vocabulary), and propose a new term when none fits.
-3. **Local vocabulary and ontology stewardship connected to shared meanings.** Maintain your organization's own vocabulary or [ontology](glossary.html#ontology), and link local terms to the shared meanings they match or relate to.
-
-| Outcome | Day 1 | Day 2 |
-| --- | --- | --- |
-| 1. Reusable data publication | Build a package and export its catalog metadata | — |
-| 2. Contribution to shared terminology | Reuse published terms | Propose and steward terms |
-| 3. Local stewardship connected to shared meanings | — | Build a vocabulary and model; bridge local terms to shared ones |
-
-**Day 1** is for the biologist who wants to reuse standardized terms and publish data in a [FAIR](glossary.html#fair) way: create a [Salmon Data Package](glossary.html#salmon-data-package), reuse published terms and practise publishing it to a test catalog. On **Day 2**, you build and steward a small vocabulary and [OWL](glossary.html#owl) model and [bridge](glossary.html#bridge) local terms to the Salmon Domain Ontology. It suits people setting up data stewardship for an organization.
-
-![How the three outcomes connect.](fig/outcomes-overview.svg){alt="The three outcomes in the bigger picture. A Salmon Data Package reuses terms from shared ontologies and vocabularies (outcome 2, Day 1) and publishes its metadata to public catalogs and databases (outcome 1, Day 1). Its local meanings go into an organization's own vocabulary and ontology (Day 2), which bridges local terms to shared meanings (outcome 3, Day 2) and proposes new shared terms (outcome 2, Day 2) that later packages can reuse."}
-
-The same hand-drawn graph and dictionary support all three outcomes. The [Day 2 guide](advanced.html) introduces a [SKOS](glossary.html#skos) controlled vocabulary, a small [OWL](glossary.html#owl) model, a [bridge](glossary.html#bridge), and a [term-request](glossary.html#term-request) or clarification draft. These examples are in the `semantic-lab/` folder inside the extracted workshop ZIP. The [setup instructions](index.html#download-and-open-the-workshop-kit) explain how to download and open it. We will work with those files from Chapter 8 onward.
-
 ## Framing the challenge
 
-Imagine you are comparing coho spawner estimates across rivers or years. A colleague sends you a [dataset](glossary.html#dataset) produced by another team. Before combining its values with your own, you need to know which populations and life stages were included, how the estimates were produced, and what missing values mean. Differences in these details can change the biological questions the data can answer.
+You want to assemble the best available annual estimates of salmon spawner abundance by **Conservation Unit (CU)** across several regions. You have found a Yukon Chinook reconstruction and a Fraser Rapid Status Assessment output. Both look relevant, but their column names, supporting documents and estimation methods differ. Which values belong in your table, and what would you need to know before using them together?
 
-Useful descriptions make that context available alongside the data. The [worked publication example](reference.html#teaching-record) brings a table, its definitions, methods, and source information together. Use the questions below to assess how well these descriptions support reuse.
+A CU groups salmon populations for conservation and assessment. The immediate task is to assemble estimates **for each CU and year**, retaining their methods, scope and uncertainty. Document the differences and questions alongside the values so they remain visible when deciding whether the estimates support an analysis.
 
-### What to look for in the record
+You might also publish the data another scientist needs. Recording the explanations you worked out can help that person avoid repeating the same searches, and can reduce the questions you have to answer later.
 
-Follow four questions rather than every catalog field:
+## Two files, one question
 
-1. **What is this?** Find the title, scope, source and contact information.
-2. **Can I use it?** Find the access conditions, licence and important caveats.
-3. **Can I understand it?** Locate the table description, column definitions and method information.
-4. **Can I trace it?** Follow the source and version information back to the packaged table.
+These are small excerpts from the sources suggested for this comparison. The original field names and values are preserved; the tables show selected columns. The linked CSV excerpts retain all source columns for these records. They are an introductory comparison, separate from the NuSEDS dataset we will use for the exercises. [Source notes and selection](files/intro-comparison/PROVENANCE.txt) and a [checksum manifest](files/intro-comparison/source-manifest.json) accompany them.
 
-These are practical aims of [FAIR](glossary.html#fair): findable, accessible, interoperable and reusable data. Accessibility may involve stated conditions; FAIR does not mean that every dataset must be openly downloadable.
+### Yukon Chinook reconstruction
 
-## Meet our one shared example
+The [Yukon project](https://github.com/Pacific-salmon-assess/Yukon-Chinook-CU-reconstructions/blob/3390d4f2a706e1923785aef24e96eba17a7002c0/README.md) reconstructs CU time series using border-passage estimates, genetic information and reconstructed harvest rates. Its output has a column called `mean`.
 
-Download and extract the [Fraser Coho workshop kit](files/fraser-coho-workshop.zip). Everyone follows the **173-row, 14-column NuSEDS Fraser Coho 2023–2024 slice** in `raw_data/nuseds-fraser-coho-2023-2024.csv`. Open a copy for viewing in a spreadsheet, or follow the projected table. Keep the source file unchanged.
+| stock | year | mean |
+| --- | --- | ---: |
+| NorthernYukonR.andtribs. | 2022 | 504.605427825807 |
+| NorthernYukonR.andtribs. | 2023 | 2009.4529003227 |
 
-The example is selected from Fisheries and Oceans Canada's Fraser and BC Interior NuSEDS workbook, available through the [Government of Canada's Open Government Portal](https://open.canada.ca/data/en/dataset/c48669a3-045b-400d-b730-48aafe8c5ee6). The kit preserves its source information, derivation and the current [official DFO dictionary](files/fraser-coho-workshop/raw_data/official-nuseds-dictionary.csv). That dictionary was retrieved on 8 September 2026 and may postdate the workbook used for this slice. The teaching dataset covers Coho for 2023–2024; the full publication contains records beyond this selection.
+[Open the Yukon excerpt](files/intro-comparison/yukon-excerpt.csv). The same records also contain `lower`, `upper` and `cv`. A number headed `mean` needs its methods context before we can tell what was estimated and how its uncertainty is described.
 
-The table contains 87 distinct `POP_ID` values and **164 distinct population–analysis-year pairs across 173 rows**. Some pairs occur more than once. A row is a source record associated with a population, waterbody and analysis year; **population plus year does not uniquely identify a row**. Keep these records separate while investigating what additional context distinguishes them in Chapter 2.
+### Fraser Rapid Status Assessment
 
-Six columns let us practice the main kinds of description:
+The [Rapid Status output](https://github.com/sos-program/Approved-WSP-Statuses/blob/05643cf7474e2c468e21e30edbf1da0ef9a060a8/OUTPUT/README.md) covers multiple CUs. Here we have selected one Lower Fraser Chinook CU. Its abundance fields sit alongside status metrics and decision-tree outputs.
 
-| Source column | What we can see | Question that still needs evidence |
+| CU_ID | Stock | Year | SpnForAbd_Total |
+| --- | --- | --- | ---: |
+| CK-03 | Lower Fraser River_FA_0.3 | 2022 | 82859 |
+| CK-03 | Lower Fraser River_FA_0.3 | 2023 | 146371 |
+
+[Open the Fraser excerpt](files/intro-comparison/fraser-excerpt.csv). Its other columns include `SpnForAbd_Wild`, `DataType`, `ConfidenceRating`, `RelUBM` and `BinPath`. Some describe abundance, some describe assessment metrics, and some describe how a status was assigned.
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Activity: What would you check before combining the files?
+
+Spend 10 minutes with a partner. Start with the question at the top of the chapter, then choose one field from each source that might answer it.
+
+Write down:
+
+- Your candidate fields and the quantity you think each represents.
+- Two details you need to check, such as which fish are included, the unit, year, spatial scale, method or uncertainty.
+- Where you would look for evidence: a dictionary, methods description, CU narrative or source author.
+
+Keep one question open if the excerpts cannot answer it. You will compare your reasoning with the source descriptions below.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Follow the evidence behind the columns
+
+The Fraser output has a [field dictionary](https://github.com/sos-program/Approved-WSP-Statuses/blob/05643cf7474e2c468e21e30edbf1da0ef9a060a8/OUTPUT/README.md). It describes `SpnForAbd_Total` as total spawner abundance used for abundance-based assessment metrics, and distinguishes it from wild spawner abundance. It also distinguishes an absolute abundance series from a relative index through `DataType`. The displayed rows use `Abs_Abd`; another CU's series may have a different basis.
+
+The Yukon [methods description](https://github.com/Pacific-salmon-assess/Yukon-Chinook-CU-reconstructions/blob/3390d4f2a706e1923785aef24e96eba17a7002c0/README.md) places its estimates within a run reconstruction. That supports treating `mean` as a candidate abundance estimate, while the included fish, stock-to-CU correspondence and uncertainty definition still need to be checked for our purpose. The project also explains that historical estimates can change when the model is updated.
+
+**Uncertainty about an abundance estimate and confidence in an assessment status describe different things.** In the 2023 Yukon row, `lower` is `1139.14176352581` and `upper` is `2879.76403711959`; we would check the interval's definition in the methods. In the 2023 Fraser row, `ConfidenceRating` is `High`; the dictionary says this is confidence in the **status**. We cannot use that rating as an abundance interval.
+
+We now have a better question than “which columns have similar names?” We need to decide whether the candidate estimates fit our intended use. Assembling the best available estimates by CU and year may allow methods to differ, while an analysis designed to compare one estimation method would need a tighter selection. A shared definition makes the quantity easier to identify; the remaining context helps us decide what to do with it.
+
+## What a described package could make easier
+
+A [Salmon Data Package (SDP)](glossary.html#salmon-data-package) keeps data together with descriptions, code meanings and source information. Links to maintained [controlled-vocabulary](glossary.html#controlled-vocabulary) and [ontology](glossary.html#ontology) terms can make its meanings easier to find and relate across datasets.
+
+Here is a **prepared description preview** for the two candidate fields. It illustrates what we would record; the comparison still needs source and domain review before accepting a mapping.
+
+| Part of the description | Yukon `mean` | Fraser `SpnForAbd_Total` |
 | --- | --- | --- |
-| `POP_ID` | A population identifier, such as `46200` | What source unit does the identifier denote? |
-| `WATERBODY` | A named waterbody, such as `BONAPARTE RIVER` | How does this named place relate to the population record? |
-| `ANALYSIS_YR` | `2023` or `2024`: the year the estimate is for | Why can contributing surveys extend into the next calendar year? |
-| `SPECIES` | `Coho` throughout this slice | How is the source species label defined? |
-| `NATURAL_ADULT_SPAWNERS` | Numerical estimates and 13 blanks | What does “natural” qualify, and what does a blank mean? |
-| `ESTIMATE_METHOD` | Labels such as `Area Under the Curve` | How does the stated procedure affect interpretation? |
+| Quantity to investigate | Estimated spawner abundance from the reconstruction | Total spawner abundance used for abundance-based metrics |
+| Entity and time | Source `stock` label and `year`; verify the CU identifier correspondence and year definition | `CU_ID`, `Stock` and escapement `Year` |
+| Scope and scale | Check included fish and coverage of the reconstructed CU estimate | Check total versus wild scope and `DataType` for the selected CU |
+| Method and uncertainty | Retain the reconstruction reference and the meaning of `lower`, `upper` and `cv` | Follow the CU's data-preparation narrative; retain status confidence separately |
+| Shared meaning | Compare the abundance property with a shared definition | Compare the abundance property with the same definition; preserve the different qualifiers |
 
-We will draft descriptions for these six fields and review the supplied descriptions for the other eight.
+For example, the Salmon Domain Ontology's [Abundance definition](https://github.com/salmon-data-mobilization/salmon-domain-ontology/blob/d45f8f7cc857d92af8bbe54a7c89b2a4a14784b2/ontology/modules/02-observation-measurement.ttl) can help describe the **property** of interest. The complete variable also needs its entity and qualifiers. Sharing that property would not make the Yukon stock and Fraser CU the same population, or establish that every estimate is interchangeable.
 
-## Values and descriptions do different jobs
+![Source files require repeated interpretation through dictionaries, methods and authors. A reviewed package can preserve those meanings and shared-definition links, while a person still checks whether the estimates fit the question.](fig/comparison-workflows.svg){alt="Two routes to a human decision about fit for purpose. Starting with source files involves a loop through columns, documentation and authors. A provider's reviewed package records meanings and evidence, links shared definitions, and exposes the differences to check. Both routes require judgement about quantity, CU, year, scope, scale, method and uncertainty."}
 
-Here are the first three records from the source CSV, showing the six focus columns. The empty estimate in the second row is also empty in the source.
+With reviewed descriptions and explicit mappings, software can be written to locate candidate fields and report recorded differences. People still have to supply the evidence, resolve unsupported meanings and decide which differences matter. The provider's preparation makes this work easier to repeat and inspect.
+
+### Reuse meanings, and develop the ones that are missing
+
+A maintained term has a stable identifier, or [IRI](glossary.html#iri), that can be linked from the metadata. Reusing it connects our description to its published definition. When an organization's meaning is more specific, a local vocabulary or ontology can preserve that definition and a [bridge](glossary.html#bridge) can state how it relates to shared terms.
+
+When a reusable concept is missing, we can prepare a [term request](glossary.html#term-request) with a definition, examples and supporting evidence for the Salmon Domain Ontology's stewards. Those terms and mappings need their own review and release. Publishing them lets later data packages reuse the work, alongside the separate process of publishing data to a catalog.
+
+## Add a third source: where scale becomes visible
+
+Now imagine adding Central Coast NuSEDS stream records. The [Central Coast estimation example](https://salmonwatersheds.ca/document/lib_451/) uses additional information and an expansion approach to produce CU-level estimates. A stream record and an estimate for a whole CU can concern salmon abundance while covering different entities and spatial scales.
+
+To take that step, we would need evidence about which records belong to the CU, the coverage of the observations, how repeated or missing records are handled, and the expansion method. An ontology link describes meaning; it does not provide an expansion factor or perform the calculation.
+
+We will practise making those relationships explicit with the **Fraser Coho NuSEDS teaching slice** below. It is a different regional example from the Central Coast illustration. Our first task is to draw what its records describe and write a dictionary, so we can see what is known and what still needs evidence before using packaging software or AI.
+
+## Work through one NuSEDS example
+
+Download and extract the [Fraser Coho workshop kit](files/fraser-coho-workshop.zip). The hands-on chapters use the **173-row, 14-column NuSEDS Fraser Coho 2023–2024 slice** in `raw_data/nuseds-fraser-coho-2023-2024.csv`. Open a copy in a spreadsheet, or follow the displayed table, keeping the source unchanged.
+
+It comes from Fisheries and Oceans Canada's Fraser and BC Interior NuSEDS workbook on the [Government of Canada's Open Government Portal](https://open.canada.ca/data/en/dataset/c48669a3-045b-400d-b730-48aafe8c5ee6). The kit preserves provenance and the [official DFO dictionary](files/fraser-coho-workshop/raw_data/official-nuseds-dictionary.csv). That dictionary was retrieved on 8 September 2026 and may postdate the source workbook.
+
+Here are the first three records, showing our six focus columns. The blank estimate is also blank in the source.
 
 | POP_<wbr>ID | WATERBODY | ANALYSIS_<wbr>YR | SPECIES | NATURAL_<wbr>ADULT_<wbr>SPAWNERS | ESTIMATE_<wbr>METHOD |
 | --- | --- | --- | --- | --- | --- |
@@ -89,61 +129,54 @@ Here are the first three records from the source CSV, showing the six focus colu
 | 44965 | CLAPPERTON CREEK | 2023 | Coho |  | Not Applicable |
 | 46190 | COLDWATER RIVER | 2023 | Coho | 7943 | Combined Methods |
 
-The identifiers, years, estimates and method labels are **data values**. Explaining what they mean is [metadata](glossary.html#metadata): information that helps someone interpret and reuse those values. For example, comparing the two numerical estimates requires understanding which fish were included and how each method produced its result.
+We will describe these six fields and review supplied descriptions for the other eight, asking which fish were included and how each method produced its result.
 
-An identifier is a label used to refer to something. It is not the thing itself. Likewise, a waterbody, a biological population, a species category and a Conservation Unit describe different things. The table has no Conservation Unit field, so comparisons by CU would need a separate source linking populations to those units.
+The table has **164 distinct population–analysis-year pairs across 173 rows**, so population plus year does not uniquely identify a row. It has no CU field. A CU comparison would therefore need additional evidence connecting these population records to CUs.
 
-One compound name is enough to motivate the next chapters: `NATURAL_ADULT_SPAWNERS`. A [variable](glossary.html#variable) describes the question being represented, while its [property](glossary.html#property) is the characteristic of interest, such as abundance, and its [entity](glossary.html#entity) is the thing the data concerns. “Adult”, “natural”, the place, the year basis, the unit and the method may add different kinds of meaning. We will separate them and record uncertainty instead of treating the column name as a complete definition.
+The compound name `NATURAL_ADULT_SPAWNERS` makes the interpretation problem concrete. The [entity](glossary.html#entity) is what the data concerns; its [property](glossary.html#property) is the characteristic of interest, such as abundance. The full [variable](glossary.html#variable) also depends on scope and context. We will investigate “adult” and “natural”, the year basis, unit and method, keeping unsupported interpretations as questions.
 
-## Follow one estimate through the workflow
+## From this record to reusable data and meanings
 
-Take the first row's estimate of `758`. Here is a preview of how we can turn that value and its context into descriptions other people can use, while keeping the source's unanswered questions visible.
+The first estimate, `758`, will follow this route:
 
-![Worked preview: draw the first record's population, waterbody and result relationships; write and decompose its dictionary; peer review; build the package and review terms and AI suggestions. Day 1 previews catalog publication. Day 2 develops vocabulary, ontology and term-request drafts; released term identifiers can later link back to the metadata.](fig/record-to-reuse.svg){alt="Worked preview: draw the first record's population, waterbody and result relationships; write and decompose its dictionary; peer review; build the package and review terms and AI suggestions. Day 1 previews catalog publication. Day 2 develops vocabulary, ontology and term-request drafts; released term identifiers can later link back to the metadata."}
+**Draw the relationships → describe and decompose the dictionary → peer review → build the package → assess term and AI suggestions → validate and prepare publication.**
 
-The same example in words:
+[Chapter 2](session-2.html) starts with the drawing. [Chapter 3](session-3.html) separates the entity, abundance property, result and unit from scope, year and method; “natural” remains a source question. [Chapters 4–7](session-4.html) translate the reviewed explanation into a package, review suggestions and preview publication. The [teaching-record page](reference.html#teaching-record) records the catalog's actual status.
 
-1. **Draw what the row describes.** The record refers to the population identified by `46200`, names `BONAPARTE RIVER`, and reports `758`. The estimation activity and its result are distinct; the method describes how the result was produced. [Chapter 2](session-2.html).
-2. **Write and decompose the dictionary.** A working definition is “reported adult-spawner estimate, excluding jacks; the scope of ‘natural’ needs confirmation.” Separate the **entity** (source population), **property** (abundance), **result** (`758`), and **unit** (individuals in the starter dictionary, to confirm). Keep year, place and method as context. Peer-review this explanation, then build the package. [Chapters 3–4](session-3.html).
-3. **Reuse terms whose definitions fit.** Compare the property with the Salmon Domain Ontology's existing [Abundance definition](https://github.com/salmon-data-mobilization/salmon-domain-ontology/blob/d45f8f7cc857d92af8bbe54a7c89b2a4a14784b2/ontology/modules/02-observation-measurement.ttl), and record a supported link to its IRI. Evaluate AI suggestions against the same human explanation and source evidence. [Chapters 5–6](session-5.html).
-4. **Make the data discoverable.** Validate the package, export its metadata and follow the KNB test publication preview. A catalog record lets someone find the data and follow its descriptions and term links. [Chapter 7](session-7.html).
-5. **Develop meanings that are missing.** Clarify unclear source definitions, then draft a local vocabulary or ontology, a [bridge](glossary.html#bridge), or a request for a reusable term in the Salmon Domain Ontology. After steward review and term publication, link the released identifiers in a later version of the dataset's metadata. [Chapters 8–12](session-8.html).
+[Chapters 8–12](session-8.html) return to meanings that need stewardship: a local vocabulary or model, a bridge, or a shared-term request. After review and release, later data packages can link to those maintained terms. The optional [worked illustration](fig/record-to-reuse.svg) follows the same estimate through the stages.
 
-There are two connected outputs: **a catalog record for finding and assessing the dataset**, and **maintained terms for describing meanings across datasets**. Publishing the data and publishing a vocabulary or ontology each has its own review and release process.
+## Two days, three connected outcomes
 
-### A few names you will hear later
+Day 1 is a six-hour beginner route to a described package and test catalog publication. Day 2 adds six hours of vocabulary, ontology and contribution work. Together, they support:
 
-A **Salmon Data Package (SDP)** keeps the table, [data dictionary](glossary.html#data-dictionary), code definitions, dataset description and other context together. `metasalmon` in R and `metasalmonpy` in Python help create and inspect that package. We will use them in Chapter 4.
+- **Reusable data publication:** make the data and their descriptions discoverable and usable.
+- **Shared terminology:** reuse maintained terms and propose new ones when a reusable concept is missing.
+- **Local stewardship:** maintain specific meanings and connect them to shared definitions through explicit bridges.
 
-The workshop [Glossary](glossary.html) is a reading aid: it explains words used in these lessons. A [controlled vocabulary](glossary.html#controlled-vocabulary) is a maintained set of terms and definitions used to describe data consistently. Reading a glossary entry helps you understand the discussion; choosing a vocabulary term requires checking its maintained definition against your data.
-
-An [ontology](glossary.html#ontology) also states relationships between concepts. An [IRI](glossary.html#iri) is a stable identifier used to refer to a term. Later, we compare the meaning we have documented with candidate definitions in the Salmon Domain Ontology and other resources. Similar wording does not establish an exact match.
-
-[EML](glossary.html#eml) is a structured format for ecological metadata. Catalogs such as [KNB](glossary.html#knb), part of the DataONE network, use metadata to help people discover and assess data. We will return to the opening record in Chapter 7 and explain how the workshop's artifacts support it.
+The same diagram and dictionary support all three. The [Day 2 guide](advanced.html) introduces the [SKOS](glossary.html#skos) vocabulary, [OWL](glossary.html#owl) model, bridge and contribution exercises in the extracted kit's `semantic-lab/` folder; [setup](index.html#download-and-open-the-workshop-kit) explains where to find it. The [outcomes illustration](fig/outcomes-overview.svg) shows how the three outputs connect.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Activity: Read the example as a future user
+## Activity: Describe what the next user would need
 
-In pairs, inspect the source table and teaching record or local preview. Spend 10 minutes identifying one question you could answer from the table and one you could not answer safely.
+Return to the Fraser Coho table with a partner. Spend 15 minutes, including sharing your example, identifying one question you could answer from the table and one that needs more evidence.
 
-Then write three short notes:
+Write three short notes:
 
 - The field or value that raises your question.
-- The description, relationship or source evidence that would help.
-- The workshop stage where you expect to resolve it.
+- The description, relationship or source evidence that would help someone else interpret it.
+- The workshop stage where you expect to prepare or review that information.
 
-Share one example. Keep unanswered questions for the diagram and dictionary exercises, together with the additional information you would need to answer them.
+Keep these notes for the diagram and dictionary exercises. Consider how publishing a clear explanation now would change the work of someone who finds the data later.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
-- The same 173-row, 14-column Fraser Coho slice carries every chapter.
-- The workshop supports three intended outcomes: reusable data publication on Day 1, shared terminology on both days, and local stewardship connected to shared meanings on Day 2.
-- A reusable dataset needs understandable values, context, relationships, sources and access conditions.
-- The dataset has 164 distinct population–year pairs; that pair does not uniquely identify every row.
-- We draw and describe the dataset, then peer review our account, before using metasalmon or AI.
-- A catalog record helps people find data; its descriptions help them assess whether those data suit their question.
+- Different column names can refer to a related quantity; scope, scale, method, year and uncertainty still affect whether estimates fit an analysis.
+- A reviewed package records the interpretation work, and shared terms connect its meanings to maintained definitions.
+- The Yukon and Fraser excerpts frame the comparison; the same 173-row, 14-column Fraser Coho slice supports the hands-on chapters.
+- We draw, describe and peer-review the NuSEDS dataset before using metasalmon or AI.
+- Publishing data, developing local meanings and contributing shared terms are connected parts of making the next person's work easier.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
