@@ -10,7 +10,9 @@ template_dir <- file.path("site", "pkgdown", "templates")
 dir.create(template_dir, recursive = TRUE, showWarnings = FALSE)
 writeLines(
   c(readLines(theme_head, warn = FALSE),
-    '<style id="workshop-navigation">', navigation_css, "</style>"),
+    '<style id="workshop-navigation">', navigation_css, "</style>",
+    '<link rel="stylesheet" href="{{#site}}{{root}}{{/site}}files/workflow-explorer/workflow-explorer.css">',
+    '<script defer src="{{#site}}{{root}}{{/site}}files/workflow-explorer/workflow-explorer.js"></script>'),
   file.path(template_dir, "head.html")
 )
 
