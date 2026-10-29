@@ -2,6 +2,10 @@
 site: sandpaper::sandpaper_site
 ---
 
+The **Salmon Data Integration Workshop** helps teams define their organization's terms, connect them to shared concepts, and publish reusable source datasets. The teaching materials and core software tools are free to use.
+
+[Interested in taking the training?](training-interest.html) Send Brett an email to ask about future sessions.
+
 Learn how to make salmon data easier to understand, share, and reuse. This workshop provides **12 hours of teaching and activities over two days**, excluding breaks. Day 1 introduces data description, packaging, and a test catalog publication demonstration. Day 2 explores controlled vocabularies, ontology models, and connections to shared meanings. The dataset and exercise materials are provided.
 
 On **Day 1, Chapters 1–7**, draw the relationships behind the observations, write and peer-review a data dictionary, build a [Salmon Data Package](glossary.html#salmon-data-package), and compare your mappings with recorded [AI](glossary.html#ai) suggestions. Then describe codes and unresolved terms, validate the package, export [EML](glossary.html#eml), and inspect the [KNB](glossary.html#knb) test publication artifacts. The public test record is still pending; the reference page records its actual status.
