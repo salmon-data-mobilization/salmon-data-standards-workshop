@@ -6,6 +6,8 @@ title: Entrypoints
 
 This is the canonical source map for the Carpentries/Sandpaper workshop. Edit source Markdown and R Markdown; never hand-edit generated `site/` pages or theme assets.
 
+The public-facing name is **Salmon Data Integration Workshop**; the repository and existing site URL retain `salmon-data-standards-workshop`. `learners/training-interest.md` owns the training-interest page. Its email link opens a draft to the public lesson contact from `config.yaml`, with an explicit request for future training information. It does not post a form, store addresses, subscribe users automatically, or send email without the visitor choosing to send it. Keep this distinction clear in presentation links and future signup changes.
+
 ## Learner and facilitator surfaces
 
 | Source | Responsibility |
