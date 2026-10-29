@@ -1,0 +1,65 @@
+# Draft source-record model for Chapters 10-11. No official ontology adoption.
+@prefix ex: <https://example.org/fraser-coho-workshop/terms/> .
+@prefix model: <https://example.org/fraser-coho-workshop/model/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+model: a owl:Ontology ;
+    rdfs:label "Fraser Coho source-record teaching model"@en ;
+    ex:reviewStatus "draft; human scientific and modelling review pending" ;
+    rdfs:comment "A local model of information in the fixed source, not a complete model of salmon biology or observation activities. No owl:imports are fetched by the workshop tools."@en .
+
+ex:reviewStatus a owl:AnnotationProperty .
+
+ex:SourceRecord a owl:Class ;
+    rdfs:label "source record"@en ;
+    dcterms:description "A record in a source data table."@en .
+
+ex:NuSEDSEstimateRecord a owl:Class ;
+    rdfs:subClassOf ex:SourceRecord ;
+    rdfs:label "NuSEDS estimate record"@en ;
+    dcterms:description "A record in the NuSEDS escapement source table used in this workshop. This class describes a record, not a field visit, organism group, or numeric result."@en .
+
+ex:SourcePopulationReference a owl:Class ;
+    rdfs:label "source population reference"@en ;
+    dcterms:description "An information object retaining a NuSEDS population identifier and its source label. It is not the biological population itself."@en .
+
+ex:RecordedNumericResult a owl:Class ;
+    rdfs:label "recorded numeric result"@en ;
+    dcterms:description "A representation of a nonblank numeric value reported in the source adult-spawner field. It does not establish the estimation procedure or comparability of results."@en .
+
+ex:VariableDescription a owl:Class ;
+    rdfs:label "variable description"@en ;
+    dcterms:description "An information object describing the source field whose reported value a result represents; this teaching class is not an asserted I-ADOPT alignment."@en .
+
+ex:NuSEDSMethodDescription a owl:Class ;
+    rdfs:label "NuSEDS method description"@en ;
+    dcterms:description "A documentation item explaining a NuSEDS method for producing an estimate, scoped in this lab to a captured source explanation."@en .
+
+ex:hasReportedResult a owl:ObjectProperty ;
+    rdfs:label "has reported result"@en ;
+    rdfs:domain ex:NuSEDSEstimateRecord ;
+    rdfs:range ex:RecordedNumericResult .
+
+ex:concernsPopulationReference a owl:ObjectProperty ;
+    rdfs:domain ex:NuSEDSEstimateRecord ;
+    rdfs:range ex:SourcePopulationReference .
+
+ex:reportedUnderVariable a owl:ObjectProperty ;
+    rdfs:domain ex:RecordedNumericResult ;
+    rdfs:range ex:VariableDescription .
+
+ex:sourceRowNumber a owl:DatatypeProperty ; rdfs:range xsd:integer .
+ex:sourceFile a owl:DatatypeProperty ; rdfs:range xsd:string .
+ex:analysisYear a owl:DatatypeProperty ; rdfs:range xsd:gYear .
+ex:sourcePopulationID a owl:DatatypeProperty ; rdfs:range xsd:string .
+ex:sourcePopulationLabel a owl:DatatypeProperty ; rdfs:range xsd:string .
+ex:sourceMethodLabel a owl:DatatypeProperty ; rdfs:range xsd:string .
+ex:sourceField a owl:DatatypeProperty ; rdfs:range xsd:string .
+ex:numericValue a owl:DatatypeProperty ; rdfs:range xsd:decimal .
+
+# Deliberately absent: equivalence axioms, identities between rows/populations,
+# a row-to-survey-event equation, a natural-origin qualifier, and a unit axiom.
+# The source questions and the reviewed human dictionary still own those decisions.
