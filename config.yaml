@@ -17,7 +17,7 @@ carpentry: 'incubator'
 # carpentry_description: "Custom Carpentry"
 
 # Overall title for pages.
-title: 'Salmon Data Standards Workshop'
+title: 'Salmon Data Integration Workshop'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: '2025-01-22'
@@ -81,6 +81,7 @@ episodes:
 # Information for Learners
 learners: 
 - setup.md
+- training-interest.md
 - glossary.md
 - field-reference.md
 - reference.md

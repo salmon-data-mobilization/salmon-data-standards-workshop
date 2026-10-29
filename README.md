@@ -1,4 +1,4 @@
-# Salmon Data Standards Workshop
+# Salmon Data Integration Workshop
 
 This **two-day, 12-hour workshop** follows one NuSEDS Fraser Coho 2023–2024 dataset from human interpretation through data publication and semantic stewardship. Day 1 is a six-hour beginner route to a Salmon Data Package and a KNB Test Node publication exercise. Day 2 is six hours of controlled-vocabulary construction, ontology modelling, bridge review, and shared-term contribution. Everyone uses the included `nuseds-fraser-coho-2023-2024.csv`: **173 rows and 14 columns**. No personal dataset is needed.
 
@@ -34,6 +34,7 @@ Both parts total **720 minutes**. Chapter 1 is also a standalone 55-minute overv
 
 ## Start here
 
+- [Training interest](learners/training-interest.md): ask Brett for future workshop information by email.
 - [Setup](learners/setup.md): download the workshop kit and choose spreadsheet, R, or Python tools.
 - [Glossary](learners/glossary.md): plain-language terms linked from their first use in the lesson.
 - [Field reference](learners/field-reference.md): package files, required fields, and links to the canonical SDP specification.
