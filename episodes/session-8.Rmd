@@ -21,6 +21,8 @@ exercises: 30
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+![Chapter 8 at a glance.](fig/infographic-chapter-8.svg){alt="Three possible routes for each meaning. Reuse: established shared meaning. Define locally: steward a local concept. Propose: raise a shared-term request. Summary: Choose an appropriate route for each meaning."}
+
 ## Start with the human work already completed
 
 Day 1 followed all **173 rows and 14 columns** of the Fraser Coho NuSEDS slice through interpretation, packaging and review. Day 2 develops small vocabulary, model and bridge artifacts from those same records. Keep the completed graph, dictionary, decomposition and actual peer-review record beside you. A supplied example does not replace that baseline.

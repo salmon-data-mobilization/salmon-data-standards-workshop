@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">Chapter 6: Explain Code Values and Route Unresolved Meanings</title>
+  <desc id="svg-desc">Minimal flowchart line illustration for workshop Chapter 6. Stored code values, Check the meaning, Route decisions. White background.</desc>
+  <style>
+    /* Font for all text in this image. To use a different font for one piece of text,
+       give that text element its own font-family attribute. */
+    svg { font-family: 'DejaVu Sans', 'Arial', sans-serif; }
+  </style>
+  <!-- White background: keeps the drawing readable on the site's dark theme -->
+  <rect id="background" x="0" y="0" width="1200" height="560" rx="20" fill="#FFFFFF" />
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <desc>Explain Code Values and Route Unresolved Meanings. White background, pure vector paths and text.</desc>
+    <circle cx="68" cy="70" r="38" fill="#167EAB" stroke="#167EAB" stroke-width="0" />
+    <text x="68" y="85" font-size="39" font-weight="750" fill="white" text-anchor="middle">6</text>
+    <text x="126" y="54" font-size="31" font-weight="720" fill="#20384C" text-anchor="start">Explain Code Values and</text>
+    <text x="126" y="93" font-size="31" font-weight="720" fill="#20384C" text-anchor="start">Route Unresolved Meanings</text>
+    <rect x="1022" y="38" width="138" height="42" rx="21" fill="#EFF8FB" stroke="#BBDCE8" stroke-width="2" />
+    <text x="1091" y="66" font-size="20" font-weight="720" fill="#167EAB" text-anchor="middle">DAY 1</text>
+    <path d="M40 139 H1160" fill="none" stroke="#BBDCE8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="41" y="519" font-size="22" font-weight="470" fill="#617988" text-anchor="start">Not every label represents the same type of meaning.</text>
+    <path d="M380 314 H418" fill="none" stroke="#167EAB" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M405 304 L418 314 L405 324" fill="none" stroke="#167EAB" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M779 314 H817" fill="none" stroke="#167EAB" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M804 304 L817 314 L804 324" fill="none" stroke="#167EAB" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round" />
+    <g id="chapter-6-stage-1" aria-label="Stored code values">
+      <rect x="37" y="178" width="328" height="284" rx="22" fill="white" stroke="#BBDCE8" stroke-width="2.7" />
+      <rect x="53" y="193" width="296" height="9" rx="5" fill="#EFF8FB" stroke="#EFF8FB" stroke-width="0" />
+      <circle cx="201.0" cy="296" r="77" fill="#EFF8FB" stroke="none" stroke-width="0" />
+      <g transform="translate(142,237) scale(0.98)" aria-label="codes icon">
+        <rect x="20" y="18" width="80" height="90" rx="9" fill="white" stroke="#20384C" stroke-width="3.5" />
+        <rect x="30" y="31" width="18" height="18" rx="4" fill="white" stroke="#167EAB" stroke-width="3" />
+        <path d="M57 40 H88" fill="none" stroke="#617988" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        <rect x="30" y="55" width="18" height="18" rx="4" fill="white" stroke="#378967" stroke-width="3" />
+        <path d="M57 64 H88" fill="none" stroke="#617988" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        <rect x="30" y="79" width="18" height="18" rx="4" fill="white" stroke="#CB7842" stroke-width="3" />
+        <path d="M57 88 H88" fill="none" stroke="#617988" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+      <path d="M68 395 H334" fill="none" stroke="#BBDCE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="201.0" y="430" font-size="23" font-weight="710" fill="#20384C" text-anchor="middle">Stored code values</text>
+      <text x="201.0" y="454" font-size="16" font-weight="460" fill="#617988" text-anchor="middle">Preserve source labels</text>
+    </g>
+    <g id="chapter-6-stage-2" aria-label="Check the meaning">
+      <rect x="436" y="178" width="328" height="284" rx="22" fill="white" stroke="#167EAB" stroke-width="3.4" />
+      <rect x="452" y="193" width="296" height="9" rx="5" fill="#EFF8FB" stroke="#EFF8FB" stroke-width="0" />
+      <circle cx="600.0" cy="296" r="77" fill="#EFF8FB" stroke="none" stroke-width="0" />
+      <g transform="translate(541,237) scale(0.98)" aria-label="decision icon">
+        <path d="M60 10 L110 60 L60 110 L10 60 Z" fill="none" stroke="#20384C" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M60 31 V68" fill="none" stroke="#167EAB" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+        <circle cx="60" cy="82" r="3" fill="#167EAB" stroke="#167EAB" stroke-width="1" />
+      </g>
+      <path d="M467 395 H733" fill="none" stroke="#BBDCE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="600.0" y="430" font-size="23" font-weight="710" fill="#20384C" text-anchor="middle">Check the meaning</text>
+      <text x="600.0" y="454" font-size="16" font-weight="460" fill="#617988" text-anchor="middle">Use evidence, not guesses</text>
+    </g>
+    <g id="chapter-6-stage-3" aria-label="Route decisions">
+      <rect x="835" y="178" width="328" height="284" rx="22" fill="white" stroke="#BBDCE8" stroke-width="2.7" />
+      <rect x="851" y="193" width="296" height="9" rx="5" fill="#EFF8FB" stroke="#EFF8FB" stroke-width="0" />
+      <circle cx="999.0" cy="296" r="77" fill="#EFF8FB" stroke="none" stroke-width="0" />
+      <g transform="translate(940,237) scale(0.98)" aria-label="branch icon">
+        <rect x="40" y="14" width="40" height="23" rx="7" fill="#EFF8FB" stroke="#20384C" stroke-width="3.5" />
+        <path d="M60 37 V53 M22 53 H98 M22 53 V77 M60 53 V77 M98 53 V77" fill="none" stroke="#20384C" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+        <rect x="7" y="77" width="30" height="25" rx="6" fill="white" stroke="#378967" stroke-width="3" />
+        <rect x="45" y="77" width="30" height="25" rx="6" fill="white" stroke="#167EAB" stroke-width="3" />
+        <rect x="83" y="77" width="30" height="25" rx="6" fill="white" stroke="#CB7842" stroke-width="3" />
+      </g>
+      <path d="M866 395 H1132" fill="none" stroke="#BBDCE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="999.0" y="430" font-size="23" font-weight="710" fill="#20384C" text-anchor="middle">Route decisions</text>
+      <text x="999.0" y="454" font-size="16" font-weight="460" fill="#617988" text-anchor="middle">Reuse, local, or unresolved</text>
+    </g>
+  </g>
+</svg>

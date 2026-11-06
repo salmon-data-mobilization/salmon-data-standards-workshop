@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">Chapter 8: Choose What to Reuse, Define Locally, or Propose Together</title>
+  <desc id="svg-desc">Minimal flowchart line illustration for workshop Chapter 8. Reuse, Define locally, Propose. White background.</desc>
+  <style>
+    /* Font for all text in this image. To use a different font for one piece of text,
+       give that text element its own font-family attribute. */
+    svg { font-family: 'DejaVu Sans', 'Arial', sans-serif; }
+  </style>
+  <!-- White background: keeps the drawing readable on the site's dark theme -->
+  <rect id="background" x="0" y="0" width="1200" height="560" rx="20" fill="#FFFFFF" />
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <desc>Choose What to Reuse, Define Locally, or Propose Together. White background, pure vector paths and text.</desc>
+    <circle cx="68" cy="70" r="38" fill="#CB7842" stroke="#CB7842" stroke-width="0" />
+    <text x="68" y="85" font-size="39" font-weight="750" fill="white" text-anchor="middle">8</text>
+    <text x="126" y="54" font-size="31" font-weight="720" fill="#20384C" text-anchor="start">Choose What to Reuse, Define</text>
+    <text x="126" y="93" font-size="31" font-weight="720" fill="#20384C" text-anchor="start">Locally, or Propose Together</text>
+    <rect x="1022" y="38" width="138" height="42" rx="21" fill="#FFF5EE" stroke="#F0D4C2" stroke-width="2" />
+    <text x="1091" y="66" font-size="20" font-weight="720" fill="#CB7842" text-anchor="middle">DAY 2</text>
+    <path d="M40 139 H1160" fill="none" stroke="#F0D4C2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="41" y="519" font-size="22" font-weight="470" fill="#617988" text-anchor="start">Choose an appropriate route for each meaning.</text>
+    <rect x="389" y="147" width="422" height="38" rx="18" fill="#FFF5EE" stroke="#F0D4C2" stroke-width="2" />
+    <text x="600" y="173" font-size="19" font-weight="720" fill="#CB7842" text-anchor="middle" letter-spacing="1.2">THREE POSSIBLE ROUTES</text>
+    <path d="M201 186 V173" fill="none" stroke="#CB7842" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 9" />
+    <path d="M600 186 V173" fill="none" stroke="#CB7842" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 9" />
+    <path d="M999 186 V173" fill="none" stroke="#CB7842" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 9" />
+    <g id="chapter-8-stage-1" aria-label="Reuse">
+      <rect x="37" y="178" width="328" height="284" rx="22" fill="white" stroke="#F0D4C2" stroke-width="2.7" />
+      <rect x="53" y="193" width="296" height="9" rx="5" fill="#FFF5EE" stroke="#FFF5EE" stroke-width="0" />
+      <circle cx="201.0" cy="296" r="77" fill="#FFF5EE" stroke="none" stroke-width="0" />
+      <g transform="translate(142,237) scale(0.98)" aria-label="check icon">
+        <circle cx="60" cy="60" r="45" fill="white" stroke="#378967" stroke-width="4" />
+        <path d="M33 61 L51 78 L87 40" fill="none" stroke="#378967" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+      <path d="M68 395 H334" fill="none" stroke="#F0D4C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="201.0" y="430" font-size="23" font-weight="710" fill="#20384C" text-anchor="middle">Reuse</text>
+      <text x="201.0" y="454" font-size="16" font-weight="460" fill="#617988" text-anchor="middle">Established shared meaning</text>
+    </g>
+    <g id="chapter-8-stage-2" aria-label="Define locally">
+      <rect x="436" y="178" width="328" height="284" rx="22" fill="white" stroke="#CB7842" stroke-width="3.4" />
+      <rect x="452" y="193" width="296" height="9" rx="5" fill="#FFF5EE" stroke="#FFF5EE" stroke-width="0" />
+      <circle cx="600.0" cy="296" r="77" fill="#FFF5EE" stroke="none" stroke-width="0" />
+      <g transform="translate(541,237) scale(0.98)" aria-label="notes icon">
+        <path d="M30 15 H77 L92 30 V105 H30 Z" fill="none" stroke="#20384C" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M77 15 V31 H92" fill="none" stroke="#20384C" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M41 48 H80" fill="none" stroke="#617988" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M41 62 H80" fill="none" stroke="#167EAB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M41 76 H71" fill="none" stroke="#617988" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M41 90 H71" fill="none" stroke="#167EAB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+      <path d="M467 395 H733" fill="none" stroke="#F0D4C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="600.0" y="430" font-size="23" font-weight="710" fill="#20384C" text-anchor="middle">Define locally</text>
+      <text x="600.0" y="454" font-size="16" font-weight="460" fill="#617988" text-anchor="middle">Steward a local concept</text>
+    </g>
+    <g id="chapter-8-stage-3" aria-label="Propose">
+      <rect x="835" y="178" width="328" height="284" rx="22" fill="white" stroke="#F0D4C2" stroke-width="2.7" />
+      <rect x="851" y="193" width="296" height="9" rx="5" fill="#FFF5EE" stroke="#FFF5EE" stroke-width="0" />
+      <circle cx="999.0" cy="296" r="77" fill="#FFF5EE" stroke="none" stroke-width="0" />
+      <g transform="translate(940,237) scale(0.98)" aria-label="request icon">
+        <path d="M28 16 H77 L94 34 V106 H28 Z M77 16 V34 H94" fill="none" stroke="#20384C" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M39 48 H80 M39 61 H76 M39 74 H81" fill="none" stroke="#617988" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M61 98 L72 88 L79 96 L94 79" fill="none" stroke="#167EAB" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+      <path d="M866 395 H1132" fill="none" stroke="#F0D4C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="999.0" y="430" font-size="23" font-weight="710" fill="#20384C" text-anchor="middle">Propose</text>
+      <text x="999.0" y="454" font-size="16" font-weight="460" fill="#617988" text-anchor="middle">Raise a shared-term request</text>
+    </g>
+  </g>
+</svg>

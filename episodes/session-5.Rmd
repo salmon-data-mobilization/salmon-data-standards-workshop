@@ -22,6 +22,8 @@ exercises: 40
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+![Chapter 5 at a glance.](fig/infographic-chapter-5.svg){alt="Three steps, left to right. 1, Human evidence: start with your interpretation. 2, Candidate terms: compare actual definitions. 3, Review decisions: accept, reject, or question. Summary: Suggestions are evidence to assess, not definitions to adopt."}
+
 ```{r metasalmon-available, include = FALSE}
 # Register the pinned lesson dependency; classroom examples below do not run
 # during a website build and no vocabulary or AI calls are made by this chunk.

@@ -21,6 +21,8 @@ exercises: 35
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+![Chapter 12 at a glance.](fig/infographic-chapter-12.svg){alt="Three steps, left to right. 1, Draft request: state the proposed meaning. 2, Human review: discuss and refine evidence. 3, Stewardship: track decisions and versions. Summary: Submitting a draft is not the same as approval."}
+
 ## The problem: an unresolved label needs a useful next action
 
 Continue with the unchanged **173-row, 14-column NuSEDS Fraser Coho 2023–2024 source**, dataset ID `fraser-coho-workshop`, table ID `escapement`. Bring your actual Chapter 2 graph, Chapter 3 dictionary and peer review, and the decisions from the Day 2 mapping and local-model exercises. A supplied reference answer cannot replace your human checkpoint.

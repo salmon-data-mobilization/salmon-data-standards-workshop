@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">Chapter 9: Build and Steward a Small SKOS Vocabulary</title>
+  <desc id="svg-desc">Minimal flowchart line illustration for workshop Chapter 9. Concepts &amp; labels, SKOS relationships, Stewardship. White background.</desc>
+  <style>
+    /* Font for all text in this image. To use a different font for one piece of text,
+       give that text element its own font-family attribute. */
+    svg { font-family: 'DejaVu Sans', 'Arial', sans-serif; }
+  </style>
+  <!-- White background: keeps the drawing readable on the site's dark theme -->
+  <rect id="background" x="0" y="0" width="1200" height="560" rx="20" fill="#FFFFFF" />
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <desc>Build and Steward a Small SKOS Vocabulary. White background, pure vector paths and text.</desc>
+    <circle cx="68" cy="70" r="38" fill="#CB7842" stroke="#CB7842" stroke-width="0" />
+    <text x="68" y="85" font-size="39" font-weight="750" fill="white" text-anchor="middle">9</text>
+    <text x="126" y="54" font-size="31" font-weight="720" fill="#20384C" text-anchor="start">Build and Steward a</text>
+    <text x="126" y="93" font-size="31" font-weight="720" fill="#20384C" text-anchor="start">Small SKOS Vocabulary</text>
+    <rect x="1022" y="38" width="138" height="42" rx="21" fill="#FFF5EE" stroke="#F0D4C2" stroke-width="2" />
+    <text x="1091" y="66" font-size="20" font-weight="720" fill="#CB7842" text-anchor="middle">DAY 2</text>
+    <path d="M40 139 H1160" fill="none" stroke="#F0D4C2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="41" y="519" font-size="22" font-weight="470" fill="#617988" text-anchor="start">Create a small vocabulary with recorded decisions.</text>
+    <path d="M380 314 H418" fill="none" stroke="#CB7842" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M405 304 L418 314 L405 324" fill="none" stroke="#CB7842" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M779 314 H817" fill="none" stroke="#CB7842" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M804 304 L817 314 L804 324" fill="none" stroke="#CB7842" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round" />
+    <g id="chapter-9-stage-1" aria-label="Concepts &amp; labels">
+      <rect x="37" y="178" width="328" height="284" rx="22" fill="white" stroke="#F0D4C2" stroke-width="2.7" />
+      <rect x="53" y="193" width="296" height="9" rx="5" fill="#FFF5EE" stroke="#FFF5EE" stroke-width="0" />
+      <circle cx="201.0" cy="296" r="77" fill="#FFF5EE" stroke="none" stroke-width="0" />
+      <g transform="translate(142,237) scale(0.98)" aria-label="terms icon">
+        <rect x="23" y="19" width="73" height="83" rx="9" fill="white" stroke="#20384C" stroke-width="3.6" />
+        <path d="M34 40 H84 M34 55 H72 M34 70 H83" fill="none" stroke="#617988" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        <rect x="32" y="80" width="45" height="13" rx="4" fill="#EFF8FB" stroke="#167EAB" stroke-width="2" />
+      </g>
+      <path d="M68 395 H334" fill="none" stroke="#F0D4C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="201.0" y="430" font-size="23" font-weight="710" fill="#20384C" text-anchor="middle">Concepts &amp; labels</text>
+      <text x="201.0" y="454" font-size="16" font-weight="460" fill="#617988" text-anchor="middle">Definitions and identifiers</text>
+    </g>
+    <g id="chapter-9-stage-2" aria-label="SKOS relationships">
+      <rect x="436" y="178" width="328" height="284" rx="22" fill="white" stroke="#CB7842" stroke-width="3.4" />
+      <rect x="452" y="193" width="296" height="9" rx="5" fill="#FFF5EE" stroke="#FFF5EE" stroke-width="0" />
+      <circle cx="600.0" cy="296" r="77" fill="#FFF5EE" stroke="none" stroke-width="0" />
+      <g transform="translate(541,237) scale(0.98)" aria-label="hierarchy icon">
+        <rect x="39" y="12" width="43" height="23" rx="6" fill="#EFF8FB" stroke="#20384C" stroke-width="3" />
+        <path d="M60 35 V51 M25 51 H95 M25 51 V69 M95 51 V69" fill="none" stroke="#20384C" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+        <rect x="7" y="68" width="40" height="28" rx="6" fill="white" stroke="#167EAB" stroke-width="3" />
+        <rect x="73" y="68" width="40" height="28" rx="6" fill="white" stroke="#378967" stroke-width="3" />
+        <path d="M18 81 H36 M84 81 H102" fill="none" stroke="#617988" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+      <path d="M467 395 H733" fill="none" stroke="#F0D4C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="600.0" y="430" font-size="23" font-weight="710" fill="#20384C" text-anchor="middle">SKOS relationships</text>
+      <text x="600.0" y="454" font-size="16" font-weight="460" fill="#617988" text-anchor="middle">Broader and narrower</text>
+    </g>
+    <g id="chapter-9-stage-3" aria-label="Stewardship">
+      <rect x="835" y="178" width="328" height="284" rx="22" fill="white" stroke="#F0D4C2" stroke-width="2.7" />
+      <rect x="851" y="193" width="296" height="9" rx="5" fill="#FFF5EE" stroke="#FFF5EE" stroke-width="0" />
+      <circle cx="999.0" cy="296" r="77" fill="#FFF5EE" stroke="none" stroke-width="0" />
+      <g transform="translate(940,237) scale(0.98)" aria-label="version icon">
+        <path d="M85 31 C55 6 20 27 24 63" fill="none" stroke="#167EAB" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M16 52 L24 66 L39 57" fill="none" stroke="#167EAB" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M35 88 C67 115 100 86 96 52" fill="none" stroke="#CB7842" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M103 62 L96 49 L82 59" fill="none" stroke="#CB7842" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M45 48 H76 M45 61 H70" fill="none" stroke="#617988" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+      <path d="M866 395 H1132" fill="none" stroke="#F0D4C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="999.0" y="430" font-size="23" font-weight="710" fill="#20384C" text-anchor="middle">Stewardship</text>
+      <text x="999.0" y="454" font-size="16" font-weight="460" fill="#617988" text-anchor="middle">Maintain and revise terms</text>
+    </g>
+  </g>
+</svg>

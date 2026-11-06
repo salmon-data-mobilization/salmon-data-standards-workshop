@@ -21,6 +21,8 @@ exercises: 20
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+![Chapter 4 at a glance.](fig/infographic-chapter-4.svg){alt="Three steps, left to right. 1, Human description: reviewed graph and dictionary. 2, Salmon Data Package: data with metadata. 3, Draft inspection: technical checks are distinct. Summary: Keep the human meaning alongside the data package."}
+
 ## The problem: useful descriptions need to travel with the data
 
 Your diagram explains the relationships. Your dictionary explains the columns. A [Salmon Data Package](glossary.html#salmon-data-package) organizes data and standardized metadata for another person and their software to inspect. This chapter transfers selected human descriptions into that structure while retaining the richer diagram and reasoning in the workshop project.

@@ -21,6 +21,8 @@ exercises: 45
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+![Chapter 9 at a glance.](fig/infographic-chapter-9.svg){alt="Three steps, left to right. 1, Concepts and labels: definitions and identifiers. 2, SKOS relationships: broader and narrower. 3, Stewardship: maintain and revise terms. Summary: Create a small vocabulary with recorded decisions."}
+
 ## Build from source meanings, not labels alone
 
 Chapter 8 selected a local/profile teaching draft for a small set of estimate-method categories. Continue with your human dictionary and the same 173-row, 14-column source. The four values below all occur in `ESTIMATE_METHOD`; they are a **selection from its nine values**, not a complete NuSEDS method vocabulary.

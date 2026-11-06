@@ -21,6 +21,8 @@ exercises: 20
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+![Chapter 7 at a glance.](fig/infographic-chapter-7.svg){alt="Three steps, left to right. 1, Data package: data and reviewed metadata. 2, Validate and export: check structure and EML. 3, Inspect test record: publication still needs authority. Summary: A valid draft is not necessarily approved for publication."}
+
 ## The problem: a reusable package needs both meaning and a reliable access path
 
 At the start of the workshop you saw the destination. Now follow the evidence that connects it to the source: unchanged rows, a human diagram, definitions and decomposition, recorded mapping decisions, code meanings, and a package another person can interpret.

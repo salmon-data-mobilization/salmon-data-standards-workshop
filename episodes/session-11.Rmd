@@ -22,6 +22,8 @@ exercises: 45
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+![Chapter 11 at a glance.](fig/infographic-chapter-11.svg){alt="Three steps, left to right. 1, Local meanings: your vocabulary and model. 2, Bridge mappings: connect related meanings. 3, Test and review: check what links really imply. Summary: A semantic bridge needs evidence and careful testing."}
+
 ## Preserve local meaning while making it discoverable
 
 A collaborator wants to find salmon enumeration information across programs. Our source uses `Area Under the Curve`, `Combined Methods`, `Fixed Site Census`, and other NuSEDS categories. The shared Salmon Domain Ontology contains reusable terms, but a shared label need not capture every local distinction.

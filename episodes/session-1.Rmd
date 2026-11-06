@@ -21,6 +21,8 @@ exercises: 25
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+![Chapter 1 at a glance.](fig/infographic-chapter-1.svg){alt="Three steps, left to right. 1, NuSEDS source, a table of observations. 2, Human context, explain what values mean. 3, Reusable data, understandable to others. Summary: Data values become useful when their context travels with them."}
+
 ## Two days, three connected outcomes
 
 This workshop supports the following intended outcomes:

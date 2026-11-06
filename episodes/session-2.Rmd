@@ -22,6 +22,8 @@ exercises: 35
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+![Chapter 2 at a glance.](fig/infographic-chapter-2.svg){alt="Three steps, left to right. 1, Spawner estimate: what is being counted? 2, Relationships: population, method, place. 3, Working diagram: show knowns and unknowns. Summary: Draw relationships before choosing tools or terminology."}
+
 ## Start with three columns
 
 Open `raw_data/nuseds-fraser-coho-2023-2024.csv` from the [extracted workshop kit](index.html#download-and-open-the-workshop-kit). Use paper, a whiteboard or a drawing application, together with a spreadsheet or text editor.

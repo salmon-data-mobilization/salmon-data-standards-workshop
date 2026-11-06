@@ -22,6 +22,8 @@ exercises: 55
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+![Chapter 10 at a glance.](fig/infographic-chapter-10.svg){alt="Three steps, left to right. 1, Human graph: relationships already described. 2, OWL model: formal classes and properties. 3, Test selected rules: check structural behaviour. Summary: Formal models need interpretation and limited checks."}
+
 ## Start with a question the model should answer
 
 We have already described the data and built a small vocabulary. Now we want another system to recognize relationships that a person can see in the diagram. For example: **if a NuSEDS record has a reported result, what kind of object is that result?** A second question is just as useful: **does a missing result tell us that zero fish were reported?**

@@ -21,6 +21,8 @@ exercises: 45
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+![Chapter 3 at a glance.](fig/infographic-chapter-3.svg){alt="Three steps, left to right. 1, Source fields: start with column names. 2, Define and decompose: separate each meaning. 3, Peer review: record open questions. Summary: A reviewed description is more than a list of column names."}
+
 ## Turn the diagram into a usable explanation
 
 Continue with the unchanged 173-row Fraser Coho table and your Chapter 2 diagram. Open `worksheets/data-dictionary.csv` and `worksheets/variable-decomposition.csv` from the kit in a spreadsheet or text editor. **Write and peer-review your interpretation before using metasalmon or AI.**

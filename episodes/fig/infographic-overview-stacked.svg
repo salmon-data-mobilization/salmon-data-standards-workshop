@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2600" height="1360" viewBox="0 0 2600 1360" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">The salmon data journey: two-day stacked flowchart</title>
+  <desc id="svg-desc">An editable SVG showing seven Day 1 chapters in the top row and five Day 2 chapters in the bottom row, joined by a central downward transition. Line icons and cards are pure vector shapes with a white background.</desc>
+  <style>
+    /* Font for all text in this image. To use a different font for one piece of text,
+       give that text element its own font-family attribute. */
+    svg { font-family: 'DejaVu Sans', 'Arial', sans-serif; }
+  </style>
+  <!-- White background: keeps the drawing readable on the site's dark theme -->
+  <rect id="background" x="0" y="0" width="2600" height="1360" rx="43" fill="#FFFFFF" />
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <text x="72" y="84" fill="#20384C" font-size="64" font-weight="730" text-anchor="start">The salmon data journey</text>
+    <text x="74" y="134" fill="#617988" font-size="29" font-weight="400" text-anchor="start">12 chapters · from human interpretation to reusable data and shared meaning</text>
+    <rect x="40" y="163" width="2520" height="510" rx="27" fill="none" stroke="#BBDCE8" stroke-width="3" />
+    <rect x="57" y="179" width="2486" height="73" rx="21" fill="#EFF8FB" />
+    <rect x="78" y="188" width="200" height="54" rx="26" fill="#167EAB" />
+    <text x="178" y="226" fill="#FFFFFF" font-size="30" font-weight="750" text-anchor="middle">DAY 1</text>
+    <path d="M304 195 V237" fill="none" stroke="#167EAB" stroke-width="3" />
+    <text x="332" y="226" fill="#167EAB" font-size="29" font-weight="530" text-anchor="start">DESCRIPTION · PACKAGING · TEST PUBLICATION</text>
+    <g id="chapter-1" aria-label="Chapter 1: See the Whole Journey: From NuSEDS to Reusable Data" transform="translate(24,10)">
+      <rect x="64" y="270" width="306" height="326" rx="24" fill="white" stroke="#BBDCE8" stroke-width="3" />
+      <rect x="79" y="285" width="276" height="10" rx="5" fill="#EFF8FB" stroke="#EFF8FB" stroke-width="0" />
+      <circle cx="111" cy="320" r="28" fill="#167EAB" stroke="#167EAB" stroke-width="0" />
+      <text x="111" y="332" font-size="31" font-weight="750" fill="white" text-anchor="middle">1</text>
+      <g transform="translate(151,329) scale(1.07)">
+        <rect x="18" y="24" width="84" height="73" rx="8" fill="white" stroke="#20384C" stroke-width="3.7" />
+        <rect x="18" y="24" width="84" height="17" rx="7" fill="#EFF8FB" stroke="#20384C" stroke-width="3.3" />
+        <path d="M45 43 V95" fill="none" stroke="#617988" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M72 43 V95" fill="none" stroke="#617988" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M19 61 H101" fill="none" stroke="#617988" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M19 79 H101" fill="none" stroke="#617988" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <rect x="47" y="63" width="23" height="14" rx="2" fill="#FFF5EE" stroke="#CB7842" stroke-width="2" />
+      </g>
+      <path d="M99 477 H335" fill="none" stroke="#BBDCE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="217.0" y="523" font-size="32" font-weight="700" fill="#20384C" text-anchor="middle">Whole</text>
+      <text x="217.0" y="566" font-size="32" font-weight="700" fill="#20384C" text-anchor="middle">journey</text>
+    </g>
+    <path d="M396 443 L431 443" fill="none" stroke="#167EAB" stroke-width="5" />
+    <path d="M418 431 L431 443 L418 455" fill="none" stroke="#167EAB" stroke-width="5" />
+    <g id="chapter-2" aria-label="Chapter 2: Draw the Dataset Before Using Tools" transform="translate(9,10)">
+      <rect x="429" y="270" width="306" height="326" rx="24" fill="white" stroke="#BBDCE8" stroke-width="3" />
+      <rect x="444" y="285" width="276" height="10" rx="5" fill="#EFF8FB" stroke="#EFF8FB" stroke-width="0" />
+      <circle cx="476" cy="320" r="28" fill="#167EAB" stroke="#167EAB" stroke-width="0" />
+      <text x="476" y="332" font-size="31" font-weight="750" fill="white" text-anchor="middle">2</text>
+      <g transform="translate(516,329) scale(1.07)">
+        <path d="M26 65 L57 25 L93 58 L64 97 L26 65 M57 25 L64 97" fill="none" stroke="#617988" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        <circle cx="26" cy="65" r="9" fill="white" stroke="#167EAB" stroke-width="3.5" />
+        <circle cx="57" cy="25" r="9" fill="white" stroke="#CB7842" stroke-width="3.5" />
+        <circle cx="93" cy="58" r="9" fill="white" stroke="#378967" stroke-width="3.5" />
+        <circle cx="64" cy="97" r="9" fill="white" stroke="#167EAB" stroke-width="3.5" />
+      </g>
+      <path d="M464 477 H700" fill="none" stroke="#BBDCE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="582.0" y="523" font-size="32" font-weight="700" fill="#20384C" text-anchor="middle">Draw the</text>
+      <text x="582.0" y="566" font-size="32" font-weight="700" fill="#20384C" text-anchor="middle">dataset</text>
+    </g>
+    <path d="M746 443 L781 443" fill="none" stroke="#167EAB" stroke-width="5" />
+    <path d="M768 431 L781 443 L768 455" fill="none" stroke="#167EAB" stroke-width="5" />
+    <g id="chapter-3" aria-label="Chapter 3: Write the Dictionary, Decompose Meanings and Review Together" transform="translate(-6,10)">
+      <rect x="794" y="270" width="306" height="326" rx="24" fill="white" stroke="#BBDCE8" stroke-width="3" />
+      <rect x="809" y="285" width="276" height="10" rx="5" fill="#EFF8FB" stroke="#EFF8FB" stroke-width="0" />
+      <circle cx="841" cy="320" r="28" fill="#167EAB" stroke="#167EAB" stroke-width="0" />
+      <text x="841" y="332" font-size="31" font-weight="750" fill="white" text-anchor="middle">3</text>
+      <g transform="translate(881,329) scale(1.07)">
+        <path d="M30 15 H77 L92 30 V105 H30 Z" fill="none" stroke="#20384C" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M77 15 V31 H92" fill="none" stroke="#20384C" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M41 48 H80" fill="none" stroke="#617988" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M41 62 H80" fill="none" stroke="#167EAB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M41 76 H71" fill="none" stroke="#617988" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M41 90 H71" fill="none" stroke="#167EAB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+      <path d="M829 477 H1065" fill="none" stroke="#BBDCE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="947.0" y="523" font-size="32" font-weight="700" fill="#20384C" text-anchor="middle">Dictionary</text>
+      <text x="947.0" y="566" font-size="32" font-weight="700" fill="#20384C" text-anchor="middle">&amp; review</text>
+    </g>
+    <path d="M1096 443 L1131 443" fill="none" stroke="#167EAB" stroke-width="5" />
+    <path d="M1118 431 L1131 443 L1118 455" fill="none" stroke="#167EAB" stroke-width="5" />
+    <g id="chapter-4" aria-label="Chapter 4: Build the Package from Your Human Description" transform="translate(-21,10)">
+      <rect x="1159" y="270" width="306" height="326" rx="24" fill="white" stroke="#BBDCE8" stroke-width="3" />
+      <rect x="1174" y="285" width="276" height="10" rx="5" fill="#EFF8FB" stroke="#EFF8FB" stroke-width="0" />
+      <circle cx="1206" cy="320" r="28" fill="#167EAB" stroke="#167EAB" stroke-width="0" />
+      <text x="1206" y="332" font-size="31" font-weight="750" fill="white" text-anchor="middle">4</text>
+      <g transform="translate(1246,329) scale(1.07)">
+        <path d="M15 39 L60 19 L104 40 L60 63 Z" fill="none" stroke="#20384C" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M15 39 V89 L60 108 L104 88 V40 M60 63 V108" fill="none" stroke="#20384C" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M37 29 L82 50 M35 57 L51 64" fill="none" stroke="#CB7842" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+      <path d="M1194 477 H1430" fill="none" stroke="#BBDCE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="1312.0" y="523" font-size="32" font-weight="700" fill="#20384C" text-anchor="middle">Build the</text>
+      <text x="1312.0" y="566" font-size="32" font-weight="700" fill="#20384C" text-anchor="middle">package</text>
+    </g>
+    <path d="M1446 443 L1481 443" fill="none" stroke="#167EAB" stroke-width="5" />
+    <path d="M1468 431 L1481 443 L1468 455" fill="none" stroke="#167EAB" stroke-width="5" />
+    <g id="chapter-5" aria-label="Chapter 5: Map Meanings and Compare AI Suggestions" transform="translate(-36,10)">
+      <rect x="1524" y="270" width="306" height="326" rx="24" fill="white" stroke="#BBDCE8" stroke-width="3" />
+      <rect x="1539" y="285" width="276" height="10" rx="5" fill="#EFF8FB" stroke="#EFF8FB" stroke-width="0" />
+      <circle cx="1571" cy="320" r="28" fill="#167EAB" stroke="#167EAB" stroke-width="0" />
+      <text x="1571" y="332" font-size="31" font-weight="750" fill="white" text-anchor="middle">5</text>
+      <g transform="translate(1611,329) scale(1.07)">
+        <rect x="7" y="24" width="48" height="72" rx="7" fill="white" stroke="#167EAB" stroke-width="3" />
+        <rect x="65" y="24" width="48" height="72" rx="7" fill="white" stroke="#CB7842" stroke-width="3" />
+        <path d="M17 43 H45 M75 43 H103" fill="none" stroke="#617988" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M17 57 H45 M75 57 H103" fill="none" stroke="#617988" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M17 71 H45 M75 71 H103" fill="none" stroke="#617988" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M48 93 L59 103 L75 84" fill="none" stroke="#378967" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+      <path d="M1559 477 H1795" fill="none" stroke="#BBDCE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="1677.0" y="523" font-size="32" font-weight="700" fill="#20384C" text-anchor="middle">Map meanings</text>
+      <text x="1677.0" y="566" font-size="32" font-weight="700" fill="#20384C" text-anchor="middle">&amp; compare AI</text>
+    </g>
+    <path d="M1796 443 L1831 443" fill="none" stroke="#167EAB" stroke-width="5" />
+    <path d="M1818 431 L1831 443 L1818 455" fill="none" stroke="#167EAB" stroke-width="5" />
+    <g id="chapter-6" aria-label="Chapter 6: Explain Code Values and Route Unresolved Meanings" transform="translate(-51,10)">
+      <rect x="1889" y="270" width="306" height="326" rx="24" fill="white" stroke="#BBDCE8" stroke-width="3" />
+      <rect x="1904" y="285" width="276" height="10" rx="5" fill="#EFF8FB" stroke="#EFF8FB" stroke-width="0" />
+      <circle cx="1936" cy="320" r="28" fill="#167EAB" stroke="#167EAB" stroke-width="0" />
+      <text x="1936" y="332" font-size="31" font-weight="750" fill="white" text-anchor="middle">6</text>
+      <g transform="translate(1976,329) scale(1.07)">
+        <rect x="20" y="18" width="80" height="90" rx="9" fill="white" stroke="#20384C" stroke-width="3.5" />
+        <rect x="30" y="31" width="18" height="18" rx="4" fill="white" stroke="#167EAB" stroke-width="3" />
+        <path d="M57 40 H88" fill="none" stroke="#617988" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        <rect x="30" y="55" width="18" height="18" rx="4" fill="white" stroke="#378967" stroke-width="3" />
+        <path d="M57 64 H88" fill="none" stroke="#617988" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        <rect x="30" y="79" width="18" height="18" rx="4" fill="white" stroke="#CB7842" stroke-width="3" />
+        <path d="M57 88 H88" fill="none" stroke="#617988" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+      <path d="M1924 477 H2160" fill="none" stroke="#BBDCE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="2042.0" y="523" font-size="32" font-weight="700" fill="#20384C" text-anchor="middle">Codes &amp;</text>
+      <text x="2042.0" y="566" font-size="32" font-weight="700" fill="#20384C" text-anchor="middle">open questions</text>
+    </g>
+    <path d="M2146 443 L2181 443" fill="none" stroke="#167EAB" stroke-width="5" />
+    <path d="M2168 431 L2181 443 L2168 455" fill="none" stroke="#167EAB" stroke-width="5" />
+    <g id="chapter-7" aria-label="Chapter 7: Validate, Inspect the Test Record, and Explain Publication" transform="translate(-66,10)">
+      <rect x="2254" y="270" width="306" height="326" rx="24" fill="white" stroke="#BBDCE8" stroke-width="3" />
+      <rect x="2269" y="285" width="276" height="10" rx="5" fill="#EFF8FB" stroke="#EFF8FB" stroke-width="0" />
+      <circle cx="2301" cy="320" r="28" fill="#167EAB" stroke="#167EAB" stroke-width="0" />
+      <text x="2301" y="332" font-size="31" font-weight="750" fill="white" text-anchor="middle">7</text>
+      <g transform="translate(2341,329) scale(1.07)">
+        <circle cx="60" cy="60" r="45" fill="white" stroke="#378967" stroke-width="4" />
+        <path d="M33 61 L51 78 L87 40" fill="none" stroke="#378967" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+      <path d="M2289 477 H2525" fill="none" stroke="#BBDCE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="2407.0" y="523" font-size="32" font-weight="700" fill="#20384C" text-anchor="middle">Validate &amp;</text>
+      <text x="2407.0" y="566" font-size="32" font-weight="700" fill="#20384C" text-anchor="middle">test record</text>
+    </g>
+    <line x1="83" y1="631" x2="2514" y2="631" stroke="#BBDCE8" stroke-width="2" />
+    <text x="94" y="658" fill="#167EAB" font-size="22" font-weight="750" text-anchor="start">01–07</text>
+    <text x="206" y="658" fill="#617988" font-size="21" font-weight="440" text-anchor="start">Understand  →  describe  →  package  →  review  →  validate  →  prepare publication</text>
+    <path d="M1300 674 V710" fill="none" stroke="#167EAB" stroke-width="6" />
+    <rect x="1121" y="710" width="358" height="61" rx="31" fill="#CB7842" />
+    <text x="1300" y="750" fill="white" font-size="25" font-weight="730" text-anchor="middle">CONTINUE TO DAY 2</text>
+    <path d="M1300 771 V802" fill="none" stroke="#167EAB" stroke-width="6" />
+    <path d="M1284 787 L1300 803 L1316 787" fill="none" stroke="#167EAB" stroke-width="6" />
+    <rect x="40" y="815" width="2520" height="510" rx="27" fill="none" stroke="#F0D4C2" stroke-width="3" />
+    <rect x="57" y="831" width="2486" height="73" rx="21" fill="#FFF5EE" />
+    <rect x="78" y="840" width="200" height="54" rx="26" fill="#CB7842" />
+    <text x="178" y="879" fill="#FFFFFF" font-size="30" font-weight="750" text-anchor="middle">DAY 2</text>
+    <path d="M304 848 V889" fill="none" stroke="#CB7842" stroke-width="3" />
+    <text x="332" y="878" fill="#CB7842" font-size="29" font-weight="530" text-anchor="start">VOCABULARIES · MODELS · STEWARDSHIP</text>
+    <g id="chapter-8" aria-label="Chapter 8: Choose What to Reuse, Define Locally, or Propose Together" transform="translate(-2401,657)">
+      <rect x="2619" y="270" width="306" height="326" rx="24" fill="white" stroke="#F0D4C2" stroke-width="3" />
+      <rect x="2634" y="285" width="276" height="10" rx="5" fill="#FFF5EE" stroke="#FFF5EE" stroke-width="0" />
+      <circle cx="2666" cy="320" r="28" fill="#CB7842" stroke="#CB7842" stroke-width="0" />
+      <text x="2666" y="332" font-size="31" font-weight="750" fill="white" text-anchor="middle">8</text>
+      <g transform="translate(2706,329) scale(1.07)">
+        <rect x="40" y="14" width="40" height="23" rx="7" fill="#EFF8FB" stroke="#20384C" stroke-width="3.5" />
+        <path d="M60 37 V53 M22 53 H98 M22 53 V77 M60 53 V77 M98 53 V77" fill="none" stroke="#20384C" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+        <rect x="7" y="77" width="30" height="25" rx="6" fill="white" stroke="#378967" stroke-width="3" />
+        <rect x="45" y="77" width="30" height="25" rx="6" fill="white" stroke="#167EAB" stroke-width="3" />
+        <rect x="83" y="77" width="30" height="25" rx="6" fill="white" stroke="#CB7842" stroke-width="3" />
+      </g>
+      <path d="M2654 477 H2890" fill="none" stroke="#F0D4C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="2772.0" y="523" font-size="32" font-weight="700" fill="#20384C" text-anchor="middle">Reuse, local</text>
+      <text x="2772.0" y="566" font-size="32" font-weight="700" fill="#20384C" text-anchor="middle">or propose</text>
+    </g>
+    <path d="M536 1090 L667 1090" fill="none" stroke="#CB7842" stroke-width="5" />
+    <path d="M654 1078 L667 1090 L654 1102" fill="none" stroke="#CB7842" stroke-width="5" />
+    <g id="chapter-9" aria-label="Chapter 9: Build and Steward a Small SKOS Vocabulary" transform="translate(-2303,657)">
+      <rect x="2984" y="270" width="306" height="326" rx="24" fill="white" stroke="#F0D4C2" stroke-width="3" />
+      <rect x="2999" y="285" width="276" height="10" rx="5" fill="#FFF5EE" stroke="#FFF5EE" stroke-width="0" />
+      <circle cx="3031" cy="320" r="28" fill="#CB7842" stroke="#CB7842" stroke-width="0" />
+      <text x="3031" y="332" font-size="31" font-weight="750" fill="white" text-anchor="middle">9</text>
+      <g transform="translate(3071,329) scale(1.07)">
+        <rect x="39" y="12" width="43" height="23" rx="6" fill="#EFF8FB" stroke="#20384C" stroke-width="3" />
+        <path d="M60 35 V51 M25 51 H95 M25 51 V69 M95 51 V69" fill="none" stroke="#20384C" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+        <rect x="7" y="68" width="40" height="28" rx="6" fill="white" stroke="#167EAB" stroke-width="3" />
+        <rect x="73" y="68" width="40" height="28" rx="6" fill="white" stroke="#378967" stroke-width="3" />
+        <path d="M18 81 H36 M84 81 H102" fill="none" stroke="#617988" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+      <path d="M3019 477 H3255" fill="none" stroke="#F0D4C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="3137.0" y="523" font-size="32" font-weight="700" fill="#20384C" text-anchor="middle">SKOS</text>
+      <text x="3137.0" y="566" font-size="32" font-weight="700" fill="#20384C" text-anchor="middle">vocabulary</text>
+    </g>
+    <path d="M999 1090 L1130 1090" fill="none" stroke="#CB7842" stroke-width="5" />
+    <path d="M1117 1078 L1130 1090 L1117 1102" fill="none" stroke="#CB7842" stroke-width="5" />
+    <g id="chapter-10" aria-label="Chapter 10: Turn the Human Graph into a Small OWL Model" transform="translate(-2205,657)">
+      <rect x="3349" y="270" width="306" height="326" rx="24" fill="white" stroke="#F0D4C2" stroke-width="3" />
+      <rect x="3364" y="285" width="276" height="10" rx="5" fill="#FFF5EE" stroke="#FFF5EE" stroke-width="0" />
+      <circle cx="3396" cy="320" r="28" fill="#CB7842" stroke="#CB7842" stroke-width="0" />
+      <text x="3396" y="332" font-size="31" font-weight="750" fill="white" text-anchor="middle">10</text>
+      <g transform="translate(3436,329) scale(1.07)">
+        <circle cx="60" cy="18" r="9" fill="#FFF5EE" stroke="#CB7842" stroke-width="3" />
+        <circle cx="22" cy="85" r="9" fill="white" stroke="#167EAB" stroke-width="3" />
+        <circle cx="95" cy="85" r="9" fill="white" stroke="#378967" stroke-width="3" />
+        <path d="M55 28 L27 75 M66 28 L90 75 M32 85 H85" fill="none" stroke="#20384C" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+        <rect x="42" y="47" width="39" height="22" rx="4" fill="white" stroke="#20384C" stroke-width="2.5" />
+        <path d="M48 58 H75" fill="none" stroke="#617988" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+      <path d="M3384 477 H3620" fill="none" stroke="#F0D4C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="3502.0" y="523" font-size="32" font-weight="700" fill="#20384C" text-anchor="middle">OWL</text>
+      <text x="3502.0" y="566" font-size="32" font-weight="700" fill="#20384C" text-anchor="middle">model</text>
+    </g>
+    <path d="M1462 1090 L1593 1090" fill="none" stroke="#CB7842" stroke-width="5" />
+    <path d="M1580 1078 L1593 1090 L1580 1102" fill="none" stroke="#CB7842" stroke-width="5" />
+    <g id="chapter-11" aria-label="Chapter 11: Build and Test Bridges to Shared Salmon Meanings" transform="translate(-2107,657)">
+      <rect x="3714" y="270" width="306" height="326" rx="24" fill="white" stroke="#F0D4C2" stroke-width="3" />
+      <rect x="3729" y="285" width="276" height="10" rx="5" fill="#FFF5EE" stroke="#FFF5EE" stroke-width="0" />
+      <circle cx="3761" cy="320" r="28" fill="#CB7842" stroke="#CB7842" stroke-width="0" />
+      <text x="3761" y="332" font-size="31" font-weight="750" fill="white" text-anchor="middle">11</text>
+      <g transform="translate(3801,329) scale(1.07)">
+        <path d="M6 91 H114 M15 89 V67 Q60 5 105 67 V89 M27 82 V64 M46 60 V48 M74 60 V48 M93 82 V64" fill="none" stroke="#20384C" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M18 91 V97 M102 91 V97" fill="none" stroke="#CB7842" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+      <path d="M3749 477 H3985" fill="none" stroke="#F0D4C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="3867.0" y="523" font-size="32" font-weight="700" fill="#20384C" text-anchor="middle">Bridge shared</text>
+      <text x="3867.0" y="566" font-size="32" font-weight="700" fill="#20384C" text-anchor="middle">meanings</text>
+    </g>
+    <path d="M1925 1090 L2056 1090" fill="none" stroke="#CB7842" stroke-width="5" />
+    <path d="M2043 1078 L2056 1090 L2043 1102" fill="none" stroke="#CB7842" stroke-width="5" />
+    <g id="chapter-12" aria-label="Chapter 12: Draft a Term Request and Follow Its Stewardship" transform="translate(-2009,657)">
+      <rect x="4079" y="270" width="306" height="326" rx="24" fill="white" stroke="#F0D4C2" stroke-width="3" />
+      <rect x="4094" y="285" width="276" height="10" rx="5" fill="#FFF5EE" stroke="#FFF5EE" stroke-width="0" />
+      <circle cx="4126" cy="320" r="28" fill="#CB7842" stroke="#CB7842" stroke-width="0" />
+      <text x="4126" y="332" font-size="31" font-weight="750" fill="white" text-anchor="middle">12</text>
+      <g transform="translate(4166,329) scale(1.07)">
+        <path d="M28 16 H77 L94 34 V106 H28 Z M77 16 V34 H94" fill="none" stroke="#20384C" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M39 48 H80 M39 61 H76 M39 74 H81" fill="none" stroke="#617988" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M61 98 L72 88 L79 96 L94 79" fill="none" stroke="#167EAB" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+      <path d="M4114 477 H4350" fill="none" stroke="#F0D4C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="4232.0" y="523" font-size="32" font-weight="700" fill="#20384C" text-anchor="middle">Term request</text>
+      <text x="4232.0" y="566" font-size="32" font-weight="700" fill="#20384C" text-anchor="middle">&amp; stewardship</text>
+    </g>
+    <line x1="83" y1="1276" x2="2514" y2="1276" stroke="#F0D4C2" stroke-width="2" />
+    <text x="94" y="1304" fill="#CB7842" font-size="22" font-weight="750" text-anchor="start">08–12</text>
+    <text x="206" y="1304" fill="#617988" font-size="21" font-weight="440" text-anchor="start">Choose  →  steward terms  →  model  →  connect  →  request community review</text>
+  </g>
+</svg>

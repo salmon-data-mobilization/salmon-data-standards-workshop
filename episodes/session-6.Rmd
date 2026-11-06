@@ -20,6 +20,8 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+![Chapter 6 at a glance.](fig/infographic-chapter-6.svg){alt="Three steps, left to right. 1, Stored code values: preserve source labels. 2, Check the meaning: use evidence, not guesses. 3, Route decisions: reuse, local, or unresolved. Summary: Not every label represents the same type of meaning."}
+
 ## The problem: readable codes can still hide important distinctions
 
 The same Fraser Coho package contains `ESTIMATE_METHOD`, `ESTIMATE_CLASSIFICATION`, `ESTIMATE_STAGE`, and `RUN_TYPE`. These columns answer different questions. A [code list](glossary.html#controlled-vocabulary) records the exact stored values and what each one means in context. The [code-field reference](field-reference.html#code-fields) explains the canonical `metadata/codes.csv` fields.
