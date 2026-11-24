@@ -1,0 +1,10 @@
+flowchart LR
+  shared["Shared ontologies and vocabularies"]
+  package["Salmon Data Package: data + metadata using standard terms"]
+  catalogs["Public catalogs and databases"]
+  local["Local vocabulary and ontology: your organization's terms"]
+  shared -->|"2: reuse terms, Day 1"| package
+  package -->|"1: publish metadata, Day 1"| catalogs
+  package -->|"local meanings, Day 2"| local
+  local -->|"3: bridge local terms, Day 2"| shared
+  local -->|"2: propose new terms, Day 2"| shared

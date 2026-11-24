@@ -1,0 +1,28 @@
+{
+  "package": "metasalmon",
+  "version": "v0.5.0",
+  "commit": "af84689df5d6365c1abaa49f8cd9012cbe8494c5",
+  "original_catalog": "https://open.canada.ca/data/en/dataset/c48669a3-045b-400d-b730-48aafe8c5ee6",
+  "files": [
+    {
+      "path": "raw_data/nuseds-fraser-coho-2023-2024.csv",
+      "sha256": "ae7cd8f9f4facee1b1c8a75b2f9ead046e3eca0d3545cec7ef223c0f816d47b1",
+      "source_url": "https://raw.githubusercontent.com/salmon-data-mobilization/metasalmon/af84689df5d6365c1abaa49f8cd9012cbe8494c5/inst/extdata/nuseds-fraser-coho-2023-2024.csv"
+    },
+    {
+      "path": "raw_data/source-column-dictionary.csv",
+      "sha256": "ea4f5bbd703374f16d52be2706946b400a2a753e1a94ac8b9a5753134f198c78",
+      "source_url": "https://raw.githubusercontent.com/salmon-data-mobilization/metasalmon/af84689df5d6365c1abaa49f8cd9012cbe8494c5/inst/extdata/nuseds-fraser-coho-2023-2024-column_dictionary.csv"
+    },
+    {
+      "path": "raw_data/upstream-example-data-README.md",
+      "sha256": "8e11cf43fbd31fc0c6b5e398a4a31be80b165faab10d27ba1b88eaa7d9d7a214",
+      "source_url": "https://raw.githubusercontent.com/salmon-data-mobilization/metasalmon/af84689df5d6365c1abaa49f8cd9012cbe8494c5/inst/extdata/example-data-README.md"
+    },
+    {
+      "path": "raw_data/upstream-derivation.R",
+      "sha256": "4453fd53f9108ef041c75956a8886828d3c2c787c5fb174ad82f476d0c78ac46",
+      "source_url": "https://raw.githubusercontent.com/salmon-data-mobilization/metasalmon/af84689df5d6365c1abaa49f8cd9012cbe8494c5/data-raw/nuseds_fraser_coho_examples.R"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "observed_date": "2026-09-08",
+  "status": "technical-checks-partly-passed-full-acceptance-pending",
+  "source_sha256": "ae7cd8f9f4facee1b1c8a75b2f9ead046e3eca0d3545cec7ef223c0f816d47b1",
+  "rows": 173,
+  "columns": 14,
+  "distinct_population_year_pairs": 164,
+  "missing_adult_spawner_estimates": 13,
+  "reference_producer": {
+    "package": "metasalmon",
+    "version": "0.5.0",
+    "commit": "af84689df5d6365c1abaa49f8cd9012cbe8494c5",
+    "runtime": "R 4.5.2"
+  },
+  "r_lane": {
+    "strict_sdp": "passed",
+    "eml_2_2_0_xsd": "passed",
+    "expanded_test_dry_run": "passed",
+    "exit_code": 0
+  },
+  "python_lane": {
+    "package": "metasalmonpy",
+    "version": "0.4.0",
+    "commit": "3b587e6be20d5feaf12c3640d48e449681271d23",
+    "runtime": "Python 3.14, pandas 3.0.5; pinned package EML dependencies supplied in an isolated directory",
+    "strict_sdp": "passed",
+    "eml_2_2_0_xsd": "passed",
+    "expanded_test_dry_run": "passed",
+    "exit_code": 0
+  },
+  "independent_specification_validator": {
+    "status": "blocked",
+    "exit_code": 1,
+    "commit": "1ec6cf5",
+    "validator_blob": "b4880b2687a42f3f309b1f07422acaf0bea17d3f",
+    "same_validator_at_origin_main": "47f0e81",
+    "error": "- datapackage.json resource data/escapement.csv schema.fields must match metadata/column_dictionary.csv-derived fields.",
+    "issue_draft": "upstream-validator-issue.md",
+    "bypass_applied": false
+  },
+  "test_publication": {
+    "status": "dry_run",
+    "node": "urn:node:mnTestKNB",
+    "public_planned": true,
+    "expanded_objects": 10,
+    "plan_sha256": "ffcd1a0f925fe854ab1db65263fef3f83a37d831180442a32b580b7b53958581",
+    "live_upload_performed": false,
+    "anonymous_catalog_verified": false
+  },
+  "scientific_review": {
+    "status": "pending",
+    "reviewers": "Bruno and Tom, through Brett",
+    "approval_claimed": false
+  },
+  "live_ai_rehearsal": "See ../ai/live-rehearsal-status.json: authentication blocked, no successful inference.",
+  "production_deposit_performed": false,
+  "doi_requested": false,
+  "commands": [
+    "Rscript --vanilla scripts/build-reference.R NEW_DRAFT_PATH",
+    "Rscript --vanilla scripts/seed-reference.R SEPARATE_CANDIDATE_COPY",
+    "Rscript --vanilla scripts/complete-reference.R SEPARATE_REFERENCE_COPY",
+    "Rscript --vanilla scripts/plan_test_deposit.R output/final-test-preview",
+    "python scripts/plan_test_deposit.py output/final-test-preview",
+    "python ../smn-data-pkg/scripts/validate_package.py episodes/files/fraser-coho-workshop/checkpoints/reference-sdp"
+  ],
+  "command_roots": "The first three and final command run from the workshop repository; learner plan scripts run from separate extracted-kit fixtures after mechanical preparation checks. Those fixtures explicitly did not claim human review."
+}

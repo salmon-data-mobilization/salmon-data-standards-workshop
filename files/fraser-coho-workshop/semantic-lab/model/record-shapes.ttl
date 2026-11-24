@@ -1,0 +1,16 @@
+# Local classroom conformance requirements. Not a full NuSEDS or SDP schema.
+@prefix ex: <https://example.org/fraser-coho-workshop/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:RecordShape a sh:NodeShape ;
+    sh:targetClass ex:NuSEDSEstimateRecord ;
+    sh:property [ sh:path ex:sourceRowNumber ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ] ;
+    sh:property [ sh:path ex:analysisYear ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:gYear ] ;
+    sh:property [ sh:path ex:concernsPopulationReference ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ex:hasReportedResult ; sh:maxCount 1 ; sh:class ex:RecordedNumericResult ] .
+
+# A numeric result is optional because blank estimates occur in the actual source.
+ex:ResultShape a sh:NodeShape ;
+    sh:targetClass ex:RecordedNumericResult ;
+    sh:property [ sh:path ex:numericValue ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:decimal ] .

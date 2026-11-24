@@ -1,0 +1,14 @@
+# Selected W3C SKOS axioms, not the complete SKOS ontology.
+# Source: https://www.w3.org/TR/2009/REC-skos-reference-20090818/#mapping
+# S39-S45 supply the mapping rules needed for the bounded classroom checks.
+# Original SKOS terms and predicate direction are preserved.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+skos:mappingRelation rdfs:subPropertyOf skos:semanticRelation .
+skos:closeMatch a owl:ObjectProperty, owl:SymmetricProperty ; rdfs:subPropertyOf skos:mappingRelation .
+skos:exactMatch a owl:ObjectProperty, owl:SymmetricProperty, owl:TransitiveProperty ; rdfs:subPropertyOf skos:closeMatch .
+skos:broadMatch a owl:ObjectProperty ; rdfs:subPropertyOf skos:mappingRelation, skos:broader .
+skos:narrowMatch a owl:ObjectProperty ; rdfs:subPropertyOf skos:mappingRelation, skos:narrower ; owl:inverseOf skos:broadMatch .
+skos:relatedMatch a owl:ObjectProperty, owl:SymmetricProperty ; rdfs:subPropertyOf skos:mappingRelation, skos:related .

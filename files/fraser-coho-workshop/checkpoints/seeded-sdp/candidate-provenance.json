@@ -1,0 +1,11 @@
+{
+  "kind": "deterministic-retrieval",
+  "utc": "2026-09-08 17:12:22 UTC",
+  "package": "metasalmon",
+  "version": "0.5.0",
+  "sources": ["smn", "gcdfo"],
+  "target_columns": ["AREA", "NATURAL_ADULT_SPAWNERS"],
+  "llm_assess": false,
+  "decisions_applied": false,
+  "note": "Real retrieved candidates, including unsuitable candidates. Neither rankings nor query text establish source meaning; consult the official dictionary."
+}

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>metamodel source notes</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">metamodel source notes</h1>
+</header>
+<h1 id="metamodel-guidance-included-for-offline-comparison">Metamodel
+guidance included for offline comparison</h1>
+<p>Status: source-grounded teaching summary; not an approved Fraser Coho
+mapping.</p>
+<p>These notes summarize the Salmon Domain Ontology checkout inspected
+at commit <code>d45f8f7</code>. The references below identify its
+canonical files. They let learners evaluate the recorded AI propositions
+offline without treating the recording itself as the authority for every
+modeling distinction.</p>
+<table>
+<thead>
+<tr>
+<th>Distinction</th>
+<th>Source guidance</th>
+<th>Consequence for the workshop</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entity / property / variable</td>
+<td><code>ontology/views/salmon-data-metamodel-variable.ttl</code>
+describes a variable as an observed property of an entity, with optional
+constraints and statistical modifiers</td>
+<td>Preserve the complete variable and its components separately</td>
+</tr>
+<tr>
+<td>Activity / result</td>
+<td><code>ontology/modules/02-observation-measurement.ttl</code> makes
+<code>smn:Measurement</code> a subclass of <code>smn:Observation</code>;
+<code>smn:EscapementEstimate</code> is an IAO measurement datum</td>
+<td>A numerical cell is a result value, not an observation activity</td>
+</tr>
+<tr>
+<td>Abundance and qualifiers</td>
+<td>The same module defines <code>smn:Abundance</code> as a reusable
+characteristic and distinguishes units, statistical modifiers, context
+and procedures</td>
+<td>Using abundance as a property does not resolve the full
+adult-spawner meaning</td>
+</tr>
+<tr>
+<td>Row coordinates / fixed constraint</td>
+<td><code>CONVENTIONS.md</code> section 12 separates year basis,
+dimension property and coordinate value; row-varying year/age
+coordinates are dimensions</td>
+<td>Do not make 2023 a fixed constraint on the full two-year column</td>
+</tr>
+<tr>
+<td>Method / result</td>
+<td><code>ontology/views/salmon-data-metamodel-method-protocol.ttl</code>
+links an observation to the procedure it used</td>
+<td>Keep the row's estimate method connected to the activity producing
+the result</td>
+</tr>
+<tr>
+<td>Metamodel status</td>
+<td><code>ontology/views/README.md</code> calls the view optional and
+non-normative, outside the shared-core imports</td>
+<td>A teaching diagram does not by itself establish normative OWL or
+approved mappings</td>
+</tr>
+</tbody>
+</table>
+<p>No source in these notes establishes that
+<code>NATURAL_ADULT_SPAWNERS</code> means natural-origin fish, assigns a
+CU to a source population, or authorizes aggregation of repeated
+records. Those are dataset/source questions, not facts that a general
+metamodel can supply.</p>
+<p>For online source inspection, use the <a
+href="https://github.com/salmon-data-mobilization/salmon-domain-ontology/tree/d45f8f7">ontology
+repository at the recorded commit</a>. The preserved official NuSEDS
+dictionary and source table under <code>../raw_data/</code> supply the
+complementary dataset evidence.</p>
+</body>
+</html>

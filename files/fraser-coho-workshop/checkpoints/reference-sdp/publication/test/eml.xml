@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd" packageId="urn:uuid:78bade57-7f57-5cf8-8b6e-32db328b53b7" system="knb">
+  <dataset id="dataset-c35dfe71cff35b73831181d1eca4b404">
+    <alternateIdentifier>fraser-coho-workshop</alternateIdentifier>
+    <title>Workshop demonstration: NuSEDS Fraser Coho — KNB Test Node</title>
+    <creator id="party-584becd01c3159009ea27c0d8ac9ac47">
+      <organizationName>Fisheries and Oceans Canada (source data)</organizationName>
+    </creator>
+    <metadataProvider id="party-dbe486ea6eab52f0bb5dbefd28d49255">
+      <individualName>
+        <givenName>Brett</givenName>
+        <surName>Johnson</surName>
+      </individualName>
+      <electronicMailAddress>brett.johnson@dfo-mpo.gc.ca</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0001-9317-0364</userId>
+    </metadataProvider>
+    <pubDate>2026-09-08</pubDate>
+    <language>eng</language>
+    <abstract>
+      <para>Teaching derivative of the Open Canada NuSEDS Fraser and BC Interior workbook: 173 Coho records from analysis years 2023-2024, retaining 14 source columns. Population-year pairs are not unique; retain waterbody and source record context. Working interpretations are pending scientific review by Bruno and Tom.</para>
+    </abstract>
+    <keywordSet>
+      <keyword>POP ID</keyword>
+      <keyword>POPULATION</keyword>
+      <keyword>AREA</keyword>
+      <keyword>WATERBODY</keyword>
+      <keyword>ANALYSIS YR</keyword>
+      <keyword>SPECIES</keyword>
+      <keyword>RUN TYPE</keyword>
+      <keyword>NATURAL ADULT SPAWNERS</keyword>
+      <keywordThesaurus>None</keywordThesaurus>
+    </keywordSet>
+    <additionalInfo>
+      <para>Source citation: Fisheries and Oceans Canada. NuSEDS: Fraser and BC Interior NuSEDS_20251014. Original publication: https://open.canada.ca/data/en/dataset/c48669a3-045b-400d-b730-48aafe8c5ee6</para>
+      <para>Provenance note: The metasalmon v0.5.0 derivation selects Coho and analysis years 2023-2024, retains 14 columns and converts survey dates to ISO format. The workshop preserves all 173 rows and source values.</para>
+      <para>Supporting document citation: metasalmon contributors. Built-in NuSEDS example data, v0.5.0.</para>
+      <para>Supporting document URL: https://raw.githubusercontent.com/salmon-data-mobilization/metasalmon/af84689df5d6365c1abaa49f8cd9012cbe8494c5/inst/extdata/example-data-README.md</para>
+      <para>Supporting document SHA-256: 8e11cf43fbd31fc0c6b5e398a4a31be80b165faab10d27ba1b88eaa7d9d7a214</para>
+    </additionalInfo>
+    <intellectualRights>
+      <para>Contains information licensed under the Open Government Licence - Canada (https://open.canada.ca/en/open-government-licence-canada).</para>
+      <para>The source data publisher is Fisheries and Oceans Canada. This KNB test teaching derivative does not imply endorsement, replace the Open Canada publication, or provide durable preservation.</para>
+    </intellectualRights>
+    <coverage>
+      <taxonomicCoverage>
+        <taxonomicClassification>
+          <taxonRankName>Species</taxonRankName>
+          <taxonRankValue>Oncorhynchus kisutch</taxonRankValue>
+          <commonName>Coho salmon</commonName>
+        </taxonomicClassification>
+      </taxonomicCoverage>
+    </coverage>
+    <contact id="party-45af04ff914a592980c0bfd2e933155f">
+      <individualName>
+        <givenName>Brett</givenName>
+        <surName>Johnson</surName>
+      </individualName>
+      <electronicMailAddress>brett.johnson@dfo-mpo.gc.ca</electronicMailAddress>
+    </contact>
+    <publisher id="party-d94a534f9b385cf684df520d0405c299">
+      <organizationName>Salmon Data Standards Workshop (teaching derivative)</organizationName>
+    </publisher>
+    <methods>
+      <methodStep>
+        <description>
+          <para>Source records report spawner estimates and ESTIMATE_METHOD; methods vary among records. The 173-row teaching slice is derived by the pinned metasalmon script. The official dictionary defines the adult field as mature salmon excluding jacks; natural origin is not inferred. Working semantic selections are agent-authored and await independent scientific review.</para>
+        </description>
+      </methodStep>
+    </methods>
+    <dataTable id="table-0fa8fd39888f5aa89b0ea50b82a33bb8">
+      <alternateIdentifier>escapement</alternateIdentifier>
+      <entityName>Escapement</entityName>
+      <entityDescription>A NuSEDS source estimate record with population identifier, waterbody, analysis year and reported estimation context. POP_ID plus ANALYSIS_YR is not a unique record key.</entityDescription>
+      <physical id="physical-0fa8fd39888f5aa89b0ea50b82a33bb8">
+        <objectName>escapement.csv</objectName>
+        <size unit="byte">35427</size>
+        <authentication method="SHA-256">ae7cd8f9f4facee1b1c8a75b2f9ead046e3eca0d3545cec7ef223c0f816d47b1</authentication>
+        <characterEncoding>UTF-8</characterEncoding>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+              <quoteCharacter>"</quoteCharacter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url>https://dev.nceas.ucsb.edu/knb/d1/mn/v2/object/urn:uuid:e60a951d-43c6-5a37-a2f0-80fae6a2fb40</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList id="attributes-0fa8fd39888f5aa89b0ea50b82a33bb8">
+        <attribute id="attribute-c8e24c4873f35fffa14e7f183883069e">
+          <attributeName>POP_ID</attributeName>
+          <attributeLabel>POP_ID</attributeLabel>
+          <attributeDefinition>Identifier of the NuSEDS population referenced by this source record. It repeats across years and sometimes within one year.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Values documented by the POP_ID attribute definition.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="attribute-bd85ec84c8aa57d8911d6ebf2bf3b3db">
+          <attributeName>POPULATION</attributeName>
+          <attributeLabel>POPULATION</attributeLabel>
+          <attributeDefinition>Source population name. The official dictionary describes a legacy composite of stream name, subdistrict, species and run type; retain the full label without reparsing it into asserted facts.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Values documented by the POPULATION attribute definition.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="attribute-2f22539369785eec88717e366d40e2c6">
+          <attributeName>AREA</attributeName>
+          <attributeLabel>AREA</attributeLabel>
+          <attributeDefinition>NuSEDS subdistrict code. The official dictionary says subdistricts can differ from statistical areas, especially in the Fraser; do not relabel this field PFMA.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>29F</code>
+                    <definition>NuSEDS subdistrict code 29F. The official dictionary explains that subdistricts can differ from statistical areas, particularly for streams draining to the Fraser. Evidence: raw_data/official-nuseds-dictionary.csv: AREA; raw_data/nuseds-fraser-coho-2023-2024.csv; source URL: https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv Retrieved: 2026-09-08T16:50:39.167837+00:00 Caveat: Current official dictionary retrieved 2026-09-08; it may postdate the 2025 workbook used for this slice. Confirm historical/source-specific applicability where material. Open question: Which dated reference establishes the geographic extent and operational definition of subdistrict 29F?</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>29G</code>
+                    <definition>NuSEDS subdistrict code 29G. The official dictionary explains that subdistricts can differ from statistical areas, particularly for streams draining to the Fraser. Evidence: raw_data/official-nuseds-dictionary.csv: AREA; raw_data/nuseds-fraser-coho-2023-2024.csv; source URL: https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv Retrieved: 2026-09-08T16:50:39.167837+00:00 Caveat: Current official dictionary retrieved 2026-09-08; it may postdate the 2025 workbook used for this slice. Confirm historical/source-specific applicability where material. Open question: Which dated reference establishes the geographic extent and operational definition of subdistrict 29G?</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>29J</code>
+                    <definition>NuSEDS subdistrict code 29J. The official dictionary explains that subdistricts can differ from statistical areas, particularly for streams draining to the Fraser. Evidence: raw_data/official-nuseds-dictionary.csv: AREA; raw_data/nuseds-fraser-coho-2023-2024.csv; source URL: https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv Retrieved: 2026-09-08T16:50:39.167837+00:00 Caveat: Current official dictionary retrieved 2026-09-08; it may postdate the 2025 workbook used for this slice. Confirm historical/source-specific applicability where material. Open question: Which dated reference establishes the geographic extent and operational definition of subdistrict 29J?</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>29K</code>
+                    <definition>NuSEDS subdistrict code 29K. The official dictionary explains that subdistricts can differ from statistical areas, particularly for streams draining to the Fraser. Evidence: raw_data/official-nuseds-dictionary.csv: AREA; raw_data/nuseds-fraser-coho-2023-2024.csv; source URL: https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv Retrieved: 2026-09-08T16:50:39.167837+00:00 Caveat: Current official dictionary retrieved 2026-09-08; it may postdate the 2025 workbook used for this slice. Confirm historical/source-specific applicability where material. Open question: Which dated reference establishes the geographic extent and operational definition of subdistrict 29K?</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="attribute-b671888bb75d5fad9a0dfdd16153f1c0">
+          <attributeName>WATERBODY</attributeName>
+          <attributeLabel>WATERBODY</attributeLabel>
+          <attributeDefinition>Source name of the waterbody or portion bounding the population as represented on the source estimate document (SEN). It need not be a unique waterbody identifier.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Values documented by the WATERBODY attribute definition.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="attribute-329437594d035eb0b6ade244e9e2633b">
+          <attributeName>ANALYSIS_YR</attributeName>
+          <attributeLabel>ANALYSIS_YR</attributeLabel>
+          <attributeDefinition>Year for which the estimate is reported. The official dictionary states that contributing surveys can continue into the next calendar year.</attributeDefinition>
+          <storageType>integer</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Values documented by the ANALYSIS_YR attribute definition.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="attribute-51b565aa85545596acc300e1a9558b23">
+          <attributeName>SPECIES</attributeName>
+          <attributeLabel>SPECIES</attributeLabel>
+          <attributeDefinition>Source species designation for the fish represented by the record; all values in this selected slice are Coho.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Coho</code>
+                    <definition>Coho is the source fish-species designation; every row of this selected slice carries that value. The official field definition identifies SPECIES as the species of fish. Evidence: raw_data/official-nuseds-dictionary.csv: SPECIES; raw_data/nuseds-fraser-coho-2023-2024.csv; source URL: https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv Retrieved: 2026-09-08T16:50:39.167837+00:00 Caveat: Current official dictionary retrieved 2026-09-08; it may postdate the 2025 workbook used for this slice. Confirm historical/source-specific applicability where material. Open question: Which authoritative taxonomic reference and identifier should be used in later semantic mapping?</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="attribute-289b0747d6315c629e6fbbff19391089">
+          <attributeName>RUN_TYPE</attributeName>
+          <attributeLabel>RUN_TYPE</attributeLabel>
+          <attributeDefinition>Source run-type category. Preserve the supplied code or label; this slice contains 1, FALL and blanks.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>1</code>
+                    <definition>A numeric run-type designation. The official dictionary explains that numeric labels were used in historical records to distinguish runs within a season when more specific timing was not documented; the digit does not itself supply a seasonal definition. Evidence: raw_data/official-nuseds-dictionary.csv: RUN_TYPE; raw_data/nuseds-fraser-coho-2023-2024.csv; source URL: https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv Retrieved: 2026-09-08T16:50:39.167837+00:00 Caveat: Current official dictionary retrieved 2026-09-08; it may postdate the 2025 workbook used for this slice. Confirm historical/source-specific applicability where material. Open question: What run does code 1 distinguish for each source population? Do not translate it to FALL or another named season without evidence.</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>FALL</code>
+                    <definition>A named run-timing label, FALL, as stored in the source. The official dictionary distinguishes descriptive timing labels from numeric labels used when detailed timing is undocumented; it supplies no date boundaries for FALL. Evidence: raw_data/official-nuseds-dictionary.csv: RUN_TYPE; raw_data/nuseds-fraser-coho-2023-2024.csv; source URL: https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv Retrieved: 2026-09-08T16:50:39.167837+00:00 Caveat: Current official dictionary retrieved 2026-09-08; it may postdate the 2025 workbook used for this slice. Confirm historical/source-specific applicability where material. Open question: What local timing or run definition applies to FALL for these records? Do not infer equivalence with numeric code 1.</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="attribute-51b525374db75b298e673d21525e8ffd">
+          <attributeName>NATURAL_ADULT_SPAWNERS</attributeName>
+          <attributeLabel>NATURAL_ADULT_SPAWNERS</attributeLabel>
+          <attributeDefinition>Reported estimate for mature spawners excluding jacks, under the source field NATURAL_ADULT_SPAWNERS. The official definition does not establish a natural-origin restriction; preserve that question rather than asserting it.</attributeDefinition>
+          <storageType>double</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="Subject">http://purl.org/dc/terms/subject</propertyURI>
+            <valueURI label="Spawner abundance">https://w3id.org/gcdfo/salmon#SpawnerAbundance</valueURI>
+          </annotation>
+          <annotation>
+            <propertyURI label="has unit">http://qudt.org/schema/qudt/hasUnit</propertyURI>
+            <valueURI label="Individual">http://qudt.org/vocab/unit/INDIV</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="attribute-41bb1d25aadd579893be247dee82542e">
+          <attributeName>ESTIMATE_METHOD</attributeName>
+          <attributeLabel>ESTIMATE_METHOD</attributeLabel>
+          <attributeDefinition>Source label for the method used to derive the estimate. Interpret each label using its own definition; some entries in the official dictionary have no substantive definition.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Resistivity Counter</code>
+                    <definition>The source records Resistivity Counter as the estimate method. Its entry in the official dictionary is N/A, so that entry supplies no operational procedure definition. Evidence: raw_data/official-nuseds-dictionary.csv: ESTIMATE_METHOD; raw_data/nuseds-fraser-coho-2023-2024.csv; source URL: https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv Retrieved: 2026-09-08T16:50:39.167837+00:00 Caveat: Current official dictionary retrieved 2026-09-08; it may postdate the 2025 workbook used for this slice. Confirm historical/source-specific applicability where material. Open question: Which counter observations and estimation procedure generated the result? Obtain an applicable methods source.</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Not Applicable</code>
+                    <definition>The official dictionary describes this reporting label as replacing insufficient-information or addition/subtraction entries when associated with not-inspected or none-observed states. It is not a standalone enumeration procedure. Evidence: raw_data/official-nuseds-dictionary.csv: ESTIMATE_METHOD; raw_data/nuseds-fraser-coho-2023-2024.csv; source URL: https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv Retrieved: 2026-09-08T16:50:39.167837+00:00 Caveat: Current official dictionary retrieved 2026-09-08; it may postdate the 2025 workbook used for this slice. Confirm historical/source-specific applicability where material. Open question: Which condition applies to each record? Do not infer a zero or missing estimate from this label alone.</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Combined Methods</code>
+                    <definition>The official dictionary describes estimates calculated for multiple survey methods, with a final estimate combining two or more estimate methods. Evidence: raw_data/official-nuseds-dictionary.csv: ESTIMATE_METHOD; raw_data/nuseds-fraser-coho-2023-2024.csv; source URL: https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv Retrieved: 2026-09-08T16:50:39.167837+00:00 Caveat: Current official dictionary retrieved 2026-09-08; it may postdate the 2025 workbook used for this slice. Confirm historical/source-specific applicability where material. Open question: Which methods and combination rule were used for the particular source record?</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Area Under the Curve</code>
+                    <definition>The official dictionary describes integrating abundance over time and dividing the area by survey life, the average period an individual remains alive and available for observation in the survey area, to derive annual abundance. Evidence: raw_data/official-nuseds-dictionary.csv: ESTIMATE_METHOD; raw_data/nuseds-fraser-coho-2023-2024.csv; source URL: https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv Retrieved: 2026-09-08T16:50:39.167837+00:00 Caveat: Current official dictionary retrieved 2026-09-08; it may postdate the 2025 workbook used for this slice. Confirm historical/source-specific applicability where material. Open question: Which abundance observations, survey-life assumption and coverage apply to this record?</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Peak Live * Expansion</code>
+                    <definition>The official dictionary describes a source use involving spawner counts from overflights multiplied by an expansion factor. Evidence: raw_data/official-nuseds-dictionary.csv: ESTIMATE_METHOD; raw_data/nuseds-fraser-coho-2023-2024.csv; source URL: https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv Retrieved: 2026-09-08T16:50:39.167837+00:00 Caveat: Current official dictionary retrieved 2026-09-08; it may postdate the 2025 workbook used for this slice. Confirm historical/source-specific applicability where material. Open question: What peak observation and expansion factor were used, and does the documented overflight use apply to this particular record?</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Sonar-DIDSON</code>
+                    <definition>The official dictionary records a 2022 name change from Didson Counter to Sonar-DIDSON. This establishes label history rather than a complete estimation procedure. Evidence: raw_data/official-nuseds-dictionary.csv: ESTIMATE_METHOD; raw_data/nuseds-fraser-coho-2023-2024.csv; source URL: https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv Retrieved: 2026-09-08T16:50:39.167837+00:00 Caveat: Current official dictionary retrieved 2026-09-08; it may postdate the 2025 workbook used for this slice. Confirm historical/source-specific applicability where material. Open question: What sonar sampling and estimation protocol applies to the record?</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Fixed Site Census</code>
+                    <definition>The official dictionary describes combining one or more raw observations into one estimate, with daily fence observations combined into an annual estimate as an example. Evidence: raw_data/official-nuseds-dictionary.csv: ESTIMATE_METHOD; raw_data/nuseds-fraser-coho-2023-2024.csv; source URL: https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv Retrieved: 2026-09-08T16:50:39.167837+00:00 Caveat: Current official dictionary retrieved 2026-09-08; it may postdate the 2025 workbook used for this slice. Confirm historical/source-specific applicability where material. Open question: What fixed site, observations, period and combination rule apply here?</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Sonar-ARIS</code>
+                    <definition>The source records Sonar-ARIS as the estimate method. Its entry in the official dictionary is N/A, so that entry supplies no operational procedure definition. Evidence: raw_data/official-nuseds-dictionary.csv: ESTIMATE_METHOD; raw_data/nuseds-fraser-coho-2023-2024.csv; source URL: https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv Retrieved: 2026-09-08T16:50:39.167837+00:00 Caveat: Current official dictionary retrieved 2026-09-08; it may postdate the 2025 workbook used for this slice. Confirm historical/source-specific applicability where material. Open question: What sonar sampling and estimation protocol applies to the record?</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Fence</code>
+                    <definition>Fence is an observed value in this slice. The official dictionary lists Fence among enumeration methods but does not provide a separate Fence entry in its estimate-method definitions. Evidence: raw_data/official-nuseds-dictionary.csv: ESTIMATE_METHOD and ENUMERATION_METHODS; raw_data/nuseds-fraser-coho-2023-2024.csv; source URL: https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv Retrieved: 2026-09-08T16:50:39.167837+00:00 Caveat: Current official dictionary retrieved 2026-09-08; it may postdate the 2025 workbook used for this slice. Confirm historical/source-specific applicability where material. Open question: How was the enumeration information converted into the estimate recorded under ESTIMATE_METHOD? Obtain a procedure source rather than assuming equivalence with Fixed Site Census.</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="attribute-48f5ba5c303c5291a7ec29c0fadc1a5f">
+          <attributeName>ESTIMATE_CLASSIFICATION</attributeName>
+          <attributeLabel>ESTIMATE_CLASSIFICATION</attributeLabel>
+          <attributeDefinition>Source category describing the estimate and its accuracy/precision classification. NO SURVEY THIS YEAR means the stream was not inspected for that species that year according to the official dictionary.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>TRUE ABUNDANCE (TYPE-1)</code>
+                    <definition>Source estimate-classification label TRUE ABUNDANCE (TYPE-1). The official dictionary describes the Type-1 to Type-6 scheme in terms of accuracy and precision, with Type-1 the most accurate and Type-6 the least accurate; it does not give a separate operational definition for this exact label. Evidence: raw_data/official-nuseds-dictionary.csv: ESTIMATE_CLASSIFICATION; raw_data/nuseds-fraser-coho-2023-2024.csv; source URL: https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv Retrieved: 2026-09-08T16:50:39.167837+00:00 Caveat: Current official dictionary retrieved 2026-09-08; it may postdate the 2025 workbook used for this slice. Confirm historical/source-specific applicability where material. Open question: Which classification guidance defines Type-1 criteria and justified comparisons? Do not treat the label as proof of an exact count or universal comparability.</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>NO SURVEY THIS YEAR</code>
+                    <definition>The official dictionary defines this classification as the stream not being inspected for that species in that year. Evidence: raw_data/official-nuseds-dictionary.csv: ESTIMATE_CLASSIFICATION; raw_data/nuseds-fraser-coho-2023-2024.csv; source URL: https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv Retrieved: 2026-09-08T16:50:39.167837+00:00 Caveat: Current official dictionary retrieved 2026-09-08; it may postdate the 2025 workbook used for this slice. Confirm historical/source-specific applicability where material. Open question: How does this classification relate to the estimate and other source fields on the particular record? It does not convert an absent estimate to zero.</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>RELATIVE ABUNDANCE (TYPE-3)</code>
+                    <definition>Source estimate-classification label RELATIVE ABUNDANCE (TYPE-3). The official dictionary describes the Type-1 to Type-6 scheme in terms of accuracy and precision, with Type-1 the most accurate and Type-6 the least accurate; it does not give a separate operational definition for this exact label. Evidence: raw_data/official-nuseds-dictionary.csv: ESTIMATE_CLASSIFICATION; raw_data/nuseds-fraser-coho-2023-2024.csv; source URL: https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv Retrieved: 2026-09-08T16:50:39.167837+00:00 Caveat: Current official dictionary retrieved 2026-09-08; it may postdate the 2025 workbook used for this slice. Confirm historical/source-specific applicability where material. Open question: Which classification guidance defines Type-3 criteria and justified comparisons? Do not treat the label as proof of an exact count or universal comparability.</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>RELATIVE ABUNDANCE (TYPE-4)</code>
+                    <definition>Source estimate-classification label RELATIVE ABUNDANCE (TYPE-4). The official dictionary describes the Type-1 to Type-6 scheme in terms of accuracy and precision, with Type-1 the most accurate and Type-6 the least accurate; it does not give a separate operational definition for this exact label. Evidence: raw_data/official-nuseds-dictionary.csv: ESTIMATE_CLASSIFICATION; raw_data/nuseds-fraser-coho-2023-2024.csv; source URL: https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv Retrieved: 2026-09-08T16:50:39.167837+00:00 Caveat: Current official dictionary retrieved 2026-09-08; it may postdate the 2025 workbook used for this slice. Confirm historical/source-specific applicability where material. Open question: Which classification guidance defines Type-4 criteria and justified comparisons? Do not treat the label as proof of an exact count or universal comparability.</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>RELATIVE ABUNDANCE (TYPE-5)</code>
+                    <definition>Source estimate-classification label RELATIVE ABUNDANCE (TYPE-5). The official dictionary describes the Type-1 to Type-6 scheme in terms of accuracy and precision, with Type-1 the most accurate and Type-6 the least accurate; it does not give a separate operational definition for this exact label. Evidence: raw_data/official-nuseds-dictionary.csv: ESTIMATE_CLASSIFICATION; raw_data/nuseds-fraser-coho-2023-2024.csv; source URL: https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv Retrieved: 2026-09-08T16:50:39.167837+00:00 Caveat: Current official dictionary retrieved 2026-09-08; it may postdate the 2025 workbook used for this slice. Confirm historical/source-specific applicability where material. Open question: Which classification guidance defines Type-5 criteria and justified comparisons? Do not treat the label as proof of an exact count or universal comparability.</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="attribute-00d7f115debb5673b9225ca49d3ed863">
+          <attributeName>ESTIMATE_STAGE</attributeName>
+          <attributeLabel>ESTIMATE_STAGE</attributeLabel>
+          <attributeDefinition>Source publication/readiness stage of the SEN estimate. All rows in this slice are FINAL; this source status does not approve our workshop interpretation or publication.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>FINAL</code>
+                    <definition>Final stage of the source summary estimate document: the official dictionary says all data have been incorporated into analysis and verification steps completed, with changes not anticipated. This status concerns the source estimate. Evidence: raw_data/official-nuseds-dictionary.csv: ESTIMATE_STAGE; raw_data/nuseds-fraser-coho-2023-2024.csv; source URL: https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv Retrieved: 2026-09-08T16:50:39.167837+00:00 Caveat: Current official dictionary retrieved 2026-09-08; it may postdate the 2025 workbook used for this slice. Confirm historical/source-specific applicability where material. Open question: Confirm source version/currentness for reuse. FINAL does not approve the workshop graph, dictionary, semantic selections or publication.</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="attribute-a619f0374eab5ee59edc6c6128ef6f48">
+          <attributeName>START_DTT</attributeName>
+          <attributeLabel>START_DTT</attributeLabel>
+          <attributeDefinition>Date stream inspections began for this season's estimate, following the official dictionary. The derivation converts source dates to ISO representation.</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD</formatString>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute id="attribute-ec3704ca0ac758dea2771e9cb07ec6c8">
+          <attributeName>END_DTT</attributeName>
+          <attributeLabel>END_DTT</attributeLabel>
+          <attributeDefinition>Date stream inspections ended for this season's estimate, following the official dictionary. Keep separate from the estimate year.</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD</formatString>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute id="attribute-e0b39d13408e5944a99e469ea55a366e">
+          <attributeName>WATERSHED_CDE</attributeName>
+          <attributeLabel>WATERSHED_CDE</attributeLabel>
+          <attributeDefinition>Source hierarchical provincial watershed code. Preserve the complete text, separators and zeroes; the official dictionary distinguishes this legacy code from FWA_Watershed_CDE.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Values documented by the WATERSHED_CDE attribute definition.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <constraint>
+        <notNullConstraint>
+          <constraintName>NotNull_escapement</constraintName>
+          <key>
+            <attributeReference>attribute-c8e24c4873f35fffa14e7f183883069e</attributeReference>
+          </key>
+        </notNullConstraint>
+      </constraint>
+      <numberOfRecords>173</numberOfRecords>
+    </dataTable>
+    <otherEntity id="other-entity-ef552b0c683f5aeeb568c5e35397b610">
+      <alternateIdentifier system="DataONE">urn:uuid:7050756a-b8ea-566d-94bd-80f0987bb1ce</alternateIdentifier>
+      <entityName>Salmon Data Package artifact: datapackage.json</entityName>
+      <entityDescription>Canonical file from the expanded Salmon Data Package at 'datapackage.json'.</entityDescription>
+      <physical id="physical-11461d24390a5ce8857b84c6ccb7eaf4">
+        <objectName>datapackage.json</objectName>
+        <size unit="byte">8034</size>
+        <authentication method="SHA-256">35d707c4e068fe2d53159a2cde0bb34e2b7e820e17c3d814b5240858d4f2579d</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/json</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <onlineDescription>Download Salmon Data Package artifact: datapackage.json</onlineDescription>
+            <url>https://dev.nceas.ucsb.edu/knb/d1/mn/v2/object/urn:uuid:7050756a-b8ea-566d-94bd-80f0987bb1ce</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>Salmon Data Package artifact</entityType>
+    </otherEntity>
+    <otherEntity id="other-entity-a5e07795bfed5903bf68957a1730a477">
+      <alternateIdentifier system="DataONE">urn:uuid:7d6575d1-cc18-5dbb-a51d-041caa16ee32</alternateIdentifier>
+      <entityName>Salmon Data Package artifact: metadata/codes.csv</entityName>
+      <entityDescription>Canonical file from the expanded Salmon Data Package at 'metadata/codes.csv'.</entityDescription>
+      <physical id="physical-107e63877b81518089243a6f62d8b9fe">
+        <objectName>metadata/codes.csv</objectName>
+        <size unit="byte">19765</size>
+        <authentication method="SHA-256">c849dd8a3818777f6d5cb644e81f24618085433eb4bfd419acbeb1a712ce52b0</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <onlineDescription>Download Salmon Data Package artifact: metadata/codes.csv</onlineDescription>
+            <url>https://dev.nceas.ucsb.edu/knb/d1/mn/v2/object/urn:uuid:7d6575d1-cc18-5dbb-a51d-041caa16ee32</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>Salmon Data Package artifact</entityType>
+    </otherEntity>
+    <otherEntity id="other-entity-cd0d0dac60375c96b945b33316a09542">
+      <alternateIdentifier system="DataONE">urn:uuid:bdd8d4b1-95c0-5ae8-bd2f-b363cac4b164</alternateIdentifier>
+      <entityName>Salmon Data Package artifact: metadata/column_dictionary.csv</entityName>
+      <entityDescription>Canonical file from the expanded Salmon Data Package at 'metadata/column_dictionary.csv'.</entityDescription>
+      <physical id="physical-fcb0426076595169a3404e6d5ce9937e">
+        <objectName>metadata/column_dictionary.csv</objectName>
+        <size unit="byte">3769</size>
+        <authentication method="SHA-256">489985e7f6220472b7fc6a691db8a0320d6a169ccf5af6eb4c93341ae3ab2e28</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <onlineDescription>Download Salmon Data Package artifact: metadata/column_dictionary.csv</onlineDescription>
+            <url>https://dev.nceas.ucsb.edu/knb/d1/mn/v2/object/urn:uuid:bdd8d4b1-95c0-5ae8-bd2f-b363cac4b164</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>Salmon Data Package artifact</entityType>
+    </otherEntity>
+    <otherEntity id="other-entity-5178dd47d5c65cedb2e853f01197e030">
+      <alternateIdentifier system="DataONE">urn:uuid:61961976-e009-5a73-ba1d-9d5280aac4d8</alternateIdentifier>
+      <entityName>Salmon Data Package artifact: metadata/dataset.csv</entityName>
+      <entityDescription>Canonical file from the expanded Salmon Data Package at 'metadata/dataset.csv'.</entityDescription>
+      <physical id="physical-81174ec54f835951afc37b84d75a4d41">
+        <objectName>metadata/dataset.csv</objectName>
+        <size unit="byte">1311</size>
+        <authentication method="SHA-256">7055466f34d86244f9dfe7814d0712e788924eb4c70a144b24f72be48ff3bd7c</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <onlineDescription>Download Salmon Data Package artifact: metadata/dataset.csv</onlineDescription>
+            <url>https://dev.nceas.ucsb.edu/knb/d1/mn/v2/object/urn:uuid:61961976-e009-5a73-ba1d-9d5280aac4d8</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>Salmon Data Package artifact</entityType>
+    </otherEntity>
+    <otherEntity id="other-entity-07985a169312531582e7ad2b8ee52a4e">
+      <alternateIdentifier system="DataONE">urn:uuid:7ca6de85-1693-5c6f-af21-a32a562f507b</alternateIdentifier>
+      <entityName>Salmon Data Package artifact: metadata/semantic_vocabulary.csv</entityName>
+      <entityDescription>Canonical file from the expanded Salmon Data Package at 'metadata/semantic_vocabulary.csv'.</entityDescription>
+      <physical id="physical-9e12b653d882562c98ae048ba74cbe19">
+        <objectName>metadata/semantic_vocabulary.csv</objectName>
+        <size unit="byte">1812</size>
+        <authentication method="SHA-256">9a299598a72886f9437a5cabd7953d0846ffe45bcb77fd9bd4651694dc7c4a4c</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <onlineDescription>Download Salmon Data Package artifact: metadata/semantic_vocabulary.csv</onlineDescription>
+            <url>https://dev.nceas.ucsb.edu/knb/d1/mn/v2/object/urn:uuid:7ca6de85-1693-5c6f-af21-a32a562f507b</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>Salmon Data Package artifact</entityType>
+    </otherEntity>
+    <otherEntity id="other-entity-9db5ca4f0d8f569c95844898f47c7743">
+      <alternateIdentifier system="DataONE">urn:uuid:560c9279-0c24-5f0b-9cc5-951e72eda8fe</alternateIdentifier>
+      <entityName>Salmon Data Package artifact: metadata/tables.csv</entityName>
+      <entityDescription>Canonical file from the expanded Salmon Data Package at 'metadata/tables.csv'.</entityDescription>
+      <physical id="physical-39872b8801ea5c0ab36b495af6305f60">
+        <objectName>metadata/tables.csv</objectName>
+        <size unit="byte">542</size>
+        <authentication method="SHA-256">664bb211fe163737e1748d7026981b3357e4d3df0e3c685a8ca623a992ca21fc</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <onlineDescription>Download Salmon Data Package artifact: metadata/tables.csv</onlineDescription>
+            <url>https://dev.nceas.ucsb.edu/knb/d1/mn/v2/object/urn:uuid:560c9279-0c24-5f0b-9cc5-951e72eda8fe</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>Salmon Data Package artifact</entityType>
+    </otherEntity>
+    <otherEntity id="other-entity-01c4c97bf0265a8889d40bb54a964123">
+      <alternateIdentifier system="DataONE">urn:uuid:c5385940-dd90-5a2e-a929-49a7b111bf3f</alternateIdentifier>
+      <entityName>Salmon Data Package artifact: reviewed_semantic_selections.csv</entityName>
+      <entityDescription>Canonical file from the expanded Salmon Data Package at 'reviewed_semantic_selections.csv'.</entityDescription>
+      <physical id="physical-f02376c3635e5e94bcde525976044916">
+        <objectName>reviewed_semantic_selections.csv</objectName>
+        <size unit="byte">1961</size>
+        <authentication method="SHA-256">4a04bad35597e8a310111f4502551e24afccb6f4b7cd0aab26cdb8e2847594ee</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <onlineDescription>Download Salmon Data Package artifact: reviewed_semantic_selections.csv</onlineDescription>
+            <url>https://dev.nceas.ucsb.edu/knb/d1/mn/v2/object/urn:uuid:c5385940-dd90-5a2e-a929-49a7b111bf3f</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>Salmon Data Package artifact</entityType>
+    </otherEntity>
+  </dataset>
+</eml:eml>

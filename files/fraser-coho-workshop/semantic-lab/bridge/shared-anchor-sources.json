@@ -1,0 +1,43 @@
+{
+  "repository": "https://github.com/salmon-data-mobilization/salmon-domain-ontology",
+  "commit": "d45f8f7cc857d92af8bbe54a7c89b2a4a14784b2",
+  "observed_date": "2026-09-08",
+  "scope": "all asserted outgoing triples for the listed six subjects; no imports resolved",
+  "excerpt_sha256": "d5e24e26667dc8d062a4c7a1f8db7b9f97370eb90a727c7f4974c20d25e11bd3",
+  "sources": [
+    {
+      "path": "ontology/modules/01-entity-systematics.ttl",
+      "sha256": "23bf4ab2918f625319581951f38a92ffdfdd6e49b58997ddc3a840d124a192bd",
+      "commit_url": "https://github.com/salmon-data-mobilization/salmon-domain-ontology/blob/d45f8f7cc857d92af8bbe54a7c89b2a4a14784b2/ontology/modules/01-entity-systematics.ttl",
+      "subjects": [
+        "https://w3id.org/smn/Population"
+      ]
+    },
+    {
+      "path": "ontology/modules/02-observation-measurement.ttl",
+      "sha256": "5931a4c3e142f3b4ab0a2b50a6448c7dbc40ad22b71e1c8f22dca3352fd02378",
+      "commit_url": "https://github.com/salmon-data-mobilization/salmon-domain-ontology/blob/d45f8f7cc857d92af8bbe54a7c89b2a4a14784b2/ontology/modules/02-observation-measurement.ttl",
+      "subjects": [
+        "https://w3id.org/smn/EscapementEstimate",
+        "https://w3id.org/smn/Abundance"
+      ]
+    },
+    {
+      "path": "ontology/modules/05-provenance-quality.ttl",
+      "sha256": "bda532e4b7afdb0509c11692433c3b1b022e928d519d65d7158c76ecf2e6b7d8",
+      "commit_url": "https://github.com/salmon-data-mobilization/salmon-domain-ontology/blob/d45f8f7cc857d92af8bbe54a7c89b2a4a14784b2/ontology/modules/05-provenance-quality.ttl",
+      "subjects": [
+        "https://w3id.org/smn/MethodDocumentation"
+      ]
+    },
+    {
+      "path": "ontology/modules/07-controlled-vocabularies.ttl",
+      "sha256": "1de84fb482fb00821d4f2a231909409f38553f9b920a5a4840a37a93f7525e72",
+      "commit_url": "https://github.com/salmon-data-mobilization/salmon-domain-ontology/blob/d45f8f7cc857d92af8bbe54a7c89b2a4a14784b2/ontology/modules/07-controlled-vocabularies.ttl",
+      "subjects": [
+        "https://w3id.org/smn/EnumerationMethod",
+        "https://w3id.org/smn/MethodScheme"
+      ]
+    }
+  ]
+}

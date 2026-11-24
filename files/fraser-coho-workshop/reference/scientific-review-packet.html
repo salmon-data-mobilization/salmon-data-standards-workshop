@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>scientific review packet</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">scientific review packet</h1>
+</header>
+<h1 id="fraser-coho-workshop-model--scientific-review-packet">Fraser
+Coho workshop model — scientific-review packet</h1>
+<p>Status: draft prepared for Brett to share; not sent and not
+scientifically approved. Prepared for: Bruno and Tom, with Brett
+coordinating the workshop revision. Requested review: when the
+co-authors can assess the complete draft; no fixed deadline. Reviewer:
+Review date: Review outcome:</p>
+<h2 id="the-proposed-teaching-case">The proposed teaching case</h2>
+<p>Every chapter uses the same 173-row, 14-column Fraser Coho 2023–2024
+NuSEDS slice. Chapter 1 tours the intended source-to-publication
+outcome. Chapters 2–3 ask learners to draw a node-and-edge model, write
+a dictionary and decompose a compound variable before loading data into
+metasalmon or AI. Another person reviews that human baseline before the
+tool-assisted stages.</p>
+<p>The six writing exercises are <code>POP_ID</code>,
+<code>WATERBODY</code>, <code>ANALYSIS_YR</code>, <code>SPECIES</code>,
+<code>NATURAL_ADULT_SPAWNERS</code> and <code>ESTIMATE_METHOD</code>.
+All 14 fields remain in the table and dictionary; the eight remaining
+descriptions are supplied drafts that learners read and review. No
+participant-owned dataset is required.</p>
+<h2 id="artifacts-to-review-together">Artifacts to review together</h2>
+<ul>
+<li><a href="dataset-graph-working.html">Conceptual diagram and
+limits</a>, with its <a href="dataset-graph-working.svg">SVG
+view</a>.</li>
+<li><a href="dataset-nodes-working.csv">Node table</a> and <a
+href="dataset-edges-working.csv">edge table</a>.</li>
+<li><a href="data-dictionary-working.csv">All-field working
+dictionary</a>, retaining starter descriptions separately.</li>
+<li><a href="variable-decomposition-working.csv">Adult-spawner
+decomposition</a>.</li>
+<li><a href="code-definitions-working.csv">All observed code
+meanings</a>, separating supported official-source paraphrases from
+remaining operational questions.</li>
+<li><a href="metamodel-source-notes.html">Offline metamodel source
+notes</a>.</li>
+<li>The unchanged source CSV and source records under
+<code>../raw_data/</code>.</li>
+</ul>
+<p>These artifacts are draft teaching interpretations. Their
+preparation, schema checks or successful package builds must not be
+represented as your approval.</p>
+<h2 id="evidence-ledger">Evidence ledger</h2>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>What it supports</th>
+<th>Limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>../raw_data/nuseds-fraser-coho-2023-2024.csv</code></td>
+<td>Values, field names, record counts, missingness and repeated
+identifier/year pairs</td>
+<td>Does not itself establish every biological definition or observation
+grain</td>
+</tr>
+<tr>
+<td>metasalmon's
+<code>inst/extdata/nuseds-fraser-coho-2023-2024-column_dictionary.csv</code></td>
+<td>Starter wording and candidate semantic interpretation</td>
+<td>Contains natural-origin and PFMA wording that require
+correction/reconciliation with the official source</td>
+</tr>
+<tr>
+<td><code>../raw_data/official-nuseds-dictionary.csv</code></td>
+<td>Current DFO definitions of the source fields</td>
+<td>Retrieved 2026-09-08; may postdate the workbook used for this
+teaching slice</td>
+</tr>
+<tr>
+<td><code>../raw_data/official-dictionary-source.json</code></td>
+<td>Retrieval URL, timestamp and SHA-256 for the preserved official
+dictionary bytes</td>
+<td>Provenance for retrieval, not independent scientific review</td>
+</tr>
+<tr>
+<td><code>../raw_data/open-canada-record.json</code></td>
+<td>Current catalog description and source-resource context</td>
+<td>A current catalog record is not a historical definition
+snapshot</td>
+</tr>
+<tr>
+<td>Salmon Domain Ontology metamodel and core conventions</td>
+<td>Distinction between entity, property, variable, activity, result,
+method, unit, qualifiers and row-varying dimensions</td>
+<td>Orientation view is non-normative; workshop diagram does not assert
+OWL or approved mappings</td>
+</tr>
+</tbody>
+</table>
+<p>Primary source links: <a
+href="https://open.canada.ca/data/en/dataset/c48669a3-045b-400d-b730-48aafe8c5ee6">Open
+Government NuSEDS record</a>, <a
+href="https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv">DFO
+data dictionary</a>, <a
+href="https://github.com/salmon-data-mobilization/metasalmon/blob/v0.5.0/inst/extdata/example-data-README.md">metasalmon
+example derivation notes</a>, <a
+href="https://github.com/salmon-data-mobilization/salmon-domain-ontology/blob/main/ontology/views/README.md">SDO
+metamodel</a> and <a
+href="https://github.com/salmon-data-mobilization/salmon-domain-ontology/blob/main/CONVENTIONS.md#12-year-age-abundance-and-method-composition">SDO
+composition rules</a>.</p>
+<h2 id="checks-from-the-actual-table">Checks from the actual table</h2>
+<ul>
+<li>173 rows, 14 columns, years 2023 and 2024, all species labels
+<code>Coho</code>.</li>
+<li>87 distinct population IDs; 164 distinct population–analysis-year
+pairs.</li>
+<li>Repeated pairs: <code>46170/2023</code> twice;
+<code>46602/2023</code> and <code>46602/2024</code> twice each;
+<code>46582/2023</code> and <code>46582/2024</code> four times each.
+They are retained as source records.</li>
+<li>13 blank adult-spawner estimates; nonblank estimates can have
+decimals.</li>
+<li><code>RUN_TYPE</code> has <code>1</code>, <code>FALL</code> and 15
+blanks; start and end dates each have 16 blanks.</li>
+<li>No Conservation Unit field or population-to-CU crosswalk occurs in
+the slice.</li>
+<li>Nine estimate-method labels: Area Under the Curve (84), Peak Live *
+Expansion (39), Not Applicable (27), Combined Methods (12), Resistivity
+Counter (4), Sonar-ARIS (4), Sonar-DIDSON (1), Fixed Site Census (1),
+Fence (1).</li>
+</ul>
+<p>These are file observations, not an assessment of scientific
+completeness or comparability. No rows are dropped or aggregated and no
+blank is changed to zero.</p>
+<h2 id="proposed-interpretations-and-questions">Proposed interpretations
+and questions</h2>
+<table>
+<thead>
+<tr>
+<th>Review item</th>
+<th>Current working position</th>
+<th>Requested scientific input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Population and record grain</td>
+<td>A record refers to the source population; population/year is not a
+unique key</td>
+<td>What differentiates repeated pairs? Which source identifier or
+dimensions distinguish an annual estimate/SEN record, and are any
+records nested or overlapping?</td>
+</tr>
+<tr>
+<td>Waterbody relationship</td>
+<td>Use the official wording: waterbody or portion bounding the
+population on a SEN</td>
+<td>Confirm the diagram's direction and label; clarify locations such as
+Nicola River DAM/DOT without implying exclusive ecological
+membership</td>
+</tr>
+<tr>
+<td>Species / population / CU</td>
+<td>Keep distinct nodes; no CU assignment is asserted</td>
+<td>Supply a dated authoritative crosswalk if a worked CU relationship
+should be added; do not infer a simple species–CU–stream–population
+hierarchy</td>
+</tr>
+<tr>
+<td>Analysis year</td>
+<td>Year the estimate is for; inspections may extend into the next
+calendar year</td>
+<td>Confirm applicability to the 2025 workbook and whether further
+biological-year distinctions need teaching; no brood-year substitution
+is proposed</td>
+</tr>
+<tr>
+<td>Adult spawner scope</td>
+<td>Mature fish excluding jacks is supported by the current official
+definition</td>
+<td>What exactly does natural qualify here? Does any source support or
+rule out an origin restriction? Correct the starter's natural-origin
+claim before it is used as an accepted mapping</td>
+</tr>
+<tr>
+<td>Unit / estimate interpretation</td>
+<td>Preserve numerical values and the starter's Individuals unit as a
+working interpretation</td>
+<td>Confirm interpretation across true/relative abundance
+classifications and decimal estimates; identify any limits on comparison
+or aggregation</td>
+</tr>
+<tr>
+<td>AREA</td>
+<td>Describe as subdistrict, not automatically PFMA/statistical
+area</td>
+<td>Confirm the Fraser subdistrict reference and intended learner
+explanation</td>
+</tr>
+<tr>
+<td>Method and classification</td>
+<td>Keep row-specific method values and source definitions; do not treat
+every label as interchangeable</td>
+<td>Confirm definitions for labels with N/A or absent entries and the
+most useful comparison pair for learners</td>
+</tr>
+<tr>
+<td>Missingness</td>
+<td>Preserve blanks and use classification/context to investigate</td>
+<td>Confirm what can safely be concluded about the 13 missing estimates
+and date blanks</td>
+</tr>
+<tr>
+<td>Six-field exercise</td>
+<td>Write six; read/review all 14</td>
+<td>Are these the most useful introductory fields, and do the draft
+graph and decomposition communicate the intended distinctions?</td>
+</tr>
+</tbody>
+</table>
+<h2 id="record-the-actual-review">Record the actual review</h2>
+<p>For each decision, record the exact artifact or statement,
+source/evidence, accepted wording or required revision, reviewer and
+date. A response may leave questions unresolved. Populate the fields
+below only after the review occurs.</p>
+<table>
+<thead>
+<tr>
+<th>Artifact/statement</th>
+<th>Reviewer feedback</th>
+<th>Evidence</th>
+<th>Required change or retained question</th>
+<th>Reviewer</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Before treating this as an answer key, incorporate the actual review,
+keep the source and retrieval history, and identify which decisions were
+approved and which remain draft. Software validation cannot supply this
+scientific review.</p>
+</body>
+</html>

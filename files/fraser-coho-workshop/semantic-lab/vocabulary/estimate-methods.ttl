@@ -1,0 +1,50 @@
+# Draft teaching vocabulary. No official NuSEDS or SDO adoption is claimed.
+# Source CSV remains unchanged; this file covers only four of its nine method labels.
+@prefix ex: <https://example.org/fraser-coho-workshop/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:estimate-method-scheme a skos:ConceptScheme ;
+    skos:prefLabel "Fraser Coho workshop estimate-method selection"@en ;
+    skos:definition "A teaching selection of four estimate-method categories observed in the 173-row Fraser Coho NuSEDS slice."@en ;
+    dcterms:created "2026-09-09"^^xsd:date ;
+    dcterms:source <https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv> ;
+    skos:scopeNote "Draft classroom representation, not the complete official NuSEDS scheme. The example.org identifiers are teaching identifiers and are not production identifiers or resolving vocabulary pages."@en ;
+    skos:historyNote "Prepared from the official dictionary retrieved on 2026-09-08; that wording may postdate the 2025 source workbook. Scientific and stewardship review are pending."@en .
+
+ex:area-under-the-curve a skos:Concept ;
+    skos:inScheme ex:estimate-method-scheme ;
+    skos:prefLabel "Area Under the Curve"@en ;
+    skos:definition "An estimate method that integrates abundance over time and divides that area by survey life to obtain annual abundance. Survey life is the average period an individual is alive and available for observation in the survey area."@en ;
+    skos:scopeNote "Teaching representation of this NuSEDS estimate-method category, not a complete protocol or a new official code. Row-specific procedure details remain unresolved."@en ;
+    skos:editorialNote "source-backed paraphrase; scientific review pending. Which abundance observations, survey-life assumption and coverage apply to this record? draft teaching artifact; no scientific or stewardship approval"@en ;
+    dcterms:source <https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv> ;
+    rdfs:isDefinedBy ex:estimate-method-scheme .
+
+ex:combined-methods a skos:Concept ;
+    skos:inScheme ex:estimate-method-scheme ;
+    skos:prefLabel "Combined Methods"@en ;
+    skos:definition "An estimate method in which separate estimates are calculated from multiple survey methods and the final estimate combines two or more estimate methods."@en ;
+    skos:scopeNote "Teaching representation of this NuSEDS estimate-method category, not a complete protocol or a new official code. Row-specific procedure details remain unresolved."@en ;
+    skos:editorialNote "source-backed paraphrase; scientific review pending. Which methods and combination rule were used for the particular source record? draft teaching artifact; no scientific or stewardship approval"@en ;
+    dcterms:source <https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv> ;
+    rdfs:isDefinedBy ex:estimate-method-scheme .
+
+ex:fixed-site-census a skos:Concept ;
+    skos:inScheme ex:estimate-method-scheme ;
+    skos:prefLabel "Fixed Site Census"@en ;
+    skos:definition "An estimate method that combines one or more raw observations into a single estimate; the source example combines daily fence observations into an annual estimate."@en ;
+    skos:scopeNote "Teaching representation of this NuSEDS estimate-method category, not a complete protocol or a new official code. Row-specific procedure details remain unresolved."@en ;
+    skos:editorialNote "source-backed paraphrase; scientific review pending. What fixed site, observations, period and combination rule apply here? draft teaching artifact; no scientific or stewardship approval"@en ;
+    dcterms:source <https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv> ;
+    rdfs:isDefinedBy ex:estimate-method-scheme .
+
+ex:resistivity-counter a skos:Concept ;
+    skos:inScheme ex:estimate-method-scheme ;
+    skos:prefLabel "Resistivity Counter"@en ;
+    skos:scopeNote "Teaching representation of this NuSEDS estimate-method category, not a complete protocol or a new official code. Row-specific procedure details remain unresolved."@en ;
+    skos:editorialNote "missing operational definition in retrieved official dictionary. Which counter observations and estimation procedure generated the result? Obtain an applicable methods source. draft teaching artifact; no scientific or stewardship approval"@en ;
+    dcterms:source <https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv> ;
+    rdfs:isDefinedBy ex:estimate-method-scheme .

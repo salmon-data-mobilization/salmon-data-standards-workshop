@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">README</h1>
+</header>
+<h1 id="fraser-coho-workshop-kit">Fraser Coho workshop kit</h1>
+<p>Use this directory as your project root. The <strong>Day 1 beginner
+sequence (six hours)</strong> is: inspect → diagram → dictionary and
+decomposition → peer review → package → semantic and AI review → codes →
+validation and KNB test demonstration.</p>
+<p><strong>Day 2 (six hours)</strong> continues from the same human
+model: choose reuse or local/shared contribution → build a SKOS
+vocabulary → formalize a small OWL model → assess bridges → draft term
+requests and review plans. Start with <a
+href="semantic-lab/README.html">the semantic lab guide</a>. These are
+classroom drafts; their identifiers, mappings and passing checks do not
+confer shared or organizational authority.</p>
+<p>The source is <strong>173 rows and 14 columns</strong>, including 13
+blank adult-spawner estimates and repeated population–year pairs. Every
+checkpoint preserves the source CSV bytes. Do not rename fields, replace
+blanks, deduplicate or aggregate.</p>
+<h2 id="start-here">Start here</h2>
+<ol type="1">
+<li>Read <code>raw_data/PROVENANCE.md</code> and inspect the six
+introductory columns.</li>
+<li>Draw the relationships and complete
+<code>worksheets/dataset-nodes.csv</code> and
+<code>worksheets/dataset-edges.csv</code> as text companions to your
+drawing.</li>
+<li>Write the six core entries in
+<code>worksheets/data-dictionary.csv</code>; review the other eight
+supplied draft entries. Decompose the adult-spawner estimate in
+<code>worksheets/variable-decomposition.csv</code>.</li>
+<li>Ask a peer to review the actual artifacts. Record their name, date,
+revisions and remaining questions in
+<code>worksheets/peer-review.md</code>. Only then change its completion
+marker. A question can remain explicit in a reviewed draft.</li>
+<li>Follow Chapter 4 using <code>scripts/build_sdp.R</code> or
+<code>scripts/build_sdp.py</code>. Spreadsheet participants inspect the
+supplied same-source checkpoint with a collaborator running its
+automated checks.</li>
+<li>Review saved vocabulary candidates, then complete
+<code>ai/comparison-worksheet.csv</code> against the recorded AI
+assessment. Live inference is optional.</li>
+<li>Inspect the reference package and run Chapter 7's test-only preview
+on a separate local copy. Read <code>validation/README.md</code> for
+current limitations.</li>
+<li>Continue in <code>semantic-lab/</code> for Chapters 8–12. Preserve
+your actual human preparation and create answers under
+<code>output/semantic-lab/</code>, following each chapter. The supplied
+examples remain separate draft evidence. No online service is needed for
+Day 2 after installing optional checking dependencies.</li>
+</ol>
+<p>The scripts check that preparation artifacts exist and have usable
+structure. They cannot establish whether a person performed a sound
+scientific review. Do not fill a fictional reviewer name to bypass
+preparation.</p>
+<h2 id="contents">Contents</h2>
+<table>
+<thead>
+<tr>
+<th>Location</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>raw_data/</code></td>
+<td>Immutable source slice, original starter dictionary, current
+official dictionary, acquisition and derivation evidence.</td>
+</tr>
+<tr>
+<td><code>worksheets/</code></td>
+<td>Learner graph tables, interpretation dictionary, decomposition and
+peer review.</td>
+</tr>
+<tr>
+<td><code>reference/</code></td>
+<td>Working examples, editable conceptual diagram and scientific review
+packet. These are drafts awaiting Bruno and Tom.</td>
+</tr>
+<tr>
+<td><code>scripts/</code></td>
+<td>Pinned R/Python learner workflows, with preparation and source
+checks.</td>
+</tr>
+<tr>
+<td><code>checkpoints/draft-sdp/</code></td>
+<td>Structure and working descriptions; no accepted semantic IRIs.</td>
+</tr>
+<tr>
+<td><code>checkpoints/seeded-sdp/</code></td>
+<td>Same draft plus real saved deterministic candidates; no AI calls or
+applied decisions.</td>
+</tr>
+<tr>
+<td><code>checkpoints/reference-sdp/</code></td>
+<td>Explicit technical semantic selections, vocabulary evidence, valid
+EML and test dry-run objects; scientific review remains pending.</td>
+</tr>
+<tr>
+<td><code>ai/</code></td>
+<td>Actual recorded authoring-assistant assessment, blank human
+comparison worksheet and optional live instructions.</td>
+</tr>
+<tr>
+<td><code>publication/</code></td>
+<td>Public test-record status and maintainer completion steps.</td>
+</tr>
+<tr>
+<td><code>validation/</code></td>
+<td>Observed checks, capability gaps and unposted upstream issue
+drafts.</td>
+</tr>
+<tr>
+<td><code>semantic-lab/</code></td>
+<td>Day 2 worksheets, draft SKOS vocabulary, RDF/OWL model, bridges,
+contribution examples and offline checks. These are context artifacts
+outside canonical SDP metadata.</td>
+</tr>
+</tbody>
+</table>
+<p><code>output/</code> is created when you work. Existing output
+directories are not replaced by the build scripts. Keep your team's
+answers separate from the supplied working examples. Do not treat a
+supplied example as your team's peer review.</p>
+<h2 id="what-has-and-has-not-been-reviewed">What has and has not been
+reviewed</h2>
+<p>The scientific answer key is <strong>not yet reviewed by Bruno and
+Tom</strong>. Their decisions must come through Brett and be recorded in
+the review packet. Source wording, working interpretations, technical
+mapping selections and independent scientific approval are different
+records.</p>
+<p>The source's original publisher is Fisheries and Oceans Canada. The
+teaching materials are a derivative workshop, not a replacement source
+publication or DFO endorsement. Source data are under the Open
+Government Licence – Canada; workshop prose follows the repository's CC
+BY 4.0 licence.</p>
+<p>The public KNB test destination is not yet verified. The local
+manifest is a dry-run plan, not proof of upload. No production
+publication or DOI request is included in this workshop. Check
+<code>publication/README.md</code> before delivery.</p>
+</body>
+</html>

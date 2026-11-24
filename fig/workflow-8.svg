@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="840" viewBox="0 0 760 840" role="img" aria-labelledby="title desc">
+<title id="title">Workshop workflow: chapter 8</title>
+<desc id="desc">Twelve chapters over two six-hour days. Day 1: human diagram, dictionary and peer review before package creation, AI review and KNB test publication. Day 2: routing, SKOS vocabulary, OWL model, bridges and contribution drafts. No production publication or official term creation.</desc>
+<rect width="760" height="840" fill="#ffffff"/>
+<text x="20" y="25" font-family="sans-serif" font-size="20" font-weight="bold" fill="#172b3a">Day 1 · Beginner route to publication · 6 hours</text>
+<text x="20" y="494" font-family="sans-serif" font-size="20" font-weight="bold" fill="#172b3a">Day 2 · Build and connect meanings · 6 hours</text>
+<rect x="20" y="38" width="720" height="54" rx="7" fill="#f4f5f6" stroke="#687582" stroke-width="1"/>
+<text x="40" y="61" font-family="sans-serif" font-size="20" font-weight="bold" fill="#172b3a">1. See the journey</text>
+<text x="40" y="81" font-family="sans-serif" font-size="16" fill="#334755">Publication, contribution and local stewardship</text>
+<text x="715" y="61" text-anchor="end" font-family="sans-serif" font-size="15" fill="#17624d"></text>
+<path d="M 380 93 v 6 m -3 -3 l 3 3 l 3 -3" fill="none" stroke="#334755" stroke-width="2"/>
+<rect x="20" y="100" width="720" height="54" rx="7" fill="#f4f5f6" stroke="#687582" stroke-width="1"/>
+<text x="40" y="123" font-family="sans-serif" font-size="20" font-weight="bold" fill="#172b3a">2. Draw relationships</text>
+<text x="40" y="143" font-family="sans-serif" font-size="16" fill="#334755">Nodes, edges, row meaning</text>
+<text x="715" y="123" text-anchor="end" font-family="sans-serif" font-size="15" fill="#17624d"></text>
+<path d="M 380 155 v 6 m -3 -3 l 3 3 l 3 -3" fill="none" stroke="#334755" stroke-width="2"/>
+<rect x="20" y="162" width="720" height="54" rx="7" fill="#f4f5f6" stroke="#687582" stroke-width="1"/>
+<text x="40" y="185" font-family="sans-serif" font-size="20" font-weight="bold" fill="#172b3a">3. Describe and review</text>
+<text x="40" y="205" font-family="sans-serif" font-size="16" fill="#334755">Dictionary and decomposition</text>
+<text x="715" y="185" text-anchor="end" font-family="sans-serif" font-size="15" fill="#17624d"></text>
+<path d="M 380 217 v 6 m -3 -3 l 3 3 l 3 -3" fill="none" stroke="#334755" stroke-width="2"/>
+<rect x="20" y="224" width="720" height="54" rx="7" fill="#f4f5f6" stroke="#687582" stroke-width="1"/>
+<text x="40" y="247" font-family="sans-serif" font-size="20" font-weight="bold" fill="#172b3a">4. Build the package</text>
+<text x="40" y="267" font-family="sans-serif" font-size="16" fill="#334755">Human work into SDP files</text>
+<text x="715" y="247" text-anchor="end" font-family="sans-serif" font-size="15" fill="#17624d"></text>
+<path d="M 380 279 v 6 m -3 -3 l 3 3 l 3 -3" fill="none" stroke="#334755" stroke-width="2"/>
+<rect x="20" y="286" width="720" height="54" rx="7" fill="#f4f5f6" stroke="#687582" stroke-width="1"/>
+<text x="40" y="309" font-family="sans-serif" font-size="20" font-weight="bold" fill="#172b3a">5. Map and evaluate AI</text>
+<text x="40" y="329" font-family="sans-serif" font-size="16" fill="#334755">Evidence and recorded decisions</text>
+<text x="715" y="309" text-anchor="end" font-family="sans-serif" font-size="15" fill="#17624d"></text>
+<path d="M 380 341 v 6 m -3 -3 l 3 3 l 3 -3" fill="none" stroke="#334755" stroke-width="2"/>
+<rect x="20" y="348" width="720" height="54" rx="7" fill="#f4f5f6" stroke="#687582" stroke-width="1"/>
+<text x="40" y="371" font-family="sans-serif" font-size="20" font-weight="bold" fill="#172b3a">6. Document codes</text>
+<text x="40" y="391" font-family="sans-serif" font-size="16" fill="#334755">Methods and local/shared gaps</text>
+<text x="715" y="371" text-anchor="end" font-family="sans-serif" font-size="15" fill="#17624d"></text>
+<path d="M 380 403 v 6 m -3 -3 l 3 3 l 3 -3" fill="none" stroke="#334755" stroke-width="2"/>
+<rect x="20" y="410" width="720" height="54" rx="7" fill="#f4f5f6" stroke="#687582" stroke-width="1"/>
+<text x="40" y="433" font-family="sans-serif" font-size="20" font-weight="bold" fill="#172b3a">7. Validate and rehearse</text>
+<text x="40" y="453" font-family="sans-serif" font-size="16" fill="#334755">EML and KNB test only</text>
+<text x="715" y="433" text-anchor="end" font-family="sans-serif" font-size="15" fill="#17624d"></text>
+<rect x="20" y="508" width="720" height="54" rx="7" fill="#e2f0eb" stroke="#17624d" stroke-width="3"/>
+<text x="40" y="531" font-family="sans-serif" font-size="20" font-weight="bold" fill="#172b3a">8. Choose the semantic route</text>
+<text x="40" y="551" font-family="sans-serif" font-size="16" fill="#334755">Reuse, local meaning or shared contribution</text>
+<text x="715" y="531" text-anchor="end" font-family="sans-serif" font-size="15" fill="#17624d">Current chapter</text>
+<path d="M 380 563 v 6 m -3 -3 l 3 3 l 3 -3" fill="none" stroke="#334755" stroke-width="2"/>
+<rect x="20" y="570" width="720" height="54" rx="7" fill="#f4f5f6" stroke="#687582" stroke-width="1"/>
+<text x="40" y="593" font-family="sans-serif" font-size="20" font-weight="bold" fill="#172b3a">9. Build a controlled vocabulary</text>
+<text x="40" y="613" font-family="sans-serif" font-size="16" fill="#334755">SKOS concepts, sources and stewardship</text>
+<text x="715" y="593" text-anchor="end" font-family="sans-serif" font-size="15" fill="#17624d"></text>
+<path d="M 380 625 v 6 m -3 -3 l 3 3 l 3 -3" fill="none" stroke="#334755" stroke-width="2"/>
+<rect x="20" y="632" width="720" height="54" rx="7" fill="#f4f5f6" stroke="#687582" stroke-width="1"/>
+<text x="40" y="655" font-family="sans-serif" font-size="20" font-weight="bold" fill="#172b3a">10. Formalize the human graph</text>
+<text x="40" y="675" font-family="sans-serif" font-size="16" fill="#334755">RDF, OWL and limited reasoning checks</text>
+<text x="715" y="655" text-anchor="end" font-family="sans-serif" font-size="15" fill="#17624d"></text>
+<path d="M 380 687 v 6 m -3 -3 l 3 3 l 3 -3" fill="none" stroke="#334755" stroke-width="2"/>
+<rect x="20" y="694" width="720" height="54" rx="7" fill="#f4f5f6" stroke="#687582" stroke-width="1"/>
+<text x="40" y="717" font-family="sans-serif" font-size="20" font-weight="bold" fill="#172b3a">11. Build and assess bridges</text>
+<text x="40" y="737" font-family="sans-serif" font-size="16" fill="#334755">Typed mappings, evidence and consequences</text>
+<text x="715" y="717" text-anchor="end" font-family="sans-serif" font-size="15" fill="#17624d"></text>
+<path d="M 380 749 v 6 m -3 -3 l 3 3 l 3 -3" fill="none" stroke="#334755" stroke-width="2"/>
+<rect x="20" y="756" width="720" height="54" rx="7" fill="#f4f5f6" stroke="#687582" stroke-width="1"/>
+<text x="40" y="779" font-family="sans-serif" font-size="20" font-weight="bold" fill="#172b3a">12. Prepare a contribution</text>
+<text x="40" y="799" font-family="sans-serif" font-size="16" fill="#334755">Term request, clarification and review plan</text>
+<text x="715" y="779" text-anchor="end" font-family="sans-serif" font-size="15" fill="#17624d"></text>
+</svg>

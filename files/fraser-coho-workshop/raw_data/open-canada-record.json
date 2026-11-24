@@ -1,0 +1,120 @@
+{
+  "id": "c48669a3-045b-400d-b730-48aafe8c5ee6",
+  "title": "NuSEDS-New Salmon Escapement Database System",
+  "notes": "The Salmon Escapement Database (NuSEDS) is the DFO Pacific Region’s central database that stores individual spawner survey data records, spawner abundance estimates and the linkages between the two. Annual abundance estimates are maintained by population, as defined by freshwater location and run timing. Each population is referenced to the location of the stream mouth. The watershed-coding system provides unique stream identification and incorporates the natural organization, direction, and hierarchical nature of stream channels and their tributaries.\n\nThe NuSEDS database currently reports salmon spawning observations for 9100+ individual populations but escapement estimates (all levels of survey intensity) are available for 9800+ populations. \n\nThis database contains historic population data starting in the 1920’s (older data for some rivers exists in other formats). Prior to 1995 a standardized form (BC-16) was used to summarize the estimate of the spawning population size, but the historical database lacked the capacity to describe the number of observations, individual counts or methods used to estimate the abundance of the population. In 1995, responsibility for salmon enumeration was moved to the DFO Science section. At that time, the database was re-written to include descriptive information for each abundance estimate, providing underlying data and the estimation method(s). Many of the historic estimates prior to 1995 are labeled Unspecified Returns because the database was limited to storing one estimate for any given stock. As time and resources permit these data are being replaced with more accurate categorization. With the introduction of the Wild Salmon Policy (2005), individual populations within NuSEDS can now be grouped by Conservation Unit.",
+  "license_title": "Open Government Licence - Canada",
+  "license_id": "ca-ogl-lgo",
+  "license_url": "https://open.canada.ca/en/open-government-licence-canada",
+  "organization": {
+    "id": "E56460A0-2055-4BF4-A693-EA238E0746E7",
+    "name": "dfo-mpo",
+    "title": "Fisheries and Oceans Canada | Pêches et Océans Canada",
+    "type": "organization",
+    "description": "",
+    "image_url": "",
+    "created": "2016-09-23T17:25:21.313583",
+    "is_organization": true,
+    "approval_status": "approved",
+    "state": "active"
+  },
+  "metadata_modified": "2026-06-11T16:41:33.502019",
+  "retrieved_utc": "2026-09-08T16:50:39.167837+00:00",
+  "source_url": "https://open.canada.ca/data/api/action/package_show?id=c48669a3-045b-400d-b730-48aafe8c5ee6",
+  "resources": [
+    {
+      "name": "All Areas NuSEDS_20260601.zip",
+      "format": "CSV",
+      "url": "https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/All%20Areas%20NuSEDS_20260601.zip"
+    },
+    {
+      "name": "All Areas NuSEDS_20260601.xlsx",
+      "format": "XLSX",
+      "url": "https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/All%20Areas%20NuSEDS_20260601.xlsx"
+    },
+    {
+      "name": "All Areas Simplified Version_20260601.xlsx",
+      "format": "CSV",
+      "url": "https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/All%20Areas%20Simplified%20Version_20260601.csv"
+    },
+    {
+      "name": "Fraser and BC Interior NuSEDS_20251014.xlsx",
+      "format": "XLSX",
+      "url": "https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Fraser%20and%20BC%20Interior%20NuSEDS_20251014.xlsx"
+    },
+    {
+      "name": "Johnstone Strait and Strait of Georgia NuSEDS_20260601.xlsx",
+      "format": "XLSX",
+      "url": "https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Johnstone%20Strait%20and%20Strait%20of%20Georgia%20NuSEDS_20260601.xlsx"
+    },
+    {
+      "name": "North and Central Coast NuSEDS_20260601.xlsx",
+      "format": "XLSX",
+      "url": "https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/North%20and%20Central%20Coast%20NuSEDS_20260601.xlsx"
+    },
+    {
+      "name": "West Coast Vancouver Island NuSEDS_20260601.xlsx",
+      "format": "CSV",
+      "url": "https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/West%20Coast%20Vancouver%20Island%20NuSEDS_20260601.xlsx"
+    },
+    {
+      "name": "Yukon and Transboundary NuSEDS_20260601.xlsx",
+      "format": "CSV",
+      "url": "https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Yukon%20and%20Transboundary%20NuSEDS_20260601.xlsx"
+    },
+    {
+      "name": "Data Dictionary NuSEDS_EN.csv",
+      "format": "CSV",
+      "url": "https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_EN.csv"
+    },
+    {
+      "name": "Data Dictionary NuSEDS_FR.csv",
+      "format": "CSV",
+      "url": "https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Data_Dictionary_NuSEDS_FR.csv"
+    },
+    {
+      "name": "Directions on how to filter and search the data",
+      "format": "PDF",
+      "url": "https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/How%20to%20guide%20for%20filtering%20and%20searching%20the%20data.pdf"
+    },
+    {
+      "name": "Guide pour filtrer et rechercher les données",
+      "format": "PDF",
+      "url": "https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/How%20to%20guide%20for%20filtering%20and%20searching%20the%20data_french.pdf"
+    },
+    {
+      "name": "Map of Areas",
+      "format": "PDF",
+      "url": "https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Map%20of%20Areas.pdf"
+    },
+    {
+      "name": "NuSEDS-Background Information",
+      "format": "RTF",
+      "url": "https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/aopen-data-portaljanuary-2019nuseds_background-information.rtf"
+    },
+    {
+      "name": "NuSEDS-Background Information",
+      "format": "RTF",
+      "url": "https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/aopen-data-portaljanuary-2019nuseds_background-information_french.rtf"
+    },
+    {
+      "name": "SEN Join CU Data_20251103.zip",
+      "format": "CSV",
+      "url": "https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/SEN%20Join%20CU%20Data_20251103.zip"
+    },
+    {
+      "name": "Conservation Unit Census Sites_20250528.csv",
+      "format": "CSV",
+      "url": "https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Conservation%20Unit%20Census%20Sites_20250528.csv"
+    },
+    {
+      "name": "Census Sites_SEN_Definitions.csv",
+      "format": "CSV",
+      "url": "https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Census%20Sites_SEN_Definitions.csv"
+    },
+    {
+      "name": "Census Sites & SEN_Definitions_French.csv",
+      "format": "CSV",
+      "url": "https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/c48669a3-045b-400d-b730-48aafe8c5ee6/attachments/Census%20Sites%20&%20SEN_Definitions_French.csv"
+    }
+  ]
+}
