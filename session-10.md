@@ -43,7 +43,7 @@ These are two illustrations within the same **173-row, 14-column table**. `seman
 
 Row 1 gives us a record, a reported numeric result, a population reference, and a year. The official dictionary describes the adult-spawner field as mature salmon excluding jacks. It does not establish natural-origin scope. The method label tells us which category was stored; the current dictionary's `N/A` entry for Resistivity Counter leaves its operational definition unresolved. Row 2 supplies no numeric estimate. Preserve both limits.
 
-![Two actual source records represented as distinct records, results, references, and literals.](files/fraser-coho-workshop/semantic-lab/model/record-model.svg)
+![Two actual source records represented as distinct records, results, references, and literals.](files/fraser-coho-workshop/semantic-lab/model/record-model.svg){alt="Flowchart of two NuSEDS source records. Record 1, source row 1 with analysis year 2023, has a reported result and concerns population reference 46200. That result has the numeric value 758, a decimal literal, and is reported under the adult-spawner field. Record 2, source row 2, has a blank estimate, so no result is asserted for it."}
 
 The editable diagram is `semantic-lab/model/record-model.mmd`. The model and instance files make the distinction between the kinds of objects and the particular objects explicit.
 
